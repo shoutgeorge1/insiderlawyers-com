@@ -1,0 +1,214 @@
+/* ============================================
+   INSIDER ACCIDENT LAWYERS - HERO SECTION
+   Two-column: content left, form right (desktop)
+   Fully responsive, maintains branding
+   ============================================ */
+
+/* Hero wrapper - two columns on desktop */
+.hero.hero-section .hero-content {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Desktop: content left (1fr), form right (fixed width, sticky) */
+@media (min-width: 992px) {
+  .hero.hero-section .hero-content {
+    grid-template-columns: 1fr 420px;
+    gap: 3rem;
+    align-items: start;
+    padding: 2rem 0 4rem;
+  }
+
+  .hero.hero-section .hero-text {
+    order: 1;
+  }
+
+  .hero.hero-section .hero-form-column {
+    order: 2;
+    position: sticky;
+    top: 100px;
+  }
+}
+
+/* Form card in hero - BD&J-style panel */
+.hero.hero-section .hero-form-column {
+  width: 100%;
+}
+
+.hero.hero-section .hero-form-card {
+  background: linear-gradient(180deg, #eceff1 0%, #cfd8dc 100%);
+  border: 3px solid #fff;
+  border-radius: 4px;
+  padding: 2rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.hero.hero-section .hero-form-card .form__header {
+  border-bottom: 3px solid var(--brand-navy, #01366c);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.hero.hero-section .hero-form-card .form__title {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: var(--brand-navy, #01366c);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.hero.hero-section .hero-form-card .form__subtitle {
+  font-size: 0.9rem;
+  color: var(--brand-gray-700, #374151);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Form fields - larger, clearer hierarchy */
+.hero.hero-section .hero-form-card .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.hero.hero-section .hero-form-card .form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--brand-navy, #01366c);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero.hero-section .hero-form-card .form-input,
+.hero.hero-section .hero-form-card .form-control {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid rgba(1, 54, 108, 0.25);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9fbff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero.hero-section .hero-form-card .form-input:focus,
+.hero.hero-section .hero-form-card .form-control:focus {
+  outline: none;
+  border-color: var(--brand-blue, #01468a);
+  box-shadow: 0 0 0 3px rgba(1, 70, 138, 0.15);
+}
+
+.hero.hero-section .hero-form-card textarea.form-input,
+.hero.hero-section .hero-form-card textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.hero.hero-section .hero-form-card .btn-primary {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+  border-radius: 8px;
+}
+
+/* Mobile: single column, form below content */
+@media (max-width: 991px) {
+  .hero.hero-section .hero-content {
+    grid-template-columns: 1fr;
+    padding-bottom: 2rem;
+  }
+
+  .hero.hero-section .hero-form-column {
+    order: 2;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .hero.hero-section .hero-form-card {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* "Over $XX Million Recovered" in hero */
+.hero.hero-section .hero-stat {
+  display: inline-block;
+  background: rgba(251, 186, 0, 0.25);
+  color: var(--brand-accent-yellow, #fbba00);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(251, 186, 0, 0.5);
+}
+
+/* Benefits list in hero - checkmark bullets */
+.hero.hero-section .hero__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.hero.hero-section .hero__benefits li {
+  color: #fff;
+  font-size: 1.05rem;
+  padding-left: 1.75rem;
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.hero.hero-section .hero__benefits li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #81c784;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.hero.hero-section .hero__benefits .hero-highlight {
+  color: var(--brand-accent-yellow, #fbba00);
+  font-weight: 700;
+}
+
+/* Section divider / ornamental line (BD&J-style) */
+.hero.hero-section .hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.hero.hero-section .hero-divider::before,
+.hero.hero-section .hero-divider::after {
+  content: "";
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.hero.hero-section .hero-divider .hero-divider__diamond {
+  width: 8px;
+  height: 8px;
+  background: var(--brand-accent-yellow, #fbba00);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 767px) {
+  .hero.hero-section .hero-form-column {
+    max-width: 100%;
+  }
+
+  .hero.hero-section .hero-form-card .form__title {
+    font-size: 1.5rem;
+  }
+}
