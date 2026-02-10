@@ -24,3 +24,17 @@ This repo is the **source for building off** that URL. Use the code here to enha
 3. **Optional:** Deploy this repo (e.g. Vercel) as a **preview** (different URL) to test the hero before pushing to the live site.
 
 Form actions and thank-you redirect stay pointed at the live domain (e.g. `https://call.insideraccidentlawyers.com/car-accident/thank-you.html`).
+
+---
+
+## Getting a new URL for this project
+
+- **Production (canonical):** Use **https://call.insideraccidentlawyers.com/car-accident/**  
+  Set this up on your host (same server as call.insideraccidentlawyers.com): add a route or folder `/car-accident/` that serves this repo’s `index.html` (and `styles/`, etc.), or copy the built files into that path.
+
+- **Preview / testing:** Deploy this repo to get a **free URL**:
+  - **[Vercel](https://vercel.com)** – Connect the GitHub repo; you get `pi-search-caraccident-lp-*.vercel.app` (or a custom subdomain).
+  - **[Netlify](https://netlify.com)** – Connect the repo; you get `*.netlify.app`.
+  - **GitHub Pages** – In repo **Settings → Pages**, set source to this branch and root; you get `https://shoutgeorge1.github.io/pi-search-caraccident-lp/`.
+
+Use the preview URL to test changes; point production traffic at **call.insideraccidentlawyers.com/car-accident/** when ready.
