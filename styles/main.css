@@ -4,38 +4,39 @@
    Fully responsive, maintains branding
    ============================================ */
 
-/* Left header - logo big and bold */
-.hero-header {
-  padding: 1rem 0 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+/* Site header - top of page, logo left, big and bold */
+.site-header {
+  background: var(--brand-navy, #01366c);
+  padding: 0.75rem 0 1rem;
+  border-bottom: 3px solid var(--brand-accent-yellow, #fbba00);
 }
-.hero-header__inner {
+.site-header__inner {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.hero-header__logo {
+.site-header__logo {
   display: inline-block;
   line-height: 0;
 }
-.hero-header__logo-img {
+.site-header__logo-img {
   display: block;
-  height: 60px;
+  height: 52px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
 }
 @media (min-width: 768px) {
-  .hero-header__logo-img {
-    height: 80px;
+  .site-header__logo-img {
+    height: 68px;
   }
 }
 @media (min-width: 992px) {
-  .hero-header {
-    padding: 1.25rem 0 2rem;
+  .site-header {
+    padding: 1rem 0 1.25rem;
   }
-  .hero-header__logo-img {
-    height: 100px;
+  .site-header__logo-img {
+    height: 84px;
   }
 }
 
