@@ -1,6 +1,6 @@
 # Hero Section Integration
 
-**Target:** Update the live site [call.insideraccidentlawyers.com](https://call.insideraccidentlawyers.com/) with the new hero. The live URL is not replaced; these files are applied to that site’s codebase.
+**Target:** Update the live page [call.insideraccidentlawyers.com/car-accident/](https://call.insideraccidentlawyers.com/car-accident/) with the new hero. The live URL is not replaced; these files are applied to that site’s codebase.
 
 ## 1. Add the stylesheet
 In your existing page `<head>` **on the live site**, add:

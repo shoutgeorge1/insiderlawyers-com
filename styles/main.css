@@ -4,39 +4,109 @@
    Fully responsive, maintains branding
    ============================================ */
 
-/* Site header - top of page, logo left, big and bold */
-.site-header {
-  background: var(--brand-navy, #01366c);
-  padding: 0.75rem 0 1rem;
+/* Site header - BD&J-style: left logo, middle stat, right phone */
+.header {
+  background: #fff;
   border-bottom: 3px solid var(--brand-accent-yellow, #fbba00);
+  padding: 0.75rem 0 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-.site-header__inner {
+.mid-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
 }
-.site-header__logo {
-  display: inline-block;
+.header__left {
+  flex: 0 0 auto;
+}
+.header__logo {
+  display: block;
   line-height: 0;
 }
-.site-header__logo-img {
+.header__logo-img {
   display: block;
-  height: 52px;
+  height: 48px;
   width: auto;
-  max-width: 100%;
+  max-width: 200px;
   object-fit: contain;
 }
+.header__middle {
+  flex: 1 1 auto;
+  text-align: center;
+  min-width: 0;
+}
+.header__middle__title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--brand-navy, #01366c);
+  line-height: 1.2;
+}
+.header__middle p {
+  font-size: 0.8rem;
+  color: var(--brand-gray-700, #374151);
+  margin: 0;
+  font-weight: 500;
+}
+.header__right {
+  flex: 0 0 auto;
+  text-align: right;
+}
+.header__title {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--brand-gray-700, #374151);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.header__number {
+  display: inline-block;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--brand-navy, #01366c);
+  text-decoration: none;
+  margin-top: 0.15rem;
+}
+.header__number:hover {
+  color: var(--brand-accent-yellow, #fbba00);
+}
+.header__lang {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--brand-gray-700, #374151);
+  margin-top: 0.2rem;
+}
 @media (min-width: 768px) {
-  .site-header__logo-img {
-    height: 68px;
+  .header__logo-img {
+    height: 56px;
+    max-width: 240px;
+  }
+  .header__middle__title {
+    font-size: 1.25rem;
+  }
+  .header__middle p {
+    font-size: 0.85rem;
+  }
+  .header__number {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 992px) {
-  .site-header {
+  .header {
     padding: 1rem 0 1.25rem;
   }
-  .site-header__logo-img {
-    height: 84px;
+  .header__logo-img {
+    height: 64px;
+    max-width: 271px;
+  }
+  .header__middle__title {
+    font-size: 1.4rem;
   }
 }
 
