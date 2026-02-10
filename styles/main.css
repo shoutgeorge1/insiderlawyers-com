@@ -4,6 +4,41 @@
    Fully responsive, maintains branding
    ============================================ */
 
+/* Left header - logo big and bold */
+.hero-header {
+  padding: 1rem 0 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.hero-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.hero-header__logo {
+  display: inline-block;
+  line-height: 0;
+}
+.hero-header__logo-img {
+  display: block;
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+@media (min-width: 768px) {
+  .hero-header__logo-img {
+    height: 80px;
+  }
+}
+@media (min-width: 992px) {
+  .hero-header {
+    padding: 1.25rem 0 2rem;
+  }
+  .hero-header__logo-img {
+    height: 100px;
+  }
+}
+
 /* Hero wrapper - two columns on desktop */
 .hero.hero-section .hero-content {
   display: grid;
