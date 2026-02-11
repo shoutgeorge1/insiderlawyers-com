@@ -1,8 +1,13 @@
 # PI Search – Car Accident LP (Insider Accident Lawyers)
 
-**Live page (canonical):** [https://call.insideraccidentlawyers.com/los-angeles-car-accident-lawyer/](https://call.insideraccidentlawyers.com/los-angeles-car-accident-lawyer/)
+**Canonical URL (once configured on your host):** [https://call.insideraccidentlawyers.com/los-angeles-car-accident-lawyer/](https://call.insideraccidentlawyers.com/los-angeles-car-accident-lawyer/)
 
-This repo is the **source for building off** that URL. Use the code here to enhance and update the live site (hero redesign, new sections, styles). The live domain stays **call.insideraccidentlawyers.com**; this repository is not a replacement for it.
+**Getting 404 on that URL?** That path doesn’t exist on your server yet. To get a **working URL to use right now**:
+
+1. **Deploy this repo to Vercel** (easiest): [vercel.com/new](https://vercel.com/new) → Import `shoutgeorge1/pi-search-caraccident-lp` → Deploy. You’ll get a live URL like **`https://pi-search-caraccident-lp.vercel.app`** (or your Vercel project name). Use that to work off of and share.
+2. **To make the canonical URL work** on call.insideraccidentlawyers.com: in the project that serves that domain, add a route/folder `/los-angeles-car-accident-lawyer/` and serve this repo’s `index.html` and `styles/` from there (or use a rewrite to your Vercel deployment).
+
+This repo is the **source** for the minim LP. The live domain stays **call.insideraccidentlawyers.com**; this repository is not a replacement for it.
 
 ---
 
