@@ -1,4 +1,4 @@
-# Serve the LP at https://call.insideraccidentlawyers.com/car-accident
+# Serve the LP at https://call.insideraccidentlawyers.com/los-angeles-car-accident
 
 You want the minim LP to live at that exact URL. **The root URL (https://call.insideraccidentlawyers.com/) stays as-is** — that’s your long-form version. We’re only adding a *new* path for the minim LP; nothing is replaced or removed.
 
@@ -25,9 +25,9 @@ In the **repo/project that serves call.insideraccidentlawyers.com** (the long-fo
 ```json
 {
   "rewrites": [
-    { "source": "/car-accident", "destination": "YOUR-LP-VERCEL-URL" },
-    { "source": "/car-accident/", "destination": "YOUR-LP-VERCEL-URL/" },
-    { "source": "/car-accident/:path*", "destination": "YOUR-LP-VERCEL-URL/:path*" }
+    { "source": "/los-angeles-car-accident", "destination": "YOUR-LP-VERCEL-URL" },
+    { "source": "/los-angeles-car-accident/", "destination": "YOUR-LP-VERCEL-URL/" },
+    { "source": "/los-angeles-car-accident/:path*", "destination": "YOUR-LP-VERCEL-URL/:path*" }
   ]
 }
 ```
@@ -37,9 +37,9 @@ Example if your LP URL is `https://pi-search-caraccident-lp.vercel.app`:
 ```json
 {
   "rewrites": [
-    { "source": "/car-accident", "destination": "https://pi-search-caraccident-lp.vercel.app" },
-    { "source": "/car-accident/", "destination": "https://pi-search-caraccident-lp.vercel.app/" },
-    { "source": "/car-accident/:path*", "destination": "https://pi-search-caraccident-lp.vercel.app/:path*" }
+    { "source": "/los-angeles-car-accident", "destination": "https://pi-search-caraccident-lp.vercel.app" },
+    { "source": "/los-angeles-car-accident/", "destination": "https://pi-search-caraccident-lp.vercel.app/" },
+    { "source": "/los-angeles-car-accident/:path*", "destination": "https://pi-search-caraccident-lp.vercel.app/:path*" }
   ]
 }
 ```
@@ -48,28 +48,28 @@ If that project already has a `vercel.json` with other settings, **merge** this 
 
 ### 3. Deploy the main project
 
-Commit, push, and let Vercel redeploy the project that has the domain **call.insideraccidentlawyers.com**. After deploy, **https://call.insideraccidentlawyers.com/car-accident** will serve the LP. The root **https://call.insideraccidentlawyers.com/** is unchanged and still serves your long-form site.
+Commit, push, and let Vercel redeploy the project that has the domain **call.insideraccidentlawyers.com**. After deploy, **https://call.insideraccidentlawyers.com/los-angeles-car-accident** will serve the LP. The root **https://call.insideraccidentlawyers.com/** is unchanged and still serves your long-form site.
 
 ---
 
 ## B. call.insideraccidentlawyers.com is on another host (e.g. WordPress, Duda, cPanel, etc.)
 
-You need that host to serve the LP at the path `/car-accident`.
+You need that host to serve the LP at the path `/los-angeles-car-accident`.
 
 **Option 1 – Upload files**
 
-1. Create a folder on the server: **`car-accident`** (under the same place that serves the site root).
+1. Create a folder on the server: **`los-angeles-car-accident`** (under the same place that serves the site root).
 2. Upload into that folder:
    - **index.html** (from this repo)
    - **styles** folder (with **main.css** inside)
 
-So the URL path `/car-accident/` (or `/car-accident/index.html`) is served by that folder.
+So the URL path `/los-angeles-car-accident/` (or `/los-angeles-car-accident/index.html`) is served by that folder.
 
 **Option 2 – Reverse proxy**
 
 If your host supports reverse proxy rules (e.g. Apache `ProxyPass`, Nginx `proxy_pass`), point:
 
-- **Path:** `/car-accident`
+- **Path:** `/los-angeles-car-accident`
 - **Target:** your LP’s Vercel URL (e.g. `https://pi-search-caraccident-lp.vercel.app`)
 
 Then the canonical URL will show the LP while the server fetches it from Vercel.
@@ -81,6 +81,6 @@ Then the canonical URL will show the LP while the server fetches it from Vercel.
 | Host for call.insideraccidentlawyers.com | What to do |
 |----------------------------------------|------------|
 | **Vercel** | Add the rewrites above to that project’s `vercel.json`, then redeploy. |
-| **Other** | Upload `index.html` + `styles/` into a `car-accident` folder, or set up a reverse proxy to your LP’s Vercel URL. |
+| **Other** | Upload `index.html` + `styles/` into a `los-angeles-car-accident` folder, or set up a reverse proxy to your LP’s Vercel URL. |
 
-After that, **https://call.insideraccidentlawyers.com/car-accident** is the URL for this LP.
+After that, **https://call.insideraccidentlawyers.com/los-angeles-car-accident** is the URL for this LP.
