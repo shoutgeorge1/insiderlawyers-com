@@ -81,29 +81,22 @@
   font-style: italic;
   line-height: 1.15;
   letter-spacing: 0.03em;
-  /* Static metallic sheen: highlight band + deep base, no animation */
-  background: linear-gradient(115deg,
-    #0a2d52 0%,
-    #1e4a7a 18%,
-    #7eb8e8 28%,
-    #b0dcf8 32%,
-    #3d7ab5 38%,
-    #0d3d6a 50%,
-    #134272 65%,
-    #5aa0d8 78%,
-    #8ec4f0 82%,
-    #1a5a8e 92%,
-    #0f3a62 100%);
+  /* Even metallic sheen: one consistent tone, subtle sparkle across the whole line */
+  background: linear-gradient(105deg,
+    #0d3d6a 0%,
+    #1a4e7e 25%,
+    #2d6ba5 50%,
+    #1a4e7e 75%,
+    #0d3d6a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: header-title-zoom 0.65s ease-out forwards;
-  /* Metallic sparkle: crisp highlight + soft silver-blue sheen */
-  filter: drop-shadow(0 0 1px rgba(255,255,255,0.95))
-    drop-shadow(0 0 3px rgba(255,255,255,0.4))
-    drop-shadow(0 0 8px rgba(190,220,255,0.35))
-    drop-shadow(0 1px 2px rgba(0,30,70,0.35))
-    drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+  /* Even sparkle: thin highlight edge + soft sheen, no patchy bands */
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0.8))
+    drop-shadow(0 0 4px rgba(200,225,255,0.25))
+    drop-shadow(0 1px 3px rgba(0,25,60,0.3))
+    drop-shadow(0 2px 6px rgba(0,0,0,0.18));
 }
 /* Subtle sheen under title */
 .header__middle__title::after {
