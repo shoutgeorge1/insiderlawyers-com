@@ -70,11 +70,6 @@
     transform: scale(1) translateY(0);
   }
 }
-/* Shimmer: starts left, glides right super fast */
-@keyframes header-title-shimmer {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
 .header__middle {
   position: relative;
 }
@@ -86,33 +81,31 @@
   font-style: italic;
   line-height: 1.15;
   letter-spacing: 0.03em;
-  /* Bright band at LEFT (0–20%), then dark. Right half all dark. Shimmer starts left, glides right. */
+  /* Static metallic sheen: highlight band + deep base, no animation */
   background: linear-gradient(115deg,
-    #8ec4f0 0%,
-    #a8d4f5 6%,
-    #5aa0d8 14%,
-    #1e4a7a 22%,
-    #0d3d6a 35%,
+    #0a2d52 0%,
+    #1e4a7a 18%,
+    #7eb8e8 28%,
+    #b0dcf8 32%,
+    #3d7ab5 38%,
     #0d3d6a 50%,
-    #0d3d6a 50%,
-    #134272 70%,
-    #082540 88%,
+    #134272 65%,
+    #5aa0d8 78%,
+    #8ec4f0 82%,
+    #1a5a8e 92%,
     #0f3a62 100%);
-  background-size: 200% 100%;
-  background-position: 0% 50%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: header-title-zoom 0.65s ease-out forwards,
-    header-title-shimmer 0.5s ease-out 0.7s 1 forwards;
-  /* Crisp metallic edge + soft silver-blue shimmer, classy depth */
+  animation: header-title-zoom 0.65s ease-out forwards;
+  /* Metallic sparkle: crisp highlight + soft silver-blue sheen */
   filter: drop-shadow(0 0 1px rgba(255,255,255,0.95))
-    drop-shadow(0 0 2px rgba(255,255,255,0.5))
-    drop-shadow(0 0 6px rgba(180,220,255,0.35))
-    drop-shadow(0 1px 2px rgba(0,30,70,0.4))
+    drop-shadow(0 0 3px rgba(255,255,255,0.4))
+    drop-shadow(0 0 8px rgba(190,220,255,0.35))
+    drop-shadow(0 1px 2px rgba(0,30,70,0.35))
     drop-shadow(0 2px 6px rgba(0,0,0,0.2));
 }
-/* Very subtle warm glow under title (classy) */
+/* Subtle sheen under title */
 .header__middle__title::after {
   content: '';
   position: absolute;
