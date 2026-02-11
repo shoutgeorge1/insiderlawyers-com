@@ -452,7 +452,7 @@
   text-align: center;
 }
 .section-title.tail {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: clamp(2.3rem, 4.75vw, 3.4rem);
   font-weight: 800;
   color: var(--brand-navy, #01366c);
   line-height: 1.25;
@@ -464,8 +464,8 @@
 .section-title.tail .tail__before,
 .section-title.tail .tail__after {
   display: inline-block;
-  width: 32px;
-  height: 3px;
+  width: 44px;
+  height: 4px;
   background: var(--brand-accent-yellow, #fbba00);
   vertical-align: middle;
   margin: 0 0.4rem;
