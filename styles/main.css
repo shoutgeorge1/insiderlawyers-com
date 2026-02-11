@@ -104,7 +104,7 @@
   background-clip: text;
   color: transparent;
   animation: header-title-zoom 0.65s ease-out forwards,
-    header-title-shimmer 6s ease-in-out 1s infinite;
+    header-title-shimmer 5s ease-in-out 1.2s 3 forwards;
   /* Crisp metallic edge + soft silver-blue shimmer, classy depth */
   filter: drop-shadow(0 0 1px rgba(255,255,255,0.95))
     drop-shadow(0 0 2px rgba(255,255,255,0.5))
