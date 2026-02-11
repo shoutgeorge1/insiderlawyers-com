@@ -70,10 +70,10 @@
     transform: scale(1) translateY(0);
   }
 }
-/* Classy subtle shimmer on the metallic sheen */
+/* One subtle left-to-right shimmer pass (a hint) */
 @keyframes header-title-shimmer {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 .header__middle {
   position: relative;
@@ -104,7 +104,7 @@
   background-clip: text;
   color: transparent;
   animation: header-title-zoom 0.65s ease-out forwards,
-    header-title-shimmer 5s ease-in-out 1.2s 3 forwards;
+    header-title-shimmer 2.2s ease-in-out 0.8s 1 forwards;
   /* Crisp metallic edge + soft silver-blue shimmer, classy depth */
   filter: drop-shadow(0 0 1px rgba(255,255,255,0.95))
     drop-shadow(0 0 2px rgba(255,255,255,0.5))
