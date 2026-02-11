@@ -273,7 +273,7 @@
 }
 
 .hero.hero-section .hero-form-card .form__title {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(1.65rem, 2.75vw, 2.2rem);
   font-weight: 800;
   color: var(--brand-navy, #01366c);
   line-height: 1.1;
@@ -282,7 +282,7 @@
 }
 
 .hero.hero-section .hero-form-card .form__subtitle {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--brand-gray-700, #374151);
   margin-top: 0.5rem;
   font-weight: 500;
@@ -295,7 +295,7 @@
 
 .hero.hero-section .hero-form-card .form-label {
   display: block;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--brand-navy, #01366c);
   margin-bottom: 0.5rem;
@@ -309,7 +309,7 @@
   padding: 0.875rem 1rem;
   border: 2px solid rgba(1, 54, 108, 0.25);
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.0625rem;
   background: #f9fbff;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -331,7 +331,7 @@
   width: 100%;
   margin-top: 0.5rem;
   padding: 1rem 1.5rem;
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   font-weight: 800;
   border-radius: 8px;
 }
