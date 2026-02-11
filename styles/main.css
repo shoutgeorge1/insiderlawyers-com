@@ -45,8 +45,13 @@
   min-width: 140px;
   object-fit: contain;
   min-height: 48px;
-  /* Same as main site: make logo visible on white header (logo asset is light) */
-  filter: brightness(0);
+  /* Bold + shiny metallic: dark base with highlight and depth */
+  filter: brightness(0) contrast(1.25)
+    drop-shadow(0 0 1px rgba(255,255,255,0.9))
+    drop-shadow(0 0 2px rgba(255,255,255,0.5))
+    drop-shadow(1px 1px 0 rgba(255,255,255,0.35))
+    drop-shadow(-1px -1px 1px rgba(0,0,0,0.2))
+    drop-shadow(0 2px 6px rgba(0,0,0,0.35));
 }
 /* Explicit dark colors so header text is never white/faint */
 .header__middle {
