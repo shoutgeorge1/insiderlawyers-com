@@ -59,7 +59,7 @@
   text-align: center;
   min-width: 0;
 }
-/* Metallic blue sheen, big bold italic, zoom-in + smoke/fire vibe */
+/* Metallic blue sheen, big bold italic, zoom-in */
 @keyframes header-title-zoom {
   from {
     opacity: 0.5;
@@ -69,6 +69,11 @@
     opacity: 1;
     transform: scale(1) translateY(0);
   }
+}
+/* Classy subtle shimmer on the metallic sheen */
+@keyframes header-title-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 .header__middle {
   position: relative;
@@ -81,39 +86,46 @@
   font-style: italic;
   line-height: 1.15;
   letter-spacing: 0.03em;
-  background: linear-gradient(165deg,
-    #8ec4f0 0%,
-    #4a9fd9 18%,
-    #0d3d6a 42%,
-    #1a5a8e 65%,
-    #5aa8e8 85%,
-    #7ebef5 100%);
+  /* Metallic sheet: sharp highlight band + deep base + soft secondary highlight */
+  background: linear-gradient(115deg,
+    #0a2d52 0%,
+    #1e4a7a 12%,
+    #7eb8e8 22%,
+    #a8d4f5 26%,
+    #2d6ba5 32%,
+    #0d3d6a 48%,
+    #134272 55%,
+    #5aa0d8 68%,
+    #8ec4f0 72%,
+    #1a5a8e 82%,
+    #0f3a62 100%);
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /* Metallic edge highlight + depth + blue glow */
-  filter: drop-shadow(0 0 1px rgba(255,255,255,0.75))
-    drop-shadow(0 0 4px rgba(100,180,255,0.5))
-    drop-shadow(0 2px 4px rgba(0,40,90,0.55))
-    drop-shadow(0 3px 10px rgba(0,0,0,0.3));
-  animation: header-title-zoom 0.65s ease-out forwards;
+  animation: header-title-zoom 0.65s ease-out forwards,
+    header-title-shimmer 6s ease-in-out 1s infinite;
+  /* Crisp metallic edge + soft silver-blue shimmer, classy depth */
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0.95))
+    drop-shadow(0 0 2px rgba(255,255,255,0.5))
+    drop-shadow(0 0 6px rgba(180,220,255,0.35))
+    drop-shadow(0 1px 2px rgba(0,30,70,0.4))
+    drop-shadow(0 2px 6px rgba(0,0,0,0.2));
 }
-/* Fire/smoke puff under the title */
+/* Very subtle warm glow under title (classy) */
 .header__middle__title::after {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: -6px;
-  width: 90%;
-  height: 14px;
+  bottom: -4px;
+  width: 85%;
+  height: 8px;
   transform: translateX(-50%);
   background: radial-gradient(ellipse at center,
-    rgba(255,140,60,0.2) 0%,
-    rgba(255,80,20,0.1) 25%,
-    rgba(80,40,20,0.06) 50%,
-    transparent 70%);
+    rgba(200,220,255,0.12) 0%,
+    transparent 65%);
   pointer-events: none;
-  filter: blur(8px);
+  filter: blur(6px);
 }
 .header__middle p {
   font-size: 0.8rem;
