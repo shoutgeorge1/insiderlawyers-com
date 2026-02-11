@@ -126,14 +126,7 @@
 .header__right {
   flex: 0 0 auto;
   text-align: right;
-  background: linear-gradient(135deg, #e85d04 0%, #dc2f02 100%);
-  padding: 0.75rem 1.25rem;
-  border-radius: 8px;
 }
-.header__right .header__title { color: #fff !important; }
-.header__right .header__number { color: #fff !important; }
-.header__right .header__number:hover { color: #ffd166; }
-.header__right .header__lang { color: rgba(255,255,255,0.95) !important; }
 .header__title {
   display: block;
   font-size: 0.85rem;
@@ -226,8 +219,8 @@
 /* Desktop: content left (1fr), form right (fixed width, sticky) */
 @media (min-width: 992px) {
   .hero.hero-section .hero-content {
-    grid-template-columns: 1.5fr 400px;
-    gap: 2.5rem;
+    grid-template-columns: 1fr 420px;
+    gap: 3rem;
     align-items: start;
     padding: 2rem 0 4rem;
   }
@@ -249,11 +242,11 @@
 }
 
 .hero.hero-section .hero-form-card {
-  background: rgba(248, 249, 250, 0.95);
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 3px solid #fff;
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(1, 54, 108, 0.08);
 }
 
 .hero.hero-section .hero-form-card .form__header {
@@ -264,13 +257,12 @@
 }
 
 .hero.hero-section .hero-form-card .form__title {
-  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 800;
   color: var(--brand-navy, #01366c);
   line-height: 1.1;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
   margin: 0;
-  text-transform: uppercase;
 }
 
 .hero.hero-section .hero-form-card .form__subtitle {
