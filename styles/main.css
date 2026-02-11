@@ -127,14 +127,14 @@
   flex: 0 0 auto;
   text-align: right;
   background: linear-gradient(135deg, #01366c 0%, #01468a 100%);
-  padding: 0.6rem 1.25rem;
-  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(1, 54, 108, 0.3);
 }
-.header__right .header__title { color: #fff !important; }
-.header__right .header__number { color: #fff !important; }
+.header__right .header__title { color: #fff !important; font-size: 1rem; }
+.header__right .header__number { color: #fff !important; font-size: 2rem; }
 .header__right .header__number:hover { color: #ffd166; }
-.header__right .header__lang { color: rgba(255,255,255,0.95) !important; }
+.header__right .header__lang { color: rgba(255,255,255,0.95) !important; font-size: 1.05rem; }
 .header__title {
   display: block;
   font-size: 0.85rem;
@@ -181,12 +181,16 @@
     font-size: 2.1rem;
     line-height: 1;
   }
+  .header__right .header__number { font-size: 2.3rem; }
   .header__title {
     font-size: 1rem;
   }
+  .header__right .header__title { font-size: 1.1rem; }
   .header__lang {
     font-size: 1rem;
   }
+  .header__right .header__lang { font-size: 1.1rem; }
+  .header__right { padding: 1rem 1.75rem; }
 }
 @media (min-width: 992px) {
   .header .mid-container {
@@ -207,12 +211,16 @@
     font-size: 2.5rem;
     line-height: 1;
   }
+  .header__right .header__number { font-size: 2.6rem; }
   .header__title {
     font-size: 1.1rem;
   }
+  .header__right .header__title { font-size: 1.2rem; }
   .header__lang {
     font-size: 1.1rem;
   }
+  .header__right .header__lang { font-size: 1.2rem; }
+  .header__right { padding: 1.1rem 2rem; }
 }
 
 /* Hero wrapper - two columns on desktop */
