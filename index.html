@@ -55,8 +55,59 @@
     .hero-yelp-badge-wrap { display: inline-flex; padding: 6px 8px; border-radius: 10px; background: rgba(255,255,255,0.1); }
     .hero-yelp-badge-wrap img { height: 36px; width: auto; }
   </style>
+  <!-- Google Tag Manager (same as main site call.insideraccidentlawyers.com) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WS8XT5FC');</script>
+  <!-- End Google Tag Manager -->
+  <!-- GTM Tracking Events: phone_click, form_start, form_submit, engaged_30s, scroll_90 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    document.addEventListener('DOMContentLoaded', function() {
+      var phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+      phoneLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({ 'event': 'phone_click', 'phone_number': this.getAttribute('href').replace('tel:', '') });
+          }
+        });
+      });
+      var form = document.getElementById('case-evaluation-form');
+      if (form) {
+        var formStarted = false;
+        form.querySelectorAll('input, select, textarea').forEach(function(field) {
+          field.addEventListener('focus', function() {
+            if (!formStarted && typeof dataLayer !== 'undefined') {
+              formStarted = true;
+              dataLayer.push({ 'event': 'form_start', 'form_name': 'case_evaluation' });
+            }
+          }, { once: true });
+        });
+        form.addEventListener('submit', function() {
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({ event: 'form_submit', form_name: 'case_evaluation' });
+          }
+        });
+      }
+      setTimeout(function() {
+        if (typeof dataLayer !== 'undefined') dataLayer.push({ 'event': 'engaged_30s' });
+      }, 30000);
+      var scroll90Fired = false;
+      window.addEventListener('scroll', function() {
+        if (!scroll90Fired && (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight >= 0.90) {
+          scroll90Fired = true;
+          if (typeof dataLayer !== 'undefined') dataLayer.push({ 'event': 'scroll_90' });
+        }
+      });
+    });
+  </script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8XT5FC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="header" id="header">
     <div class="mid-container">
       <div class="header__left">
@@ -70,7 +121,7 @@
       </div>
       <div class="header__right">
         <span class="header__title">Available 24/7 - Call Now:</span>
-        <a class="link header__number" href="tel:844-467-4335">844-467-4335</a>
+        <a class="link header__number" href="tel:844-467-4335" data-callrail-phone="844-467-4335">844-467-4335</a>
         <span class="header__lang">Hablamos Español</span>
       </div>
     </div>
