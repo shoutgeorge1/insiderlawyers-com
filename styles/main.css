@@ -59,11 +59,6 @@
   text-align: center;
   min-width: 0;
 }
-/* Phone number pulse - white beacon */
-@keyframes phone-beacon-pulse {
-  0%, 100% { text-shadow: 0 0 8px rgba(255,255,255,0.8), 0 0 16px rgba(255,255,255,0.5), 0 0 24px rgba(255,255,255,0.3); }
-  50% { text-shadow: 0 0 14px rgba(255,255,255,0.95), 0 0 28px rgba(255,255,255,0.6), 0 0 40px rgba(255,255,255,0.4); }
-}
 /* Metallic blue sheen, big bold italic, zoom-in */
 @keyframes header-title-zoom {
   from {
@@ -136,19 +131,10 @@
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(1, 54, 108, 0.3);
 }
-.header__right .header__title { color: #fff !important; font-size: 1rem; }
-.header__right .header__number {
-  color: #fff !important;
-  font-size: 2rem;
-  animation: phone-beacon-pulse 2.5s ease-in-out infinite;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-.header__right .header__number:hover {
-  color: #ffd700 !important;
-  animation: none;
-  text-shadow: 0 0 12px rgba(255,215,0,0.9), 0 0 24px rgba(255,215,0,0.6), 0 0 36px rgba(255,251,0,0.4);
-}
-.header__right .header__lang { color: rgba(255,255,255,0.95) !important; font-size: 1.05rem; }
+.header__right .header__title { color: #fff !important; font-size: 0.95rem; }
+.header__right .header__number { color: #fff !important; font-size: 2.2rem; }
+.header__right .header__number:hover { color: #ffd166; }
+.header__right .header__lang { color: rgba(255,255,255,0.95) !important; font-size: 0.95rem; }
 .header__title {
   display: block;
   font-size: 0.85rem;
@@ -195,15 +181,15 @@
     font-size: 2.1rem;
     line-height: 1;
   }
-  .header__right .header__number { font-size: 2.3rem; }
+  .header__right .header__number { font-size: 2.5rem; }
   .header__title {
     font-size: 1rem;
   }
-  .header__right .header__title { font-size: 1.1rem; }
+  .header__right .header__title { font-size: 1rem; }
   .header__lang {
     font-size: 1rem;
   }
-  .header__right .header__lang { font-size: 1.1rem; }
+  .header__right .header__lang { font-size: 1rem; }
   .header__right { padding: 1rem 1.75rem; }
 }
 @media (min-width: 992px) {
@@ -225,15 +211,15 @@
     font-size: 2.5rem;
     line-height: 1;
   }
-  .header__right .header__number { font-size: 2.6rem; }
+  .header__right .header__number { font-size: 2.75rem; }
   .header__title {
     font-size: 1.1rem;
   }
-  .header__right .header__title { font-size: 1.2rem; }
+  .header__right .header__title { font-size: 1.05rem; }
   .header__lang {
     font-size: 1.1rem;
   }
-  .header__right .header__lang { font-size: 1.2rem; }
+  .header__right .header__lang { font-size: 1.05rem; }
   .header__right { padding: 1.1rem 2rem; }
 }
 
