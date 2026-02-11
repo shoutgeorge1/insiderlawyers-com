@@ -398,6 +398,10 @@
   font-weight: 700;
 }
 
+.hero.hero-section .hero__benefits--large li {
+  font-size: 1.35rem;
+}
+
 /* Section divider / ornamental line (BD&J-style) */
 .hero.hero-section .hero-divider {
   display: flex;
