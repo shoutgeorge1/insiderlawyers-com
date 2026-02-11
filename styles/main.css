@@ -126,7 +126,15 @@
 .header__right {
   flex: 0 0 auto;
   text-align: right;
+  background: linear-gradient(135deg, #01366c 0%, #01468a 100%);
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(1, 54, 108, 0.3);
 }
+.header__right .header__title { color: #fff !important; }
+.header__right .header__number { color: #fff !important; }
+.header__right .header__number:hover { color: #ffd166; }
+.header__right .header__lang { color: rgba(255,255,255,0.95) !important; }
 .header__title {
   display: block;
   font-size: 0.85rem;
