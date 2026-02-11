@@ -32,13 +32,21 @@
   display: block;
   line-height: 0;
 }
+.header__logo a {
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+}
 .header__logo-img {
   display: block;
   height: 56px;
   width: auto;
   max-width: 260px;
+  min-width: 140px;
   object-fit: contain;
   min-height: 48px;
+  /* Same as main site: make logo visible on white header (logo asset is light) */
+  filter: brightness(0);
 }
 /* Explicit dark colors so header text is never white/faint */
 .header__middle {
