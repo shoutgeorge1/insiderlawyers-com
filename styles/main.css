@@ -16,9 +16,9 @@
 }
 .header .mid-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -212,7 +212,7 @@
   display: grid;
   gap: 2rem;
   align-items: start;
-  max-width: 1280px;
+  max-width: 1360px;
   margin: 0 auto;
 }
 
