@@ -522,3 +522,25 @@
     height: 100px;
   }
 }
+
+.team-photo-section {
+  margin-top: 2.5rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #f0f6fc 0%, #e8f0f8 50%, #e0ebf4 100%);
+  border-radius: 12px;
+  text-align: center;
+}
+.team-photo {
+  display: block;
+  max-width: min(880px, 100%);
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(1, 54, 108, 0.08);
+}
+@media (max-width: 600px) {
+  .team-photo-section {
+    padding: 2rem 1rem;
+  }
+}
