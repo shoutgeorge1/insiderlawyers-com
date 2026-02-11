@@ -4,14 +4,14 @@
    Fully responsive, maintains branding
    ============================================ */
 
-/* Site header - BD&J-style: left logo, middle stat, right phone */
+/* Site header - BD&J-style: left logo, middle stat, right phone. Force contrast so header never looks faint. */
 .header {
-  background: #fff;
-  border-bottom: 3px solid var(--brand-accent-yellow, #fbba00);
+  background: #fff !important;
+  border-bottom: 3px solid #fbba00;
   padding: 0.75rem 0 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-.mid-container {
+.header .mid-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -35,7 +35,9 @@
   width: auto;
   max-width: 200px;
   object-fit: contain;
+  min-height: 40px;
 }
+/* Explicit dark colors so header text is never white/faint */
 .header__middle {
   flex: 1 1 auto;
   text-align: center;
@@ -44,12 +46,12 @@
 .header__middle__title {
   font-size: 1.1rem;
   font-weight: 800;
-  color: var(--brand-navy, #01366c);
+  color: #01366c !important;
   line-height: 1.2;
 }
 .header__middle p {
   font-size: 0.8rem;
-  color: var(--brand-gray-700, #374151);
+  color: #374151 !important;
   margin: 0;
   font-weight: 500;
 }
@@ -61,7 +63,7 @@
   display: block;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--brand-gray-700, #374151);
+  color: #374151 !important;
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
@@ -69,17 +71,17 @@
   display: inline-block;
   font-size: 1.35rem;
   font-weight: 800;
-  color: var(--brand-navy, #01366c);
+  color: #01366c !important;
   text-decoration: none;
   margin-top: 0.15rem;
 }
 .header__number:hover {
-  color: var(--brand-accent-yellow, #fbba00);
+  color: #c99400;
 }
 .header__lang {
   display: block;
   font-size: 0.8rem;
-  color: var(--brand-gray-700, #374151);
+  color: #374151 !important;
   margin-top: 0.2rem;
 }
 @media (min-width: 768px) {
