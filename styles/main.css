@@ -81,37 +81,41 @@
   font-style: italic;
   line-height: 1.15;
   letter-spacing: 0.03em;
-  /* Even metallic sheen: one consistent tone, subtle sparkle across the whole line */
+  /* Metallic chrome sheen: strong highlight band + dark edges */
   background: linear-gradient(105deg,
-    #0d3d6a 0%,
-    #1a4e7e 25%,
-    #2d6ba5 50%,
-    #1a4e7e 75%,
-    #0d3d6a 100%);
+    #0a2d4a 0%,
+    #1a4a70 18%,
+    #3d7ab5 35%,
+    #7eb5e8 50%,
+    #3d7ab5 65%,
+    #1a4a70 82%,
+    #0a2d4a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: header-title-zoom 0.65s ease-out forwards;
-  /* Even sparkle: thin highlight edge + soft sheen, no patchy bands */
-  filter: drop-shadow(0 0 1px rgba(255,255,255,0.8))
-    drop-shadow(0 0 4px rgba(200,225,255,0.25))
-    drop-shadow(0 1px 3px rgba(0,25,60,0.3))
-    drop-shadow(0 2px 6px rgba(0,0,0,0.18));
+  /* Polished metal: crisp highlight edge + reflective sheen */
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0.95))
+    drop-shadow(0 0 3px rgba(255,255,255,0.4))
+    drop-shadow(0 0 8px rgba(180,215,255,0.35))
+    drop-shadow(0 1px 2px rgba(0,30,70,0.4))
+    drop-shadow(0 2px 8px rgba(0,0,0,0.2));
 }
-/* Subtle sheen under title */
+/* Metallic reflection sheen under title */
 .header__middle__title::after {
   content: '';
   position: absolute;
   left: 50%;
   bottom: -4px;
-  width: 85%;
-  height: 8px;
+  width: 90%;
+  height: 10px;
   transform: translateX(-50%);
   background: radial-gradient(ellipse at center,
-    rgba(200,220,255,0.12) 0%,
-    transparent 65%);
+    rgba(255,255,255,0.2) 0%,
+    rgba(180,220,255,0.12) 30%,
+    transparent 70%);
   pointer-events: none;
-  filter: blur(6px);
+  filter: blur(8px);
 }
 .header__middle p {
   font-size: 0.8rem;
