@@ -588,22 +588,14 @@
 }
 .block.highlights .highlights__icon {
   margin-bottom: 1rem;
+}
+.block.highlights .highlights__icon img {
   width: 168px;
   height: 168px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url('https://pi-search-caraccident-lp.vercel.app/images/highlights-icons-sprite.png');
-  background-size: 400% 200%;
-  background-repeat: no-repeat;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
-.block.highlights .highlights__icon--1 { background-position: 0% 0%; }
-.block.highlights .highlights__icon--2 { background-position: 33.333% 0%; }
-.block.highlights .highlights__icon--3 { background-position: 66.666% 0%; }
-.block.highlights .highlights__icon--4 { background-position: 100% 0%; }
-.block.highlights .highlights__icon--5 { background-position: 0% 50%; }
-.block.highlights .highlights__icon--6 { background-position: 33.333% 50%; }
-.block.highlights .highlights__icon--7 { background-position: 66.666% 50%; }
-.block.highlights .highlights__icon--8 { background-position: 100% 50%; }
 .block.highlights .highlights__disc {
   font-size: 1rem;
   font-weight: 700;
@@ -643,7 +635,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-  .block.highlights .highlights__icon {
+  .block.highlights .highlights__icon img {
     width: 120px;
     height: 120px;
   }
