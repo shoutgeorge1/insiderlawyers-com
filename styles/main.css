@@ -34,11 +34,11 @@
 }
 .header__logo-img {
   display: block;
-  height: 48px;
+  height: 56px;
   width: auto;
-  max-width: 200px;
+  max-width: 260px;
   object-fit: contain;
-  min-height: 40px;
+  min-height: 48px;
 }
 /* Explicit dark colors so header text is never white/faint */
 .header__middle {
@@ -89,8 +89,8 @@
 }
 @media (min-width: 768px) {
   .header__logo-img {
-    height: 56px;
-    max-width: 240px;
+    height: 72px;
+    max-width: 320px;
   }
   .header__middle__title {
     font-size: 1.25rem;
@@ -107,8 +107,8 @@
     padding: 1rem 0 1.25rem;
   }
   .header__logo-img {
-    height: 64px;
-    max-width: 271px;
+    height: 88px;
+    max-width: 360px;
   }
   .header__middle__title {
     font-size: 1.4rem;
