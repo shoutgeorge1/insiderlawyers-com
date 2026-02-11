@@ -86,25 +86,24 @@
   font-style: italic;
   line-height: 1.15;
   letter-spacing: 0.03em;
-  /* Metallic sheet: sharp highlight band + deep base + soft secondary highlight */
+  /* Left half: shimmer band. Right half: darker (where we land). */
   background: linear-gradient(115deg,
     #0a2d52 0%,
-    #1e4a7a 12%,
+    #1e4a7a 14%,
     #7eb8e8 22%,
     #a8d4f5 26%,
-    #2d6ba5 32%,
-    #0d3d6a 48%,
-    #134272 55%,
-    #5aa0d8 68%,
-    #8ec4f0 72%,
-    #1a5a8e 82%,
+    #2d6ba5 34%,
+    #0d3d6a 50%,
+    #0d3d6a 50%,
+    #134272 68%,
+    #082540 85%,
     #0f3a62 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: header-title-zoom 0.65s ease-out forwards,
-    header-title-shimmer 2.2s ease-in-out 0.8s 1 forwards;
+    header-title-shimmer 1s ease-out 0.6s 1 forwards;
   /* Crisp metallic edge + soft silver-blue shimmer, classy depth */
   filter: drop-shadow(0 0 1px rgba(255,255,255,0.95))
     drop-shadow(0 0 2px rgba(255,255,255,0.5))
