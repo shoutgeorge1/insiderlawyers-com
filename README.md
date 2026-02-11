@@ -1,11 +1,12 @@
 # PI Search – Car Accident LP (Insider Accident Lawyers)
 
-**Canonical URL (once configured on your host):** [https://call.insideraccidentlawyers.com/los-angeles-car-accident-lawyer/](https://call.insideraccidentlawyers.com/los-angeles-car-accident-lawyer/)
+**Canonical URL for this minim LP (once configured):** [https://call.insideraccidentlawyers.com/los-angeles-car-accident-lawyer/](https://call.insideraccidentlawyers.com/los-angeles-car-accident-lawyer/)  
+The root **https://call.insideraccidentlawyers.com/** is the long-form site and is not changed or replaced.
 
 **Getting 404 on that URL?** That path doesn’t exist on your server yet. To get a **working URL to use right now**:
 
 1. **Deploy this repo to Vercel** (easiest): [vercel.com/new](https://vercel.com/new) → Import `shoutgeorge1/pi-search-caraccident-lp` → Deploy. You’ll get a live URL like **`https://pi-search-caraccident-lp.vercel.app`** (or your Vercel project name). Use that to work off of and share.
-2. **To make the canonical URL work** on call.insideraccidentlawyers.com: in the project that serves that domain, add a route/folder `/los-angeles-car-accident-lawyer/` and serve this repo’s `index.html` and `styles/` from there (or use a rewrite to your Vercel deployment).
+2. **To make the canonical URL work** at **https://call.insideraccidentlawyers.com/los-angeles-car-accident-lawyer**: see **[SERVE-AT-CANONICAL-URL.md](SERVE-AT-CANONICAL-URL.md)** (rewrite on Vercel or upload/proxy on other hosts).
 
 This repo is the **source** for the minim LP. The live domain stays **call.insideraccidentlawyers.com**; this repository is not a replacement for it.
 
