@@ -544,3 +544,102 @@
     padding: 2rem 1rem;
   }
 }
+
+/* Highlights block - How Insider Helps */
+.block.highlights {
+  padding: 4rem 0;
+  background: #fff;
+}
+.block.highlights .mid-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.block.highlights .head-group {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.block.highlights .highlights__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--brand-navy, #01366c);
+  line-height: 1.25;
+  margin: 0;
+  display: inline-block;
+}
+.block.highlights .highlights__title .tail__before,
+.block.highlights .highlights__title .tail__after {
+  display: inline-block;
+  width: 44px;
+  height: 4px;
+  background: var(--brand-accent-yellow, #fbba00);
+  vertical-align: middle;
+  margin: 0 0.4rem;
+}
+.block.highlights .items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.block.highlights .item {
+  text-align: center;
+}
+.block.highlights .highlights__icon {
+  margin-bottom: 1rem;
+}
+.block.highlights .highlights__icon img {
+  width: 168px;
+  height: 168px;
+  object-fit: contain;
+}
+.block.highlights .highlights__disc {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brand-navy, #01366c);
+  line-height: 1.3;
+}
+.block.highlights .btn-set {
+  text-align: center;
+}
+.block.highlights .btn {
+  display: inline-block;
+  background: #ffbf00;
+  color: #01366c;
+  font-weight: 800;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 0 #cc9900;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.block.highlights .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #cc9900;
+}
+.block.highlights .btn--lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.15rem;
+}
+@media (max-width: 992px) {
+  .block.highlights .items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .block.highlights .items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .block.highlights .highlights__icon img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 500px) {
+  .block.highlights .items {
+    grid-template-columns: 1fr;
+  }
+}
