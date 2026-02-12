@@ -119,11 +119,6 @@
           if (phoneInput) {
             phoneInput.value = phoneInput.value.replace(/\D/g, '');
           }
-          var replyTo = document.getElementById('form-replyto');
-          var emailInput = form.querySelector('input[name="email"]');
-          if (replyTo && emailInput) {
-            replyTo.value = emailInput.value;
-          }
           var formNext = document.getElementById('form-next-url');
           if (formNext && !formNext.value) {
             var path = (location.pathname || '/').replace(/\/index\.html?$/i, '').replace(/\/?$/, '') || '';
@@ -248,11 +243,9 @@
             </div>
             <form action="https://formsubmit.co/ial.leads.2024@gmail.com" method="POST" id="case-evaluation-form">
               <input type="hidden" name="_subject" value="New Car Accident Lead">
-              <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_autoresponse" value="We received your request. We'll contact you shortly.">
-              <input type="hidden" name="_next" value="https://pi-search-caraccident-lp.vercel.app/thank-you" id="form-next-url">
-              <input type="hidden" name="_replyto" value="" id="form-replyto">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="" id="form-next-url">
               <div class="form-group">
                 <label class="form-label" for="hero-fullname">Full Name *</label>
                 <input type="text" id="hero-fullname" class="form-input" name="full_name" placeholder="Your Full Name" required>
