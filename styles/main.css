@@ -357,8 +357,8 @@
 }
 
 /* Form scroll target - title + form visible (all viewports) */
-#free-case-review-form {
-  scroll-margin-top: 1rem;
+#get-your-free-case-review {
+  scroll-margin-top: 1.5rem;
   scroll-margin-bottom: 6rem;
 }
 
