@@ -4,21 +4,15 @@
    Fully responsive, maintains branding
    ============================================ */
 
-/* Site header - 3-row centered: logo, tagline, phone. Scroll-hide on scroll down. */
+/* Site header - DESKTOP: left logo, middle stat, right phone (horizontal) */
 .header {
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafd 50%, #f0f6fc 100%) !important;
-  border-bottom: 4px solid #fbba00;
-  padding: 0.75rem 0 1rem;
-  box-shadow: 0 4px 20px rgba(1, 54, 108, 0.08), 0 0 0 1px rgba(1, 54, 108, 0.04) inset;
+  background: #fff !important;
+  border-bottom: 3px solid #fbba00;
+  padding: 0.5rem 0 0.65rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
-}
-.header.header--hidden {
-  transform: translateY(-100%);
-  opacity: 0;
-  pointer-events: none;
 }
 .header .mid-container {
   width: 100%;
@@ -26,11 +20,10 @@
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0.5rem;
-  text-align: center;
 }
 .header__left {
   flex: 0 0 auto;
@@ -46,214 +39,180 @@
 }
 .header__logo-img {
   display: block;
-  height: 90px;
+  height: 58px;
   width: auto;
-  max-width: 300px;
-  min-width: 200px;
+  max-width: 180px;
+  min-width: 120px;
   object-fit: contain;
-  min-height: 64px;
-  filter: brightness(0) contrast(1.3)
-    drop-shadow(0 2px 6px rgba(0,0,0,0.3))
-    drop-shadow(0 1px 0 rgba(255,255,255,0.1));
+  min-height: 46px;
+  filter: brightness(0) contrast(1.25) drop-shadow(0 2px 6px rgba(0,0,0,0.35));
 }
 .header__middle {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   text-align: center;
+  min-width: 0;
 }
-/* Tagline - navy with polish */
 .header__middle__title {
-  display: block;
-  font-size: 1.45rem;
+  display: inline-block;
+  font-size: 1.1rem;
   font-weight: 900;
   font-style: italic;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
   color: #01366c !important;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.08),
-               0 0 1px rgba(255,255,255,0.8);
+  background: none;
 }
 .header__middle__title a {
-  background: linear-gradient(135deg, #012a50 0%, #01366c 50%, #01468a 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent !important;
-}
-.header__middle__title::after {
-  display: none;
+  color: inherit;
 }
 .header__middle p {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #374151 !important;
-  margin: 0.15rem 0 0 0;
+  margin: 0;
   font-weight: 500;
 }
 .header__right {
   flex: 0 0 auto;
-  text-align: center;
-  width: 100%;
-  max-width: 400px;
+  text-align: right;
 }
 .header__right .header__number {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
-  gap: 0.25rem;
-  width: 100%;
-  padding: 1rem 1.5rem;
-  background: linear-gradient(145deg, #012a50 0%, #01366c 35%, #01468a 70%, #01508f 100%);
+  gap: 0.5rem;
+  padding: 0.9rem 1.5rem;
+  background: linear-gradient(135deg, #01366c 0%, #01468a 100%);
   color: #fff !important;
   text-decoration: none;
-  border-radius: 12px;
-  box-shadow: 0 4px 0 rgba(0, 30, 60, 0.4),
-              0 6px 20px rgba(1, 54, 108, 0.45),
-              0 0 0 1px rgba(255, 255, 255, 0.15) inset;
-  transition: color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(1, 54, 108, 0.3);
+  transition: color 0.25s ease;
 }
 .header__right .header__number:hover {
-  color: #fff !important;
-  transform: scale(1.02);
-  box-shadow: 0 6px 0 rgba(0, 30, 60, 0.4),
-              0 10px 28px rgba(1, 54, 108, 0.5),
-              0 0 0 1px rgba(255, 219, 0, 0.25) inset;
+  color: #ffd700 !important;
 }
 .header__call-label {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  opacity: 0.95;
-}
-.header__right .header__number:hover .header__call-label {
-  color: #ffd700 !important;
+  letter-spacing: 0.03em;
 }
 .header__call-num {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 900;
-  letter-spacing: 0.06em;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.02em;
 }
-.header__right .header__number:hover .header__call-num {
-  color: #ffd700 !important;
+@media (min-width: 768px) {
+  .header__logo-img {
+    height: 72px;
+    max-width: 220px;
+  }
+  .header__middle__title { font-size: 1.6rem; }
+  .header__call-num { font-size: 2.5rem; }
 }
+@media (min-width: 992px) {
+  .header .mid-container { padding-left: 0; }
+  .header { padding: 0.55rem 0 0.7rem; }
+  .header__logo-img {
+    height: 90px;
+    max-width: 280px;
+  }
+  .header__middle__title { font-size: 2rem; }
+  .header__call-num { font-size: 2.75rem; }
+  .header__right .header__number { padding: 1.1rem 2rem; }
+}
+
+/* MOBILE ONLY: 3-row centered, scroll-hide, bigger logo/tagline/phone */
 @media (max-width: 767px) {
+  .header {
+    background: linear-gradient(180deg, #fff 0%, #f8fafd 100%) !important;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+  }
+  .header.header--hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
   .header .mid-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 0.6rem;
     padding: 0 16px;
   }
   .header__logo-img {
     height: 72px;
     max-width: 220px;
+    filter: brightness(0) contrast(1.3) drop-shadow(0 2px 6px rgba(0,0,0,0.3));
   }
+  .header__middle { text-align: center; }
   .header__middle__title {
     font-size: 1.2rem;
   }
-  .header__middle p {
-    font-size: 0.8rem;
-  }
+  .header__middle p { font-size: 0.8rem; }
   .header__right {
+    width: 100%;
     max-width: 100%;
+    text-align: center;
+  }
+  .header__right .header__number {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.25rem;
+    padding: 1rem 1.25rem;
   }
   .header__call-num {
     font-size: 1.9rem;
   }
-  .header__right .header__number {
-    padding: 1rem 1.25rem;
-  }
-}
-@media (min-width: 768px) {
-  .header .mid-container {
-    gap: 0.6rem;
-  }
-  .header__logo-img {
-    height: 100px;
-    max-width: 320px;
-  }
-  .header__middle__title {
-    font-size: 1.65rem;
-  }
-  .header__middle p {
-    font-size: 0.9rem;
-  }
-  .header__call-num {
-    font-size: 2.5rem;
-  }
-  .header__right .header__number {
-    padding: 1rem 2rem;
-  }
-}
-@media (min-width: 992px) {
-  .header {
-    padding: 0.6rem 0 1rem;
-  }
-  .header__logo-img {
-    height: 108px;
-    max-width: 340px;
-  }
-  .header__middle__title {
-    font-size: 1.95rem;
-  }
-  .header__call-num {
-    font-size: 2.85rem;
-  }
-  .header__right .header__number {
-    padding: 1.1rem 2rem;
-  }
 }
 
-/* Sticky tap-to-call bar - fixed bottom, PPC-optimized */
+/* Sticky tap-to-call bar - MOBILE ONLY, fixed bottom, PPC-optimized */
 .tap-to-call-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem 1rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  padding: 1rem 1.25rem;
-  background: linear-gradient(135deg, #01366c 0%, #01468a 100%);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 1rem;
-  box-shadow: 0 -4px 20px rgba(1, 54, 108, 0.4);
-  border-top: 3px solid #fbba00;
-  transition: background 0.2s ease, transform 0.2s ease;
+  display: none;
 }
-.tap-to-call-bar:hover {
-  background: linear-gradient(135deg, #01468a 0%, #01508f 100%);
-  color: #fff;
-  transform: translateY(-2px);
-}
-.tap-to-call-bar__icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-}
-.tap-to-call-bar__text {
-  flex: 1 1 auto;
-  text-align: center;
-  letter-spacing: 0.02em;
-}
-.tap-to-call-bar__num {
-  font-size: 1.25rem;
-  letter-spacing: 0.05em;
-}
-body {
-  padding-bottom: 72px;
-}
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .tap-to-call-bar {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, #01366c 0%, #01468a 100%);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    box-shadow: 0 -4px 20px rgba(1, 54, 108, 0.4);
+    border-top: 3px solid #fbba00;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .tap-to-call-bar:hover {
+    background: linear-gradient(135deg, #01468a 0%, #01508f 100%);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  .tap-to-call-bar__icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .tap-to-call-bar__text {
+    flex: 1 1 auto;
+    text-align: center;
+    letter-spacing: 0.02em;
   }
   .tap-to-call-bar__num {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
   }
   body {
-    padding-bottom: 76px;
+    padding-bottom: 72px;
   }
 }
 

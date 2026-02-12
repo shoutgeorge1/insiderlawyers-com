@@ -219,6 +219,10 @@
       var scrollThreshold = 80;
       if (header) {
         window.addEventListener('scroll', function() {
+          if (window.innerWidth > 767) {
+            header.classList.remove('header--hidden');
+            return;
+          }
           var currentScrollY = window.scrollY;
           if (currentScrollY > scrollThreshold) {
             if (currentScrollY > lastScrollY) header.classList.add('header--hidden');
