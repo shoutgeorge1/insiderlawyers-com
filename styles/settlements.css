@@ -75,7 +75,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 }
 .case-results__headline {
   text-align: center;
-  font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
   font-weight: 800;
   color: #01366c;
   margin: 0 0 0.5rem 0;
@@ -83,7 +83,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 }
 .case-results__sub {
   text-align: center;
-  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-size: clamp(1.3rem, 2.2vw, 1.5rem);
   color: #374151;
   margin: 0 auto 2rem;
   max-width: 640px;
@@ -91,7 +91,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 }
 .case-results__disclaimer {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #6b7280;
   font-style: italic;
   margin: 1.5rem 0 0 0;
@@ -126,16 +126,16 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
   display: inline-block;
   background: #fbba00;
   color: #01366c;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  padding: 0.35rem 0.65rem;
+  padding: 0.4rem 0.75rem;
   border-radius: 4px;
   margin-bottom: 0.75rem;
 }
 .scoreboard-card__amount {
-  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  font-size: clamp(2.1rem, 3vw, 2.75rem);
   font-weight: 900;
   color: #fbba00;
   margin-bottom: 0.35rem;
@@ -143,19 +143,19 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
   line-height: 1.1;
 }
 .scoreboard-card__type {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 0.5rem;
 }
 .scoreboard-card__narrative {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.45;
   margin: 0 0 0.5rem 0;
 }
 .scoreboard-card__meta {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
   font-style: italic;
   margin: 0;
@@ -182,7 +182,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 }
 .settlement-ticker__amount {
   display: block;
-  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
   font-weight: 900;
   color: #01366c;
   margin-bottom: 0.25rem;
@@ -190,7 +190,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 }
 .settlement-ticker__type {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #374151;
   text-transform: uppercase;
