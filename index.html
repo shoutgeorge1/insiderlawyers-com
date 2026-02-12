@@ -87,6 +87,11 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     document.addEventListener('DOMContentLoaded', function() {
+      var formNext = document.getElementById('form-next-url');
+      if (formNext) {
+        var path = (location.pathname || '/').replace(/\/index\.html?$/i, '').replace(/\/?$/, '') || '';
+        formNext.value = location.origin + (path ? path + '/' : '/') + 'thank-you';
+      }
       var phoneLinks = document.querySelectorAll('a[href^="tel:"]');
       phoneLinks.forEach(function(link) {
         link.addEventListener('click', function() {
@@ -110,7 +115,27 @@
           if (typeof dataLayer !== 'undefined') {
             dataLayer.push({ event: 'form_submit', form_name: 'case_evaluation' });
           }
+          var phoneInput = form.querySelector('input[name="phone"]');
+          if (phoneInput) {
+            phoneInput.value = phoneInput.value.replace(/\D/g, '');
+          }
         });
+        var phoneInput = form.querySelector('input[name="phone"], input[id="hero-phone"]');
+        if (phoneInput) {
+          phoneInput.addEventListener('input', function() {
+            var v = this.value.replace(/\D/g, '');
+            if (v.length >= 6) {
+              this.value = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6,10);
+            } else if (v.length >= 3) {
+              this.value = '(' + v.slice(0,3) + ') ' + v.slice(3);
+            } else if (v.length > 0) {
+              this.value = '(' + v;
+            }
+          });
+          phoneInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Backspace' && this.value.length === 4) this.value = '';
+          });
+        }
       }
       setTimeout(function() {
         if (typeof dataLayer !== 'undefined') dataLayer.push({ 'event': 'engaged_30s' });
@@ -216,7 +241,7 @@
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_autoresponse" value="We received your request. We'll contact you shortly.">
-              <input type="hidden" name="_next" value="https://call.insideraccidentlawyers.com/los-angeles-car-accident/thank-you.html">
+              <input type="hidden" name="_next" value="" id="form-next-url">
               <div class="form-group">
                 <label class="form-label" for="hero-fullname">Full Name *</label>
                 <input type="text" id="hero-fullname" class="form-input" name="full_name" placeholder="Your Full Name" required>
