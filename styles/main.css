@@ -1027,6 +1027,98 @@
   }
 }
 
+/* Our Attorneys grid */
+.our-attorneys-section {
+  padding: 2rem 0;
+  background: #fff;
+  border-top: 1px solid rgba(1, 54, 108, 0.08);
+}
+.our-attorneys-section .container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.our-attorneys-section .head-group {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.our-attorneys__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: #01366c;
+  line-height: 1.25;
+  margin: 0;
+  display: inline-block;
+}
+.our-attorneys__title .tail__before,
+.our-attorneys__title .tail__after {
+  display: inline-block;
+  width: 44px;
+  height: 4px;
+  background: #fbba00;
+  vertical-align: middle;
+  margin: 0 0.4rem;
+}
+.our-attorneys__sub {
+  font-size: 1rem;
+  color: #374151;
+  margin: 0.5rem 0 0 0;
+}
+.our-attorneys-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.our-attorneys-card {
+  text-align: center;
+  padding: 1rem;
+}
+.our-attorneys-photo-wrap {
+  width: 132px;
+  height: 132px;
+  margin: 0 auto 0.75rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(1, 54, 108, 0.15);
+  box-shadow: 0 4px 12px rgba(1, 54, 108, 0.1);
+}
+.our-attorneys-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.our-attorneys-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #01366c;
+  margin-bottom: 0.2rem;
+  line-height: 1.2;
+}
+.our-attorneys-title {
+  font-size: 0.8rem;
+  color: #374151;
+  font-weight: 600;
+}
+@media (max-width: 992px) {
+  .our-attorneys-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .our-attorneys-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .our-attorneys-photo-wrap {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 /* Site footer */
 .site-footer {
   background: linear-gradient(180deg, #012a50 0%, #01366c 50%, #012240 100%);
