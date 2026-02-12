@@ -485,27 +485,26 @@
   }
 }
 
-/* Yelp section - pairs with call bar */
-.yelp-section {
-  padding: 0.75rem 0 1rem;
-  background: linear-gradient(180deg, #e8eef6 0%, #f0f4f8 100%);
+/* Team group photo - smashed to call bar, clean white */
+.team-group-section {
+  padding: 0.5rem 0 1rem;
+  background: #fff;
   text-align: center;
-  border-bottom: 1px solid rgba(1, 54, 108, 0.08);
 }
-.yelp-section .container {
+.team-group-section .container {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
-.yelp-section__img {
+.team-group-section__img {
   width: 1200px;
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(1, 54, 108, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Content section - California Personal Injury Lawyers header */
@@ -555,8 +554,8 @@
 }
 
 .trust-badges-box {
-  margin-top: 2rem;
-  padding: 2rem 2.5rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem 2rem;
   background: linear-gradient(180deg, #fafbfc 0%, #f4f6f8 100%);
   border: 1px solid rgba(1, 54, 108, 0.08);
   border-radius: 14px;
@@ -601,8 +600,8 @@
 }
 
 .team-photo-section {
-  margin-top: 2.5rem;
-  padding: 3rem 2rem;
+  margin-top: 1.5rem;
+  padding: 2rem 1.5rem;
   background: linear-gradient(180deg, #f0f6fc 0%, #e8f0f8 50%, #e0ebf4 100%);
   border-radius: 16px;
   text-align: center;
@@ -634,10 +633,8 @@
 
 /* Highlights block - How Insider Helps */
 .block.highlights {
-  padding: 4rem 0;
+  padding: 2rem 0;
   background: linear-gradient(180deg, #f8fafd 0%, #eef4fa 30%, #e6eef8 70%, #f0f6fc 100%);
-  border-top: 1px solid rgba(1, 54, 108, 0.06);
-  border-bottom: 1px solid rgba(1, 54, 108, 0.06);
 }
 .block.highlights .mid-container {
   width: 100%;
@@ -647,7 +644,7 @@
 }
 .block.highlights .head-group {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 .block.highlights .highlights__title {
   font-size: clamp(1.5rem, 2.5vw, 2.2rem);
@@ -669,8 +666,8 @@
 .block.highlights .items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem 2rem;
-  margin-bottom: 2.5rem;
+  gap: 1.5rem 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .block.highlights .item {
   text-align: center;
@@ -768,7 +765,7 @@
 
 /* Injuries section - Serious Injuries. Serious Representation. */
 .injuries-section {
-  padding: 4rem 0;
+  padding: 2.5rem 0;
   background: linear-gradient(180deg, #f0f4f8 0%, #e8eef6 50%, #e2eaf2 100%);
 }
 .injuries-section .container {
@@ -779,7 +776,7 @@
 }
 .injuries-section__header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 .injuries-section__title {
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
@@ -793,7 +790,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem 1.25rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -890,12 +887,12 @@
 }
 @media (max-width: 768px) {
   .injuries-section {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
   .injuries-section__cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   .injuries-card {
     padding: 1.25rem 1rem;
