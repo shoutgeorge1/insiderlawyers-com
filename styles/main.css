@@ -548,7 +548,9 @@
 /* Highlights block - How Insider Helps */
 .block.highlights {
   padding: 4rem 0;
-  background: #fff;
+  background: linear-gradient(180deg, #f8fafd 0%, #eef4fa 30%, #e6eef8 70%, #f0f6fc 100%);
+  border-top: 1px solid rgba(1, 54, 108, 0.06);
+  border-bottom: 1px solid rgba(1, 54, 108, 0.06);
 }
 .block.highlights .mid-container {
   width: 100%;
@@ -580,7 +582,7 @@
 .block.highlights .items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem 1.5rem;
+  gap: 2.5rem 2rem;
   margin-bottom: 2.5rem;
 }
 .block.highlights .item {
@@ -588,17 +590,17 @@
 }
 .block.highlights .highlights__icon {
   margin-bottom: 1rem;
-  width: 220px;
-  height: 220px;
+  width: 260px;
+  height: 260px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  border-radius: 16px;
-  padding: 1rem;
+  border-radius: 20px;
+  padding: 1.25rem;
   box-sizing: border-box;
-  background: linear-gradient(180deg, #f0f6fc 0%, #e8f0f8 50%, #e0ebf4 100%);
-  border: 1px solid rgba(1, 54, 108, 0.08);
-  box-shadow: 0 2px 12px rgba(1, 54, 108, 0.06);
+  background: linear-gradient(180deg, #fff 0%, #f4f8fc 50%, #eef4fa 100%);
+  border: 1px solid rgba(1, 54, 108, 0.1);
+  box-shadow: 0 4px 20px rgba(1, 54, 108, 0.08), 0 0 0 1px rgba(255,255,255,0.8) inset;
 }
 .block.highlights .highlights__icon img {
   width: 100%;
@@ -649,9 +651,9 @@
     gap: 1.5rem;
   }
   .block.highlights .highlights__icon {
-    width: 160px;
-    height: 160px;
-    padding: 0.75rem;
+    width: 200px;
+    height: 200px;
+    padding: 1rem;
   }
 }
 @media (max-width: 500px) {
