@@ -356,6 +356,12 @@
   }
 }
 
+/* Form scroll target - title + form visible (all viewports) */
+#free-case-review-form {
+  scroll-margin-top: 1rem;
+  scroll-margin-bottom: 6rem;
+}
+
 /* Hero wrapper - two columns on desktop */
 .hero.hero-section .hero-content {
   display: grid;
