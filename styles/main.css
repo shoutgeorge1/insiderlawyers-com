@@ -311,6 +311,41 @@
   body {
     padding-bottom: 72px;
   }
+  /* CTA buttons - use hover color/state by default on mobile for prominence */
+  .btn-primary,
+  .hero.hero-section .hero-form-card .btn-primary,
+  .block.highlights .btn,
+  .why-choose__cta .btn,
+  .btn-settlements {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #c99400, 0 10px 28px rgba(255,191,0,0.45);
+  }
+  .btn-primary:active,
+  .block.highlights .btn:active,
+  .why-choose__cta .btn:active,
+  .btn-settlements:active {
+    transform: translateY(0);
+  }
+  /* Tap-to-call bar - hover color by default for urgency */
+  .tap-to-call-bar {
+    color: #ffd700;
+  }
+  /* Call bar number - bright by default */
+  .call-bar__number {
+    color: #ffd700;
+  }
+  /* Tel links - better touch feedback */
+  a[href^="tel:"] {
+    -webkit-tap-highlight-color: rgba(255, 219, 0, 0.35);
+  }
+  /* Min 44px tap targets for CTAs */
+  .tap-to-call-bar,
+  .btn-primary,
+  .block.highlights .btn,
+  .why-choose__cta .btn,
+  .btn-settlements {
+    min-height: 48px;
+  }
 }
 
 /* Hero wrapper - two columns on desktop */
