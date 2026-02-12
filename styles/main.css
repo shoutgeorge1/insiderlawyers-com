@@ -944,7 +944,7 @@
   margin-bottom: 1.5rem;
 }
 .why-choose-section .highlights__title {
-  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
   font-weight: 800;
   color: #01366c;
   line-height: 1.25;
@@ -961,7 +961,7 @@
   margin: 0 0.4rem;
 }
 .why-choose__tagline {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #374151;
   font-style: italic;
@@ -986,14 +986,14 @@
   transform: translateY(-2px);
 }
 .why-choose__card-title {
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: #01366c;
   margin: 0 0 0.5rem 0;
   line-height: 1.2;
 }
 .why-choose__card p {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: #374151;
   line-height: 1.5;
   margin: 0;
