@@ -4,7 +4,7 @@
    Fully responsive, maintains branding
    ============================================ */
 
-/* Site header - DESKTOP: left logo, middle stat, right phone (horizontal) */
+/* Site header - BD&J-style: left logo, middle stat, right phone. Force contrast so header never looks faint. */
 .header {
   background: #fff !important;
   border-bottom: 3px solid #fbba00;
@@ -45,25 +45,77 @@
   min-width: 120px;
   object-fit: contain;
   min-height: 46px;
-  filter: brightness(0) contrast(1.25) drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+  /* Bold + shiny metallic: dark base with highlight and depth */
+  filter: brightness(0) contrast(1.25)
+    drop-shadow(0 0 1px rgba(255,255,255,0.9))
+    drop-shadow(0 0 2px rgba(255,255,255,0.5))
+    drop-shadow(1px 1px 0 rgba(255,255,255,0.35))
+    drop-shadow(-1px -1px 1px rgba(0,0,0,0.2))
+    drop-shadow(0 2px 6px rgba(0,0,0,0.35));
 }
+/* Explicit dark colors so header text is never white/faint */
 .header__middle {
   flex: 1 1 auto;
   text-align: center;
   min-width: 0;
 }
+/* Metallic blue sheen, big bold italic, zoom-in */
+@keyframes header-title-zoom {
+  from {
+    opacity: 0.5;
+    transform: scale(0.82) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.header__middle {
+  position: relative;
+}
 .header__middle__title {
+  position: relative;
   display: inline-block;
   font-size: 1.1rem;
   font-weight: 900;
   font-style: italic;
   line-height: 0.95;
   letter-spacing: 0.03em;
-  color: #01366c !important;
-  background: none;
+  /* Metallic chrome sheen: strong highlight band + dark edges */
+  background: linear-gradient(105deg,
+    #0a2d4a 0%,
+    #1a4a70 18%,
+    #3d7ab5 35%,
+    #7eb5e8 50%,
+    #3d7ab5 65%,
+    #1a4a70 82%,
+    #0a2d4a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: header-title-zoom 0.65s ease-out forwards;
+  /* Polished metal: crisp highlight edge + reflective sheen */
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0.95))
+    drop-shadow(0 0 3px rgba(255,255,255,0.4))
+    drop-shadow(0 0 8px rgba(180,215,255,0.35))
+    drop-shadow(0 1px 2px rgba(0,30,70,0.4))
+    drop-shadow(0 2px 8px rgba(0,0,0,0.2));
 }
-.header__middle__title a {
-  color: inherit;
+/* Metallic reflection sheen under title */
+.header__middle__title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 90%;
+  height: 6px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center,
+    rgba(255,255,255,0.2) 0%,
+    rgba(180,220,255,0.12) 30%,
+    transparent 70%);
+  pointer-events: none;
+  filter: blur(8px);
 }
 .header__middle p {
   font-size: 0.8rem;
@@ -74,52 +126,101 @@
 .header__right {
   flex: 0 0 auto;
   text-align: right;
-}
-.header__right .header__number {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.9rem 1.5rem;
   background: linear-gradient(135deg, #01366c 0%, #01468a 100%);
-  color: #fff !important;
-  text-decoration: none;
+  padding: 0.9rem 1.5rem;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(1, 54, 108, 0.3);
-  transition: color 0.25s ease;
 }
-.header__right .header__number:hover {
-  color: #ffd700 !important;
-}
-.header__call-label {
-  font-size: 0.9rem;
+.header__right .header__title { color: #fff !important; font-size: 0.95rem; }
+.header__right .header__number { color: #fff !important; font-size: 2.2rem; transition: color 0.25s ease; }
+.header__right .header__number:hover { color: #ffd700 !important; }
+.header__right .header__lang { color: rgba(255,255,255,0.95) !important; font-size: 0.95rem; }
+.header__title {
+  display: block;
+  font-size: 0.85rem;
   font-weight: 700;
+  line-height: 1.1;
+  color: #374151 !important;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
-.header__call-num {
-  font-size: 2.2rem;
+.header__number {
+  display: inline-block;
+  font-size: 1.75rem;
   font-weight: 900;
+  line-height: 1;
+  color: #01366c !important;
+  text-decoration: none;
+  margin-top: 0.05rem;
   letter-spacing: 0.02em;
+}
+.header__number:hover {
+  color: #c99400;
+}
+.header__lang {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  color: #374151 !important;
+  margin-top: 0.1rem;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .header__logo-img {
     height: 72px;
     max-width: 220px;
   }
-  .header__middle__title { font-size: 1.6rem; }
-  .header__call-num { font-size: 2.5rem; }
+  .header__middle__title {
+    font-size: 1.6rem;
+    line-height: 0.95;
+  }
+  .header__middle p {
+    font-size: 0.8rem;
+  }
+  .header__number {
+    font-size: 2.1rem;
+    line-height: 1;
+  }
+  .header__right .header__number { font-size: 2.5rem; }
+  .header__title {
+    font-size: 1rem;
+  }
+  .header__right .header__title { font-size: 1rem; }
+  .header__lang {
+    font-size: 1rem;
+  }
+  .header__right .header__lang { font-size: 1rem; }
+  .header__right { padding: 1rem 1.75rem; }
 }
 @media (min-width: 992px) {
-  .header .mid-container { padding-left: 0; }
-  .header { padding: 0.55rem 0 0.7rem; }
+  .header .mid-container {
+    padding-left: 0; /* logo to far left */
+  }
+  .header {
+    padding: 0.55rem 0 0.7rem;
+  }
   .header__logo-img {
     height: 90px;
     max-width: 280px;
   }
-  .header__middle__title { font-size: 2rem; }
-  .header__call-num { font-size: 2.75rem; }
-  .header__right .header__number { padding: 1.1rem 2rem; }
+  .header__middle__title {
+    font-size: 2rem;
+    line-height: 0.9;
+  }
+  .header__number {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+  .header__right .header__number { font-size: 2.75rem; }
+  .header__title {
+    font-size: 1.1rem;
+  }
+  .header__right .header__title { font-size: 1.05rem; }
+  .header__lang {
+    font-size: 1.1rem;
+  }
+  .header__right .header__lang { font-size: 1.05rem; }
+  .header__right { padding: 1.1rem 2rem; }
 }
 
 /* MOBILE ONLY: 3-row centered, scroll-hide, bigger logo/tagline/phone */
@@ -155,14 +256,13 @@
     width: 100%;
     max-width: 100%;
     text-align: center;
-  }
-  .header__right .header__number {
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
     gap: 0.25rem;
     padding: 1rem 1.25rem;
   }
-  .header__call-num {
+  .header__right .header__number {
     font-size: 1.9rem;
   }
 }
