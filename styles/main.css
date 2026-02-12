@@ -743,7 +743,7 @@
   }
 }
 
-/* Injuries section - We Handle All Injuries */
+/* Injuries section - Serious Injuries. Serious Representation. */
 .injuries-section {
   padding: 4rem 0;
   background: #2d3748;
@@ -758,33 +758,20 @@
   text-align: center;
   margin-bottom: 2.5rem;
 }
-.injuries-section__title-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.injuries-section__diamond {
-  width: 8px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  transform: rotate(45deg);
-  flex-shrink: 0;
-}
-.injuries-section__line {
-  width: 60px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.5);
-  flex-shrink: 0;
-}
 .injuries-section__title {
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 800;
   color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 0;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+}
+.injuries-section__subline {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 .injuries-section__cards {
   display: flex;
@@ -793,8 +780,8 @@
   gap: 1.5rem 2rem;
 }
 .injuries-card {
-  flex: 1 1 160px;
-  max-width: 220px;
+  flex: 1 1 200px;
+  max-width: 280px;
   background: #fff;
   padding: 1.5rem 1.25rem;
   text-align: center;
@@ -810,8 +797,8 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 .injuries-card__icon {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -820,7 +807,9 @@
 .injuries-card__icon img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.12);
 }
 .injuries-card__line {
   width: 40px;
@@ -845,13 +834,16 @@
     gap: 1rem;
   }
   .injuries-card {
-    flex: 1 1 140px;
-    max-width: 180px;
+    flex: 1 1 160px;
+    max-width: 240px;
     padding: 1.25rem 1rem;
   }
   .injuries-card__icon {
-    width: 100px;
-    height: 100px;
+    width: 160px;
+    height: 160px;
+  }
+  .injuries-card__icon img {
+    transform: scale(1.12);
   }
   .injuries-card__label {
     font-size: 0.85rem;
@@ -863,7 +855,11 @@
     align-items: center;
   }
   .injuries-card {
-    max-width: 260px;
+    max-width: 320px;
     width: 100%;
+  }
+  .injuries-card__icon {
+    width: 220px;
+    height: 220px;
   }
 }
