@@ -485,11 +485,12 @@
   }
 }
 
-/* Yelp section - below call bar */
+/* Yelp section - pairs with call bar */
 .yelp-section {
-  padding: 2rem 0;
-  background: #fff;
+  padding: 0.75rem 0 1rem;
+  background: linear-gradient(180deg, #e8eef6 0%, #f0f4f8 100%);
   text-align: center;
+  border-bottom: 1px solid rgba(1, 54, 108, 0.08);
 }
 .yelp-section .container {
   width: 100%;
@@ -504,7 +505,7 @@
   display: block;
   margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(1, 54, 108, 0.12);
 }
 
 /* Content section - California Personal Injury Lawyers header */
