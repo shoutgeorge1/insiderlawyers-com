@@ -68,149 +68,153 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .settlements-scoreboard-strip--inline .scoreboard-label { color: #374151; }
 .settlements-scoreboard-strip--inline .scoreboard-sep { color: rgba(55, 65, 81, 0.5); }
 
-/* Case Results Section */
+/* Case Results Section - Scoreboard format */
 .case-results {
   padding: 2.5rem 0 3rem;
-  background: linear-gradient(180deg, #f8fafd 0%, #eef4fa 50%, #e8eef6 100%);
+  background: #fff;
 }
-.case-results__title {
+.case-results__headline {
   text-align: center;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: clamp(1.9rem, 3.5vw, 2.75rem);
   font-weight: 800;
   color: #01366c;
   margin: 0 0 0.5rem 0;
+  line-height: 1.25;
+}
+.case-results__headline-italic {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
 }
 .case-results__sub {
   text-align: center;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
   color: #374151;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 640px;
+  line-height: 1.6;
+}
+.case-results__disclaimer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-style: italic;
+  margin: 1.5rem 0 0 0;
 }
 
-/* Featured image cards - perfect square crop */
-.results-grid {
+/* Dark scoreboard cards - high contrast */
+.scoreboard-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.25rem;
   margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
-  .results-grid {
-    grid-template-columns: repeat(5, 1fr);
+  .scoreboard-cards {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-.result-card--image .result-card__img-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(1, 54, 108, 0.15);
-  background: #f0f4f8;
-}
-/* Square crop - object-position hides disclaimer at bottom */
-.result-card--image .result-card__img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 12%;
-  display: block;
-}
-.result-card__meta {
-  font-size: 0.85rem;
-  color: #374151;
-  text-align: center;
-  margin-top: 0.5rem;
-  font-weight: 600;
-}
-
-/* Text-only result cards */
-.results-grid--text {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  margin-bottom: 2rem;
-}
-@media (min-width: 900px) {
-  .results-grid--text {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.result-card:not(.result-card--image) {
-  background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
+.scoreboard-card {
+  background: linear-gradient(160deg, #0f1824 0%, #1a2744 50%, #0d1520 100%);
   padding: 1.5rem;
-  border-radius: 12px;
-  text-align: center;
-  border: 2px solid rgba(1, 54, 108, 0.15);
-  box-shadow: 0 4px 16px rgba(1, 54, 108, 0.08);
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.result-card:not(.result-card--image):hover {
+.scoreboard-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(1, 54, 108, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
 }
-.result-label {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #6b7280;
+.scoreboard-card__pill {
+  display: inline-block;
+  background: #2176ff;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.25rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
-.result-amount {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+.scoreboard-card__amount {
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
   font-weight: 900;
-  color: #01366c;
-  margin-bottom: 0.35rem;
+  color: #ffd700;
+  margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
+  line-height: 1.1;
 }
-.result-type {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #374151;
-  margin-bottom: 0.5rem;
-}
-.result-meta {
-  font-size: 0.8rem;
-  color: #6b7280;
-  font-style: italic;
+.scoreboard-card__narrative {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.45;
+  margin: 0;
 }
 
-/* Settlement strip - scoreboard ticker */
-.settlement-strip {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 0.75rem;
-  margin-top: 1rem;
+/* Ticker strip - horizontal with dividers */
+.settlement-ticker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  background: #f5f7fa;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  gap: 0;
 }
-.settlement-card {
-  padding: 1rem 1.25rem;
-  background: linear-gradient(135deg, #fff 0%, #f4f8fc 100%);
-  border: 1px solid rgba(1, 54, 108, 0.12);
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #1e293b;
+.settlement-ticker__block {
+  flex: 1 1 auto;
+  min-width: 120px;
+  padding: 0.5rem 1rem;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(1, 54, 108, 0.06);
-  transition: background 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
 }
-.settlement-card:hover {
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(1, 54, 108, 0.1);
+.settlement-ticker__amount {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 900;
+  color: #01366c;
+  line-height: 1;
 }
-@media (min-width: 600px) {
-  .settlement-strip {
-    grid-template-columns: repeat(2, 1fr);
+.settlement-ticker__million {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #01366c;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.settlement-ticker__type {
+  font-size: 0.7rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+.settlement-ticker__divider {
+  width: 1px;
+  min-height: 40px;
+  background: rgba(1, 70, 138, 0.2);
+  flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .settlement-ticker {
+    flex-direction: column;
+    align-items: center;
   }
-}
-@media (min-width: 992px) {
-  .settlement-strip {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+  .settlement-ticker__block {
+    min-width: 100%;
+    padding: 0.75rem;
+    border-bottom: 1px solid rgba(1, 70, 138, 0.15);
   }
-}
-@media (min-width: 1200px) {
-  .settlement-strip {
-    grid-template-columns: repeat(5, 1fr);
+  .settlement-ticker__block:last-of-type {
+    border-bottom: none;
+  }
+  .settlement-ticker__divider {
+    display: none;
   }
 }
 
