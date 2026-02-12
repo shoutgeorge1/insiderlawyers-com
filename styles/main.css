@@ -276,40 +276,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem 1rem;
+    gap: 0.75rem 1.25rem;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 99;
-    padding: 1rem 1.25rem;
-    background: linear-gradient(135deg, #01366c 0%, #01468a 100%);
-    color: #fff;
+    padding: 1.1rem 1.25rem;
+    background: linear-gradient(135deg, #ffc107 0%, #ffbf00 50%, #f5a623 100%);
+    color: #01366c;
     text-decoration: none;
-    font-weight: 800;
-    font-size: 1.25rem;
-    box-shadow: 0 -4px 20px rgba(1, 54, 108, 0.4);
-    border-top: 3px solid #fbba00;
-    transition: background 0.2s ease, transform 0.2s ease;
+    font-weight: 900;
+    font-size: 1.5rem;
+    box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.2), 0 -2px 0 rgba(193, 148, 0, 0.5) inset;
+    border-top: 4px solid #01366c;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
-  .tap-to-call-bar:hover {
-    background: linear-gradient(135deg, #01468a 0%, #01508f 100%);
-    color: #ffd700;
-    transform: translateY(-2px);
+  .tap-to-call-bar:hover,
+  .tap-to-call-bar:active {
+    background: linear-gradient(135deg, #ffd54f 0%, #ffc107 50%, #ffbf00 100%);
+    color: #012a50;
+    transform: translateY(-1px);
+    box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.25);
   }
   .tap-to-call-bar__icon {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
   }
   .tap-to-call-bar__text {
     flex: 1 1 auto;
     text-align: center;
-    letter-spacing: 0.02em;
-    font-size: 1.35rem;
+    letter-spacing: 0.03em;
+    font-size: 1.5rem;
   }
   body {
-    padding-bottom: 72px;
+    padding-bottom: 80px;
   }
   /* CTA buttons - use hover color/state by default on mobile for prominence */
   .btn-primary,
@@ -325,10 +327,6 @@
   .why-choose__cta .btn:active,
   .btn-settlements:active {
     transform: translateY(0);
-  }
-  /* Tap-to-call bar - hover color by default for urgency */
-  .tap-to-call-bar {
-    color: #ffd700;
   }
   /* Call bar number - bright by default */
   .call-bar__number {
