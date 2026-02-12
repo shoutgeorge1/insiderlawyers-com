@@ -848,20 +848,15 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .block.highlights .items {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
   .block.highlights .highlights__icon {
-    width: 200px;
-    height: 200px;
-    padding: 1rem;
-  }
-}
-@media (max-width: 500px) {
-  .block.highlights .items {
-    grid-template-columns: 1fr;
+    width: min(180px, 42vw);
+    height: min(180px, 42vw);
+    padding: 0.9rem;
   }
 }
 
