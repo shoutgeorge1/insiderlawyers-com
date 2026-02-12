@@ -1077,8 +1077,8 @@
   padding: 1rem;
 }
 .our-attorneys-photo-wrap {
-  width: 132px;
-  height: 132px;
+  width: 180px;
+  height: 180px;
   margin: 0 auto 0.75rem;
   border-radius: 50%;
   overflow: hidden;
@@ -1114,8 +1114,8 @@
     gap: 1.25rem;
   }
   .our-attorneys-photo-wrap {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
   }
 }
 
