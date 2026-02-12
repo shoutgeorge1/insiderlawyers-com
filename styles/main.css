@@ -767,17 +767,17 @@
   line-height: 1.2;
 }
 .injuries-section__cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem 1.25rem;
   margin-bottom: 3rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .injuries-card {
-  flex: 1 1 240px;
-  max-width: 320px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.85) 100%);
-  padding: 1.5rem 1.25rem;
+  padding: 1rem 0.75rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -800,8 +800,8 @@
               0 16px 40px rgba(30, 58, 95, 0.12);
 }
 .injuries-card__icon {
-  width: 260px;
-  height: 260px;
+  width: min(260px, 100%);
+  aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -849,17 +849,21 @@
   letter-spacing: 0.02em;
   font-family: Georgia, 'Times New Roman', serif;
 }
+@media (max-width: 1100px) {
+  .injuries-section__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 768px) {
   .injuries-section {
     padding: 3rem 0;
   }
   .injuries-section__cards {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-bottom: 2.5rem;
   }
   .injuries-card {
-    flex: 1 1 200px;
-    max-width: 280px;
     padding: 1.25rem 1rem;
   }
   .injuries-card__icon {
@@ -880,11 +884,11 @@
 }
 @media (max-width: 500px) {
   .injuries-section__cards {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
   .injuries-card {
-    max-width: 340px;
+    max-width: 320px;
     width: 100%;
   }
   .injuries-card__icon {
