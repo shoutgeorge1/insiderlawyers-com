@@ -68,10 +68,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .settlements-scoreboard-strip--inline .scoreboard-label { color: #374151; }
 .settlements-scoreboard-strip--inline .scoreboard-sep { color: rgba(55, 65, 81, 0.5); }
 
-/* Case Results Section - Scoreboard format */
+/* Case Results Section - Insider Accident Lawyers brand colors */
 .case-results {
   padding: 2.5rem 0 3rem;
-  background: #fff;
+  background: linear-gradient(180deg, #f8fafd 0%, #eef4fa 50%, #e8eef6 100%);
 }
 .case-results__headline {
   text-align: center;
@@ -81,14 +81,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
   margin: 0 0 0.5rem 0;
   line-height: 1.25;
 }
-.case-results__headline-italic {
-  font-family: 'Crimson Text', Georgia, serif;
-  font-style: italic;
-  font-weight: 600;
-}
 .case-results__sub {
   text-align: center;
-  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
   color: #374151;
   margin: 0 auto 2rem;
   max-width: 640px;
@@ -102,108 +97,104 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
   margin: 1.5rem 0 0 0;
 }
 
-/* Dark scoreboard cards - high contrast */
+/* Scoreboard cards - brand navy/gold */
 .scoreboard-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.25rem;
   margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
   .scoreboard-cards {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .scoreboard-card {
-  background: linear-gradient(160deg, #0f1824 0%, #1a2744 50%, #0d1520 100%);
+  background: linear-gradient(160deg, #012a50 0%, #01366c 50%, #01468a 100%);
   padding: 1.5rem;
   border-radius: 10px;
   color: #fff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(251, 186, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(1, 54, 108, 0.25);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .scoreboard-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 32px rgba(1, 54, 108, 0.35);
 }
 .scoreboard-card__pill {
   display: inline-block;
-  background: #2176ff;
-  color: #fff;
+  background: #fbba00;
+  color: #01366c;
   font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 0.35rem 0.65rem;
   border-radius: 4px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 .scoreboard-card__amount {
   font-size: clamp(1.75rem, 2.5vw, 2.25rem);
   font-weight: 900;
-  color: #ffd700;
-  margin-bottom: 0.75rem;
+  color: #fbba00;
+  margin-bottom: 0.35rem;
   letter-spacing: -0.02em;
   line-height: 1.1;
+}
+.scoreboard-card__type {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
 }
 .scoreboard-card__narrative {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.45;
+  margin: 0 0 0.5rem 0;
+}
+.scoreboard-card__meta {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
   margin: 0;
 }
 
-/* Ticker strip - horizontal with dividers */
+/* Ticker strip - exact format from user, brand colors */
 .settlement-ticker {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
-  background: #f5f7fa;
-  padding: 1.5rem 1rem;
+  background: linear-gradient(180deg, #f0f6fc 0%, #e8eef6 100%);
+  padding: 1.25rem 1rem;
   border-radius: 10px;
+  border: 1px solid rgba(1, 54, 108, 0.1);
   gap: 0;
 }
 .settlement-ticker__block {
   flex: 1 1 auto;
-  min-width: 120px;
-  padding: 0.5rem 1rem;
+  min-width: 180px;
+  padding: 0.6rem 1rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.15rem;
-}
-.settlement-ticker__amount {
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-  font-weight: 900;
-  color: #01366c;
-  line-height: 1;
-}
-.settlement-ticker__million {
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #01366c;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.settlement-ticker__type {
-  font-size: 0.7rem;
-  color: #6b7280;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .settlement-ticker__divider {
   width: 1px;
-  min-height: 40px;
+  min-height: 36px;
   background: rgba(1, 70, 138, 0.2);
   flex-shrink: 0;
 }
 @media (max-width: 767px) {
   .settlement-ticker {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
   .settlement-ticker__block {
     min-width: 100%;
