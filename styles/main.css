@@ -298,18 +298,14 @@
     transform: translateY(-2px);
   }
   .tap-to-call-bar__icon {
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
     flex-shrink: 0;
   }
   .tap-to-call-bar__text {
     flex: 1 1 auto;
     text-align: center;
     letter-spacing: 0.02em;
-  }
-  .tap-to-call-bar__num {
-    font-size: 1.25rem;
-    letter-spacing: 0.05em;
   }
   body {
     padding-bottom: 72px;
