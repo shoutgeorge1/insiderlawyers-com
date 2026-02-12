@@ -315,6 +315,7 @@
     margin: 0;
     padding: 0;
     line-height: 1;
+    text-transform: uppercase;
   }
   body {
     padding-bottom: 100px;
