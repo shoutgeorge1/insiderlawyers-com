@@ -294,7 +294,7 @@
   }
   .tap-to-call-bar:hover {
     background: linear-gradient(135deg, #01468a 0%, #01508f 100%);
-    color: #fff;
+    color: #ffd700;
     transform: translateY(-2px);
   }
   .tap-to-call-bar__icon {
@@ -575,6 +575,14 @@
 @media (max-width: 600px) {
   .call-bar {
     padding: 1rem 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .call-bar__number:hover {
+    color: #ffd700;
+  }
+  .footer__phone:hover {
+    color: #ffd700;
   }
 }
 
