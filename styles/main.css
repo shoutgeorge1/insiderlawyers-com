@@ -908,6 +908,11 @@
     height: min(180px, 42vw);
     padding: 0.9rem;
   }
+  .block.highlights .btn--xl,
+  .why-choose__cta .btn--lg.btn--xl {
+    font-size: 1.6rem;
+    padding: 1.25rem 2.5rem;
+  }
 }
 
 /* Injuries section - Serious Injuries. Serious Representation. */
