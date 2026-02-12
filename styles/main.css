@@ -323,6 +323,13 @@
   body {
     padding-bottom: 100px;
   }
+  html {
+    scroll-padding-top: 5rem;
+  }
+  #get-your-free-case-review {
+    scroll-margin-top: 5rem;
+    scroll-margin-bottom: 7rem;
+  }
   /* CTA buttons - use hover color/state by default on mobile for prominence */
   .btn-primary,
   .hero.hero-section .hero-form-card .btn-primary,
@@ -356,7 +363,7 @@
   }
 }
 
-/* Form scroll target - title + form visible (all viewports) */
+/* Form scroll target - title + form visible (desktop) */
 #get-your-free-case-review {
   scroll-margin-top: 1.5rem;
   scroll-margin-bottom: 6rem;
