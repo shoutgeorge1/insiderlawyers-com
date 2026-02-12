@@ -1075,6 +1075,9 @@
 .our-attorneys-card {
   text-align: center;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .our-attorneys-photo-wrap {
   width: 180px;
