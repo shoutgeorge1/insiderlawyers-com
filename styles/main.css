@@ -577,6 +577,52 @@
   transform: rotate(45deg);
 }
 
+/* Hero review badges - Google & Yelp */
+.hero-review-badges {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.hero-review-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+.hero-review-badge-item img {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .hero-review-badges {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .hero-review-badge-item {
+    gap: 0.4rem;
+  }
+  .hero-review-badge-item .hero-badge-num {
+    font-size: 1.4rem !important;
+  }
+  .hero-review-badge-item .hero-badge-stars {
+    font-size: 1.2rem !important;
+  }
+  .hero-review-badge-item .hero-badge-text {
+    font-size: 1rem !important;
+  }
+  .hero-review-badge-item img[alt="Google Reviews"] {
+    width: 60px !important;
+    height: auto !important;
+  }
+  .hero-review-badge-item img[alt="Yelp"] {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+
 @media (max-width: 767px) {
   .hero.hero-section .hero-form-column {
     max-width: 100%;
