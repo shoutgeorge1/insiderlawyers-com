@@ -49,19 +49,19 @@
     .hero.hero-section .hero-highlight { color: var(--brand-accent-yellow); font-weight: 700; }
     .btn-primary {
       display: inline-block;
-      background: #ffbf00;
+      background: linear-gradient(180deg, #ffd54f 0%, #ffbf00 50%, #f5a623 100%);
       color: #01366c;
       font-weight: 800;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
+      padding: 1.1rem 1.5rem;
+      border-radius: 10px;
       text-decoration: none;
       border: none;
       cursor: pointer;
-      font-size: 1.1rem;
-      box-shadow: 0 4px 0 #cc9900;
-      transition: transform 0.2s, box-shadow 0.2s;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 0 #c99400, 0 6px 20px rgba(255,191,0,0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 0 #cc9900; }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 0 #c99400, 0 10px 28px rgba(255,191,0,0.45); }
     .trust-badge { color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem; }
     .trust-badge span:first-child { color: #81c784; margin-right: 0.35rem; }
     .service-areas { color: rgba(255,255,255,0.9); font-size: 0.95rem; }
@@ -198,7 +198,7 @@
                 <label class="form-label" for="hero-email">Email *</label>
                 <input type="email" id="hero-email" class="form-input" name="email" placeholder="your@email.com" required>
               </div>
-              <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">Get My Free Case Review</button>
+              <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">Get My Free Case Review — No Obligation</button>
             </form>
           </div>
         </div>
@@ -287,7 +287,7 @@
         </div>
       </div>
       <div class="btn-set text-center">
-        <a href="#case-evaluation" class="btn btn--lg">Speak With an Attorney</a>
+        <a href="#case-evaluation" class="btn btn--lg">Speak With an Attorney Now — Free</a>
       </div>
     </div>
   </section>

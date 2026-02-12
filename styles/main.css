@@ -335,10 +335,10 @@
 .hero.hero-section .hero-form-card .btn-primary {
   width: 100%;
   margin-top: 0.5rem;
-  padding: 1rem 1.5rem;
+  padding: 1.15rem 1.5rem;
   font-size: 1.2rem;
   font-weight: 800;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 /* Mobile: single column, form below content */
@@ -492,11 +492,17 @@
   padding: 2rem 2.5rem;
   background: linear-gradient(180deg, #fafbfc 0%, #f4f6f8 100%);
   border: 1px solid rgba(1, 54, 108, 0.08);
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.8) inset,
               0 2px 8px rgba(0,0,0,0.04),
               0 8px 24px rgba(0,0,0,0.06),
               0 16px 48px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s ease;
+}
+.trust-badges-box:hover {
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.8) inset,
+              0 4px 16px rgba(0,0,0,0.06),
+              0 12px 32px rgba(0,0,0,0.08);
 }
 .trust-badges-row {
   display: flex;
@@ -509,6 +515,10 @@
   height: 130px;
   width: auto;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.trust-badges-row .trust-badge-img:hover {
+  transform: scale(1.06);
 }
 @media (max-width: 600px) {
   .trust-badges-box {
@@ -527,8 +537,13 @@
   margin-top: 2.5rem;
   padding: 3rem 2rem;
   background: linear-gradient(180deg, #f0f6fc 0%, #e8f0f8 50%, #e0ebf4 100%);
-  border-radius: 12px;
+  border-radius: 16px;
   text-align: center;
+  border: 1px solid rgba(1, 54, 108, 0.06);
+  transition: box-shadow 0.35s ease;
+}
+.team-photo-section:hover {
+  box-shadow: 0 8px 32px rgba(1, 54, 108, 0.1);
 }
 .team-photo {
   display: block;
@@ -536,8 +551,13 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 24px rgba(1, 54, 108, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.team-photo-section:hover .team-photo {
+  transform: scale(1.02);
+  box-shadow: 0 8px 32px rgba(1, 54, 108, 0.12);
 }
 @media (max-width: 600px) {
   .team-photo-section {
@@ -631,23 +651,25 @@
 }
 .block.highlights .btn {
   display: inline-block;
-  background: #ffbf00;
+  background: linear-gradient(180deg, #ffd54f 0%, #ffbf00 50%, #f5a623 100%);
   color: #01366c;
   font-weight: 800;
-  padding: 1rem 2rem;
-  border-radius: 8px;
+  padding: 1.15rem 2.5rem;
+  border-radius: 10px;
   text-decoration: none;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 0 #cc9900;
-  transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 0 #c99400, 0 6px 20px rgba(255,191,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  border: none;
 }
 .block.highlights .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 0 #cc9900;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 0 #c99400, 0 10px 28px rgba(255,191,0,0.45);
 }
 .block.highlights .btn--lg {
-  padding: 1rem 2.5rem;
-  font-size: 1.15rem;
+  padding: 1.15rem 2.75rem;
+  font-size: 1.2rem;
 }
 @media (max-width: 992px) {
   .block.highlights .items {
