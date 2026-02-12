@@ -161,51 +161,54 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
   margin: 0;
 }
 
-/* Ticker strip - exact format from user, brand colors */
+/* Settlement ticker - clean grid, amount-first hierarchy */
 .settlement-ticker {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-  background: linear-gradient(180deg, #f0f6fc 0%, #e8eef6 100%);
-  padding: 1.25rem 1rem;
-  border-radius: 10px;
-  border: 1px solid rgba(1, 54, 108, 0.1);
-  gap: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
 }
-.settlement-ticker__block {
-  flex: 1 1 auto;
-  min-width: 180px;
-  padding: 0.6rem 1rem;
+.settlement-ticker__item {
+  background: #fff;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
   text-align: center;
-  font-size: 0.95rem;
-  font-weight: 700;
+  border: 1px solid rgba(1, 54, 108, 0.12);
+  box-shadow: 0 2px 8px rgba(1, 54, 108, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.settlement-ticker__item:hover {
+  box-shadow: 0 4px 16px rgba(1, 54, 108, 0.1);
+  transform: translateY(-2px);
+}
+.settlement-ticker__amount {
+  display: block;
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-weight: 900;
   color: #01366c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
 }
-.settlement-ticker__divider {
-  width: 1px;
-  min-height: 36px;
-  background: rgba(1, 70, 138, 0.2);
-  flex-shrink: 0;
+.settlement-ticker__type {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
 }
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .settlement-ticker {
-    flex-direction: column;
-    align-items: stretch;
+    grid-template-columns: repeat(3, 1fr);
   }
-  .settlement-ticker__block {
-    min-width: 100%;
-    padding: 0.75rem;
-    border-bottom: 1px solid rgba(1, 70, 138, 0.15);
+}
+@media (max-width: 600px) {
+  .settlement-ticker {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
   }
-  .settlement-ticker__block:last-of-type {
-    border-bottom: none;
-  }
-  .settlement-ticker__divider {
-    display: none;
+  .settlement-ticker__item {
+    padding: 0.85rem 1rem;
   }
 }
 
