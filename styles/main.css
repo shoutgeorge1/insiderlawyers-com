@@ -687,16 +687,16 @@
 .trust-badges-row .trust-badge-img:hover {
   transform: scale(1.06);
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .trust-badges-box {
     padding: 1.5rem 1.25rem;
     margin-top: 1.5rem;
   }
   .trust-badges-row {
-    gap: 1rem 1.5rem;
+    gap: 1.25rem 1.75rem;
   }
   .trust-badges-row .trust-badge-img {
-    height: 100px;
+    height: 130px;
   }
 }
 
