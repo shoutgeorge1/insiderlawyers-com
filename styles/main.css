@@ -283,21 +283,21 @@
     right: 0;
     z-index: 99;
     padding: 0.8rem;
-    background: linear-gradient(135deg, #ffc107 0%, #ffbf00 50%, #f5a623 100%);
-    color: #01366c;
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 50%, #166534 100%);
+    color: #fff;
     text-decoration: none;
     font-weight: 900;
     font-size: 1.85rem;
-    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.18), 0 -2px 0 rgba(193, 148, 0, 0.4) inset;
-    border-top: 3px solid #01366c;
+    box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.3) inset;
+    border-top: 4px solid #fff;
     transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
   .tap-to-call-bar:hover,
   .tap-to-call-bar:active {
-    background: linear-gradient(135deg, #ffd54f 0%, #ffc107 50%, #ffbf00 100%);
-    color: #012a50;
-    transform: translateY(-1px);
-    box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.25), 0 0 0 3px rgba(255, 255, 255, 0.4) inset;
   }
   .tap-to-call-bar__icon {
     width: 4rem;
