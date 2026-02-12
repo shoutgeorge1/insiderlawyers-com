@@ -601,6 +601,11 @@
   background: linear-gradient(180deg, #fff 0%, #f4f8fc 50%, #eef4fa 100%);
   border: 1px solid rgba(1, 54, 108, 0.1);
   box-shadow: 0 4px 20px rgba(1, 54, 108, 0.08), 0 0 0 1px rgba(255,255,255,0.8) inset;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.block.highlights .highlights__icon:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(1, 54, 108, 0.12), 0 0 0 1px rgba(255,255,255,0.8) inset;
 }
 .block.highlights .highlights__icon img {
   width: 100%;
@@ -610,6 +615,10 @@
   display: block;
   transform: scale(1.08);
   border-radius: 8px;
+  transition: transform 0.35s ease;
+}
+.block.highlights .highlights__icon:hover img {
+  transform: scale(1.12);
 }
 .block.highlights .highlights__disc {
   font-size: 1rem;
