@@ -276,20 +276,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem 1.25rem;
+    gap: 0.5rem 0.75rem;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 99;
-    padding: 1.1rem 1.25rem;
+    padding: 0.75rem 1rem;
     background: linear-gradient(135deg, #ffc107 0%, #ffbf00 50%, #f5a623 100%);
     color: #01366c;
     text-decoration: none;
     font-weight: 900;
-    font-size: 1.5rem;
-    box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.2), 0 -2px 0 rgba(193, 148, 0, 0.5) inset;
-    border-top: 4px solid #01366c;
+    font-size: 1.2rem;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.18), 0 -2px 0 rgba(193, 148, 0, 0.4) inset;
+    border-top: 3px solid #01366c;
     transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
   .tap-to-call-bar:hover,
@@ -300,18 +300,18 @@
     box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.25);
   }
   .tap-to-call-bar__icon {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     flex-shrink: 0;
   }
   .tap-to-call-bar__text {
     flex: 1 1 auto;
     text-align: center;
     letter-spacing: 0.03em;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   body {
-    padding-bottom: 80px;
+    padding-bottom: 60px;
   }
   /* CTA buttons - use hover color/state by default on mobile for prominence */
   .btn-primary,
