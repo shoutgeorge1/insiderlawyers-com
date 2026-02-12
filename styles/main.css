@@ -927,3 +927,201 @@
     height: 220px;
   }
 }
+
+/* Why Choose Us section */
+.why-choose-section {
+  padding: 2rem 0;
+  background: linear-gradient(180deg, #fff 0%, #f8fafd 50%, #eef4fa 100%);
+}
+.why-choose-section .container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.why-choose-section .head-group {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.why-choose-section .highlights__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: #01366c;
+  line-height: 1.25;
+  margin: 0;
+  display: inline-block;
+}
+.why-choose-section .highlights__title .tail__before,
+.why-choose-section .highlights__title .tail__after {
+  display: inline-block;
+  width: 44px;
+  height: 4px;
+  background: var(--brand-accent-yellow, #fbba00);
+  vertical-align: middle;
+  margin: 0 0.4rem;
+}
+.why-choose__tagline {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #374151;
+  font-style: italic;
+  margin: 0.5rem 0 0 0;
+}
+.why-choose__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.why-choose__card {
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(1, 54, 108, 0.1);
+  box-shadow: 0 2px 12px rgba(1, 54, 108, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.why-choose__card:hover {
+  box-shadow: 0 4px 20px rgba(1, 54, 108, 0.1);
+  transform: translateY(-2px);
+}
+.why-choose__card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #01366c;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+.why-choose__card p {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.5;
+  margin: 0;
+}
+.why-choose__cta {
+  text-align: center;
+}
+.why-choose__cta .btn {
+  display: inline-block;
+  background: linear-gradient(180deg, #ffd54f 0%, #ffbf00 50%, #f5a623 100%);
+  color: #01366c;
+  font-weight: 800;
+  padding: 1.15rem 2.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 0 #c99400, 0 6px 20px rgba(255,191,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.why-choose__cta .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 0 #c99400, 0 10px 28px rgba(255,191,0,0.45);
+}
+.why-choose__cta .btn--lg.btn--xl {
+  padding: 1.15rem 2.75rem;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  .why-choose__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Site footer */
+.site-footer {
+  background: linear-gradient(180deg, #012a50 0%, #01366c 50%, #012240 100%);
+  color: #fff;
+  padding: 2rem 0 1.5rem;
+  border-top: 3px solid #fbba00;
+}
+.site-footer .container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.footer__main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.footer__firm {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+}
+.footer__brand p,
+.footer__contact p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0.25rem 0;
+  line-height: 1.5;
+}
+.footer__heading {
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fbba00;
+  margin: 0 0 0.5rem 0;
+}
+.footer__phone {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fbba00;
+  text-decoration: none;
+  margin: 0.25rem 0 0.5rem 0;
+  transition: color 0.2s ease;
+}
+.footer__phone:hover {
+  color: #fff;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.footer__links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+.footer__links a:hover {
+  color: #fbba00;
+}
+.footer__disclaimer {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+}
+.footer__disclaimer p {
+  margin: 0.5rem 0;
+}
+.footer__disclaimer a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+}
+.footer__disclaimer a:hover {
+  color: #fbba00;
+}
+.footer__copyright {
+  margin-top: 1rem !important;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media (max-width: 768px) {
+  .footer__main {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .footer__links {
+    align-items: center;
+  }
+}
