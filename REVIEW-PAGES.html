@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPC + SEO Pages Review - Launch Tracker</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 920px; margin: 2rem auto; padding: 0 1rem; line-height: 1.45; }
+    h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    h2 { margin-top: 1.5rem; margin-bottom: 0.4rem; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { margin: 0.35rem 0; }
+    a { color: #0a58ca; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .badge { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 999px; margin-left: 0.4rem; }
+    .b-ppc { background: #e8f0ff; color: #124db0; }
+    .b-seo { background: #e8f7ed; color: #176d2e; }
+    .b-enriched { background: #efe8ff; color: #5b2ca0; }
+    .b-index { background: #fff8e0; color: #8a6800; }
+    .b-noindex { background: #fde8ea; color: #8f1f2f; }
+    .done { color: #166534; }
+    .pending { color: #6b7280; }
+    .note { font-size: 0.93rem; color: #4b5563; margin-top: 1rem; }
+    .callout { background: #f6f8fb; border: 1px solid #dbe3ee; border-radius: 8px; padding: 0.8rem 0.95rem; margin: 1rem 0; }
+    code { background: #f3f4f6; padding: 0.1rem 0.3rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>PPC + SEO Review Tracker</h1>
+  <p>Primary domain target: <strong>https://www.insiderlawyers.com/</strong></p>
+
+  <div class="callout">
+    <strong>Decision locked for now:</strong> Homepage stays your primary PPC page.
+    Existing <code>/personal-injury/*</code> and <code>/insurance-company-playbook</code> pages are treated as SEO/article pages.
+  </div>
+
+  <h2>Homepage (locked)</h2>
+  <ul>
+    <li class="done">[Live PPC] <a href="index.html">/ (Homepage)</a> <span class="badge b-ppc">PPC</span> <span class="badge b-index">INDEX</span></li>
+  </ul>
+
+  <h2>PPC Expansion (build next)</h2>
+  <ul>
+    <li class="pending">[Not built] /car-wreck-lawyer-los-angeles <span class="badge b-ppc">PPC</span> <span class="badge b-noindex">NOINDEX (start)</span></li>
+    <li class="pending">[Not built] /car-crash-lawyer-los-angeles <span class="badge b-ppc">PPC</span> <span class="badge b-noindex">NOINDEX (start)</span></li>
+    <li class="pending">[Not built] /rear-end-accident-lawyer-los-angeles <span class="badge b-ppc">PPC</span> <span class="badge b-index">INDEX candidate</span></li>
+    <li class="pending">[Not built] /truck-accident-lawyer-los-angeles <span class="badge b-ppc">PPC</span> <span class="badge b-index">INDEX candidate</span></li>
+  </ul>
+
+  <h2>SEO / Article Pages (already drafted)</h2>
+  <ul>
+    <li class="done"><a href="personal-injury/index.html">/personal-injury</a> <span class="badge b-seo">SEO</span> <span class="badge b-enriched">ENRICHED</span> <span class="badge b-index">INDEX</span></li>
+    <li class="done"><a href="personal-injury/auto-accidents/index.html">/personal-injury/auto-accidents</a> <span class="badge b-seo">SEO</span> <span class="badge b-enriched">ENRICHED</span> <span class="badge b-index">INDEX</span></li>
+    <li class="done"><a href="personal-injury/brain-injuries/index.html">/personal-injury/brain-injuries</a> <span class="badge b-seo">SEO</span> <span class="badge b-enriched">ENRICHED</span> <span class="badge b-index">INDEX</span></li>
+    <li class="done"><a href="personal-injury/truck-accidents/index.html">/personal-injury/truck-accidents</a> <span class="badge b-seo">SEO</span> <span class="badge b-enriched">ENRICHED</span> <span class="badge b-index">INDEX</span></li>
+    <li class="done"><a href="personal-injury/wrongful-death/index.html">/personal-injury/wrongful-death</a> <span class="badge b-seo">SEO</span> <span class="badge b-enriched">ENRICHED</span> <span class="badge b-index">INDEX</span></li>
+    <li class="done"><a href="insurance-company-playbook/index.html">/insurance-company-playbook</a> <span class="badge b-seo">SEO</span> <span class="badge b-enriched">ENRICHED</span> <span class="badge b-index">INDEX</span></li>
+  </ul>
+
+  <div class="callout">
+    <strong>Truck manuscript expansion now reflected:</strong> Added deeper truck-case legal content (FMCSA/state rules, fast-disappearing evidence, multi-party liability) and propagated the insider valuation framework across core SEO pages.
+  </div>
+
+  <h2>Launch Today Checklist</h2>
+  <ul>
+    <li>[ ] Confirm homepage form + call links still working.</li>
+    <li>[ ] Keep homepage as only PPC root for now.</li>
+    <li>[ ] Launch current SEO pages as supporting authority content.</li>
+    <li>[ ] Build 2 PPC variants first (car wreck + rear-end), then decide index/noindex after performance.</li>
+  </ul>
+
+  <p class="note"><strong>How to review:</strong> open this file directly or run a local server and visit <a href="http://localhost:3000/REVIEW-PAGES.html">http://localhost:3000/REVIEW-PAGES.html</a>.</p>
+  <p class="note"><strong>Publish flow:</strong> push to GitHub -> Vercel deploy -> verify live URLs + forms.</p>
+</body>
+</html>

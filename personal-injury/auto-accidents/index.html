@@ -62,18 +62,20 @@
         .section-content{padding:48px;margin-bottom:32px}
         h1,h2,h3,h4{font-weight:700;color:var(--brand-navy)}
         h1{font-size:36px;margin-bottom:24px}
-        h2{font-size:28px;margin:32px 0 16px}
+        h2{font-size:28px;margin:36px 0 16px}
         h3{font-size:22px;margin:24px 0 12px}
         h4{font-size:18px;margin:16px 0 8px}
         p{margin-bottom:16px;line-height:1.75}
         .lead-text{font-size:18px;color:var(--brand-gray-700);margin-bottom:24px}
-        blockquote.content-quote{border-left:4px solid var(--brand-blue);padding:16px 20px;margin:24px 0;background:var(--brand-light-blue);font-style:italic}
+        blockquote.content-quote{border-left:4px solid var(--brand-blue);padding:16px 20px;margin:24px 0;background:var(--brand-light-blue);font-size:1.18rem;font-weight:800;line-height:1.5;font-style:normal}
         .book-insight{font-size:15px;color:var(--brand-gray-700);margin:12px 0}
         ul{margin:16px 0;padding-left:24px}
         li{margin:8px 0}
         .plus-list{list-style:none;padding-left:0}
         .plus-list li:before{content:"✓ ";color:var(--brand-blue);font-weight:700}
-        .faq-item{margin:24px 0;padding:20px;background:var(--brand-light-blue);border-radius:var(--card-radius)}
+        .content-body h2{position:relative;padding:12px 16px;background:linear-gradient(180deg,#f9fbfe 0%,#f1f6fc 100%);border:1px solid #dce6f2;border-left:4px solid var(--brand-blue);border-radius:10px}
+        .content-body h3{color:#0f3f72}
+        .faq-item{margin:24px 0;padding:20px;background:#f8fbff;border:1px solid #d8e5f4;border-radius:var(--card-radius);box-shadow:0 4px 14px rgba(1,54,108,.06)}
         .faq-item h4{margin-top:0}
         .btn-primary{display:inline-block;background:var(--brand-accent-yellow);color:var(--brand-navy);font-weight:600;padding:14px 28px;border-radius:8px;text-decoration:none;font-size:18px;margin:24px 0;transition:all .3s}
         .btn-primary:hover{background:#e6b300;transform:translateY(-2px)}
@@ -81,19 +83,27 @@
         .btn-secondary:hover{background:#0f3261;transform:translateY(-2px)}
         .sticky-header{position:sticky;top:0;background:var(--brand-white);border-bottom:3px solid var(--brand-accent-yellow);padding:10px 0 8px;z-index:1000;box-shadow:0 4px 14px rgba(1,54,108,.12)}
         .header-content{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
-        .header-col--proof{text-align:center}
-        .header-proof-title{font-family:Roboto,Arial,sans-serif;font-size:1.02rem;font-weight:900;color:var(--brand-navy);line-height:1.1;letter-spacing:-.02em;text-transform:uppercase}
-        .header-proof-title a{color:inherit;text-decoration:none}
-        .header-col--proof p{margin:2px 0 0;font-size:.82rem;color:var(--brand-gray-700)}
+        .header-col--proof{text-align:center;display:flex;flex-direction:column;align-items:center}
+        .header-proof-title{font-family:Roboto,Arial,sans-serif;font-size:1rem;font-weight:900;color:var(--brand-navy);line-height:1.1;letter-spacing:-.01em;text-transform:uppercase;background:linear-gradient(180deg,#ffffff 0%,#f4f8fd 100%);border:1px solid rgba(1,54,108,.2);border-radius:999px;padding:7px 14px;box-shadow:0 3px 10px rgba(1,54,108,.1)}
+        .header-col--proof p{margin:6px 0 0;font-size:.78rem;color:var(--brand-gray-700);font-weight:700;letter-spacing:.02em;text-transform:uppercase}
+        .header-col--proof p a{color:inherit;text-decoration:none}
         .header-col--call{text-align:right}
         .header-call-label{display:block;font-size:.74rem;color:var(--brand-gray-700);font-weight:800;text-transform:uppercase;letter-spacing:.03em}
         .header-call-number{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#ffd54f 0%,#ffbf00 50%,#f5a623 100%);color:#01366c;font-family:Roboto,Arial,sans-serif;font-size:1.08rem;line-height:1;font-weight:900;text-decoration:none;padding:.62rem .9rem;border-radius:10px;box-shadow:0 3px 0 #c99400,0 6px 16px rgba(255,191,0,.35);border:1px solid rgba(201,148,0,.55);margin-top:4px}
         .header-call-number:hover{transform:translateY(-1px);box-shadow:0 4px 0 #c99400,0 8px 20px rgba(255,191,0,.45)}
         .header-lang{display:block;font-size:.75rem;color:var(--brand-gray-700);font-weight:600}
         .header-logo{max-width:250px;height:auto;filter:brightness(0) saturate(100%)}
-        .header-nav-row{display:flex;justify-content:center;gap:20px;padding-top:8px}
-        .header-nav-row a{color:var(--brand-gray-900);text-decoration:none;font-weight:700;font-size:.9rem}
-        .header-nav-row a:hover{color:var(--brand-blue)}
+        .header-nav-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;padding-top:10px;position:relative}
+        .nav-link{display:inline-flex;align-items:center;justify-content:center;min-height:38px;color:var(--brand-navy);text-decoration:none;font-weight:700;font-size:.82rem;padding:8px 14px;background:linear-gradient(180deg,#ffffff 0%,#f6f9fd 100%);border:1px solid rgba(1,54,108,.2);border-radius:8px;box-shadow:0 1px 3px rgba(1,54,108,.07);transition:all .2s ease}
+        .nav-link:hover{color:var(--brand-blue);border-color:#9fbadb;background:#eef4fb;transform:translateY(-1px)}
+        .nav-link--primary{background:linear-gradient(180deg,#01468a 0%,#01366c 100%);color:#fff;border-color:#01366c}
+        .nav-link--primary:hover{color:#fff;background:linear-gradient(180deg,#0253a4 0%,#01468a 100%)}
+        .nav-link--dropdown{cursor:default}
+        .nav-item{position:relative}
+        .nav-dropdown{position:absolute;left:0;top:calc(100% + 6px);min-width:250px;background:#fff;border:1px solid #d3e0f0;border-radius:10px;box-shadow:0 10px 26px rgba(1,54,108,.15);padding:8px;display:none;z-index:1200}
+        .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{display:block}
+        .nav-dropdown a{display:block;padding:9px 10px;color:var(--brand-navy);text-decoration:none;font-size:.84rem;font-weight:600;border-radius:6px}
+        .nav-dropdown a:hover{background:#eef4fb;color:var(--brand-blue)}
         .content-body a{color:var(--brand-blue);text-decoration:underline}
         .content-body a:hover{color:var(--brand-navy)}
         .content-body a.btn-secondary{color:#fff!important;text-decoration:none}
@@ -106,7 +116,11 @@
           .header-col--proof{order:3;text-align:center}
           .header-proof-title{font-size:.95rem}
           .header-col--proof p{font-size:.75rem}
-          .header-nav-row{flex-wrap:wrap;gap:12px;margin-top:6px;padding-top:8px;border-top:1px solid rgba(1,54,108,.12)}
+          .header-nav-row{gap:8px;margin-top:6px;padding-top:8px;border-top:1px solid rgba(1,54,108,.12)}
+          .nav-link{min-height:36px;padding:7px 12px}
+          .nav-item{width:100%}
+          .nav-item .nav-link{width:100%}
+          .nav-dropdown{position:static;display:block;margin-top:6px;min-width:0;box-shadow:none;border:1px solid #dce6f3}
           .header-call-label{font-size:.7rem}
           .header-call-number{font-size:1rem;padding:.58rem .85rem}
           .header-logo{max-width:180px}
@@ -114,22 +128,27 @@
         @media(max-width:768px){
           h1{font-size:28px}
           h2{font-size:24px}
+          .content-body h2{padding:10px 12px}
           .footer-content{grid-template-columns:1fr;gap:18px;text-align:center}
+          .footer-section{padding:14px}
+          .footer-section:first-child{padding:0}
           .footer-logo{margin:0 auto 10px}
           .related-pages{text-align:center}
           .related-pages ul{display:inline-block;text-align:left}
           .footer-disclaimer{text-align:center}
         }
         footer{background:linear-gradient(180deg,#012a50 0%,#01366c 50%,#012240 100%);color:var(--brand-white);padding:42px 0 22px;border-top:3px solid var(--brand-accent-yellow)}
-        .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.18)}
+        .footer-content{display:grid;grid-template-columns:1.4fr repeat(3,minmax(180px,1fr));gap:18px;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.18)}
+        .footer-section{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px}
+        .footer-section:first-child{background:transparent;border:none;padding:0}
         .footer-logo{max-width:210px;height:auto;display:block;margin-bottom:10px}
-        .footer-section h3{color:var(--brand-white);margin-bottom:12px;font-size:.96rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+        .footer-section h3{color:var(--brand-white);margin-bottom:12px;font-size:.9rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
         .footer-section p{margin:.3rem 0;font-size:.92rem;line-height:1.5}
         .footer-section a{color:rgba(255,255,255,.92);text-decoration:none}
         .footer-section a:hover{color:var(--brand-accent-yellow)}
         .footer-phone{display:inline-block;font-size:1.08rem;font-weight:800;color:var(--brand-accent-yellow)!important;margin-top:8px}
         .related-pages{margin-top:0;padding-top:0;border-top:none}
-        .related-pages h4{color:var(--brand-white);font-size:.96rem;margin-bottom:10px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+        .related-pages h4{color:var(--brand-white);font-size:.9rem;margin-bottom:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
         .related-pages ul{list-style:none;padding-left:0;margin:0}
         .related-pages li{margin:.35rem 0}
         .related-pages a{color:rgba(255,255,255,.92);text-decoration:none}
@@ -173,8 +192,8 @@
                     <a href="/"><img src="https://www.insiderlawyers.com/images/la/logo.png" alt="Insider Accident Lawyers" class="header-logo"></a>
                 </div>
                 <div class="header-col header-col--proof">
-                    <div class="header-proof-title"><a href="/#case-results">Over $100 Million Recovered</a></div>
-                    <p>in Verdicts &amp; Settlements<small><sup>*</sup></small></p>
+                    <div class="header-proof-title">Over $100 Million Recovered</div>
+                    <p>in Verdicts &amp; Settlements<small><sup><a href="#results-disclaimer-note" aria-label="Results disclaimer reference">*</a></sup></small></p>
                 </div>
                 <div class="header-col header-col--call">
                     <span class="header-call-label">Available 24/7 - Call Now:</span>
@@ -182,11 +201,34 @@
                     <span class="header-lang">Hablamos Espanol</span>
                 </div>
             </div>
-            <nav class="header-nav-row">
-                <a href="/">Home</a>
-                <a href="/#case-evaluation">Free Case Review</a>
-                <a href="/#case-results">Case Results</a>
-                <a href="/#our-attorneys">Our Attorneys</a>
+            <nav class="header-nav-row" aria-label="Primary">
+                <a class="nav-link nav-link--primary" href="/#case-evaluation">Free Case Review</a>
+                <a class="nav-link" href="/">Home</a>
+                <div class="nav-item">
+                    <span class="nav-link nav-link--dropdown">Practice Areas</span>
+                    <div class="nav-dropdown">
+                        <a href="/personal-injury">Personal Injury</a>
+                        <a href="/personal-injury/auto-accidents">Auto Accidents</a>
+                        <a href="/personal-injury/truck-accidents">Truck Accidents</a>
+                        <a href="/personal-injury/brain-injuries">Brain Injuries</a>
+                        <a href="/personal-injury/wrongful-death">Wrongful Death</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <span class="nav-link nav-link--dropdown">Resources</span>
+                    <div class="nav-dropdown">
+                        <a href="/insurance-company-playbook">Insurance Company Playbook</a>
+                        <a href="/settlements">Settlements</a>
+                        <a href="/#injuries">Injury Types</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <span class="nav-link nav-link--dropdown">Firm</span>
+                    <div class="nav-dropdown">
+                        <a href="/#our-attorneys">Our Attorneys</a>
+                        <a href="/#case-results">Case Results</a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -276,6 +318,20 @@
                     <li>We evaluate policy limits and layered coverage early to avoid missed recovery.</li>
                 </ul>
 
+                <h2>Insider Case Evaluation Framework</h2>
+                <p class="lead-text">Our auto accident strategy starts with the same four pillars we use in high-value litigation.</p>
+                <h3>1) Liability</h3>
+                <ul><li>Fault proof from scene evidence, witness statements, and report analysis.</li></ul>
+                <h3>2) Impact</h3>
+                <ul><li>Collision force and mechanics tied to injury plausibility and causation.</li></ul>
+                <h3>3) Injuries</h3>
+                <ul><li>Immediate and delayed symptoms documented in a coherent treatment timeline.</li></ul>
+                <h3>4) Coverage</h3>
+                <ul><li>Primary, excess, and UM/UIM policy sources reviewed early to prevent missed value.</li></ul>
+                <ul class="plus-list">
+                    <li>Early work in these four areas reduces delay tactics and improves settlement positioning.</li>
+                </ul>
+
                 <h2>FAQs</h2>
                 <p class="lead-text">These are common questions after a crash.</p>
                 <div class="faq-item">
@@ -320,27 +376,43 @@
                     <p>3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3>Firm</h3>
                     <p><a href="/">Home</a></p>
                     <p><a href="/#case-evaluation">Free Case Review</a></p>
                     <p><a href="/#case-results">Case Results</a></p>
                     <p><a href="/#our-attorneys">Our Attorneys</a></p>
+                    <p><a href="/settlements">Settlements</a></p>
                 </div>
                 <div class="footer-section">
                     <div class="related-pages">
-                        <h4>Related Pages</h4>
+                        <h4>Practice Areas</h4>
                         <ul>
                             <li><a href="/personal-injury">Personal Injury</a></li>
-                            <li><a href="/personal-injury/brain-injuries">Brain Injuries</a></li>
+                            <li><a href="/personal-injury/auto-accidents">Auto Accidents</a></li>
                             <li><a href="/personal-injury/truck-accidents">Truck Accidents</a></li>
+                            <li><a href="/personal-injury/brain-injuries">Brain Injuries</a></li>
                             <li><a href="/personal-injury/wrongful-death">Wrongful Death</a></li>
-                            <li><a href="/">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="related-pages">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="/insurance-company-playbook">Insurance Company Playbook</a></li>
+                            <li><a href="/#injuries">Injury Types Overview</a></li>
+                            <li><a href="/legal/results-disclaimer">Results Disclaimer</a></li>
+                            <li><a href="/legal/disclaimer">Legal Disclaimer</a></li>
+                            <li><a href="/legal/terms">Terms of Use</a></li>
+                            <li><a href="/legal/accessibility">Accessibility Statement</a></li>
+                            <li><a href="https://www.insideraccidentlawyers.com/privacy-policy">Privacy Policy</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-disclaimer">
-                <p>Attorney advertising. Prior results do not guarantee a similar outcome. This site does not provide legal advice. Countrywide Trial Lawyers DBA Insider Accident Lawyers. 3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010.</p>
+                <p id="results-disclaimer-note"><strong>* Results Disclaimer:</strong> Prior verdicts and settlements do not guarantee a similar outcome. Case value depends on specific facts, liability, injuries, evidence, insurance coverage, and applicable law.</p>
+                <p>Attorney advertising. This site provides general information only and is not legal advice. No attorney-client relationship is created by using this site or submitting a form. Countrywide Trial Lawyers A Professional Law Corporation DBA Insider Accident Lawyers, California Entity #4851715, 3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010.</p>
             </div>
         </div>
     </footer>
