@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IAL Launch Control Center</title>
+  <style>
+    :root {
+      --brand-navy: #01366c;
+      --brand-blue: #01468a;
+      --brand-accent-yellow: #fbba00;
+      --brand-gray: #374151;
+      --ok: #166534;
+      --warn: #8a6800;
+      --todo: #6b7280;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      color: #111827;
+      background: #f5f8fc;
+      line-height: 1.45;
+    }
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #01366c 0%, #01468a 60%, #0a2f57 100%);
+      color: #fff;
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 16px;
+    }
+    .hero h1 { margin: 0 0 8px; font-size: 1.5rem; }
+    .hero p { margin: 0; opacity: 0.95; }
+    .card {
+      background: #fff;
+      border: 1px solid #d8e3f2;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    h2 { margin: 0 0 10px; font-size: 1.05rem; color: var(--brand-navy); }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { margin: 6px 0; }
+    a { color: var(--brand-blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .ppc { background: #e8f0ff; color: #124db0; }
+    .seo { background: #e8f7ed; color: #176d2e; }
+    .index { background: #fff7dd; color: var(--warn); }
+    .noindex { background: #fde8ea; color: #8f1f2f; }
+    .ok { color: var(--ok); font-weight: 600; }
+    .todo { color: var(--todo); font-weight: 600; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 780px) { .grid { grid-template-columns: 1fr; } }
+    .small { font-size: 0.93rem; color: var(--brand-gray); }
+    code { background: #eef3f9; border-radius: 4px; padding: 1px 5px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>IAL Launch Control Center</h1>
+      <p>Single-page command center for daily PPC + SEO launches. Keep this tab open.</p>
+    </div>
+
+    <div class="card">
+      <h2>Primary Strategy (Locked)</h2>
+      <ul>
+        <li><span class="ok">Homepage is locked as primary PPC page.</span></li>
+        <li>PPC pages: homepage-like conversion layout, minimal nav, strong CTA/form.</li>
+        <li>SEO pages: article/hub style, same brand colors/fonts/buttons, strong internal linking.</li>
+        <li>Near-duplicate PPC variants start as <code>noindex,follow</code>; promote winners later.</li>
+      </ul>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Live Production Links (Vercel)</h2>
+        <ul>
+          <li><a href="https://www.insiderlawyers.com/" target="_blank" rel="noopener noreferrer">https://www.insiderlawyers.com/</a> <span class="badge ppc">PPC</span></li>
+          <li><a href="https://www.insiderlawyers.com/personal-injury" target="_blank" rel="noopener noreferrer">https://www.insiderlawyers.com/personal-injury</a> <span class="badge seo">SEO</span></li>
+          <li><a href="https://www.insiderlawyers.com/personal-injury/auto-accidents" target="_blank" rel="noopener noreferrer">https://www.insiderlawyers.com/personal-injury/auto-accidents</a> <span class="badge seo">SEO</span></li>
+          <li><a href="https://www.insiderlawyers.com/personal-injury/brain-injuries" target="_blank" rel="noopener noreferrer">https://www.insiderlawyers.com/personal-injury/brain-injuries</a> <span class="badge seo">SEO</span></li>
+          <li><a href="https://www.insiderlawyers.com/personal-injury/truck-accidents" target="_blank" rel="noopener noreferrer">https://www.insiderlawyers.com/personal-injury/truck-accidents</a> <span class="badge seo">SEO</span></li>
+          <li><a href="https://www.insiderlawyers.com/personal-injury/wrongful-death" target="_blank" rel="noopener noreferrer">https://www.insiderlawyers.com/personal-injury/wrongful-death</a> <span class="badge seo">SEO</span></li>
+          <li><a href="https://www.insiderlawyers.com/insurance-company-playbook" target="_blank" rel="noopener noreferrer">https://www.insiderlawyers.com/insurance-company-playbook</a> <span class="badge seo">SEO</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Always-Open Review Links</h2>
+        <ul>
+          <li><a href="index.html">Homepage /</a> <span class="badge ppc">PPC</span> <span class="badge index">INDEX</span></li>
+          <li><a href="REVIEW-PAGES.html">Review Tracker</a></li>
+          <li><a href="PPC-SEO-LAUNCH-PLAN.md">Launch Plan (markdown)</a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>External References</h2>
+        <ul>
+          <li><a href="https://ial-rewrite.vercel.app/" target="_blank" rel="noopener noreferrer">IAL Rewrite Content Map</a></li>
+          <li><a href="https://www.insiderlawyers.com/" target="_blank" rel="noopener noreferrer">Live Website</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Current SEO Pages (Drafted)</h2>
+        <ul>
+          <li><a href="personal-injury/index.html">/personal-injury</a> <span class="badge seo">SEO</span> <span class="badge index">INDEX</span></li>
+          <li><a href="personal-injury/auto-accidents/index.html">/personal-injury/auto-accidents</a> <span class="badge seo">SEO</span> <span class="badge index">INDEX</span></li>
+          <li><a href="personal-injury/brain-injuries/index.html">/personal-injury/brain-injuries</a> <span class="badge seo">SEO</span> <span class="badge index">INDEX</span></li>
+          <li><a href="personal-injury/truck-accidents/index.html">/personal-injury/truck-accidents</a> <span class="badge seo">SEO</span> <span class="badge index">INDEX</span></li>
+          <li><a href="personal-injury/wrongful-death/index.html">/personal-injury/wrongful-death</a> <span class="badge seo">SEO</span> <span class="badge index">INDEX</span></li>
+          <li><a href="insurance-company-playbook/index.html">/insurance-company-playbook</a> <span class="badge seo">SEO</span> <span class="badge index">INDEX</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Next PPC Pages (Build Queue)</h2>
+        <ul>
+          <li><span class="todo">/car-wreck-lawyer-los-angeles</span> <span class="badge ppc">PPC</span> <span class="badge noindex">NOINDEX</span></li>
+          <li><span class="todo">/car-crash-lawyer-los-angeles</span> <span class="badge ppc">PPC</span> <span class="badge noindex">NOINDEX</span></li>
+          <li><span class="todo">/rear-end-accident-lawyer-los-angeles</span> <span class="badge ppc">PPC</span> <span class="badge index">INDEX candidate</span></li>
+          <li><span class="todo">/truck-accident-lawyer-los-angeles</span> <span class="badge ppc">PPC</span> <span class="badge index">INDEX candidate</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Daily Launch Checklist</h2>
+      <ul>
+        <li>[ ] Confirm call links and form on homepage.</li>
+        <li>[ ] Run preflight: <code>npm run preflight</code></li>
+        <li>[ ] Review internal links and canonical tags for new page.</li>
+        <li>[ ] Decide <code>index,follow</code> vs <code>noindex,follow</code> before publish.</li>
+      </ul>
+      <p class="small">Local direct URL: <code>file:///C:/Users/georgea/insiderlawyer-com-lps/pi-search-caraccident-lp/LAUNCH-CONTROL-CENTER.html</code></p>
+    </div>
+  </div>
+</body>
+</html>
