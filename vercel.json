@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
-  "buildCommand": "npm install && npm run build",
+  "buildCommand": "",
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/personal-injury", "destination": "/seo/" },
     { "source": "/personal-injury/", "destination": "/seo/" },
