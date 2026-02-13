@@ -96,8 +96,28 @@
         .content-body a:hover{color:var(--brand-navy)}
         .content-body a.btn-secondary{color:#fff!important;text-decoration:none}
         .content-body a.btn-secondary:hover{color:#fff!important}
-        @media(max-width:900px){.header-content{grid-template-columns:1fr}.header-col--proof,.header-col--call{text-align:center}.header-nav-row{flex-wrap:wrap;gap:12px}.header-call-label{font-size:.7rem}.header-call-number{font-size:1.15rem}.header-logo{max-width:180px}}
-        @media(max-width:768px){h1{font-size:28px}h2{font-size:24px}}
+        @media(max-width:900px){
+          .sticky-header{padding:8px 0}
+          .header-content{grid-template-columns:1fr;gap:10px}
+          .header-col--logo{order:1;text-align:center}
+          .header-col--call{order:2;text-align:center}
+          .header-col--proof{order:3;text-align:center}
+          .header-proof-title{font-size:.95rem}
+          .header-col--proof p{font-size:.75rem}
+          .header-nav-row{flex-wrap:wrap;gap:12px;margin-top:6px;padding-top:8px;border-top:1px solid rgba(1,54,108,.12)}
+          .header-call-label{font-size:.7rem}
+          .header-call-number{font-size:1rem;padding:.58rem .85rem}
+          .header-logo{max-width:180px}
+        }
+        @media(max-width:768px){
+          h1{font-size:28px}
+          h2{font-size:24px}
+          .footer-content{grid-template-columns:1fr;gap:18px;text-align:center}
+          .footer-logo{margin:0 auto 10px}
+          .related-pages{text-align:center}
+          .related-pages ul{display:inline-block;text-align:left}
+          .footer-disclaimer{text-align:center}
+        }
         footer{background:linear-gradient(180deg,#012a50 0%,#01366c 50%,#012240 100%);color:var(--brand-white);padding:42px 0 22px;border-top:3px solid var(--brand-accent-yellow)}
         .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.18)}
         .footer-logo{max-width:210px;height:auto;display:block;margin-bottom:10px}
