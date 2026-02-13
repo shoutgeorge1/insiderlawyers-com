@@ -21,19 +21,20 @@ async function convert() {
     { src: 'images/hero/yelp-logo.png', out: 'images/hero/yelp-logo.webp' },
     { src: 'images/hero/yelp-logo-mobile.png', out: 'images/hero/yelp-logo-mobile.webp' },
     { src: 'images/team-attorneys.png', out: 'images/team-attorneys.webp', maxWidth: 900 },
-    { src: 'images/highlights/trial-strategy.png', out: 'images/highlights/trial-strategy.webp' },
-    { src: 'images/highlights/medical-network.png', out: 'images/highlights/medical-network.webp' },
-    { src: 'images/highlights/insurance-defense.png', out: 'images/highlights/insurance-defense.webp' },
-    { src: 'images/highlights/property-damage.png', out: 'images/highlights/property-damage.webp' },
-    { src: 'images/highlights/lost-income.png', out: 'images/highlights/lost-income.webp' },
-    { src: 'images/highlights/local-attorney.png', out: 'images/highlights/local-attorney.webp' },
-    { src: 'images/highlights/no-fee.png', out: 'images/highlights/no-fee.webp' },
-    { src: 'images/highlights/clock-247.png', out: 'images/highlights/clock-247.webp' },
-    { src: 'images/injuries/neck.png', out: 'images/injuries/neck.webp' },
-    { src: 'images/injuries/broken-bone.png', out: 'images/injuries/broken-bone.webp' },
-    { src: 'images/injuries/catastrophic.png', out: 'images/injuries/catastrophic.webp' },
-    { src: 'images/injuries/spine.png', out: 'images/injuries/spine.webp' },
-    { src: 'images/injuries/brain.png', out: 'images/injuries/brain.webp' },
+    { src: 'images/highlights/trial-strategy.png', out: 'images/highlights/trial-strategy.webp', maxWidth: 256 },
+    { src: 'images/highlights/medical-network.png', out: 'images/highlights/medical-network.webp', maxWidth: 256 },
+    { src: 'images/highlights/insurance-defense.png', out: 'images/highlights/insurance-defense.webp', maxWidth: 256 },
+    { src: 'images/highlights/property-damage.png', out: 'images/highlights/property-damage.webp', maxWidth: 256 },
+    { src: 'images/highlights/lost-income.png', out: 'images/highlights/lost-income.webp', maxWidth: 256 },
+    { src: 'images/highlights/local-attorney.png', out: 'images/highlights/local-attorney.webp', maxWidth: 256 },
+    { src: 'images/highlights/no-fee.png', out: 'images/highlights/no-fee.webp', maxWidth: 256 },
+    { src: 'images/highlights/clock-247.png', out: 'images/highlights/clock-247.webp', maxWidth: 256 },
+    { src: 'images/injuries/neck.png', out: 'images/injuries/neck.webp', maxWidth: 280 },
+    { src: 'images/injuries/broken-bone.png', out: 'images/injuries/broken-bone.webp', maxWidth: 280 },
+    { src: 'images/injuries/catastrophic.png', out: 'images/injuries/catastrophic.webp', maxWidth: 280 },
+    { src: 'images/injuries/spine.png', out: 'images/injuries/spine.webp', maxWidth: 280 },
+    { src: 'images/injuries/brain.png', out: 'images/injuries/brain.webp', maxWidth: 280 },
+    { src: 'images/hero/ktown-bg.jpg', out: 'images/hero/ktown-bg.webp' },
   ];
 
   for (const img of images) {
@@ -47,7 +48,8 @@ async function convert() {
     if (img.maxWidth) {
       pipeline = pipeline.resize(img.maxWidth, null, { withoutEnlargement: true });
     }
-    await pipeline.webp({ quality: 85 }).toFile(outPath);
+    const isJpg = img.src.toLowerCase().endsWith('.jpg') || img.src.toLowerCase().endsWith('.jpeg');
+    await pipeline.webp({ quality: isJpg ? 80 : 85 }).toFile(outPath);
     console.log('Created:', img.out);
   }
   console.log('Done. Update HTML references from .png to .webp for these images.');
