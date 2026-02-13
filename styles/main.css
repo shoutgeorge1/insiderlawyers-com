@@ -81,6 +81,7 @@
   font-style: italic;
   line-height: 0.95;
   letter-spacing: 0.03em;
+  will-change: transform, opacity;
   /* Metallic chrome sheen: strong highlight band + dark edges */
   background: linear-gradient(105deg,
     #0a2d4a 0%,

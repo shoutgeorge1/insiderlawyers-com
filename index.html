@@ -8,9 +8,12 @@
   <title>Los Angeles Car Accident Lawyer | Insider Accident Lawyers</title>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/settlements.css">
+  <link rel="preload" as="image" href="images/hero/ktown-bg.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"></noscript>
   <style>
     :root {
       --brand-navy: #01366c;
@@ -74,6 +77,8 @@
     .hero-review-badge-rating .rating-stars { color: #fbba00; }
     .hero-google-badge-wrap { display: inline-flex; padding: 6px 8px; border-radius: 10px; background: rgba(255,255,255,0.1); }
     .hero-google-badge-wrap img { height: 36px; width: auto; }
+    .header { min-height: 111px; }
+    body:not(.loaded) * { animation-play-state: paused; }
   </style>
   <!-- Google Tag Manager (same as main site www.insiderlawyers.com) -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -141,38 +146,40 @@
           });
         }
       }
-      setTimeout(function() {
-        if (typeof dataLayer !== 'undefined') dataLayer.push({ 'event': 'engaged_30s' });
-      }, 30000);
-      var scroll90Fired = false;
-      window.addEventListener('scroll', function() {
-        if (!scroll90Fired && (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight >= 0.90) {
-          scroll90Fired = true;
-          if (typeof dataLayer !== 'undefined') dataLayer.push({ 'event': 'scroll_90' });
-        }
-      });
-      var header = document.getElementById('header');
-      var lastScrollY = 0;
-      var scrollThreshold = 80;
-      if (header) {
+      (window.requestIdleCallback || function(cb) { setTimeout(cb, 1); })(function() {
+        setTimeout(function() {
+          if (typeof dataLayer !== 'undefined') dataLayer.push({ 'event': 'engaged_30s' });
+        }, 30000);
+        var scroll90Fired = false;
         window.addEventListener('scroll', function() {
-          if (window.innerWidth > 767) {
-            header.classList.remove('header--hidden');
-            return;
+          if (!scroll90Fired && (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight >= 0.90) {
+            scroll90Fired = true;
+            if (typeof dataLayer !== 'undefined') dataLayer.push({ 'event': 'scroll_90' });
           }
-          var currentScrollY = window.scrollY;
-          if (currentScrollY > scrollThreshold) {
-            if (currentScrollY > lastScrollY) {
-              header.classList.add('header--hidden');
+        }, { passive: true });
+        var header = document.getElementById('header');
+        var lastScrollY = 0;
+        var scrollThreshold = 80;
+        if (header) {
+          window.addEventListener('scroll', function() {
+            if (window.innerWidth > 767) {
+              header.classList.remove('header--hidden');
+              return;
+            }
+            var currentScrollY = window.scrollY;
+            if (currentScrollY > scrollThreshold) {
+              if (currentScrollY > lastScrollY) {
+                header.classList.add('header--hidden');
+              } else {
+                header.classList.remove('header--hidden');
+              }
             } else {
               header.classList.remove('header--hidden');
             }
-          } else {
-            header.classList.remove('header--hidden');
-          }
-          lastScrollY = currentScrollY;
-        }, { passive: true });
-      }
+            lastScrollY = currentScrollY;
+          }, { passive: true });
+        }
+      });
     });
   </script>
 </head>
@@ -573,5 +580,6 @@
       </div>
     </div>
   </footer>
+  <script>window.addEventListener('load', function() { document.body.classList.add('loaded'); });</script>
 </body>
 </html>
