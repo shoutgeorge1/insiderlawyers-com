@@ -80,6 +80,35 @@
     .hero-google-badge-wrap img { height: 36px; width: auto; }
     .header { min-height: 111px; }
     body:not(.loaded) * { animation-play-state: paused; }
+    .home-ppc .our-attorneys-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+    .home-ppc .our-attorneys-card {
+      padding: 1.4rem 1rem 1.1rem;
+    }
+    .home-ppc .our-attorneys-photo-wrap {
+      width: 250px;
+      height: 300px;
+      border-radius: 12px;
+    }
+    @media (max-width: 992px) {
+      .home-ppc .our-attorneys-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
+      .home-ppc .our-attorneys-photo-wrap {
+        width: 220px;
+        height: 270px;
+      }
+    }
+    @media (max-width: 600px) {
+      .home-ppc .our-attorneys-photo-wrap {
+        width: 150px;
+        height: 185px;
+        border-radius: 10px;
+      }
+    }
   </style>
   <!-- Google Tag Manager (same as main site www.insiderlawyers.com) -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -184,7 +213,7 @@
     });
   </script>
 </head>
-<body>
+<body class="home-ppc">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8XT5FC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
@@ -508,42 +537,42 @@
       <div class="our-attorneys-grid">
         <div class="our-attorneys-card">
           <div class="our-attorneys-photo-wrap">
-            <img src="https://www.insiderlawyers.com/images/la/harvey-goldhammer.webp" alt="Harvey Goldhammer" width="132" height="132" loading="lazy">
+            <img src="https://www.insiderlawyers.com/images/la/harvey-goldhammer.webp" alt="Harvey Goldhammer" width="250" height="300" loading="lazy">
           </div>
           <div class="our-attorneys-name">Harvey Goldhammer</div>
           <div class="our-attorneys-title">Senior Litigation Attorney</div>
         </div>
         <div class="our-attorneys-card">
           <div class="our-attorneys-photo-wrap">
-            <img src="https://www.insiderlawyers.com/images/la/nathaniel-clark.png" alt="Nathaniel Clark" width="132" height="132" loading="lazy">
+            <img src="https://www.insiderlawyers.com/images/la/nathaniel-clark.png" alt="Nathaniel Clark" width="250" height="300" loading="lazy">
           </div>
           <div class="our-attorneys-name">Nathaniel Clark</div>
           <div class="our-attorneys-title">Senior Litigation Attorney</div>
         </div>
         <div class="our-attorneys-card">
           <div class="our-attorneys-photo-wrap">
-            <img src="https://www.insiderlawyers.com/images/la/edward-yim.webp" alt="Edward C. Yim" width="132" height="132" loading="lazy">
+            <img src="https://www.insiderlawyers.com/images/la/edward-yim.webp" alt="Edward C. Yim" width="250" height="300" loading="lazy">
           </div>
           <div class="our-attorneys-name">Edward C. Yim</div>
           <div class="our-attorneys-title">Senior Litigation Attorney</div>
         </div>
         <div class="our-attorneys-card">
           <div class="our-attorneys-photo-wrap">
-            <img src="https://www.insiderlawyers.com/images/la/steven-salazar.png" alt="Steven Salazar" width="132" height="132" loading="lazy">
+            <img src="https://www.insiderlawyers.com/images/la/steven-salazar.png" alt="Steven Salazar" width="250" height="300" loading="lazy">
           </div>
           <div class="our-attorneys-name">Steven Salazar</div>
           <div class="our-attorneys-title">Associate Attorney</div>
         </div>
         <div class="our-attorneys-card">
           <div class="our-attorneys-photo-wrap">
-            <img src="https://www.insiderlawyers.com/images/la/donn-christensen.webp" alt="Donn W. Christensen, Esq." width="132" height="132" loading="lazy">
+            <img src="https://www.insiderlawyers.com/images/la/donn-christensen.webp" alt="Donn W. Christensen, Esq." width="250" height="300" loading="lazy">
           </div>
           <div class="our-attorneys-name">Donn W. Christensen, Esq.</div>
           <div class="our-attorneys-title">Managing Attorney</div>
         </div>
         <div class="our-attorneys-card">
           <div class="our-attorneys-photo-wrap">
-            <img src="https://www.insiderlawyers.com/images/la/artur-mheryan.webp" alt="Artur Mheryan" width="132" height="132" loading="lazy">
+            <img src="https://www.insiderlawyers.com/images/la/artur-mheryan.webp" alt="Artur Mheryan" width="250" height="300" loading="lazy">
           </div>
           <div class="our-attorneys-name">Artur Mheryan</div>
           <div class="our-attorneys-title">Associate Attorney</div>
