@@ -64,14 +64,14 @@
         .header-call-label{display:block;font-size:.74rem;color:var(--brand-gray-700);font-weight:800;text-transform:uppercase;letter-spacing:.03em}
         .header-call-number{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#ffd54f 0%,#ffbf00 50%,#f5a623 100%);color:#01366c;font-family:Roboto,Arial,sans-serif;font-size:1.08rem;line-height:1;font-weight:900;text-decoration:none;padding:.62rem .9rem;border-radius:10px;box-shadow:0 3px 0 #c99400,0 6px 16px rgba(255,191,0,.35);border:1px solid rgba(201,148,0,.55);margin-top:4px}
         .header-logo{max-width:250px;height:auto;filter:brightness(0) saturate(100%)}
-        .header-nav-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;padding-top:10px}
+        .header-nav-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;padding-top:10px;position:relative}
         .nav-link{display:inline-flex;align-items:center;justify-content:center;min-height:38px;color:var(--brand-navy);text-decoration:none;font-weight:700;font-size:.82rem;padding:8px 14px;background:linear-gradient(180deg,#ffffff 0%,#f6f9fd 100%);border:1px solid rgba(1,54,108,.2);border-radius:8px;box-shadow:0 1px 3px rgba(1,54,108,.07);transition:all .2s ease}
         .nav-link:hover{color:var(--brand-blue);border-color:#9fbadb;background:#eef4fb;transform:translateY(-1px)}
         .nav-link--primary{background:linear-gradient(180deg,#01468a 0%,#01366c 100%);color:#fff;border-color:#01366c}
         .nav-link--primary:hover{color:#fff;background:linear-gradient(180deg,#0253a4 0%,#01468a 100%)}
         .nav-link--dropdown{cursor:default}
-        .nav-item{position:relative}
-        .nav-dropdown{position:absolute;left:0;top:100%;min-width:780px;max-width:980px;background:#fff;border:1px solid #d3e0f0;border-radius:10px;box-shadow:0 10px 26px rgba(1,54,108,.15);padding:10px;display:none;z-index:1200;grid-template-columns:repeat(3,minmax(220px,1fr));gap:4px 8px}
+        .nav-item{position:relative;padding-bottom:8px}
+        .nav-dropdown{position:absolute;left:0;top:100%;min-width:880px;max-width:1100px;background:#fff;border:1px solid #d3e0f0;border-radius:10px;box-shadow:0 10px 26px rgba(1,54,108,.15);padding:12px;display:none;z-index:1200;grid-template-columns:repeat(4,minmax(200px,1fr));gap:6px 12px;align-items:start}
         .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{display:grid}
         .nav-dropdown a{display:block;padding:9px 10px;color:var(--brand-navy);text-decoration:none;font-size:.84rem;font-weight:600;border-radius:6px}
         .nav-dropdown a:hover{background:#eef4fb;color:var(--brand-blue)}
@@ -79,7 +79,7 @@
         .content-body a:hover{color:var(--brand-navy)}
         .content-body a.btn-secondary{color:#fff!important;text-decoration:none}
         footer{background:linear-gradient(180deg,#012a50 0%,#01366c 50%,#012240 100%);color:var(--brand-white);padding:42px 0 22px;border-top:3px solid var(--brand-accent-yellow)}
-        .footer-content{display:grid;grid-template-columns:1.4fr repeat(3,minmax(180px,1fr));gap:18px;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.18)}
+        .footer-content{display:grid;grid-template-columns:1.2fr repeat(7,minmax(115px,1fr));gap:16px;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.18)}
         .footer-section{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px}
         .footer-section:first-child{background:transparent;border:none;padding:0}
         .footer-logo{max-width:210px;height:auto;display:block;margin-bottom:10px}
@@ -97,7 +97,7 @@
         .footer-disclaimer p{margin:.55rem 0}
         .footer-disclaimer a{color:rgba(255,255,255,.92);text-decoration:underline}
         @media(max-width:900px){.header-content{grid-template-columns:1fr;gap:10px}.header-col--logo{order:1;text-align:center}.header-col--call{order:2;text-align:center}.header-col--proof{order:3;text-align:center}.nav-dropdown{position:static;display:block;margin-top:6px;min-width:0}}
-        @media(max-width:768px){h1{font-size:28px}h2{font-size:24px}.footer-content{grid-template-columns:1fr;text-align:center}}
+        @media(max-width:1100px){.footer-content{grid-template-columns:1fr 1fr;gap:14px}}@media(max-width:768px){h1{font-size:28px}h2{font-size:24px}.footer-content{grid-template-columns:1fr;text-align:center}}
     </style>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-WS8XT5FC');</script>
 </head>
@@ -146,28 +146,43 @@
                     </div>
                 </div>
                 <div class="nav-item">
-                    <span class="nav-link nav-link--dropdown">Playbooks</span>
+                    <span class="nav-link nav-link--dropdown">Injury Types</span>
+                    <div class="nav-dropdown">
+                        <a href="/personal-injury/brain-injuries">Brain Injuries</a>
+                        <a href="/personal-injury/spine-injuries">Spine Injuries</a>
+                        <a href="/personal-injury/catastrophic-injuries">Catastrophic Injuries</a>
+                        <a href="/personal-injury/wrongful-death">Wrongful Death</a>
+                        <a href="/brain-injury">Brain Injury Compensation Guide</a>
+                        <a href="/major-car-accident">Major Car Accident Guide</a>
+                        <a href="/california-car-accident-lawyer">California Car Accident Guide</a>
+                        <a href="/injuries-truck-accidents">Injuries in Truck Accidents</a>
+                        <a href="/motorcycle-accident-case">Motorcycle Accident Case</a>
+                        <a href="/post-dog-bite">Post Dog Bite</a>
+                        <a href="/pedestrian-right-of-way">Pedestrian Right of Way</a>
+                        <a href="/uber-or-lyft-accident">Uber or Lyft Accident</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <span class="nav-link nav-link--dropdown">Claim Playbooks</span>
                     <div class="nav-dropdown">
                         <a href="/insurance-company-playbook">Insurance Company Playbook</a>
                         <a href="/adjuster-claim-valuation">Adjuster Claim Valuation</a>
                         <a href="/proving-claim-value">Proving Claim Value</a>
                         <a href="/demand-letter-negotiation">Demand Letter Negotiation</a>
                         <a href="/lowball-offer-response">Lowball Offer Response</a>
-                        <a href="/major-car-accident">Major Car Accident Guide</a>
-                        <a href="/california-car-accident-lawyer">California Car Accident Guide</a>
-                        <a href="/brain-injury">Brain Injury Compensation Guide</a>
+                        <a href="/personal-injury-court">Personal Injury Court</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <span class="nav-link nav-link--dropdown">Trucking Guides</span>
+                    <div class="nav-dropdown">
+                        <a href="/personal-injury/truck-accidents">Truck Accidents</a>
                         <a href="/truck-accident-legal-rights">Truck Accident Legal Rights</a>
                         <a href="/proving-truck-accident-case">Proving a Truck Accident Case</a>
-                        <a href="/personal-injury-court">Personal Injury Court</a>
-                        <a href="/post-dog-bite">Post Dog Bite</a>
-                        <a href="/pedestrian-right-of-way">Pedestrian Right of Way</a>
-                        <a href="/uber-or-lyft-accident">Uber or Lyft Accident</a>
                         <a href="/injuries-truck-accidents">Injuries in Truck Accidents</a>
-                        <a href="/motorcycle-accident-case">Motorcycle Accident Case</a>
                         <a href="/personal-injury/truck-accidents/fmcsa-hours-of-service">FMCSA Hours-of-Service</a>
                         <a href="/personal-injury/truck-accidents/truck-accident-evidence">Truck Evidence Preservation</a>
                         <a href="/personal-injury/truck-accidents/truck-accident-liability">Truck Liability Guide</a>
-                        <a href="/settlements">Settlements</a>
                     </div>
                 </div>
                 <div class="nav-item">
@@ -189,8 +204,16 @@
                 <div class="nav-item">
                     <span class="nav-link nav-link--dropdown">Firm</span>
                     <div class="nav-dropdown">
+                        <a href="/">Home</a>
+                        <a href="/#case-evaluation">Free Case Review</a>
                         <a href="/#our-attorneys">Our Attorneys</a>
                         <a href="/#case-results">Case Results</a>
+                        <a href="/settlements">Settlements</a>
+                        <a href="/legal/results-disclaimer">Results Disclaimer</a>
+                        <a href="/legal/disclaimer">Legal Disclaimer</a>
+                        <a href="/legal/terms">Terms of Use</a>
+                        <a href="/legal/accessibility">Accessibility Statement</a>
+                        <a href="https://www.insideraccidentlawyers.com/privacy-policy">Privacy Policy</a>
                     </div>
                 </div>
             </nav>
@@ -281,13 +304,20 @@
                 </div>
                 <div class="footer-section">
                     <div class="related-pages">
-                        <h4>Practice Areas</h4>
+                        <h4>Core Practice Areas</h4>
                         <ul>
                             <li><a href="/personal-injury">Personal Injury</a></li>
                             <li><a href="/personal-injury/auto-accidents">Auto Accidents</a></li>
                             <li><a href="/personal-injury/truck-accidents">Truck Accidents</a></li>
                             <li><a href="/personal-injury/brain-injuries">Brain Injuries</a></li>
                             <li><a href="/personal-injury/wrongful-death">Wrongful Death</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="related-pages">
+                        <h4>Additional Practice Areas</h4>
+                        <ul>
                             <li><a href="/personal-injury/animal-attacks">Animal Attacks</a></li>
                             <li><a href="/personal-injury/bicycle-accidents">Bicycle Accidents</a></li>
                             <li><a href="/personal-injury/motorcycle-accidents">Motorcycle Accidents</a></li>
@@ -303,7 +333,40 @@
                 </div>
                 <div class="footer-section">
                     <div class="related-pages">
-                        <h4>Resources</h4>
+                        <h4>Claim Playbooks</h4>
+                        <ul>
+                            <li><a href="/insurance-company-playbook">Insurance Company Playbook</a></li>
+                            <li><a href="/adjuster-claim-valuation">Adjuster Claim Valuation</a></li>
+                            <li><a href="/proving-claim-value">Proving Claim Value</a></li>
+                            <li><a href="/demand-letter-negotiation">Demand Letter Negotiation</a></li>
+                            <li><a href="/lowball-offer-response">Lowball Offer Response</a></li>
+                            <li><a href="/major-car-accident">Major Car Accident Guide</a></li>
+                            <li><a href="/california-car-accident-lawyer">California Car Accident Guide</a></li>
+                            <li><a href="/brain-injury">Brain Injury Compensation Guide</a></li>
+                            <li><a href="/personal-injury-court">Personal Injury Court</a></li>
+                            <li><a href="/post-dog-bite">Post Dog Bite</a></li>
+                            <li><a href="/pedestrian-right-of-way">Pedestrian Right of Way</a></li>
+                            <li><a href="/uber-or-lyft-accident">Uber or Lyft Accident</a></li>
+                            <li><a href="/injuries-truck-accidents">Injuries in Truck Accidents</a></li>
+                            <li><a href="/motorcycle-accident-case">Motorcycle Accident Case</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="related-pages">
+                        <h4>Trucking Guides</h4>
+                        <ul>
+                            <li><a href="/truck-accident-legal-rights">Truck Accident Legal Rights</a></li>
+                            <li><a href="/proving-truck-accident-case">Proving a Truck Accident Case</a></li>
+                            <li><a href="/personal-injury/truck-accidents/fmcsa-hours-of-service">FMCSA Hours-of-Service</a></li>
+                            <li><a href="/personal-injury/truck-accidents/truck-accident-evidence">Truck Evidence Preservation</a></li>
+                            <li><a href="/personal-injury/truck-accidents/truck-accident-liability">Truck Liability Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="related-pages">
+                        <h4>Litigation Referrals</h4>
                         <ul>
                             <li><a href="/attorney-referrals">Attorney Referrals</a></li>
                             <li><a href="/lit-referral-core">Litigation Referral Core</a></li>
@@ -316,25 +379,13 @@
                             <li><a href="/lit-referral-brain-injury">Brain Injury Referrals</a></li>
                             <li><a href="/lit-referral-wrongful-death">Wrongful Death Referrals</a></li>
                             <li><a href="/lit-referral-coverage-disputes">Coverage Dispute Referrals</a></li>
-                            <li><a href="/insurance-company-playbook">Insurance Company Playbook</a></li>
-                            <li><a href="/adjuster-claim-valuation">Adjuster Claim Valuation</a></li>
-                            <li><a href="/proving-claim-value">Proving Claim Value</a></li>
-                            <li><a href="/demand-letter-negotiation">Demand Letter Negotiation</a></li>
-                            <li><a href="/lowball-offer-response">Lowball Offer Response</a></li>
-                            <li><a href="/major-car-accident">Major Car Accident Guide</a></li>
-                            <li><a href="/california-car-accident-lawyer">California Car Accident Guide</a></li>
-                            <li><a href="/brain-injury">Brain Injury Compensation Guide</a></li>
-                            <li><a href="/truck-accident-legal-rights">Truck Accident Legal Rights</a></li>
-                            <li><a href="/proving-truck-accident-case">Proving a Truck Accident Case</a></li>
-                            <li><a href="/personal-injury-court">Personal Injury Court</a></li>
-                            <li><a href="/post-dog-bite">Post Dog Bite</a></li>
-                            <li><a href="/pedestrian-right-of-way">Pedestrian Right of Way</a></li>
-                            <li><a href="/uber-or-lyft-accident">Uber or Lyft Accident</a></li>
-                            <li><a href="/injuries-truck-accidents">Injuries in Truck Accidents</a></li>
-                            <li><a href="/motorcycle-accident-case">Motorcycle Accident Case</a></li>
-                            <li><a href="/personal-injury/truck-accidents/fmcsa-hours-of-service">FMCSA Hours-of-Service</a></li>
-                            <li><a href="/personal-injury/truck-accidents/truck-accident-evidence">Truck Evidence Preservation</a></li>
-                            <li><a href="/personal-injury/truck-accidents/truck-accident-liability">Truck Liability Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="related-pages">
+                        <h4>Legal</h4>
+                        <ul>
                             <li><a href="/settlements">Settlements</a></li>
                             <li><a href="/legal/results-disclaimer">Results Disclaimer</a></li>
                             <li><a href="/legal/disclaimer">Legal Disclaimer</a></li>
