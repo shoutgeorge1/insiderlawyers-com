@@ -73,3 +73,33 @@ Form actions and thank-you redirect stay pointed at the live domain (e.g. `https
   - **GitHub Pages** – In repo **Settings → Pages**, set source to this branch and root; you get `https://shoutgeorge1.github.io/pi-search-caraccident-lp/`.
 
 Use the preview URL to test changes; point production traffic at **call.insideraccidentlawyers.com/los-angeles-car-accident/** when ready.
+
+---
+
+## Production lock-down (recommended for live PPC)
+
+To reduce accidental breakage on a live campaign page, this repo includes:
+
+- **Preflight validation** (`npm run preflight`) that checks:
+  - canonical tags exist and stay on `https://www.insiderlawyers.com/...`
+  - homepage canonical remains `https://www.insiderlawyers.com/`
+  - homepage retains the primary click-to-call number
+  - required GTM container remains present
+  - lead form action/hidden fields are intact
+- **Vercel hardening headers** in `vercel.json`:
+  - `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`
+  - conservative cache behavior for HTML, long cache for static assets
+
+### Safe publish flow
+
+1. Make copy/design edits.
+2. Run: `npm run preflight`
+3. Preview deploy and submit a test lead.
+4. Publish to production only after checks pass.
+
+---
+
+## PPC + SEO scaling docs
+
+- Launch structure and indexing rules: `PPC-SEO-LAUNCH-PLAN.md`
+- Local page-by-page review board: `REVIEW-PAGES.html`
