@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+  <defs>
+    <linearGradient id="brainHeroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3748"/>
+      <stop offset="50%" style="stop-color:#4a5568"/>
+      <stop offset="100%" style="stop-color:#718096"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" fill="url(#brainHeroGrad)"/>
+  <ellipse cx="300" cy="160" rx="80" ry="70" fill="none" stroke="#a0aec0" stroke-width="2" opacity="0.8"/>
+  <path d="M260 140 Q300 120 340 140 Q360 160 340 180 Q300 200 260 180 Q240 160 260 140" fill="none" stroke="#a0aec0" stroke-width="2" opacity="0.8"/>
+  <text x="300" y="260" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="32" font-weight="bold">Brain Injuries</text>
+  <text x="300" y="295" text-anchor="middle" fill="#e2e8f0" font-size="18">TBI &amp; Concussion Legal Advocacy</text>
+</svg>

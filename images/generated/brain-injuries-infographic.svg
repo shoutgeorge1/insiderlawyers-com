@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <defs>
+    <linearGradient id="brainInfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7fafc"/>
+      <stop offset="100%" style="stop-color:#edf2f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#brainInfGrad)"/>
+  <text x="300" y="50" text-anchor="middle" fill="#2d3748" font-family="Georgia, serif" font-size="26" font-weight="bold">Brain Injuries: Quick Case Roadmap</text>
+  <rect x="40" y="90" width="520" height="70" rx="8" fill="#fff" stroke="#4a5568" stroke-width="1"/>
+  <text x="300" y="125" text-anchor="middle" fill="#2d3748" font-size="20" font-weight="bold">1. Immediate Medical Documentation</text>
+  <text x="300" y="148" text-anchor="middle" fill="#4a5568" font-size="16">ER records, imaging, specialist referrals</text>
+  <rect x="40" y="175" width="520" height="70" rx="8" fill="#fff" stroke="#4a5568" stroke-width="1"/>
+  <text x="300" y="210" text-anchor="middle" fill="#2d3748" font-size="20" font-weight="bold">2. Expert Causation Analysis</text>
+  <text x="300" y="233" text-anchor="middle" fill="#4a5568" font-size="16">Neurologist, neuropsychologist, life-care planning</text>
+  <rect x="40" y="260" width="520" height="70" rx="8" fill="#fff" stroke="#4a5568" stroke-width="1"/>
+  <text x="300" y="295" text-anchor="middle" fill="#2d3748" font-size="20" font-weight="bold">3. Long-Term Impact Assessment</text>
+  <text x="300" y="318" text-anchor="middle" fill="#4a5568" font-size="16">Cognitive, emotional, and vocational damages</text>
+  <rect x="40" y="345" width="520" height="70" rx="8" fill="#fff" stroke="#4a5568" stroke-width="1"/>
+  <text x="300" y="380" text-anchor="middle" fill="#2d3748" font-size="20" font-weight="bold">4. Full Damages Claim</text>
+  <text x="300" y="403" text-anchor="middle" fill="#4a5568" font-size="16">Medical, lost wages, future care, pain and suffering</text>
+</svg>

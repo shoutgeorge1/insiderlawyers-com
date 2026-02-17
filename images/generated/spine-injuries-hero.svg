@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+  <defs>
+    <linearGradient id="spineHeroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b4d3e"/>
+      <stop offset="50%" style="stop-color:#287855"/>
+      <stop offset="100%" style="stop-color:#2e7d63"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" fill="url(#spineHeroGrad)"/>
+  <path d="M300 80 L320 120 L310 200 L290 200 L280 120 Z" fill="none" stroke="#80cbc4" stroke-width="3"/>
+  <path d="M295 100 L305 100 M293 140 L307 140 M291 180 L309 180" stroke="#80cbc4" stroke-width="2"/>
+  <text x="300" y="270" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="30" font-weight="bold">Spine Injuries</text>
+  <text x="300" y="300" text-anchor="middle" fill="#80cbc4" font-size="18">Back &amp; Neck Injury Legal Claims</text>
+</svg>

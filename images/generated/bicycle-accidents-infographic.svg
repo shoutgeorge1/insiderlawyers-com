@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <defs>
+    <linearGradient id="bikeInfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff3e0"/>
+      <stop offset="100%" style="stop-color:#ffe0b2"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#bikeInfGrad)"/>
+  <text x="300" y="50" text-anchor="middle" fill="#e65100" font-family="Georgia, serif" font-size="26" font-weight="bold">Bicycle Accidents: Quick Case Roadmap</text>
+  <rect x="40" y="90" width="520" height="70" rx="8" fill="#fff" stroke="#ff6f00" stroke-width="1"/>
+  <text x="300" y="125" text-anchor="middle" fill="#e65100" font-size="20" font-weight="bold">1. Scene &amp; Evidence Preservation</text>
+  <text x="300" y="148" text-anchor="middle" fill="#ff6f00" font-size="16">Photos, witness statements, bike and vehicle</text>
+  <rect x="40" y="175" width="520" height="70" rx="8" fill="#fff" stroke="#ff6f00" stroke-width="1"/>
+  <text x="300" y="210" text-anchor="middle" fill="#e65100" font-size="20" font-weight="bold">2. Liability &amp; Right-of-Way</text>
+  <text x="300" y="233" text-anchor="middle" fill="#ff6f00" font-size="16">Driver fault, door zone, visibility issues</text>
+  <rect x="40" y="260" width="520" height="70" rx="8" fill="#fff" stroke="#ff6f00" stroke-width="1"/>
+  <text x="300" y="295" text-anchor="middle" fill="#e65100" font-size="20" font-weight="bold">3. Injury Documentation</text>
+  <text x="300" y="318" text-anchor="middle" fill="#ff6f00" font-size="16">Orthopedic, head trauma, long-term impact</text>
+  <rect x="40" y="345" width="520" height="70" rx="8" fill="#fff" stroke="#ff6f00" stroke-width="1"/>
+  <text x="300" y="380" text-anchor="middle" fill="#e65100" font-size="20" font-weight="bold">4. Full Damages Recovery</text>
+  <text x="300" y="403" text-anchor="middle" fill="#ff6f00" font-size="16">Medical, lost wages, pain and suffering</text>
+</svg>

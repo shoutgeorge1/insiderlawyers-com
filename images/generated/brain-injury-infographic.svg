@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <defs>
+    <linearGradient id="brainRefInfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5eef8"/>
+      <stop offset="100%" style="stop-color:#e8daef"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#brainRefInfGrad)"/>
+  <text x="300" y="50" text-anchor="middle" fill="#4a235a" font-family="Georgia, serif" font-size="24" font-weight="bold">Brain Injury Referrals: Quick Case Roadmap</text>
+  <rect x="40" y="90" width="520" height="70" rx="8" fill="#fff" stroke="#6c3483" stroke-width="1"/>
+  <text x="300" y="125" text-anchor="middle" fill="#4a235a" font-size="20" font-weight="bold">1. Medical Records &amp; Imaging</text>
+  <text x="300" y="148" text-anchor="middle" fill="#6c3483" font-size="16">Complete TBI documentation for referral</text>
+  <rect x="40" y="175" width="520" height="70" rx="8" fill="#fff" stroke="#6c3483" stroke-width="1"/>
+  <text x="300" y="210" text-anchor="middle" fill="#4a235a" font-size="20" font-weight="bold">2. Expert Coordination</text>
+  <text x="300" y="233" text-anchor="middle" fill="#6c3483" font-size="16">Neurologist, neuropsychologist, life-care</text>
+  <rect x="40" y="260" width="520" height="70" rx="8" fill="#fff" stroke="#6c3483" stroke-width="1"/>
+  <text x="300" y="295" text-anchor="middle" fill="#4a235a" font-size="20" font-weight="bold">3. Damages Valuation</text>
+  <text x="300" y="318" text-anchor="middle" fill="#6c3483" font-size="16">Future care, lost capacity, pain and suffering</text>
+  <rect x="40" y="345" width="520" height="70" rx="8" fill="#fff" stroke="#6c3483" stroke-width="1"/>
+  <text x="300" y="380" text-anchor="middle" fill="#4a235a" font-size="20" font-weight="bold">4. Co-Counsel Trial Strategy</text>
+  <text x="300" y="403" text-anchor="middle" fill="#6c3483" font-size="16">Trial-ready presentation for maximum recovery</text>
+</svg>

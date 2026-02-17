@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+  <defs>
+    <linearGradient id="pedHeroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22543d"/>
+      <stop offset="50%" style="stop-color:#276749"/>
+      <stop offset="100%" style="stop-color:#38a169"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" fill="url(#pedHeroGrad)"/>
+  <rect x="250" y="100" width="20" height="80" fill="none" stroke="#9ae6b4" stroke-width="2"/>
+  <circle cx="260" cy="90" r="15" fill="none" stroke="#9ae6b4" stroke-width="2"/>
+  <path d="M200 200 L220 200 M240 200 L260 200" stroke="#9ae6b4" stroke-width="3"/>
+  <text x="300" y="260" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="30" font-weight="bold">Pedestrian Accidents</text>
+  <text x="300" y="295" text-anchor="middle" fill="#9ae6b4" font-size="18">Crosswalk &amp; Right-of-Way Claims</text>
+</svg>

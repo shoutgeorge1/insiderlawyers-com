@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+  <defs>
+    <linearGradient id="coverageHeroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b4f72"/>
+      <stop offset="50%" style="stop-color:#2874a6"/>
+      <stop offset="100%" style="stop-color:#3498db"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" fill="url(#coverageHeroGrad)"/>
+  <rect x="240" y="100" width="120" height="100" rx="4" fill="none" stroke="#aed6f1" stroke-width="3"/>
+  <path d="M260 130 L340 130 M260 160 L320 160 M260 190 L300 190" stroke="#aed6f1" stroke-width="2"/>
+  <text x="300" y="260" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="28" font-weight="bold">Coverage Disputes</text>
+  <text x="300" y="295" text-anchor="middle" fill="#d6eaf8" font-size="18">Insurance Policy &amp; Limit Advocacy</text>
+</svg>

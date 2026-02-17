@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <defs>
+    <linearGradient id="spineInfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0f2f1"/>
+      <stop offset="100%" style="stop-color:#b2dfdb"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#spineInfGrad)"/>
+  <text x="300" y="50" text-anchor="middle" fill="#1b4d3e" font-family="Georgia, serif" font-size="26" font-weight="bold">Spine Injuries: Quick Case Roadmap</text>
+  <rect x="40" y="90" width="520" height="70" rx="8" fill="#fff" stroke="#287855" stroke-width="1"/>
+  <text x="300" y="125" text-anchor="middle" fill="#1b4d3e" font-size="20" font-weight="bold">1. Imaging &amp; Diagnosis</text>
+  <text x="300" y="148" text-anchor="middle" fill="#287855" font-size="16">MRI, CT, disc herniation, stenosis documentation</text>
+  <rect x="40" y="175" width="520" height="70" rx="8" fill="#fff" stroke="#287855" stroke-width="1"/>
+  <text x="300" y="210" text-anchor="middle" fill="#1b4d3e" font-size="20" font-weight="bold">2. Treatment Timeline</text>
+  <text x="300" y="233" text-anchor="middle" fill="#287855" font-size="16">Conservative care, injections, surgery options</text>
+  <rect x="40" y="260" width="520" height="70" rx="8" fill="#fff" stroke="#287855" stroke-width="1"/>
+  <text x="300" y="295" text-anchor="middle" fill="#1b4d3e" font-size="20" font-weight="bold">3. Causation &amp; Preexisting</text>
+  <text x="300" y="318" text-anchor="middle" fill="#287855" font-size="16">Link trauma to injury; address aggravation claims</text>
+  <rect x="40" y="345" width="520" height="70" rx="8" fill="#fff" stroke="#287855" stroke-width="1"/>
+  <text x="300" y="380" text-anchor="middle" fill="#1b4d3e" font-size="20" font-weight="bold">4. Full Damages Claim</text>
+  <text x="300" y="403" text-anchor="middle" fill="#287855" font-size="16">Medical, lost wages, future care, pain and suffering</text>
+</svg>

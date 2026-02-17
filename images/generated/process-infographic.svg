@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <defs>
+    <linearGradient id="processInfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f3e5f5"/>
+      <stop offset="100%" style="stop-color:#e1bee7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#processInfGrad)"/>
+  <text x="300" y="50" text-anchor="middle" fill="#7b1fa2" font-family="Georgia, serif" font-size="26" font-weight="bold">Referral Process: Quick Case Roadmap</text>
+  <rect x="40" y="90" width="520" height="70" rx="8" fill="#fff" stroke="#9c27b0" stroke-width="1"/>
+  <text x="300" y="125" text-anchor="middle" fill="#7b1fa2" font-size="20" font-weight="bold">1. Initial Contact</text>
+  <text x="300" y="148" text-anchor="middle" fill="#9c27b0" font-size="16">Case summary and key documents</text>
+  <rect x="40" y="175" width="520" height="70" rx="8" fill="#fff" stroke="#9c27b0" stroke-width="1"/>
+  <text x="300" y="210" text-anchor="middle" fill="#7b1fa2" font-size="20" font-weight="bold">2. Case Evaluation</text>
+  <text x="300" y="233" text-anchor="middle" fill="#9c27b0" font-size="16">Liability, damages, and fit assessment</text>
+  <rect x="40" y="260" width="520" height="70" rx="8" fill="#fff" stroke="#9c27b0" stroke-width="1"/>
+  <text x="300" y="295" text-anchor="middle" fill="#7b1fa2" font-size="20" font-weight="bold">3. Referral Agreement</text>
+  <text x="300" y="318" text-anchor="middle" fill="#9c27b0" font-size="16">Terms, fees, and communication plan</text>
+  <rect x="40" y="345" width="520" height="70" rx="8" fill="#fff" stroke="#9c27b0" stroke-width="1"/>
+  <text x="300" y="380" text-anchor="middle" fill="#7b1fa2" font-size="20" font-weight="bold">4. Client Transition &amp; Litigation</text>
+  <text x="300" y="403" text-anchor="middle" fill="#9c27b0" font-size="16">Handoff and trial preparation begins</text>
+</svg>

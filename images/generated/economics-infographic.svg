@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <defs>
+    <linearGradient id="econInfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fffff0"/>
+      <stop offset="100%" style="stop-color:#fefcbf"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#econInfGrad)"/>
+  <text x="300" y="50" text-anchor="middle" fill="#744210" font-family="Georgia, serif" font-size="26" font-weight="bold">Referral Economics: Quick Case Roadmap</text>
+  <rect x="40" y="90" width="520" height="70" rx="8" fill="#fff" stroke="#975a16" stroke-width="1"/>
+  <text x="300" y="125" text-anchor="middle" fill="#744210" font-size="20" font-weight="bold">1. Fee Split Structure</text>
+  <text x="300" y="148" text-anchor="middle" fill="#975a16" font-size="16">Compliant referral and origination fees</text>
+  <rect x="40" y="175" width="520" height="70" rx="8" fill="#fff" stroke="#975a16" stroke-width="1"/>
+  <text x="300" y="210" text-anchor="middle" fill="#744210" font-size="20" font-weight="bold">2. Cost Allocation</text>
+  <text x="300" y="233" text-anchor="middle" fill="#975a16" font-size="16">Expert fees, litigation costs, advances</text>
+  <rect x="40" y="260" width="520" height="70" rx="8" fill="#fff" stroke="#975a16" stroke-width="1"/>
+  <text x="300" y="295" text-anchor="middle" fill="#744210" font-size="20" font-weight="bold">3. Settlement Distribution</text>
+  <text x="300" y="318" text-anchor="middle" fill="#975a16" font-size="16">Clear accounting and client recovery priority</text>
+  <rect x="40" y="345" width="520" height="70" rx="8" fill="#fff" stroke="#975a16" stroke-width="1"/>
+  <text x="300" y="380" text-anchor="middle" fill="#744210" font-size="20" font-weight="bold">4. Long-Term Partnership Value</text>
+  <text x="300" y="403" text-anchor="middle" fill="#975a16" font-size="16">Repeat referrals and case volume benefits</text>
+</svg>

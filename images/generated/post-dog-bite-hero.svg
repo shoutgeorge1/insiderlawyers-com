@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#01366c"/>
+      <stop offset="50%" style="stop-color:#01468a"/>
+      <stop offset="100%" style="stop-color:#012a50"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbba00"/>
+      <stop offset="100%" style="stop-color:#e6a800"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <path d="M180 250 Q200 220 220 250 Q240 280 220 310 Q200 340 180 310 Q160 280 180 250" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <path d="M980 350 Q1000 320 1020 350" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  <path d="M550 200 L570 170 L590 200" fill="none" stroke="rgba(255,187,0,0.35)" stroke-width="2" stroke-linecap="round"/>
+  <text x="600" y="280" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="48" font-weight="700">Post Dog Bite</text>
+  <text x="600" y="340" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Arial, sans-serif" font-size="24">Steps to Protect Your Claim</text>
+  <rect x="500" y="380" width="200" height="4" fill="url(#accent)" rx="2"/>
+</svg>

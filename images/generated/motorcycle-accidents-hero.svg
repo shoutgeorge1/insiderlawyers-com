@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+  <defs>
+    <linearGradient id="motoHeroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="50%" style="stop-color:#2c5282"/>
+      <stop offset="100%" style="stop-color:#4299e1"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" fill="url(#motoHeroGrad)"/>
+  <ellipse cx="200" cy="180" rx="60" ry="25" fill="none" stroke="#90cdf4" stroke-width="3"/>
+  <circle cx="160" cy="185" r="15" fill="none" stroke="#90cdf4" stroke-width="2"/>
+  <circle cx="240" cy="185" r="15" fill="none" stroke="#90cdf4" stroke-width="2"/>
+  <text x="300" y="260" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="30" font-weight="bold">Motorcycle Accidents</text>
+  <text x="300" y="295" text-anchor="middle" fill="#90cdf4" font-size="18">Rider Rights &amp; Serious Injury Claims</text>
+</svg>

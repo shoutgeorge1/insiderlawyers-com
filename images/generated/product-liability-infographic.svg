@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <defs>
+    <linearGradient id="productInfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#efebe9"/>
+      <stop offset="100%" style="stop-color:#d7ccc8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#productInfGrad)"/>
+  <text x="300" y="50" text-anchor="middle" fill="#5d4037" font-family="Georgia, serif" font-size="26" font-weight="bold">Product Liability: Quick Case Roadmap</text>
+  <rect x="40" y="90" width="520" height="70" rx="8" fill="#fff" stroke="#795548" stroke-width="1"/>
+  <text x="300" y="125" text-anchor="middle" fill="#5d4037" font-size="20" font-weight="bold">1. Preserve the Product</text>
+  <text x="300" y="148" text-anchor="middle" fill="#795548" font-size="16">Document, store, and prevent alteration</text>
+  <rect x="40" y="175" width="520" height="70" rx="8" fill="#fff" stroke="#795548" stroke-width="1"/>
+  <text x="300" y="210" text-anchor="middle" fill="#5d4037" font-size="20" font-weight="bold">2. Defect Theory</text>
+  <text x="300" y="233" text-anchor="middle" fill="#795548" font-size="16">Design, manufacturing, or failure to warn</text>
+  <rect x="40" y="260" width="520" height="70" rx="8" fill="#fff" stroke="#795548" stroke-width="1"/>
+  <text x="300" y="295" text-anchor="middle" fill="#5d4037" font-size="20" font-weight="bold">3. Identify Defendants</text>
+  <text x="300" y="318" text-anchor="middle" fill="#795548" font-size="16">Manufacturer, distributor, retailer chain</text>
+  <rect x="40" y="345" width="520" height="70" rx="8" fill="#fff" stroke="#795548" stroke-width="1"/>
+  <text x="300" y="380" text-anchor="middle" fill="#5d4037" font-size="20" font-weight="bold">4. Causation &amp; Damages</text>
+  <text x="300" y="403" text-anchor="middle" fill="#795548" font-size="16">Link defect to injury; document full damages</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <defs>
+    <linearGradient id="coverageInfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ebf5fb"/>
+      <stop offset="100%" style="stop-color:#d6eaf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#coverageInfGrad)"/>
+  <text x="300" y="50" text-anchor="middle" fill="#1b4f72" font-family="Georgia, serif" font-size="24" font-weight="bold">Coverage Disputes: Quick Case Roadmap</text>
+  <rect x="40" y="90" width="520" height="70" rx="8" fill="#fff" stroke="#2874a6" stroke-width="1"/>
+  <text x="300" y="125" text-anchor="middle" fill="#1b4f72" font-size="20" font-weight="bold">1. Policy Review &amp; Tenders</text>
+  <text x="300" y="148" text-anchor="middle" fill="#2874a6" font-size="16">Identify all applicable policies and limits</text>
+  <rect x="40" y="175" width="520" height="70" rx="8" fill="#fff" stroke="#2874a6" stroke-width="1"/>
+  <text x="300" y="210" text-anchor="middle" fill="#1b4f72" font-size="20" font-weight="bold">2. Coverage Dispute Analysis</text>
+  <text x="300" y="233" text-anchor="middle" fill="#2874a6" font-size="16">Reservation of rights, denials, exclusions</text>
+  <rect x="40" y="260" width="520" height="70" rx="8" fill="#fff" stroke="#2874a6" stroke-width="1"/>
+  <text x="300" y="295" text-anchor="middle" fill="#1b4f72" font-size="20" font-weight="bold">3. Bad Faith Evaluation</text>
+  <text x="300" y="318" text-anchor="middle" fill="#2874a6" font-size="16">Unreasonable delay, wrongful denial</text>
+  <rect x="40" y="345" width="520" height="70" rx="8" fill="#fff" stroke="#2874a6" stroke-width="1"/>
+  <text x="300" y="380" text-anchor="middle" fill="#1b4f72" font-size="20" font-weight="bold">4. Litigation or Settlement</text>
+  <text x="300" y="403" text-anchor="middle" fill="#2874a6" font-size="16">Maximize recovery across policy layers</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+  <defs>
+    <linearGradient id="catInjHeroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b71c1c"/>
+      <stop offset="50%" style="stop-color:#d32f2f"/>
+      <stop offset="100%" style="stop-color:#f44336"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" fill="url(#catInjHeroGrad)"/>
+  <path d="M260 100 L340 100 L340 200 L300 240 L260 200 Z" fill="none" stroke="#ffcdd2" stroke-width="3"/>
+  <text x="300" y="270" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="28" font-weight="bold">Catastrophic Injuries</text>
+  <text x="300" y="300" text-anchor="middle" fill="#ffcdd2" font-size="18">Life-Altering Injury Legal Advocacy</text>
+</svg>

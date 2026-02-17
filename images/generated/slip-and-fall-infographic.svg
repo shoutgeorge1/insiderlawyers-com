@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <defs>
+    <linearGradient id="slipInfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e3f2fd"/>
+      <stop offset="100%" style="stop-color:#bbdefb"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#slipInfGrad)"/>
+  <text x="300" y="50" text-anchor="middle" fill="#1e88e5" font-family="Georgia, serif" font-size="26" font-weight="bold">Slip and Fall: Quick Case Roadmap</text>
+  <rect x="40" y="90" width="520" height="70" rx="8" fill="#fff" stroke="#2196f3" stroke-width="1"/>
+  <text x="300" y="125" text-anchor="middle" fill="#1e88e5" font-size="20" font-weight="bold">1. Preserve Evidence</text>
+  <text x="300" y="148" text-anchor="middle" fill="#2196f3" font-size="16">Photos, incident report, surveillance footage</text>
+  <rect x="40" y="175" width="520" height="70" rx="8" fill="#fff" stroke="#2196f3" stroke-width="1"/>
+  <text x="300" y="210" text-anchor="middle" fill="#1e88e5" font-size="20" font-weight="bold">2. Notice &amp; Hazard Proof</text>
+  <text x="300" y="233" text-anchor="middle" fill="#2196f3" font-size="16">Constructive or actual notice; maintenance records</text>
+  <rect x="40" y="260" width="520" height="70" rx="8" fill="#fff" stroke="#2196f3" stroke-width="1"/>
+  <text x="300" y="295" text-anchor="middle" fill="#1e88e5" font-size="20" font-weight="bold">3. Medical Documentation</text>
+  <text x="300" y="318" text-anchor="middle" fill="#2196f3" font-size="16">Treatment timeline; causation link to fall</text>
+  <rect x="40" y="345" width="520" height="70" rx="8" fill="#fff" stroke="#2196f3" stroke-width="1"/>
+  <text x="300" y="380" text-anchor="middle" fill="#1e88e5" font-size="20" font-weight="bold">4. Damages Recovery</text>
+  <text x="300" y="403" text-anchor="middle" fill="#2196f3" font-size="16">Medical, wages, pain and suffering</text>
+</svg>

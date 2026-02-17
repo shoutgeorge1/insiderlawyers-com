@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+  <defs>
+    <linearGradient id="truckHeroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a365d"/>
+      <stop offset="50%" style="stop-color:#2c5282"/>
+      <stop offset="100%" style="stop-color:#2b6cb0"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" fill="url(#truckHeroGrad)"/>
+  <path d="M80 220 L120 180 L180 180 L220 220 Z" fill="none" stroke="#c9e2ff" stroke-width="3" opacity="0.9"/>
+  <circle cx="140" cy="220" r="20" fill="none" stroke="#c9e2ff" stroke-width="2"/>
+  <circle cx="200" cy="220" r="20" fill="none" stroke="#c9e2ff" stroke-width="2"/>
+  <text x="300" y="140" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="32" font-weight="bold">Truck Accidents</text>
+  <text x="300" y="180" text-anchor="middle" fill="#c9e2ff" font-size="18">Los Angeles Legal Representation</text>
+</svg>
