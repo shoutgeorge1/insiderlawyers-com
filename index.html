@@ -53,6 +53,15 @@
       .hero.hero-section .hero-text .h1-line2 { font-size: 1.1em; }
       .hero.hero-section .hero-text .h1-line3-smaller, .hero.hero-section .hero-text .h1-line4-smaller { font-size: 1.1em; }
     }
+    @media (max-width: 767px) {
+      /* Reduce expensive paint work on mobile hero */
+      .hero.hero-section { filter: none; }
+      /* Defer offscreen section layout/paint until near viewport */
+      .defer-mobile {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 900px;
+      }
+    }
     .hero.hero-section .hero-subhead { color: rgba(255,255,255,0.95); font-size: 1.1rem; margin-bottom: 0.5rem; }
     .hero.hero-section .hero-highlight { color: var(--brand-accent-yellow); font-weight: 700; }
     .btn-primary {
@@ -302,7 +311,7 @@
       </div>
     </div>
   </section>
-  <section class="content-section" style="padding:2rem 0; background:#fff;">
+  <section class="content-section defer-mobile" style="padding:2rem 0; background:#fff;">
     <div class="container">
       <header class="head-group text-center">
         <h2 class="section-title tail">
@@ -326,7 +335,7 @@
       </div>
     </div>
   </section>
-  <section class="block highlights">
+  <section class="block highlights defer-mobile">
     <div class="mid-container">
       <header class="head-group">
         <h2 class="h2 highlights__title tail">
@@ -388,18 +397,18 @@
       </div>
     </div>
   </section>
-  <section class="call-bar" id="call-bar">
+  <section class="call-bar defer-mobile" id="call-bar">
     <div class="call-bar__inner">
       <span class="call-bar__text">Call Now for Help</span>
       <a href="tel:844-467-4335" class="call-bar__number" data-callrail-phone="844-467-4335">844-467-4335</a>
     </div>
   </section>
-  <section class="team-group-section">
+  <section class="team-group-section defer-mobile">
     <div class="container">
       <img src="https://s3-media0.fl.yelpcdn.com/bphoto/7dI2WHWJLykAP2oXi4Du3g/o.jpg" alt="Our legal team of 20+ attorneys" class="team-group-section__img" loading="lazy" width="1200" height="800">
     </div>
   </section>
-  <section class="injuries-section" id="injuries">
+  <section class="injuries-section defer-mobile" id="injuries">
     <div class="container">
       <header class="injuries-section__header">
         <h2 class="injuries-section__title">Serious Injuries. Serious Representation.</h2>
@@ -443,7 +452,7 @@
       </div>
     </div>
   </section>
-  <section class="case-results" id="case-results">
+  <section class="case-results defer-mobile" id="case-results">
     <div class="container">
       <h2 class="case-results__headline">Case Results</h2>
       <p class="case-results__sub">Millions Recovered for Injury Victims</p>
@@ -495,7 +504,7 @@
       <p class="case-results__disclaimer">Results depend on the facts of each case.</p>
     </div>
   </section>
-  <section class="why-choose-section" id="why-choose">
+  <section class="why-choose-section defer-mobile" id="why-choose">
     <div class="container">
       <header class="head-group">
         <h2 class="h2 highlights__title tail">
@@ -526,7 +535,7 @@
       </div>
     </div>
   </section>
-  <section class="our-attorneys-section" id="our-attorneys">
+  <section class="our-attorneys-section defer-mobile" id="our-attorneys">
     <div class="container">
       <header class="head-group">
         <h2 class="our-attorneys__title tail">
