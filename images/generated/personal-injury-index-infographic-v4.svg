@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7fbff"/>
+      <stop offset="100%" style="stop-color:#e8f2fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1600" fill="url(#bg)"/>
+  <rect x="80" y="60" width="1040" height="120" fill="#01366c" rx="12"/>
+  <text x="600" y="130" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="36" font-weight="700">Personal Injury Lawyer Los Angeles Case Roadmap</text>
+  <text x="600" y="175" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Arial, sans-serif" font-size="20">Your path to full compensation</text>
+  <g fill="#01366c">
+    <circle cx="120" cy="280" r="50" fill="#fbba00"/>
+    <text x="120" y="295" text-anchor="middle" fill="#01366c" font-family="Arial, sans-serif" font-size="32" font-weight="700">1</text>
+    <text x="220" y="260" fill="#01366c" font-family="Arial, sans-serif" font-size="24" font-weight="700">Report and Document</text>
+    <text x="220" y="300" fill="#374151" font-family="Arial, sans-serif" font-size="20">Police report, photos, and witness information.</text>
+  </g>
+  <g fill="#01366c">
+    <circle cx="120" cy="520" r="50" fill="#fbba00"/>
+    <text x="120" y="535" text-anchor="middle" fill="#01366c" font-family="Arial, sans-serif" font-size="32" font-weight="700">2</text>
+    <text x="220" y="500" fill="#01366c" font-family="Arial, sans-serif" font-size="24" font-weight="700">Seek Medical Treatment</text>
+    <text x="220" y="540" fill="#374151" font-family="Arial, sans-serif" font-size="20">Document injuries and follow care recommendations.</text>
+  </g>
+  <g fill="#01366c">
+    <circle cx="120" cy="760" r="50" fill="#fbba00"/>
+    <text x="120" y="775" text-anchor="middle" fill="#01366c" font-family="Arial, sans-serif" font-size="32" font-weight="700">3</text>
+    <text x="220" y="740" fill="#01366c" font-family="Arial, sans-serif" font-size="24" font-weight="700">Preserve Evidence</text>
+    <text x="220" y="780" fill="#374151" font-family="Arial, sans-serif" font-size="20">Vehicle damage and scene photos before repair.</text>
+  </g>
+  <g fill="#01366c">
+    <circle cx="120" cy="1000" r="50" fill="#fbba00"/>
+    <text x="120" y="1015" text-anchor="middle" fill="#01366c" font-family="Arial, sans-serif" font-size="32" font-weight="700">4</text>
+    <text x="220" y="980" fill="#01366c" font-family="Arial, sans-serif" font-size="24" font-weight="700">Consult an Attorney</text>
+    <text x="220" y="1020" fill="#374151" font-family="Arial, sans-serif" font-size="20">Insurers use tactics; experience matters.</text>
+  </g>
+  <line x1="120" y1="330" x2="120" y2="470" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="120" y1="570" x2="120" y2="710" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="120" y1="810" x2="120" y2="950" stroke="#d1d5db" stroke-width="2"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#01366c"/>
+      <stop offset="50%" style="stop-color:#01468a"/>
+      <stop offset="100%" style="stop-color:#012a50"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbba00"/>
+      <stop offset="100%" style="stop-color:#e6a800"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <path d="M100 450 L150 400 L200 450 L250 380 L300 450 L350 420 L400 450 L450 400 L500 450 L550 380 L600 450 L650 400 L700 450 L750 420 L800 450 L850 400 L900 450 L950 420 L1000 450 L1050 400 L1100 450" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  <rect x="250" y="350" width="100" height="60" rx="4" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <rect x="850" y="320" width="100" height="60" rx="4" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  <text x="600" y="260" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="48" font-weight="700">Catastrophic Injury Lawyer</text>
+  <text x="600" y="330" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Arial, sans-serif" font-size="24">Los Angeles Life-Changing Injury Representation</text>
+  <rect x="500" y="370" width="200" height="4" fill="url(#accent)" rx="2"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg-lrcr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#01366c"/>
+      <stop offset="50%" style="stop-color:#01468a"/>
+      <stop offset="100%" style="stop-color:#012a50"/>
+    </linearGradient>
+    <linearGradient id="accent-lrcr" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbba00"/>
+      <stop offset="100%" style="stop-color:#e6a800"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg-lrcr)"/>
+  <rect x="890" y="230" width="95" height="85" rx="6" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+  <path d="M240 370 L320 320 L400 370 L480 320 L560 370" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="2" stroke-linecap="round"/>
+  <text x="600" y="268" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="42" font-weight="700">Referral Criteria</text>
+  <text x="600" y="328" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Arial, sans-serif" font-size="22">Litigation-Ready Case Evaluation</text>
+  <rect x="455" y="378" width="290" height="4" fill="url(#accent-lrcr)" rx="2"/>
+</svg>

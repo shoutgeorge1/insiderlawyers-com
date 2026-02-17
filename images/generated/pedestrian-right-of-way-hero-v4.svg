@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="pro-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#01366c"/>
+      <stop offset="50%" style="stop-color:#01468a"/>
+      <stop offset="100%" style="stop-color:#012a50"/>
+    </linearGradient>
+    <linearGradient id="pro-accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbba00"/>
+      <stop offset="100%" style="stop-color:#e6a800"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#pro-bg)"/>
+  <rect x="180" y="200" width="60" height="100" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2" rx="4"/>
+  <rect x="960" y="300" width="50" height="80" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" rx="4"/>
+  <text x="600" y="280" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="48" font-weight="700">Pedestrian Right of Way</text>
+  <text x="600" y="340" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Arial, sans-serif" font-size="28">California Laws &amp; Liability</text>
+  <rect x="500" y="380" width="200" height="4" fill="url(#pro-accent)" rx="2"/>
+</svg>

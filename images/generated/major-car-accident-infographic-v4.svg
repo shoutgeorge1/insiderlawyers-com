@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600">
+  <defs>
+    <linearGradient id="bg-mca" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7fbff"/>
+      <stop offset="100%" style="stop-color:#e8f2fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1600" fill="url(#bg-mca)"/>
+  <rect x="80" y="60" width="1040" height="120" fill="#01366c" rx="12"/>
+  <text x="600" y="130" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="38" font-weight="700">Major Car Accident Case Roadmap</text>
+  <g fill="#01366c">
+    <circle cx="120" cy="280" r="55" fill="#fbba00"/>
+    <text x="120" y="298" text-anchor="middle" fill="#01366c" font-family="Arial, sans-serif" font-size="36" font-weight="700">1</text>
+    <text x="220" y="255" fill="#01366c" font-family="Arial, sans-serif" font-size="28" font-weight="700">Safety and Medical Care</text>
+    <text x="220" y="305" fill="#374151" font-family="Arial, sans-serif" font-size="22">Call 911, get treatment, document injuries.</text>
+  </g>
+  <g fill="#01366c">
+    <circle cx="120" cy="520" r="55" fill="#fbba00"/>
+    <text x="120" y="538" text-anchor="middle" fill="#01366c" font-family="Arial, sans-serif" font-size="36" font-weight="700">2</text>
+    <text x="220" y="495" fill="#01366c" font-family="Arial, sans-serif" font-size="28" font-weight="700">Preserve Evidence</text>
+    <text x="220" y="545" fill="#374151" font-family="Arial, sans-serif" font-size="22">Photos, police report, witness contact info.</text>
+  </g>
+  <g fill="#01366c">
+    <circle cx="120" cy="760" r="55" fill="#fbba00"/>
+    <text x="120" y="778" text-anchor="middle" fill="#01366c" font-family="Arial, sans-serif" font-size="36" font-weight="700">3</text>
+    <text x="220" y="735" fill="#01366c" font-family="Arial, sans-serif" font-size="28" font-weight="700">Document All Damages</text>
+    <text x="220" y="785" fill="#374151" font-family="Arial, sans-serif" font-size="22">Medical bills, lost wages, pain and suffering.</text>
+  </g>
+  <g fill="#01366c">
+    <circle cx="120" cy="1000" r="55" fill="#fbba00"/>
+    <text x="120" y="1018" text-anchor="middle" fill="#01366c" font-family="Arial, sans-serif" font-size="36" font-weight="700">4</text>
+    <text x="220" y="975" fill="#01366c" font-family="Arial, sans-serif" font-size="28" font-weight="700">Consult an Attorney</text>
+    <text x="220" y="1025" fill="#374151" font-family="Arial, sans-serif" font-size="22">Serious accidents need experienced counsel.</text>
+  </g>
+  <line x1="120" y1="335" x2="120" y2="465" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="120" y1="575" x2="120" y2="705" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="120" y1="815" x2="120" y2="945" stroke="#d1d5db" stroke-width="2"/>
+</svg>

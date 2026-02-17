@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bi-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#01366c"/>
+      <stop offset="50%" style="stop-color:#01468a"/>
+      <stop offset="100%" style="stop-color:#012a50"/>
+    </linearGradient>
+    <linearGradient id="bi-accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbba00"/>
+      <stop offset="100%" style="stop-color:#e6a800"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bi-bg)"/>
+  <ellipse cx="220" cy="200" rx="50" ry="40" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <text x="600" y="280" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="48" font-weight="700">Brain Injury Compensation</text>
+  <text x="600" y="340" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Arial, sans-serif" font-size="28">Your Legal Guide to TBI Claims</text>
+  <rect x="500" y="380" width="200" height="4" fill="url(#bi-accent)" rx="2"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg-ita" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#01366c"/>
+      <stop offset="50%" style="stop-color:#01468a"/>
+      <stop offset="100%" style="stop-color:#012a50"/>
+    </linearGradient>
+    <linearGradient id="accent-ita" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbba00"/>
+      <stop offset="100%" style="stop-color:#e6a800"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg-ita)"/>
+  <path d="M200 350 L280 280 L360 350 L440 280 L520 350" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="3" stroke-linecap="round"/>
+  <rect x="850" y="180" width="120" height="80" rx="6" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <text x="600" y="270" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="44" font-weight="700">Injuries in Truck Accidents</text>
+  <text x="600" y="330" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Arial, sans-serif" font-size="22">What Victims Should Know</text>
+  <rect x="450" y="370" width="300" height="5" fill="url(#accent-ita)" rx="2"/>
+</svg>

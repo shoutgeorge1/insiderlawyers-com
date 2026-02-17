@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg-talr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#01366c"/>
+      <stop offset="50%" style="stop-color:#01468a"/>
+      <stop offset="100%" style="stop-color:#012a50"/>
+    </linearGradient>
+    <linearGradient id="accent-talr" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbba00"/>
+      <stop offset="100%" style="stop-color:#e6a800"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg-talr)"/>
+  <path d="M180 200 L220 160 L260 200 L220 240 Z" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <text x="600" y="300" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="44" font-weight="700">Truck Accident Legal Rights</text>
+  <text x="600" y="360" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Arial, sans-serif" font-size="22">Know Your Options After a Crash</text>
+  <rect x="380" y="408" width="440" height="4" fill="url(#accent-talr)" rx="2"/>
+</svg>
