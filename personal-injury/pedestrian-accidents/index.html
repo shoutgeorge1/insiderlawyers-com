@@ -58,6 +58,8 @@
         .nav-link--primary:hover{color:#fff;background:linear-gradient(180deg,#0253a4 0%,#01468a 100%)}
         .nav-link--dropdown{cursor:default}
         .nav-item{position:relative;padding-bottom:8px}
+        .mobile-menu-toggle{display:none;width:44px;height:38px;border:1px solid rgba(1,54,108,.25);border-radius:8px;background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}
+        .mobile-menu-toggle span{width:20px;height:2px;background:#01366c;border-radius:2px;display:block}
         .nav-dropdown{position:absolute;left:0;top:100%;min-width:880px;max-width:1100px;background:#fff;border:1px solid #d3e0f0;border-radius:10px;box-shadow:0 10px 26px rgba(1,54,108,.15);padding:12px;display:none;z-index:1200;grid-template-columns:repeat(4,minmax(200px,1fr));gap:6px 12px;align-items:start}
         .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{display:grid}
         .nav-dropdown a{display:block;padding:9px 10px;color:var(--brand-navy);text-decoration:none;font-size:.84rem;font-weight:600;border-radius:6px}
@@ -74,11 +76,14 @@
           .header-col--proof{order:3;text-align:center}
           .header-proof-title{font-size:.95rem}
           .header-col--proof p{font-size:.75rem}
-          .header-nav-row{display:flex;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;gap:8px;margin-top:6px;padding-top:8px;border-top:1px solid rgba(1,54,108,.12);-webkit-overflow-scrolling:touch}
-          .nav-link{min-height:36px;padding:7px 12px}
-          .nav-item{width:auto;padding-bottom:0;flex:0 0 auto}
-          .nav-item .nav-link{width:auto;white-space:nowrap}
-          .nav-dropdown{position:static;display:none;margin-top:6px;min-width:0;box-shadow:none;border:1px solid #dce6f3}
+          .mobile-menu-toggle{display:inline-flex}
+          .header-nav-row{display:none;flex-direction:column;gap:8px;padding:8px 0 4px}
+          .header-nav-wrap.is-open .header-nav-row{display:flex}
+          .nav-link{width:100%;justify-content:space-between;min-height:36px;padding:7px 12px}
+          .nav-item{display:block;width:100%;padding-bottom:0}
+          .nav-item .nav-link{width:100%}
+          .nav-dropdown{position:static;display:none;margin-top:6px;min-width:0;box-shadow:none;border:1px solid #dce6f3;grid-template-columns:1fr}
+          .nav-item.is-open .nav-dropdown{display:grid}
           .header-call-label{font-size:.7rem}
           .header-call-number{font-size:1rem;padding:.58rem .85rem}
           .header-logo{max-width:180px}
@@ -115,6 +120,19 @@
         .footer-disclaimer p{margin:.55rem 0}
         .footer-disclaimer a{color:rgba(255,255,255,.92);text-decoration:underline;text-underline-offset:2px}
         .footer-disclaimer a:hover{color:var(--brand-accent-yellow)}
+        .asset-preview-block{margin:22px 0 30px;padding:16px;background:#f7fbff;border:1px solid #d7e6f5;border-radius:12px}
+        .asset-preview-grid{display:grid;grid-template-columns:1fr;gap:14px}
+        .asset-preview-grid img{width:100%;height:auto;border-radius:10px;border:1px solid #dbe7f4;box-shadow:0 8px 22px rgba(1,54,108,.12)}
+        .asset-preview-note{font-size:1rem;line-height:1.6;color:#374151;margin-top:10px}
+        .asset-preview-open{display:inline-block;margin-top:8px;font-weight:700;font-size:1rem}
+        @media(min-width:900px){.asset-preview-grid{grid-template-columns:1.4fr 1fr;align-items:start}}
+        @media(max-width:600px){.asset-preview-block{padding:14px}.asset-preview-block h2{font-size:1.25rem}.asset-preview-block .lead-text{font-size:1.06rem}.asset-preview-note{font-size:1rem}}
+        .footer-social{margin:14px 0 6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+        .footer-social__label{font-size:.9rem;font-weight:700;color:rgba(255,255,255,.92);margin-right:2px}
+        .footer-social__link{width:34px;height:34px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;text-decoration:none;transition:all .2s ease}
+        .footer-social__link:hover{background:#fbba00;color:#01366c;border-color:#fbba00}
+        .footer-social__link svg{width:18px;height:18px;fill:currentColor}
+        @media (max-width: 600px){.footer-social{justify-content:center}.footer-social__label{font-size:1rem}.footer-social__link{width:38px;height:38px}}
     </style>
 </head>
 <body>
@@ -134,7 +152,9 @@
                     <span class="header-lang">Hablamos Espanol</span>
                 </div>
             </div>
-            <nav class="header-nav-row" aria-label="Primary">
+            <div id="header-nav-wrap" class="header-nav-wrap">
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <nav class="header-nav-row" id="primary-nav" aria-label="Primary">
                 <a class="nav-link nav-link--primary" href="/#case-evaluation">Free Case Review</a>
                 <a class="nav-link" href="/">Home</a>
                 <div class="nav-item">
@@ -250,9 +270,44 @@
                     </div>
                 </div>
             </nav>
+            </div>
         </div>
     </header>
-  <main><section class="section-content"><div class="container"><h1>Pedestrian Accident Lawyer Los Angeles</h1><p class="lead-text">Pedestrian collisions are often catastrophic. We move quickly to preserve scene evidence, establish fault, and build full damages claims for long-term recovery.</p><blockquote>"Pedestrian claims require immediate liability work. Delay benefits the defense." - Shawn S. Rokni</blockquote><h2>Where Pedestrian Cases Become Complex</h2><ul><li>Disputed right-of-way and signal timing issues</li><li>Visibility and speed reconstruction</li><li>Comparative fault allegations against the pedestrian</li><li>Severe trauma with long-term care exposure</li></ul><h2>Damages We Document</h2><ul><li>Emergency and surgical care costs</li><li>Future treatment, rehab, and assistive needs</li><li>Lost wages and reduced earning capacity</li><li>Pain, suffering, and life-impact damages</li></ul><h2>Related Pages</h2><ul><li><a href="/personal-injury/auto-accidents">Auto Accidents</a></li><li><a href="/personal-injury/wrongful-death">Wrongful Death</a></li><li><a href="/insurance-company-playbook">Insurance Company Playbook</a></li></ul><h2>Speak With a Los Angeles Pedestrian Accident Attorney</h2><p class="lead-text">Get a quick case review and immediate action plan.</p><p style="margin-top:32px"><a href="/#case-evaluation" class="btn-primary">Get My Free Case Review</a> <a href="tel:844-467-4335" class="btn-secondary" data-callrail-phone="844-467-4335">Call 844-467-4335</a></p></div></section></main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var navWrap = document.getElementById('header-nav-wrap');
+      var mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      if (navWrap && mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+          var willOpen = !navWrap.classList.contains('is-open');
+          navWrap.classList.toggle('is-open', willOpen);
+          mobileMenuToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        });
+      }
+      var dropdownToggles = document.querySelectorAll('.header-nav-row .nav-link--dropdown');
+      dropdownToggles.forEach(function(toggle) {
+        toggle.setAttribute('role', 'button');
+        toggle.setAttribute('tabindex', '0');
+        toggle.setAttribute('aria-expanded', 'false');
+        function handleToggle() {
+          if (window.innerWidth > 900) return;
+          var parentItem = toggle.closest('.nav-item');
+          if (!parentItem) return;
+          var willOpen = !parentItem.classList.contains('is-open');
+          parentItem.classList.toggle('is-open', willOpen);
+          toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        }
+        toggle.addEventListener('click', handleToggle);
+        toggle.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleToggle();
+          }
+        });
+      });
+    });
+  </script>
+  <main><section class="section-content"><div class="container"><h1>Pedestrian Accident Lawyer Los Angeles</h1><p class="lead-text">Pedestrian collisions are often catastrophic. We move quickly to preserve scene evidence, establish fault, and build full damages claims for long-term recovery.</p><section class="asset-preview-block" aria-label="Visual style preview"><h2>Visual Style Preview</h2><p class="lead-text">Pilot visuals for this non-PPC page style (hero + infographic).</p><div class="asset-preview-grid"><img src="/images/generated/pi-personal-injury-hero-style-pilot.png" alt="Los Angeles legal hero visual concept"><img src="/images/generated/pi-personal-injury-infographic-pilot.png" alt="Personal injury case process infographic visual concept"></div><a class="asset-preview-open" href="/images/generated/pi-personal-injury-infographic-pilot.png" target="_blank" rel="noopener">Open infographic full size</a><p class="asset-preview-note">Tip: on mobile, open the infographic full size for easier reading.</p></section><blockquote>"Pedestrian claims require immediate liability work. Delay benefits the defense." - Shawn S. Rokni</blockquote><h2>Where Pedestrian Cases Become Complex</h2><ul><li>Disputed right-of-way and signal timing issues</li><li>Visibility and speed reconstruction</li><li>Comparative fault allegations against the pedestrian</li><li>Severe trauma with long-term care exposure</li></ul><h2>Damages We Document</h2><ul><li>Emergency and surgical care costs</li><li>Future treatment, rehab, and assistive needs</li><li>Lost wages and reduced earning capacity</li><li>Pain, suffering, and life-impact damages</li></ul><h2>Related Pages</h2><ul><li><a href="/personal-injury/auto-accidents">Auto Accidents</a></li><li><a href="/personal-injury/wrongful-death">Wrongful Death</a></li><li><a href="/insurance-company-playbook">Insurance Company Playbook</a></li></ul><h2>Speak With a Los Angeles Pedestrian Accident Attorney</h2><p class="lead-text">Get a quick case review and immediate action plan.</p><p style="margin-top:32px"><a href="/#case-evaluation" class="btn-primary">Get My Free Case Review</a> <a href="tel:844-467-4335" class="btn-secondary" data-callrail-phone="844-467-4335">Call 844-467-4335</a></p></div></section></main>
   <footer id="footer-contact">
         <div class="container">
             <div class="footer-content">
@@ -263,6 +318,18 @@
                     <p><a href="tel:844-467-4335" class="footer-phone" data-callrail-phone="844-467-4335">844-467-4335</a></p>
                     <p>Available 24/7 · Hablamos Espanol</p>
                     <p>3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010</p>
+                    <div class="footer-social" aria-label="Follow Insider Accident Lawyers on social media">
+  <span class="footer-social__label">Follow Us:</span>
+  <a class="footer-social__link" href="https://www.facebook.com/insideraccidentlawyers" target="_blank" rel="noopener" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.19 2.23.19v2.46H15.2c-1.21 0-1.58.75-1.58 1.52V12h2.69l-.43 2.89h-2.26v6.99A10 10 0 0 0 22 12z"/></svg>
+  </a>
+  <a class="footer-social__link" href="https://www.instagram.com/insideraccidentlawyers" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5zm8.95 1.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4z"/></svg>
+  </a>
+  <a class="footer-social__link" href="https://www.linkedin.com/events/7428108930947518464/" target="_blank" rel="noopener" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5v9H4v-9h2.94zM5.47 3.5A1.72 1.72 0 1 1 5.5 7a1.72 1.72 0 0 1-.03-3.5zM20 12.3v5.2h-2.93v-4.86c0-1.22-.43-2.05-1.52-2.05-.83 0-1.33.56-1.54 1.1-.08.2-.1.47-.1.75v5.06H11V8.5h2.91v1.23c.39-.6 1.08-1.46 2.63-1.46 1.92 0 3.46 1.26 3.46 4.03z"/></svg>
+  </a>
+</div>
                 </div>
                 <div class="footer-section">
                     <h3>Firm</h3>
