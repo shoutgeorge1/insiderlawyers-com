@@ -1485,4 +1485,14 @@
   .footer__links {
     align-items: center;
   }
+  .home-ppc .site-footer .footer__main {
+    grid-template-columns: 1fr !important;
+    max-width: 560px;
+    gap: 0.9rem;
+    text-align: center;
+  }
+  .home-ppc .site-footer .footer__brand,
+  .home-ppc .site-footer .footer__contact {
+    padding: 0.85rem 0.9rem 0.8rem;
+  }
 }
