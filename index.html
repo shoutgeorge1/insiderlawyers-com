@@ -123,6 +123,26 @@
     .nav-link--primary:hover { color:#fff; background: linear-gradient(180deg,#0253a4 0%,#01468a 100%); }
     .nav-link--dropdown { cursor: default; }
     .nav-item { position: relative; padding-bottom: 8px; }
+    .mobile-menu-toggle {
+      display: none;
+      width: 44px;
+      height: 38px;
+      border: 1px solid rgba(1,54,108,.25);
+      border-radius: 8px;
+      background: #fff;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .mobile-menu-toggle span {
+      width: 20px;
+      height: 2px;
+      background: #01366c;
+      border-radius: 2px;
+      display: block;
+    }
     .nav-dropdown {
       position: absolute;
       left: 0;
@@ -152,21 +172,47 @@
     }
     .nav-dropdown a:hover { background:#eef4fb; color:#01468a; }
     @media (max-width: 900px) {
+      .header-nav-wrap .container {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      .mobile-menu-toggle {
+        display: inline-flex;
+      }
       .header-nav-row {
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: auto;
+        display: none;
+        flex-direction: column;
         gap: 8px;
-        padding: 8px 0;
-        -webkit-overflow-scrolling: touch;
+        padding: 8px 0 4px;
       }
-      .header-nav-row::-webkit-scrollbar { display: none; }
+      .header-nav-wrap.is-open .header-nav-row {
+        display: flex;
+      }
       .nav-link {
-        flex: 0 0 auto;
-        white-space: nowrap;
+        width: 100%;
+        justify-content: space-between;
       }
-      .nav-item { display: none; }
-      .nav-dropdown { display: none !important; }
+      .nav-item {
+        display: block;
+        width: 100%;
+        padding-bottom: 0;
+      }
+      .nav-item .nav-link {
+        width: 100%;
+      }
+      .nav-dropdown {
+        position: static;
+        display: none;
+        margin-top: 6px;
+        min-width: 0;
+        max-width: none;
+        box-shadow: none;
+        border: 1px solid #dce6f3;
+        grid-template-columns: 1fr;
+      }
+      .nav-item.is-open .nav-dropdown {
+        display: grid;
+      }
     }
     .footer-content {
       display: grid;
@@ -291,6 +337,36 @@
           });
         }
       }
+      var navWrap = document.getElementById('header-nav-wrap');
+      var mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      if (navWrap && mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+          var willOpen = !navWrap.classList.contains('is-open');
+          navWrap.classList.toggle('is-open', willOpen);
+          mobileMenuToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        });
+      }
+      var dropdownToggles = document.querySelectorAll('.header-nav-row .nav-link--dropdown');
+      dropdownToggles.forEach(function(toggle) {
+        toggle.setAttribute('role', 'button');
+        toggle.setAttribute('tabindex', '0');
+        toggle.setAttribute('aria-expanded', 'false');
+        function handleToggle() {
+          if (window.innerWidth > 900) return;
+          var parentItem = toggle.closest('.nav-item');
+          if (!parentItem) return;
+          var willOpen = !parentItem.classList.contains('is-open');
+          parentItem.classList.toggle('is-open', willOpen);
+          toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        }
+        toggle.addEventListener('click', handleToggle);
+        toggle.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleToggle();
+          }
+        });
+      });
       (window.requestIdleCallback || function(cb) { setTimeout(cb, 1); })(function() {
         setTimeout(function() {
           if (typeof dataLayer !== 'undefined') dataLayer.push({ 'event': 'engaged_30s' });
@@ -350,9 +426,12 @@
       </div>
     </div>
   </header>
-  <div class="header-nav-wrap">
+  <div class="header-nav-wrap" id="header-nav-wrap">
     <div class="container">
-      <nav class="header-nav-row" aria-label="Primary">
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="header-nav-row" id="primary-nav" aria-label="Primary">
         <a class="nav-link nav-link--primary" href="#case-evaluation">Free Case Review</a>
         <a class="nav-link" href="/">Home</a>
         <div class="nav-item">
