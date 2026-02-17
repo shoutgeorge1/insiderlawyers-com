@@ -1424,6 +1424,35 @@
 .footer__links a:hover {
   color: #fbba00;
 }
+.home-ppc nav,
+.home-ppc .nav,
+.home-ppc .header-nav,
+.home-ppc .menu {
+  display: none !important;
+}
+.home-ppc .footer__links {
+  display: none !important;
+}
+.home-ppc .site-footer .footer__main {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-ppc .site-footer .footer__brand,
+.home-ppc .site-footer .footer__contact {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 1rem 1rem 0.9rem;
+}
+.home-ppc #footer-contact a:not([href^="tel:"]) {
+  pointer-events: none;
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+}
 .footer__disclaimer {
   font-size: 0.79rem;
   color: rgba(255, 255, 255, 0.74);
