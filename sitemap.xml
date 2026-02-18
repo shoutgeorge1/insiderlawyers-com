@@ -1,48 +1,347 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.insiderlawyers.com/</loc></url>
-  <url><loc>https://www.insiderlawyers.com/settlements</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury/auto-accidents</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury/animal-attacks</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury/bicycle-accidents</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury/brain-injuries</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury/motorcycle-accidents</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury/pedestrian-accidents</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury/truck-accidents</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury/truck-accidents/fmcsa-hours-of-service</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury/truck-accidents/truck-accident-evidence</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury/truck-accidents/truck-accident-liability</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury/wrongful-death</loc></url>
-  <url><loc>https://www.insiderlawyers.com/insurance-company-playbook</loc></url>
-  <url><loc>https://www.insiderlawyers.com/adjuster-claim-valuation</loc></url>
-  <url><loc>https://www.insiderlawyers.com/proving-claim-value</loc></url>
-  <url><loc>https://www.insiderlawyers.com/demand-letter-negotiation</loc></url>
-  <url><loc>https://www.insiderlawyers.com/lowball-offer-response</loc></url>
-  <url><loc>https://www.insiderlawyers.com/major-car-accident</loc></url>
-  <url><loc>https://www.insiderlawyers.com/california-car-accident-lawyer</loc></url>
-  <url><loc>https://www.insiderlawyers.com/brain-injury</loc></url>
-  <url><loc>https://www.insiderlawyers.com/truck-accident-legal-rights</loc></url>
-  <url><loc>https://www.insiderlawyers.com/proving-truck-accident-case</loc></url>
-  <url><loc>https://www.insiderlawyers.com/personal-injury-court</loc></url>
-  <url><loc>https://www.insiderlawyers.com/post-dog-bite</loc></url>
-  <url><loc>https://www.insiderlawyers.com/pedestrian-right-of-way</loc></url>
-  <url><loc>https://www.insiderlawyers.com/uber-or-lyft-accident</loc></url>
-  <url><loc>https://www.insiderlawyers.com/injuries-truck-accidents</loc></url>
-  <url><loc>https://www.insiderlawyers.com/motorcycle-accident-case</loc></url>
-  <url><loc>https://www.insiderlawyers.com/attorney-referrals</loc></url>
-  <url><loc>https://www.insiderlawyers.com/lit-referral-core</loc></url>
-  <url><loc>https://www.insiderlawyers.com/lit-referral-process</loc></url>
-  <url><loc>https://www.insiderlawyers.com/lit-referral-criteria</loc></url>
-  <url><loc>https://www.insiderlawyers.com/lit-referral-economics</loc></url>
-  <url><loc>https://www.insiderlawyers.com/lit-referral-trial-ready-cocounsel</loc></url>
-  <url><loc>https://www.insiderlawyers.com/lit-referral-catastrophic-cases</loc></url>
-  <url><loc>https://www.insiderlawyers.com/lit-referral-truck-litigation</loc></url>
-  <url><loc>https://www.insiderlawyers.com/lit-referral-brain-injury</loc></url>
-  <url><loc>https://www.insiderlawyers.com/lit-referral-wrongful-death</loc></url>
-  <url><loc>https://www.insiderlawyers.com/lit-referral-coverage-disputes</loc></url>
-  <url><loc>https://www.insiderlawyers.com/legal/results-disclaimer</loc></url>
-  <url><loc>https://www.insiderlawyers.com/legal/disclaimer</loc></url>
-  <url><loc>https://www.insiderlawyers.com/legal/terms</loc></url>
-  <url><loc>https://www.insiderlawyers.com/legal/accessibility</loc></url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.insiderlawyers.com/</loc>
+  <lastmod>2026-02-17T22:48:35+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury</loc>
+  <lastmod>2026-02-17T22:48:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/auto-accidents</loc>
+  <lastmod>2026-02-17T22:48:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/truck-accidents</loc>
+  <lastmod>2026-02-17T22:48:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/brain-injuries</loc>
+  <lastmod>2026-02-17T22:48:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/wrongful-death</loc>
+  <lastmod>2026-02-17T22:48:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/animal-attacks</loc>
+  <lastmod>2026-02-17T22:48:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/bicycle-accidents</loc>
+  <lastmod>2026-02-17T22:48:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/motorcycle-accidents</loc>
+  <lastmod>2026-02-17T22:48:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/pedestrian-accidents</loc>
+  <lastmod>2026-02-17T22:48:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/premises-liability</loc>
+  <lastmod>2026-02-17T22:48:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/product-liability</loc>
+  <lastmod>2026-02-17T22:48:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/slip-and-fall</loc>
+  <lastmod>2026-02-17T22:48:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/spine-injuries</loc>
+  <lastmod>2026-02-17T22:48:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/catastrophic-injuries</loc>
+  <lastmod>2026-02-17T22:48:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/uber-and-lyft-accidents</loc>
+  <lastmod>2026-02-17T22:48:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/insurance-company-playbook</loc>
+  <lastmod>2026-02-17T22:48:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/adjuster-claim-valuation</loc>
+  <lastmod>2026-02-17T22:48:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/proving-claim-value</loc>
+  <lastmod>2026-02-17T22:48:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/demand-letter-negotiation</loc>
+  <lastmod>2026-02-17T22:48:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/lowball-offer-response</loc>
+  <lastmod>2026-02-17T22:48:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/major-car-accident</loc>
+  <lastmod>2026-02-17T22:48:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/california-car-accident-lawyer</loc>
+  <lastmod>2026-02-17T22:48:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/brain-injury</loc>
+  <lastmod>2026-02-17T22:48:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury-court</loc>
+  <lastmod>2026-02-17T22:48:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/post-dog-bite</loc>
+  <lastmod>2026-02-17T22:48:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/pedestrian-right-of-way</loc>
+  <lastmod>2026-02-17T22:48:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/uber-or-lyft-accident</loc>
+  <lastmod>2026-02-17T22:48:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/injuries-truck-accidents</loc>
+  <lastmod>2026-02-17T22:48:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/motorcycle-accident-case</loc>
+  <lastmod>2026-02-17T22:48:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-car-accident-lawyer</loc>
+  <lastmod>2026-02-17T22:48:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-auto-accident-lawyer</loc>
+  <lastmod>2026-02-17T22:48:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-car-crash-lawyer</loc>
+  <lastmod>2026-02-17T22:48:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/car-accident-lawyer-near-me-los-angeles</loc>
+  <lastmod>2026-02-17T22:48:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-truck-accident-lawyer</loc>
+  <lastmod>2026-02-17T22:48:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-motorcycle-accident-lawyer</loc>
+  <lastmod>2026-02-17T22:48:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-pedestrian-accident-lawyer</loc>
+  <lastmod>2026-02-17T22:48:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-bicycle-accident-lawyer</loc>
+  <lastmod>2026-02-17T22:48:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-wrongful-death-lawyer</loc>
+  <lastmod>2026-02-17T22:48:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-brain-injury-lawyer</loc>
+  <lastmod>2026-02-17T22:48:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-spine-injury-lawyer</loc>
+  <lastmod>2026-02-17T22:48:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-catastrophic-injury-lawyer</loc>
+  <lastmod>2026-02-17T22:48:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-premises-liability-lawyer</loc>
+  <lastmod>2026-02-17T22:48:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-slip-and-fall-lawyer</loc>
+  <lastmod>2026-02-17T22:48:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-product-liability-lawyer</loc>
+  <lastmod>2026-02-17T22:48:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/los-angeles-uber-lyft-accident-lawyer</loc>
+  <lastmod>2026-02-17T22:48:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/truck-accident-legal-rights</loc>
+  <lastmod>2026-02-17T22:48:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/proving-truck-accident-case</loc>
+  <lastmod>2026-02-17T22:48:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/truck-accidents/fmcsa-hours-of-service</loc>
+  <lastmod>2026-02-17T22:48:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/truck-accidents/truck-accident-evidence</loc>
+  <lastmod>2026-02-17T22:48:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/personal-injury/truck-accidents/truck-accident-liability</loc>
+  <lastmod>2026-02-17T22:48:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/attorney-referrals</loc>
+  <lastmod>2026-02-17T22:48:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/lit-referral-core</loc>
+  <lastmod>2026-02-17T22:48:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/lit-referral-process</loc>
+  <lastmod>2026-02-17T22:48:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/lit-referral-criteria</loc>
+  <lastmod>2026-02-17T22:48:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/lit-referral-economics</loc>
+  <lastmod>2026-02-17T22:48:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/lit-referral-trial-ready-cocounsel</loc>
+  <lastmod>2026-02-17T22:48:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/lit-referral-catastrophic-cases</loc>
+  <lastmod>2026-02-17T22:48:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/lit-referral-truck-litigation</loc>
+  <lastmod>2026-02-17T22:48:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/lit-referral-brain-injury</loc>
+  <lastmod>2026-02-17T22:48:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/lit-referral-wrongful-death</loc>
+  <lastmod>2026-02-17T22:48:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/lit-referral-coverage-disputes</loc>
+  <lastmod>2026-02-17T22:48:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/settlements</loc>
+  <lastmod>2026-02-17T22:48:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/legal/results-disclaimer</loc>
+  <lastmod>2026-02-17T22:48:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/legal/disclaimer</loc>
+  <lastmod>2026-02-17T22:48:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/legal/terms</loc>
+  <lastmod>2026-02-17T22:48:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.insiderlawyers.com/legal/accessibility</loc>
+  <lastmod>2026-02-17T22:48:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Map | Insider Accident Lawyers</title>
+  <meta name="description" content="Site map and XML sitemap links for Insider Accident Lawyers.">
+  <link rel="canonical" href="https://www.insiderlawyers.com/site-map.html">
+  <style>
+    :root {
+      --navy: #01366c;
+      --blue: #01468a;
+      --gold: #fbba00;
+      --bg: #f4f7fb;
+      --text: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 2rem;
+    }
+    .lead {
+      margin: 0 0 20px;
+      color: #334155;
+    }
+    .panel {
+      background: #fff;
+      border: 1px solid #d6e3f1;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 24px rgba(1, 54, 108, 0.08);
+    }
+    h2 {
+      margin: 0 0 10px;
+      color: var(--blue);
+      font-size: 1.2rem;
+    }
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    li { margin: 6px 0; }
+    .pill {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e8f0fa;
+      color: var(--navy);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .status {
+      margin-top: 10px;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+    .loading { color: #64748b; }
+    .error { color: #b91c1c; }
+    .foot {
+      margin-top: 22px;
+      font-size: 0.95rem;
+      color: #475569;
+    }
+    .highlight {
+      background: #fff8e6;
+      border: 1px solid #f8d986;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-top: 10px;
+    }
+    .highlight strong { color: #7a4a00; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Site Map</h1>
+    <p class="lead">This page provides sitemap links for indexing and a crawlable list of URLs.</p>
+
+    <section class="panel">
+      <h2>Google Search Console Sitemap URL</h2>
+      <p>
+        Primary XML sitemap:
+        <a href="https://www.insiderlawyers.com/sitemap.xml">https://www.insiderlawyers.com/sitemap.xml</a>
+      </p>
+      <div class="highlight">
+        <strong>Submit in GSC:</strong> Go to Indexing > Sitemaps, then submit
+        <code>sitemap.xml</code>.
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>All URLs in XML Sitemap <span class="pill" id="url-count">0</span></h2>
+      <div id="sitemap-status" class="status loading">Loading URLs from /sitemap.xml...</div>
+      <ul id="url-list"></ul>
+    </section>
+
+    <p class="foot">Insider Accident Lawyers · Los Angeles, California</p>
+  </main>
+
+  <script>
+    (function () {
+      var listEl = document.getElementById("url-list");
+      var statusEl = document.getElementById("sitemap-status");
+      var countEl = document.getElementById("url-count");
+
+      function setStatus(text, className) {
+        statusEl.textContent = text;
+        statusEl.className = "status " + className;
+      }
+
+      fetch("/sitemap.xml", { cache: "no-store" })
+        .then(function (res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          return res.text();
+        })
+        .then(function (xmlText) {
+          var doc = new DOMParser().parseFromString(xmlText, "application/xml");
+          var locNodes = doc.getElementsByTagName("loc");
+          var count = locNodes.length;
+          countEl.textContent = String(count);
+
+          if (!count) {
+            setStatus("No URLs found in sitemap.xml.", "error");
+            return;
+          }
+
+          var fragment = document.createDocumentFragment();
+          for (var i = 0; i < count; i += 1) {
+            var url = locNodes[i].textContent || "";
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.href = url;
+            a.textContent = url;
+            li.appendChild(a);
+            fragment.appendChild(li);
+          }
+          listEl.appendChild(fragment);
+          setStatus("Loaded " + count + " URLs from sitemap.xml.", "");
+        })
+        .catch(function (err) {
+          setStatus("Unable to load sitemap.xml (" + err.message + ").", "error");
+        });
+    })();
+  </script>
+</body>
+</html>
