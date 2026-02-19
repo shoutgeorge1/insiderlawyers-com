@@ -1632,3 +1632,29 @@
     display: grid;
   }
 }
+
+/* Force nav visible and footer links clickable (override any legacy/cached rules) */
+.home-ppc .header-nav-wrap,
+.header-nav-wrap {
+  display: block !important;
+  visibility: visible !important;
+}
+@media (min-width: 901px) {
+  .home-ppc .header-nav-wrap .header-nav-row,
+  .header-nav-wrap .header-nav-row {
+    display: flex !important;
+  }
+}
+.home-ppc .site-footer a,
+.site-footer .footer-section a,
+.site-footer .footer-content a,
+.site-footer .footer__links a {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+@media (max-width: 767px) {
+  .home-ppc .site-footer,
+  .site-footer {
+    padding-bottom: 5rem;
+  }
+}
