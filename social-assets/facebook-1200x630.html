@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beyond the Gavel | Donn Christensen | Facebook 1200×630</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap");
+
+    :root {
+      --brand-navy: #07192f;
+      --brand-blue: #123764;
+      --brand-gold: #d4af37;
+      --brand-white: #f7f9ff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: "Inter", "Segoe UI", -apple-system, sans-serif;
+      background: #081425;
+      color: #fff;
+    }
+    .card {
+      width: 1200px;
+      height: 630px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+    }
+    .card__hero {
+      position: absolute;
+      inset: 0;
+    }
+    .card__hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 72% 42%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 72%),
+        linear-gradient(164deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.1) 100%);
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+    .card__hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 16%;
+      display: block;
+      transform: scale(1.025);
+      filter: contrast(1.1) saturate(1.08) brightness(1.03);
+    }
+    .card__overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(104deg, rgba(4, 14, 27, 0.9) 2%, rgba(7, 25, 47, 0.82) 34%, rgba(12, 44, 80, 0.24) 68%, rgba(12, 44, 80, 0.05) 100%),
+        radial-gradient(circle at 16% 20%, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0) 34%),
+        radial-gradient(circle at 100% 100%, rgba(18, 55, 100, 0.26) 0%, rgba(18, 55, 100, 0) 42%);
+    }
+    .card__edge {
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 22px;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .card__grain {
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0);
+      background-size: 4px 4px;
+      z-index: 1;
+    }
+    .card__logo-wrap {
+      position: absolute;
+      top: 28px;
+      left: 28px;
+      z-index: 4;
+      background: rgba(5, 18, 34, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 14px;
+      backdrop-filter: blur(4px);
+      padding: 10px 16px;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+    }
+    .card__logo {
+      width: 178px;
+      height: auto;
+      display: block;
+    }
+    .card__content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+      padding: 34px 78px 0 76px;
+      max-width: 700px;
+    }
+    .card__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .card__podcast {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.19em;
+      color: var(--brand-gold);
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      border-radius: 999px;
+      padding: 7px 14px 6px;
+      background: rgba(212, 175, 55, 0.12);
+      text-transform: uppercase;
+    }
+    .card__live {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.82);
+    }
+    .card__title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 79px;
+      font-weight: 700;
+      line-height: 0.96;
+      max-width: 640px;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+      color: var(--brand-white);
+      text-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    .card__sub {
+      font-size: 23px;
+      color: rgba(255, 255, 255, 0.93);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .card__meta {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.45;
+      max-width: 540px;
+    }
+    .card__date {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      margin-top: 4px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(130deg, rgba(212, 175, 55, 0.24) 0%, rgba(255, 255, 255, 0.11) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 12px;
+      padding: 9px 14px;
+      backdrop-filter: blur(2px);
+    }
+    .card__badge {
+      position: absolute;
+      right: 34px;
+      bottom: 34px;
+      width: 134px;
+      height: 134px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: rgba(5, 18, 34, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.42);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.46), inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 0 0 4px rgba(212, 175, 55, 0.1);
+      z-index: 3;
+    }
+    .card__badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .card__accent {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.96) 0%, rgba(18, 55, 100, 0.8) 55%, rgba(18, 55, 100, 0) 100%);
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card__hero">
+      <img src="https://www.insiderlawyers.com/images/la/donn-christensen.webp" alt="Donn Christensen">
+    </div>
+    <div class="card__overlay"></div>
+    <div class="card__grain"></div>
+    <div class="card__logo-wrap">
+      <img class="card__logo" src="https://www.insiderlawyers.com/images/la/logo.png" alt="Insider Lawyers logo">
+    </div>
+    <div class="card__content">
+      <div class="card__eyebrow">
+        <p class="card__podcast">Podcast</p>
+        <p class="card__live">Insider Lawyers</p>
+      </div>
+      <h1 class="card__title">Beyond The Gavel</h1>
+      <p class="card__sub">With Donn Christensen</p>
+      <p class="card__meta">Conversations at the intersection of law, leadership, and life.</p>
+      <p class="card__date">Fri, Feb 20, 2026</p>
+    </div>
+    <div class="card__badge">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/0e/8f/ad/0e8fadd2-9d01-0edb-79a2-2a185f6d9be0/mza_7050964826481513520.jpg/1200x1200bf-60.jpg" alt="Beyond the Gavel Podcast">
+    </div>
+    <div class="card__accent"></div>
+    <div class="card__edge"></div>
+  </div>
+</body>
+</html>

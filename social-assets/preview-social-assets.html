@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Asset Preview Hub</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #111a2b;
+      --text: #e8eefc;
+      --muted: #9fb0d2;
+      --accent: #d4af37;
+      --border: rgba(255, 255, 255, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #0b1220 0%, #0f1a32 100%);
+      color: var(--text);
+      padding: 28px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      letter-spacing: 0.01em;
+    }
+
+    .sub {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .meta {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .actions a {
+      text-decoration: none;
+      color: #0b1220;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    iframe {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #0b1220;
+    }
+  </style>
+</head>
+<body>
+  <h1>Social Asset Preview Hub</h1>
+  <p class="sub">Open each file directly or preview inline below.</p>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Facebook 1200x630</h2>
+      <p class="meta">Landscape post format</p>
+      <div class="actions">
+        <a href="./facebook-1200x630.html" target="_blank" rel="noopener">Open Full</a>
+      </div>
+      <iframe src="./facebook-1200x630.html" width="1200" height="630" title="Facebook Preview"></iframe>
+    </section>
+
+    <section class="card">
+      <h2>LinkedIn 1200x630</h2>
+      <p class="meta">Landscape company/personal share</p>
+      <div class="actions">
+        <a href="./linkedin-1200x630.html" target="_blank" rel="noopener">Open Full</a>
+      </div>
+      <iframe src="./linkedin-1200x630.html" width="1200" height="630" title="LinkedIn Preview"></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Instagram 1080x1080</h2>
+      <p class="meta">Square feed post</p>
+      <div class="actions">
+        <a href="./instagram-1080x1080.html" target="_blank" rel="noopener">Open Full</a>
+      </div>
+      <iframe src="./instagram-1080x1080.html" width="1080" height="1080" title="Instagram Square Preview"></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Instagram Portrait 1080x1350</h2>
+      <p class="meta">Portrait feed post</p>
+      <div class="actions">
+        <a href="./instagram-portrait-1080x1350.html" target="_blank" rel="noopener">Open Full</a>
+      </div>
+      <iframe src="./instagram-portrait-1080x1350.html" width="1080" height="1350" title="Instagram Portrait Preview"></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Headshot Square 1080x1080</h2>
+      <p class="meta">Square portrait variant</p>
+      <div class="actions">
+        <a href="./headshot-square-1080x1080.html" target="_blank" rel="noopener">Open Full</a>
+      </div>
+      <iframe src="./headshot-square-1080x1080.html" width="1080" height="1080" title="Headshot Square Preview"></iframe>
+    </section>
+  </div>
+</body>
+</html>

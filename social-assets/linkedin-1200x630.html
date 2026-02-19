@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beyond the Gavel | Donn Christensen | 1200×630</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; overflow: hidden; font-family: 'Segoe UI', -apple-system, sans-serif; }
+    .card {
+      width: 1200px; height: 630px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .card__hero {
+      position: absolute; inset: 0;
+    }
+    .card__hero img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+    }
+    .card__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(10,25,41,0.92) 0%, rgba(10,25,41,0.7) 45%, rgba(10,25,41,0.2) 100%);
+    }
+    .card__content {
+      position: relative; z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 80px;
+      max-width: 620px;
+    }
+    .card__podcast {
+      font-size: 14px; font-weight: 700;
+      letter-spacing: 0.2em;
+      color: #d4af37;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .card__title {
+      font-size: 52px; font-weight: 800;
+      color: #fff; line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .card__sub {
+      font-size: 22px; color: rgba(255,255,255,0.7);
+      font-weight: 500; margin-bottom: 16px;
+    }
+    .card__meta {
+      font-size: 18px; color: rgba(255,255,255,0.5);
+    }
+    /* Small podcast art in bottom-right corner */
+    .card__badge {
+      position: absolute;
+      bottom: 28px; right: 28px;
+      width: 100px; height: 100px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.12);
+      z-index: 3;
+    }
+    .card__badge img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://www.linkedin.com/events/7428108930947518464/" target="_blank" rel="noopener noreferrer" class="card" style="text-decoration:none;color:inherit;display:block;">
+    <div class="card__hero">
+      <img src="https://www.insiderlawyers.com/images/la/donn-christensen.webp" alt="Donn Christensen">
+    </div>
+    <div class="card__overlay"></div>
+    <div class="card__content">
+      <p class="card__podcast">Podcast</p>
+      <h1 class="card__title">Beyond The Gavel</h1>
+      <p class="card__sub">With Donn Christensen</p>
+      <p class="card__meta">Event by Rodney Peyton, MD, OBE · Fri, Feb 20, 2026</p>
+    </div>
+    <div class="card__badge">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/0e/8f/ad/0e8fadd2-9d01-0edb-79a2-2a185f6d9be0/mza_7050964826481513520.jpg/1200x1200bf-60.jpg" alt="Beyond the Gavel Podcast">
+    </div>
+  </a>
+</body>
+</html>

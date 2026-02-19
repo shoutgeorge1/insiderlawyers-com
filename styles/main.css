@@ -1424,15 +1424,6 @@
 .footer__links a:hover {
   color: #fbba00;
 }
-.home-ppc nav,
-.home-ppc .nav,
-.home-ppc .header-nav,
-.home-ppc .menu {
-  display: none !important;
-}
-.home-ppc .footer__links {
-  display: none !important;
-}
 .home-ppc .site-footer .footer__main {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
@@ -1446,12 +1437,6 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   padding: 1rem 1rem 0.9rem;
-}
-.home-ppc #footer-contact a:not([href^="tel:"]) {
-  pointer-events: none;
-  text-decoration: none;
-  color: inherit;
-  cursor: default;
 }
 .footer__disclaimer {
   font-size: 0.79rem;
@@ -1494,5 +1479,156 @@
   .home-ppc .site-footer .footer__brand,
   .home-ppc .site-footer .footer__contact {
     padding: 0.85rem 0.9rem 0.8rem;
+  }
+}
+
+/* Shared site nav (header-nav-wrap) – one menu across homepage and PPC pages */
+.header-nav-wrap {
+  background: #fff;
+  border-top: 1px solid rgba(1, 54, 108, 0.12);
+  border-bottom: 2px solid #fbba00;
+  box-shadow: 0 3px 12px rgba(1, 54, 108, 0.08);
+}
+.header-nav-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+  position: relative;
+}
+.header-nav-wrap .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  color: #01366c;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9fd 100%);
+  border: 1px solid rgba(1, 54, 108, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(1, 54, 108, 0.07);
+  transition: all 0.2s ease;
+}
+.header-nav-wrap .nav-link:hover {
+  color: #01468a;
+  border-color: #9fbadb;
+  background: #eef4fb;
+  transform: translateY(-1px);
+}
+.header-nav-wrap .nav-link--primary {
+  background: linear-gradient(180deg, #01468a 0%, #01366c 100%);
+  color: #fff;
+  border-color: #01366c;
+}
+.header-nav-wrap .nav-link--primary:hover {
+  color: #fff;
+  background: linear-gradient(180deg, #0253a4 0%, #01468a 100%);
+}
+.header-nav-wrap .nav-link--dropdown {
+  cursor: default;
+}
+.header-nav-wrap .nav-item {
+  position: relative;
+  padding-bottom: 8px;
+}
+.header-nav-wrap .mobile-menu-toggle {
+  display: none;
+  width: 44px;
+  height: 38px;
+  border: 1px solid rgba(1, 54, 108, 0.25);
+  border-radius: 8px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.header-nav-wrap .mobile-menu-toggle span {
+  width: 20px;
+  height: 2px;
+  background: #01366c;
+  border-radius: 2px;
+  display: block;
+}
+.header-nav-wrap .nav-dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 880px;
+  max-width: 1100px;
+  background: #fff;
+  border: 1px solid #d3e0f0;
+  border-radius: 10px;
+  box-shadow: 0 10px 26px rgba(1, 54, 108, 0.15);
+  padding: 12px;
+  display: none;
+  z-index: 1200;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 6px 12px;
+  align-items: start;
+}
+.header-nav-wrap .nav-item:hover .nav-dropdown,
+.header-nav-wrap .nav-item:focus-within .nav-dropdown {
+  display: grid;
+}
+.header-nav-wrap .nav-dropdown a {
+  display: block;
+  padding: 9px 10px;
+  color: #01366c;
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 600;
+  border-radius: 6px;
+}
+.header-nav-wrap .nav-dropdown a:hover {
+  background: #eef4fb;
+  color: #01468a;
+}
+@media (max-width: 900px) {
+  .header-nav-wrap .container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .header-nav-wrap .mobile-menu-toggle {
+    display: inline-flex;
+  }
+  .header-nav-wrap .header-nav-row {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0 4px;
+  }
+  .header-nav-wrap.is-open .header-nav-row {
+    display: flex;
+  }
+  .header-nav-wrap .nav-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header-nav-wrap .nav-item {
+    display: block;
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .header-nav-wrap .nav-item .nav-link {
+    width: 100%;
+  }
+  .header-nav-wrap .nav-dropdown {
+    position: static;
+    display: none;
+    margin-top: 6px;
+    min-width: 0;
+    max-width: none;
+    box-shadow: none;
+    border: 1px solid #dce6f3;
+    grid-template-columns: 1fr;
+  }
+  .header-nav-wrap .nav-item.is-open .nav-dropdown {
+    display: grid;
   }
 }
