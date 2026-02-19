@@ -1,5 +1,6 @@
 # Apply the same footer as los-angeles-car-accident-lawyer to all pages that don't have it.
 # Run from repo root: .\scripts\apply-uniform-footer.ps1
+# FROZEN: Home page and all injury/accident PPC pages (los-angeles-*-lawyer, etc.) are skipped—already uniform.
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
