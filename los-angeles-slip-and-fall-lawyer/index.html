@@ -41,17 +41,12 @@
       color: #fff;
       filter: contrast(1.12);
     }
-    .banner-home__sub-title { font-size: 1.8em; font-style: italic; text-decoration: underline; font-weight: bold; color: #fff; line-height: 1.2; margin-bottom: 0.3em; }
     .hero.hero-section .hero-text h1 { font-family: Roboto, Arial, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; line-height: 1.2; margin-bottom: 0.5em; }
     .hero.hero-section .hero-text .h1-line1 { display: block; font-size: 2.1em; color: #fff; }
     .hero.hero-section .hero-text .h1-line2 { display: block; font-size: 1.9em; color: #fff; }
-    .hero.hero-section .hero-text .h1-line3-smaller, .hero.hero-section .hero-text .h1-line4-smaller { display: block; font-size: 1.5em; font-weight: bold; color: #ffd700; font-style: normal; line-height: 1.2; }
-    .hero.hero-section .hero-text .h1-line4-smaller { margin-bottom: 2em; }
     @media (max-width: 600px) {
-      .banner-home__sub-title { font-size: 1.4em; }
       .hero.hero-section .hero-text .h1-line1 { font-size: 1.25em; }
       .hero.hero-section .hero-text .h1-line2 { font-size: 1.1em; }
-      .hero.hero-section .hero-text .h1-line3-smaller, .hero.hero-section .hero-text .h1-line4-smaller { font-size: 1.1em; }
     }
     .hero.hero-section .hero-subhead { color: rgba(255,255,255,0.95); font-size: 1.1rem; margin-bottom: 0.5rem; }
     .hero.hero-section .hero-highlight { color: var(--brand-accent-yellow); font-weight: 700; }
@@ -285,13 +280,13 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <div class="banner-home__sub-title">Injured in a Slip and Fall in Los Angeles?</div>
           <h1>
             <span class="h1-line1">Los Angeles</span>
             <span class="h1-line2">Slip and Fall Lawyer</span>
-            <span class="h1-line3-smaller">No Fee Unless</span>
-            <span class="h1-line4-smaller">We Win.</span>
           </h1>
+          <div class="hero-team-photo">
+            <img src="https://www.insiderlawyers.com/images/team-attorneys.png" alt="Our Legal Team" class="team-photo" width="670" height="308">
+          </div>
           <ul class="hero__benefits hero__benefits--large list-style" style="list-style:none; padding:0; margin:0.5rem 0 1rem 0;">
             <li><span class="hero-highlight">No Fee Unless We Win</span></li>
             <li><span class="hero-highlight">Available 24/7</span></li>
@@ -360,9 +355,6 @@
           <img src="https://www.insiderlawyers.com/images/la/google-badge.png" alt="Google Reviews" class="trust-badge-img" width="160" height="120" loading="lazy">
           <img src="https://www.insiderlawyers.com/images/la/trust-badge-4.webp" alt="Trust Badge" class="trust-badge-img" width="160" height="120" loading="lazy">
         </div>
-      </div>
-      <div class="team-photo-section">
-        <img src="https://www.insiderlawyers.com/images/team-attorneys.png" alt="Our Legal Team" class="team-photo" width="670" height="308" loading="lazy">
       </div>
     </div>
   </section>

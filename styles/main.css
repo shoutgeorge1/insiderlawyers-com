@@ -819,6 +819,23 @@
   }
 }
 
+/* Hero: team image directly below H1 (above the fold on mobile) */
+.hero-team-photo {
+  margin: 0.75rem 0 1rem;
+}
+.hero-team-photo .team-photo {
+  max-width: min(880px, 100%);
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(1, 54, 108, 0.08);
+}
+@media (max-width: 767px) {
+  .hero-team-photo { margin: 0.5rem 0 0.75rem; }
+  .hero-team-photo .team-photo { max-width: 100%; }
+}
+
 .team-photo-section {
   margin-top: 1.5rem;
   padding: 2rem 1.5rem;
