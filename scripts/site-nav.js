@@ -3,7 +3,9 @@
     var navWrap = document.getElementById('header-nav-wrap');
     var mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     if (navWrap && mobileMenuToggle) {
-      mobileMenuToggle.addEventListener('click', function() {
+      mobileMenuToggle.setAttribute('type', 'button');
+      mobileMenuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
         var willOpen = !navWrap.classList.contains('is-open');
         navWrap.classList.toggle('is-open', willOpen);
         mobileMenuToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
