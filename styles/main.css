@@ -1420,9 +1420,38 @@
 .site-footer .footer-section a {
   color: rgba(255, 255, 255, 0.92);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 .site-footer .footer-section a:hover {
   color: #fbba00;
+}
+/* Footer links: uniform color site-wide (canonical) */
+.site-footer .footer-content a,
+.site-footer .footer-section a,
+.site-footer .footer__links a {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.site-footer .footer-content a:hover,
+.site-footer .footer-section a:hover,
+.site-footer .footer__links a:hover {
+  color: #fbba00 !important;
+}
+.site-footer .footer__phone {
+  color: #fbba00 !important;
+}
+.site-footer .footer__phone:hover {
+  color: #fff !important;
+}
+.site-footer .footer__disclaimer a {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+.site-footer .footer__disclaimer a:hover {
+  color: #fbba00 !important;
 }
 @media (min-width: 900px) {
   .site-footer .footer-content {
