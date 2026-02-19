@@ -6,8 +6,8 @@
   <meta name="description" content="Los Angeles car accident lawyers. Free consultation. No fee unless we win. Call 844-467-4335 24/7.">
   <link rel="canonical" href="https://www.insiderlawyers.com/">
   <title>Los Angeles Car Accident Lawyer | Insider Accident Lawyers</title>
-  <link rel="stylesheet" href="/styles/main.css?v=revert">
-  <link rel="stylesheet" href="/styles/settlements.css?v=revert">
+  <link rel="stylesheet" href="/styles/main.css?v=2">
+  <link rel="stylesheet" href="/styles/settlements.css?v=2">
   <link rel="preload" as="image" href="https://www.insiderlawyers.com/images/hero/ktown-bg.jpg">
   <link rel="preconnect" href="https://www.insiderlawyers.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -278,7 +278,7 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WS8XT5FC');</script>
   <!-- End Google Tag Manager -->
-  <script src="/scripts/site-nav.js" defer></script>
+  <script src="/scripts/site-nav.js?v=2" defer></script>
   <!-- GTM Tracking Events: phone_click, form_start, form_submit, engaged_30s, scroll_90 -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -338,36 +338,7 @@
           });
         }
       }
-      var navWrap = document.getElementById('header-nav-wrap');
-      var mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-      if (navWrap && mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
-          var willOpen = !navWrap.classList.contains('is-open');
-          navWrap.classList.toggle('is-open', willOpen);
-          mobileMenuToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-        });
-      }
-      var dropdownToggles = document.querySelectorAll('.header-nav-row .nav-link--dropdown');
-      dropdownToggles.forEach(function(toggle) {
-        toggle.setAttribute('role', 'button');
-        toggle.setAttribute('tabindex', '0');
-        toggle.setAttribute('aria-expanded', 'false');
-        function handleToggle() {
-          if (window.innerWidth > 900) return;
-          var parentItem = toggle.closest('.nav-item');
-          if (!parentItem) return;
-          var willOpen = !parentItem.classList.contains('is-open');
-          parentItem.classList.toggle('is-open', willOpen);
-          toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-        }
-        toggle.addEventListener('click', handleToggle);
-        toggle.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            handleToggle();
-          }
-        });
-      });
+      /* Nav toggle handled by site-nav.js - no duplicate handler here */
       (window.requestIdleCallback || function(cb) { setTimeout(cb, 1); })(function() {
         setTimeout(function() {
           if (typeof dataLayer !== 'undefined') dataLayer.push({ 'event': 'engaged_30s' });
@@ -429,7 +400,7 @@
   </header>
   <div class="header-nav-wrap" id="header-nav-wrap">
     <div class="container">
-      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+      <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
       <nav class="header-nav-row" id="primary-nav" aria-label="Primary">
