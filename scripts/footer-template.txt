@@ -1,29 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Use | Insider Accident Lawyers</title>
-  <meta name="robots" content="index,follow">
-  <style>
-    body{font-family:Inter,Arial,sans-serif;background:#f6f9fd;color:#1f2937;margin:0}
-    .wrap{max-width:900px;margin:0 auto;padding:32px 20px}
-    .card{background:#fff;border:1px solid #dce6f2;border-radius:12px;padding:22px}
-    h1{color:#01366c;margin-top:0}
-    a{color:#01468a}
-  </style>
-  <link rel="stylesheet" href="/styles/footer.css">
-</head>
-<body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Terms of Use</h1>
-      <p>By using this website, you agree to use it for lawful purposes and understand that content is provided for general information only.</p>
-      <p>You may not copy, scrape, reproduce, or republish website content for commercial use without written permission.</p>
-      <p>The firm may update website content and these terms at any time without prior notice.</p>
-      <p><a href="/">Return to homepage</a></p>
-    </div>
-  </div>
   <footer class="site-footer" id="footer-contact">
     <div class="container">
       <div class="footer-content">
@@ -98,5 +72,3 @@
       </div>
     </div>
   </footer>
-</body>
-</html>

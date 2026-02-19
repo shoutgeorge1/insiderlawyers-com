@@ -1,0 +1,98 @@
+/* Standalone footer styles – same look as main.css .site-footer (for pages that don't load main.css) */
+.site-footer {
+  background: linear-gradient(180deg, #012a50 0%, #01366c 50%, #012240 100%);
+  color: #fff;
+  padding: 2rem 0 1.5rem;
+  border-top: 3px solid #fbba00;
+}
+.site-footer .container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.site-footer .footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 26px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+.site-footer .footer-section {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+}
+.site-footer .footer-section h3,
+.site-footer .footer-section h4 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.site-footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer .footer-section li {
+  margin: 0.32rem 0;
+}
+.site-footer .footer-section a,
+.site-footer .footer-content a {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.site-footer .footer-section a:hover,
+.site-footer .footer-content a:hover {
+  color: #fbba00 !important;
+}
+.site-footer .footer__phone {
+  color: #fbba00 !important;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-decoration: none;
+  margin: 0.25rem 0 0.5rem 0;
+  transition: color 0.2s ease;
+}
+.site-footer .footer__phone:hover {
+  color: #fff !important;
+}
+.site-footer .footer__disclaimer {
+  font-size: 0.79rem;
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.7;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.site-footer .footer__disclaimer p {
+  margin: 0.55rem 0;
+}
+.site-footer .footer__disclaimer a {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+.site-footer .footer__disclaimer a:hover {
+  color: #fbba00 !important;
+}
+.site-footer .footer__copyright {
+  margin-top: 1rem !important;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media (min-width: 900px) {
+  .site-footer .footer-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

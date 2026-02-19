@@ -1,30 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Use | Insider Accident Lawyers</title>
-  <meta name="robots" content="index,follow">
-  <style>
-    body{font-family:Inter,Arial,sans-serif;background:#f6f9fd;color:#1f2937;margin:0}
-    .wrap{max-width:900px;margin:0 auto;padding:32px 20px}
-    .card{background:#fff;border:1px solid #dce6f2;border-radius:12px;padding:22px}
-    h1{color:#01366c;margin-top:0}
-    a{color:#01468a}
-  </style>
-  <link rel="stylesheet" href="/styles/footer.css">
-</head>
-<body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Terms of Use</h1>
-      <p>By using this website, you agree to use it for lawful purposes and understand that content is provided for general information only.</p>
-      <p>You may not copy, scrape, reproduce, or republish website content for commercial use without written permission.</p>
-      <p>The firm may update website content and these terms at any time without prior notice.</p>
-      <p><a href="/">Return to homepage</a></p>
-    </div>
-  </div>
-  <footer class="site-footer" id="footer-contact">
+/**
+ * Apply the same footer as los-angeles-car-accident-lawyer to all pages that don't have it.
+ * Run from repo root: node scripts/apply-uniform-footer.js
+ */
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = path.join(__dirname, '..');
+
+const CANONICAL_FOOTER = `  <footer class="site-footer" id="footer-contact">
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
@@ -97,6 +80,57 @@
         <p class="footer__copyright">© 2026 Insider Accident Lawyers. All Rights Reserved.</p>
       </div>
     </div>
-  </footer>
-</body>
-</html>
+  </footer>`;
+
+const FOOTER_CSS_LINK = '<link rel="stylesheet" href="/styles/footer.css">';
+
+function walkDir(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const full = path.join(dir, file);
+    if (fs.statSync(full).isDirectory()) {
+      if (file !== 'styles' && file !== 'scripts' && file !== 'images' && file !== 'node_modules') {
+        walkDir(full, fileList);
+      }
+    } else if (file === 'index.html') {
+      fileList.push(full);
+    }
+  }
+  return fileList;
+}
+
+function hasUniformFooter(html) {
+  return html.includes('footer__disclaimer') && html.includes('Injury &amp; Accident Types</h4>') && html.includes('California Guides</h4>');
+}
+
+function hasMainCss(html) {
+  return html.includes('main.css');
+}
+
+const footerRegex = /<footer[\s\S]*?<\/footer>/i;
+
+let updated = 0;
+let skipped = 0;
+const indexFiles = walkDir(ROOT);
+
+for (const filePath of indexFiles) {
+  let html = fs.readFileSync(filePath, 'utf8');
+  if (hasUniformFooter(html)) {
+    skipped++;
+    continue;
+  }
+  const match = html.match(footerRegex);
+  if (!match) {
+    console.warn('No footer found:', filePath);
+    continue;
+  }
+  html = html.replace(footerRegex, CANONICAL_FOOTER);
+  if (!hasMainCss(html)) {
+    html = html.replace('</head>', FOOTER_CSS_LINK + '\n</head>');
+  }
+  fs.writeFileSync(filePath, html, 'utf8');
+  updated++;
+  console.log('Updated:', path.relative(ROOT, filePath));
+}
+
+console.log('\nDone. Updated', updated, 'files, skipped', skipped, '(already uniform).');
