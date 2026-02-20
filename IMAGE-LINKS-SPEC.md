@@ -118,3 +118,5 @@ and I’ll map them to the pages and update the site.
 - **#24** insurance-company-playbook — `yourcentralvalley.com/.../SEMI-PIC.jpg`  
 
 To replace those three, send alternate image URLs for slugs: `at-fault-driver-no-insurance`, `attorney-referrals`, `insurance-company-playbook`.
+
+**Batch 2 (content-matched) applied:** 19 images downloaded and 19 pages updated. Mapping: major-car-accident, motorcycle-accident-case, parking-lot-accident-lawyer-los-angeles, what-if-i-cant-afford-deductible, personal-injury/auto-accidents, what-is-uninsured-motorist-coverage, personal-injury/brain-injuries, traumatic-brain-injury-car-accident-settlement-california, recover-destroyed-scooter-ebike, personal-injury/wrongful-death, uber-or-lyft-accident, uber-accident-lawyer-los-angeles, truck-accident-legal-rights, proving-truck-accident-case, injuries-truck-accidents, personal-injury/spine-injuries, personal-injury/slip-and-fall; plus batch-1 gaps filled: at-fault-driver-no-insurance, attorney-referrals, insurance-company-playbook. **1 URL failed (403):** lit-referral-wrongful-death — nesslerlaw wrongful-death image; page kept existing image.
