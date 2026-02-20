@@ -88,14 +88,19 @@
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.6);
 }
-/* Mobile: larger base font for readability */
+/* Mobile: larger base font for readability (override page inline styles) */
 @media (max-width: 767px) {
-  html { font-size: 18px; }
-  body { font-size: 1rem; }
+  html { font-size: 20px !important; }
+  body,
+  .content-body,
+  .section-content,
+  main,
+  .wrap .card { font-size: 1.05rem !important; line-height: 1.65 !important; }
+  body p, .content-body p, .section-content p, .card p { font-size: 1.05rem !important; }
   /* Keep hamburger clickable above header content */
   .sticky-header .mobile-menu-toggle { position: relative; z-index: 1001; min-width: 44px; min-height: 44px; }
   /* Slightly larger nav links in mobile menu */
-  .header-nav-wrap .nav-link { font-size: 0.95rem; min-height: 44px; padding: 10px 12px; }
+  .header-nav-wrap .nav-link { font-size: 1rem !important; min-height: 44px; padding: 10px 12px; }
 }
 
 @media (min-width: 900px) {
