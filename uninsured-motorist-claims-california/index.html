@@ -62,7 +62,7 @@
         .breadcrumb a:hover{text-decoration:underline}
         .reassurance-block{padding:20px;background:#f0f7ff;border:1px solid #c5daf0;border-radius:var(--card-radius);margin:24px 0}
         .reassurance-block h3{margin-top:0}
-        .sticky-header{position:sticky;top:0;background:var(--brand-white);border-bottom:3px solid var(--brand-accent-yellow);padding:10px 0 8px;z-index:1000;box-shadow:0 4px 14px rgba(1,54,108,.12)}
+        .sticky-header{position:sticky;top:0;background:var(--brand-white);border-bottom:3px solid var(--brand-accent-yellow);padding:10px 0 8px;z-index:1000;box-shadow:0 4px 14px rgba(1,54,108,.12)};transition:transform .25s ease;transition:transform .25s ease
         .header-content{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
         .header-col--proof{text-align:center}.header-proof-title{font-size:1rem;font-weight:900;color:var(--brand-navy)}
         .header-col--call{text-align:right}.header-call-label{display:block;font-size:.8rem;color:var(--brand-gray-700)}
@@ -86,7 +86,8 @@
         .content-body a.btn-primary,.content-body a.btn-secondary{text-decoration:none}
         footer .footer-section ul{list-style:none;padding-left:0}
         footer .footer-section li{margin:.35rem 0}
-        @media(max-width:900px){.header-content{grid-template-columns:1fr;gap:10px}.header-col--logo{order:1;text-align:center}.header-col--call{order:2;text-align:center}.header-col--proof{order:3;text-align:center}.mobile-menu-toggle{display:inline-flex}.header-nav-row{display:none;flex-direction:column;gap:8px;padding:8px 0 4px}.header-nav-wrap.is-open .header-nav-row{display:flex}.nav-link{width:100%;justify-content:space-between}.nav-item{display:block;width:100%}.nav-item .nav-link{width:100%}.nav-dropdown{position:static;display:none;margin-top:6px;min-width:0;box-shadow:none;border:1px solid #dce6f3;grid-template-columns:1fr}.nav-item.is-open .nav-dropdown{display:grid}}
+        @media(max-width:767px){.sticky-header.header--hidden{transform:translateY(-100%)}}
+ @media(max-width:900px){.header-content{grid-template-columns:1fr;gap:10px}.header-col--logo{order:1;text-align:center}.header-col--call{order:2;text-align:center}.header-col--proof{order:3;text-align:center}.mobile-menu-toggle{display:inline-flex}.header-nav-row{display:none;flex-direction:column;gap:8px;padding:8px 0 4px}.header-nav-wrap.is-open .header-nav-row{display:flex}.nav-link{width:100%;justify-content:space-between}.nav-item{display:block;width:100%}.nav-item .nav-link{width:100%}.nav-dropdown{position:static;display:none;margin-top:6px;min-width:0;box-shadow:none;border:1px solid #dce6f3;grid-template-columns:1fr}.nav-item.is-open .nav-dropdown{display:grid}}
     </style>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-WS8XT5FC');</script>
     <link rel="stylesheet" href="/styles/footer.css">
@@ -95,8 +96,9 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8XT5FC" height="0" width="0" style="display:none"></iframe></noscript>
     <script>
       document.addEventListener('DOMContentLoaded',function(){window.dataLayer=window.dataLayer||[];document.querySelectorAll('a[href^="tel:"]').forEach(function(l){l.addEventListener('click',function(){window.dataLayer.push({event:'phone_click',phone_number:(this.getAttribute('href')||'').replace('tel:',''),page_path:location.pathname})})});setTimeout(function(){window.dataLayer.push({event:'engaged_30s'})},30000);var navWrap=document.getElementById('header-nav-wrap');var mobileMenuToggle=document.getElementById('mobile-menu-toggle');if(navWrap&&mobileMenuToggle){mobileMenuToggle.addEventListener('click',function(){var willOpen=!navWrap.classList.contains('is-open');navWrap.classList.toggle('is-open',willOpen);mobileMenuToggle.setAttribute('aria-expanded',willOpen?'true':'false')})}var dropdownToggles=document.querySelectorAll('.header-nav-row .nav-link--dropdown');dropdownToggles.forEach(function(toggle){toggle.setAttribute('role','button');toggle.setAttribute('tabindex','0');toggle.setAttribute('aria-expanded','false');function handleToggle(){if(window.innerWidth>900)return;var parentItem=toggle.closest('.nav-item');if(!parentItem)return;var willOpen=!parentItem.classList.contains('is-open');parentItem.classList.toggle('is-open',willOpen);toggle.setAttribute('aria-expanded',willOpen?'true':'false')}toggle.addEventListener('click',handleToggle);toggle.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();handleToggle()}})});
-    </script>
-    <header class="sticky-header">
+    </script>    <script>
+      document.addEventListener('DOMContentLoaded',function(){var h=document.querySelector('.sticky-header');var ly=0;if(h){window.addEventListener('scroll',function(){if(window.innerWidth>767){h.classList.remove('header--hidden');return;}var y=window.scrollY;if(y>80){if(y>ly)h.classList.add('header--hidden');else h.classList.remove('header--hidden');}else h.classList.remove('header--hidden');ly=y;},{passive:true});}});
+    </script><header class="sticky-header">
         <div class="container">
             <div class="header-content">
                 <div class="header-col header-col--logo">
@@ -267,7 +269,7 @@
                     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> &gt; Uninsured Motorist Claims in California</nav>
                     <h1>Uninsured Motorist Claims in California</h1>
                     <p class="lead-text">When the driver who hit you has no insurance or disappears in a hit-and-run, your own <strong>uninsured motorist (UM)</strong> coverage can pay for your injuries in California. This page explains how UM claims work, when they apply, and how to protect your rights without the confusion many callers feel about &ldquo;suing&rdquo; or rates going up.</p>
-                <figure class="content-hero-img" style="margin:24px 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(1,54,108,.12);"><img src="../assets/images/custom/claimscoverage33.png" alt="Illustration: Uninsured Motorist Claims in California" style="width:100%;height:auto;display:block;"></figure>
+                <figure class="content-hero-img" style="margin:24px 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(1,54,108,.12);"><img decoding="async" src="../assets/images/custom/claimscoverage33.png" alt="Illustration: Uninsured Motorist Claims in California" style="width:100%;height:auto;display:block;"></figure>
                 
 
                     <h2>What Is Uninsured Motorist (UM) Coverage?</h2>

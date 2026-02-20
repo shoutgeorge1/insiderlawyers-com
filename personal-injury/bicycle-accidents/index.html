@@ -39,7 +39,7 @@
         .btn-primary:hover{background:#e6b300;transform:translateY(-2px)}
         .btn-secondary{display:inline-block;background:var(--brand-blue);color:var(--brand-white);font-weight:600;padding:14px 28px;border-radius:8px;text-decoration:none;font-size:18px;margin:24px 0;transition:all .3s}
         .btn-secondary:hover{background:#0f3261;transform:translateY(-2px)}
-        .sticky-header{position:sticky;top:0;background:var(--brand-white);border-bottom:3px solid var(--brand-accent-yellow);padding:10px 0 8px;z-index:1000;box-shadow:0 4px 14px rgba(1,54,108,.12)}
+        .sticky-header{position:sticky;top:0;background:var(--brand-white);border-bottom:3px solid var(--brand-accent-yellow);padding:10px 0 8px;z-index:1000;box-shadow:0 4px 14px rgba(1,54,108,.12)};transition:transform .25s ease;transition:transform .25s ease
         .header-content{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
         .header-col--proof{text-align:center;display:flex;flex-direction:column;align-items:center}
         .header-proof-title{font-family:Roboto,Arial,sans-serif;font-size:1rem;font-weight:900;color:var(--brand-navy);line-height:1.1;letter-spacing:-.01em;text-transform:uppercase;background:linear-gradient(180deg,#ffffff 0%,#f4f8fd 100%);border:1px solid rgba(1,54,108,.2);border-radius:999px;padding:7px 14px;box-shadow:0 3px 10px rgba(1,54,108,.1)}
@@ -68,7 +68,8 @@
         .content-body a:hover{color:var(--brand-navy)}
         .content-body a.btn-secondary{color:#fff!important;text-decoration:none}
         .content-body a.btn-secondary:hover{color:#fff!important}
-        @media(max-width:900px){
+        @media(max-width:767px){.sticky-header.header--hidden{transform:translateY(-100%)}}
+ @media(max-width:900px){
           .sticky-header{padding:8px 0}
           .header-content{grid-template-columns:1fr;gap:10px}
           .header-col--logo{order:1;text-align:center}
@@ -337,7 +338,7 @@
     });
   </script>
   <main><section class="section-content"><div class="container"><h1>Bicycle Accident Lawyer Los Angeles</h1><p class="lead-text">Bicycle crashes often create severe injuries and complex liability disputes. We build trial-ready claims that account for long-term medical and financial impact.</p>
-                <figure class="content-hero-img" style="margin:24px 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(1,54,108,.12);"><img src="../../assets/images/custom/caraccident2.png" alt="Illustration: Bicycle Accident Lawyer Los Angeles" style="width:100%;height:auto;display:block;"></figure>
+                <figure class="content-hero-img" style="margin:24px 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(1,54,108,.12);"><img decoding="async" src="../../assets/images/custom/caraccident2.png" alt="Illustration: Bicycle Accident Lawyer Los Angeles" style="width:100%;height:auto;display:block;"></figure>
                 <blockquote>"Bike injury claims are frequently undervalued early. Objective records and clear liability framing change the outcome." - Shawn S. Rokni</blockquote>
   <h2>Common Bicycle Crash Injuries</h2><ul><li>Head injury and concussion</li><li>Fractures, ligament tears, and shoulder trauma</li><li>Road rash, scarring, and infection risk</li><li>Spine and nerve injuries with delayed symptoms</li></ul>
   <h2>How We Prove Liability</h2><ul><li>Intersection and right-of-way analysis</li><li>Video, scene mapping, and witness statements</li><li>Vehicle damage and impact reconstruction</li><li>Comparative fault defense counter-strategy</li></ul>
