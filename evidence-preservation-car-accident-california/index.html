@@ -460,4 +460,41 @@
     </div>
   </footer>
 
+<div id="smsPopup" class="sms-popup">
+  <div class="sms-popup-content">
+    <button class="sms-close" aria-label="Close popup">&times;</button>
+    <img 
+      src="/images/shawn-rokni-popup.webp" 
+      alt="Shawn Rokni" 
+      class="sms-image"
+      width="90"
+      height="90"
+      loading="lazy"
+    />
+    <h3>Prefer to text instead?</h3>
+    <p>Message our intake team directly. We're available 24/7.</p>
+    <a href="sms:2136368571" class="sms-button">Text Our Team Now</a>
+    <div class="sms-footer">No Fee Unless We Win</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const popup = document.getElementById("smsPopup");
+
+  if (!sessionStorage.getItem("smsPopupShown")) {
+    setTimeout(function() {
+      popup.classList.add("show");
+      sessionStorage.setItem("smsPopupShown", "true");
+    }, 20000);
+  }
+
+  document.addEventListener("click", function(e) {
+    if (e.target.classList.contains("sms-close")) {
+      popup.classList.remove("show");
+    }
+  });
+})();
+</script>
+
 </body></html>
