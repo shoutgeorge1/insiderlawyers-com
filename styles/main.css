@@ -405,11 +405,11 @@
 }
 
 .hero.hero-section .hero-form-card {
-  background: linear-gradient(180deg, #e8f4fc 0%, #d6ebf7 100%);
-  border: 2px solid #90caf9;
+  background: linear-gradient(180deg, #0d3a6e 0%, #0a2d52 50%, #072847 100%);
+  border: 2px solid rgba(251, 186, 0, 0.6);
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(1, 54, 108, 0.08);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .hero.hero-section .hero-form-card .form__header {
@@ -449,7 +449,7 @@
   display: block;
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--brand-navy, #01366c);
+  color: #fff;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -459,28 +459,28 @@
 .hero.hero-section .hero-form-card .form-control {
   width: 100%;
   padding: 0.875rem 1rem;
-  border: 2px solid #90caf9;
+  border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   font-size: 1.0625rem;
-  background: #e3f2fd;
+  background: #fff;
   color: #1f2937;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .hero.hero-section .hero-form-card .form-input::placeholder,
 .hero.hero-section .hero-form-card .form-control::placeholder {
-  color: #1565c0;
-  opacity: 0.9;
+  color: #64748b;
+  opacity: 0.95;
 }
 .hero.hero-section .hero-form-card .form-input::-webkit-input-placeholder,
-.hero.hero-section .hero-form-card .form-control::-webkit-input-placeholder { color: #1565c0; opacity: 0.9; }
+.hero.hero-section .hero-form-card .form-control::-webkit-input-placeholder { color: #64748b; opacity: 0.95; }
 .hero.hero-section .hero-form-card .form-input::-moz-placeholder,
-.hero.hero-section .hero-form-card .form-control::-moz-placeholder { color: #1565c0; opacity: 0.9; }
+.hero.hero-section .hero-form-card .form-control::-moz-placeholder { color: #64748b; opacity: 0.95; }
 
 .hero.hero-section .hero-form-card .form-input:focus,
 .hero.hero-section .hero-form-card .form-control:focus {
   outline: none;
-  border-color: var(--brand-blue, #01468a);
-  box-shadow: 0 0 0 3px rgba(1, 70, 138, 0.15);
+  border-color: #fbba00;
+  box-shadow: 0 0 0 3px rgba(251, 186, 0, 0.25);
 }
 
 .hero.hero-section .hero-form-card textarea.form-input,
@@ -498,25 +498,34 @@
   border-radius: 10px;
 }
 
-/* Case form – badge, heading, checkbox (Free & Confidential style) */
+/* Case form – badge, heading, intro, checkbox: white on dark blue card */
 .hero-form-card .form-container { padding: 0; text-align: center; }
 .hero-form-card .cta-badge {
   display: inline-block;
-  background: rgba(1, 54, 108, 0.12);
-  color: var(--brand-navy, #01366c);
+  background: rgba(251, 186, 0, 0.25);
+  color: #fff;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   padding: 0.5rem 1rem;
   border-radius: 999px;
+  border: 1px solid rgba(251, 186, 0, 0.5);
 }
 .hero-form-card .cta-heading {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--brand-navy, #01366c);
+  color: #fff;
   margin: 0 0 0.5rem;
   line-height: 1.25;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.hero-form-card .hero-form-intro {
+  text-align: center;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.5;
 }
 .hero-form-card .form-checkbox {
   display: flex;
@@ -524,16 +533,8 @@
   gap: 0.5rem;
   text-align: left;
 }
-.hero-form-card .form-checkbox input { margin-top: 0.25rem; flex-shrink: 0; }
-.hero-form-card .form-checkbox label { font-size: 0.9rem; color: #0d47a1; line-height: 1.4; font-weight: 500; }
-/* Intro paragraph above form – visible light blue theme */
-.hero-form-card .hero-form-intro {
-  text-align: center;
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-  color: #0d47a1;
-  line-height: 1.5;
-}
+.hero-form-card .form-checkbox input { margin-top: 0.25rem; flex-shrink: 0; accent-color: #fbba00; }
+.hero-form-card .form-checkbox label { font-size: 0.9rem; color: rgba(255, 255, 255, 0.95); line-height: 1.4; font-weight: 500; }
 
 /* Mobile: single column, form below content */
 @media (max-width: 991px) {
