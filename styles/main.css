@@ -405,8 +405,8 @@
 }
 
 .hero.hero-section .hero-form-card {
-  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
-  border: 3px solid #fff;
+  background: linear-gradient(180deg, #e8f4fc 0%, #d6ebf7 100%);
+  border: 2px solid #90caf9;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(1, 54, 108, 0.08);
@@ -459,12 +459,22 @@
 .hero.hero-section .hero-form-card .form-control {
   width: 100%;
   padding: 0.875rem 1rem;
-  border: 2px solid rgba(1, 54, 108, 0.25);
+  border: 2px solid #90caf9;
   border-radius: 8px;
   font-size: 1.0625rem;
-  background: #f9fbff;
+  background: #e3f2fd;
+  color: #1f2937;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+.hero.hero-section .hero-form-card .form-input::placeholder,
+.hero.hero-section .hero-form-card .form-control::placeholder {
+  color: #1565c0;
+  opacity: 0.9;
+}
+.hero.hero-section .hero-form-card .form-input::-webkit-input-placeholder,
+.hero.hero-section .hero-form-card .form-control::-webkit-input-placeholder { color: #1565c0; opacity: 0.9; }
+.hero.hero-section .hero-form-card .form-input::-moz-placeholder,
+.hero.hero-section .hero-form-card .form-control::-moz-placeholder { color: #1565c0; opacity: 0.9; }
 
 .hero.hero-section .hero-form-card .form-input:focus,
 .hero.hero-section .hero-form-card .form-control:focus {
@@ -515,7 +525,15 @@
   text-align: left;
 }
 .hero-form-card .form-checkbox input { margin-top: 0.25rem; flex-shrink: 0; }
-.hero-form-card .form-checkbox label { font-size: 0.9rem; color: var(--brand-gray-700, #374151); line-height: 1.4; }
+.hero-form-card .form-checkbox label { font-size: 0.9rem; color: #0d47a1; line-height: 1.4; font-weight: 500; }
+/* Intro paragraph above form – visible light blue theme */
+.hero-form-card .hero-form-intro {
+  text-align: center;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: #0d47a1;
+  line-height: 1.5;
+}
 
 /* Mobile: single column, form below content */
 @media (max-width: 991px) {
@@ -528,11 +546,13 @@
     order: 2;
     max-width: 520px;
     margin: 0 auto;
+    width: 100%;
   }
 
   .hero.hero-section .hero-form-card {
     padding: 1.5rem 1.25rem;
   }
+  .hero-form-card .hero-form-intro { font-size: 1rem; margin-bottom: 1.5rem; }
 }
 
 /* "Over $XX Million Recovered" in hero */
@@ -664,7 +684,10 @@
   .hero.hero-section .hero-form-column {
     max-width: 100%;
   }
-
+  .hero.hero-section .hero-form-card {
+    padding: 1.25rem 1rem;
+  }
+  .hero-form-card .form-container { padding: 0; }
   .hero.hero-section .hero-form-card .form__title {
     font-size: 1.5rem;
   }
