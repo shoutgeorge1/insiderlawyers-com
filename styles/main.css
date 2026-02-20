@@ -488,6 +488,35 @@
   border-radius: 10px;
 }
 
+/* Case form – badge, heading, checkbox (Free & Confidential style) */
+.hero-form-card .form-container { padding: 0; text-align: center; }
+.hero-form-card .cta-badge {
+  display: inline-block;
+  background: rgba(1, 54, 108, 0.12);
+  color: var(--brand-navy, #01366c);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+}
+.hero-form-card .cta-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-navy, #01366c);
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+.hero-form-card .form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  text-align: left;
+}
+.hero-form-card .form-checkbox input { margin-top: 0.25rem; flex-shrink: 0; }
+.hero-form-card .form-checkbox label { font-size: 0.9rem; color: var(--brand-gray-700, #374151); line-height: 1.4; }
+
 /* Mobile: single column, form below content */
 @media (max-width: 991px) {
   .hero.hero-section .hero-content {

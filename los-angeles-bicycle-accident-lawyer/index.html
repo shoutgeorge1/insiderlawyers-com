@@ -418,29 +418,39 @@
         </div>
         <div class="hero-form-column">
           <div class="hero-form-card">
-            <div class="form__header" id="get-your-free-case-review">
-              <h2 class="form__title">Get Your<br>Free Case Review</h2>
-              <p class="form__subtitle">Free &amp; Confidential — 24-Hour Response</p>
+            <div class="form-container" style="text-align: center;">
+              <div style="text-align: center; margin-bottom: 16px;">
+                <div class="cta-badge">Free &amp; Confidential</div>
+              </div>
+              <h2 class="cta-heading" style="text-align: center;">Get Your Free Case Evaluation</h2>
+              <p style="text-align: center; font-size: 18px; color: var(--brand-gray-700); margin-bottom: 32px;">Answer a few quick questions and an experienced personal injury attorney will review your case at no cost.</p>
+              <form action="https://formsubmit.co/ial.leads.2024@gmail.com" method="POST" id="case-evaluation-form">
+                <input type="hidden" name="_subject" value="New Los Angeles Bicycle Accident Lead">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_autoresponse" value="Thank you — we received your request. Our legal team will contact you shortly.">
+                <input type="hidden" name="_next" value="https://call.insideraccidentlawyers.com/thank-you.html">
+                <div class="form-group">
+                  <label class="form-label">Full Name *</label>
+                  <input type="text" class="form-input" name="full_name" placeholder="Your Full Name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-input" name="phone" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Tell us about your accident *</label>
+                  <textarea class="form-input" name="accident_reason" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                  <div class="form-checkbox">
+                    <input type="checkbox" name="text_consent" id="text_consent">
+                    <label for="text_consent">I agree to receive text messages. Message and data rates may apply. Reply STOP to opt out.</label>
+                  </div>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 24px;">Get My Free Review</button>
+              </form>
             </div>
-            <form action="https://formsubmit.co/ial.leads.2024@gmail.com" method="POST" id="case-evaluation-form">
-              <input type="hidden" name="_subject" value="New Los Angeles Bicycle Accident Lead">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" value="" id="form-next-url">
-              <div class="form-group">
-                <label class="form-label" for="hero-fullname">Full Name *</label>
-                <input type="text" id="hero-fullname" class="form-input" name="full_name" placeholder="Your Full Name" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="hero-phone">Phone Number *</label>
-                <input type="tel" id="hero-phone" class="form-input" name="phone" placeholder="(555) 555-5555" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="hero-email">Email *</label>
-                <input type="email" id="hero-email" class="form-input" name="email" placeholder="your@email.com" required>
-              </div>
-              <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">Start My Free Case Review</button>
-            </form>
           </div>
         </div>
       </div>
