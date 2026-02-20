@@ -3,6 +3,23 @@
   "buildCommand": "echo \"skip\"",
   "installCommand": "",
   "outputDirectory": ".",
+  "redirects": [
+    {"source": "/los-angeles-auto-accident-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-car-crash-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/car-accident-lawyer-near-me-los-angeles", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-truck-accident-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-motorcycle-accident-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-pedestrian-accident-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-bicycle-accident-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-wrongful-death-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-brain-injury-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-spine-injury-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-catastrophic-injury-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-premises-liability-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-slip-and-fall-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-product-liability-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
+    {"source": "/los-angeles-uber-lyft-accident-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302}
+  ],
   "headers": [
     {
       "source": "/(.*)",
