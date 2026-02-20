@@ -88,6 +88,16 @@
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.6);
 }
+/* Mobile: larger base font for readability */
+@media (max-width: 767px) {
+  html { font-size: 18px; }
+  body { font-size: 1rem; }
+  /* Keep hamburger clickable above header content */
+  .sticky-header .mobile-menu-toggle { position: relative; z-index: 1001; min-width: 44px; min-height: 44px; }
+  /* Slightly larger nav links in mobile menu */
+  .header-nav-wrap .nav-link { font-size: 0.95rem; min-height: 44px; padding: 10px 12px; }
+}
+
 @media (min-width: 900px) {
   .site-footer .footer-content {
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -171,7 +171,7 @@
         });
       });
     </script>    <script>
-      document.addEventListener('DOMContentLoaded',function(){var h=document.querySelector('.sticky-header');var ly=0;if(h){window.addEventListener('scroll',function(){if(window.innerWidth>767){h.classList.remove('header--hidden');return;}var y=window.scrollY;if(y>80){if(y>ly)h.classList.add('header--hidden');else h.classList.remove('header--hidden');}else h.classList.remove('header--hidden');ly=y;},{passive:true});}});
+      document.addEventListener('DOMContentLoaded',function(){var h=document.querySelector('.sticky-header');var ly=0;var nw=document.getElementById('header-nav-wrap');var mt=document.getElementById('mobile-menu-toggle');if(h){window.addEventListener('scroll',function(){if(window.innerWidth>767){h.classList.remove('header--hidden');return;}var y=window.scrollY;if(y>80){if(y>ly){h.classList.add('header--hidden');if(nw)nw.classList.remove('is-open');if(mt)mt.setAttribute('aria-expanded','false');}else h.classList.remove('header--hidden');}else h.classList.remove('header--hidden');ly=y;},{passive:true});}});
     </script><header class="sticky-header">
         <div class="container">
             <div class="header-content">
