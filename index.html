@@ -910,54 +910,7 @@
     </div>
   </footer>
   <script>window.addEventListener('load', function() { document.body.classList.add('loaded'); });</script>
-<style id="sms-popup-styles">
-#smsPopup{position:fixed;bottom:20px;right:20px;width:340px;background:#fff;border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.18);z-index:9999;opacity:0;transform:translateY(20px);transition:all .3s ease;pointer-events:none;}
-#smsPopup.show{opacity:1;transform:translateY(0);pointer-events:auto;}
-#smsPopup .sms-popup-content{padding:24px;text-align:center;position:relative;}
-#smsPopup .sms-image{width:90px;height:90px;border-radius:50%;object-fit:cover;margin-bottom:14px;}
-#smsPopup h3{margin:0 0 8px;font-size:18px;font-weight:600;}
-#smsPopup p{font-size:14px;margin-bottom:16px;color:#555;}
-#smsPopup .sms-button{display:inline-block;background:#0b4dbb;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:600;}
-#smsPopup .sms-footer{font-size:12px;margin-top:12px;color:#777;}
-#smsPopup .sms-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:18px;cursor:pointer;}
-@media(max-width:768px){#smsPopup{left:12px;right:12px;width:auto;bottom:12px;}}
-</style>
-<div id="smsPopup" class="sms-popup">
-  <div class="sms-popup-content">
-    <button class="sms-close" aria-label="Close popup">&times;</button>
-    <img src="https://www.insiderlawyers.com/images/shawn-rokni-popup.webp" alt="Shawn Rokni" class="sms-image" width="90" height="90" loading="lazy" />
-    <h3>Prefer to text instead?</h3>
-    <p>Message our intake team directly. We're available 24/7.</p>
-    <a href="sms:2136368571" class="sms-button">Text Our Team Now</a>
-    <div class="sms-footer">No Fee Unless We Win</div>
-  </div>
-</div>
-
-<!-- SMS popup paused — waiting for A2P approval
-<script>
-(function() {
-  var popup = document.getElementById("smsPopup");
-  if (!popup) return;
-
-  function isMobile() { return window.matchMedia("(max-width: 768px)").matches; }
-
-  if (!sessionStorage.getItem("smsPopupShown") && isMobile()) {
-    setTimeout(function() {
-      if (isMobile()) {
-        popup.classList.add("show");
-        sessionStorage.setItem("smsPopupShown", "true");
-      }
-    }, 20000);
-  }
-
-  document.addEventListener("click", function(e) {
-    if (e.target && e.target.classList && e.target.classList.contains("sms-close")) {
-      popup.classList.remove("show");
-    }
-  });
-})();
-</script>
--->
+<!-- SMS popup hidden — waiting for A2P approval -->
 
 </body>
 </html>
