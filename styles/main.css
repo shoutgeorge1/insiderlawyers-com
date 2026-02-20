@@ -535,6 +535,23 @@
 .hero-form-card .form-checkbox input { margin-top: 0.25rem; flex-shrink: 0; accent-color: #fbba00; }
 .hero-form-card .form-checkbox label { font-size: 0.9rem; color: #0d3a6e; line-height: 1.4; font-weight: 500; }
 
+/* Home page only: dark blue form (like truck PPC deployment) */
+body.page-is-home .hero.hero-section .hero-form-card {
+  background: linear-gradient(180deg, #0d3a6e 0%, #0a2d52 50%, #072847 100%);
+  border: 2px solid rgba(251, 186, 0, 0.6);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+body.page-is-home .hero.hero-section .hero-form-card .form-label { color: #fff; }
+body.page-is-home .hero.hero-section .hero-form-card .form-input,
+body.page-is-home .hero.hero-section .hero-form-card .form-control {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+body.page-is-home .hero.hero-section .hero-form-card .form-input:focus,
+body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
+  border-color: #fbba00;
+  box-shadow: 0 0 0 3px rgba(251, 186, 0, 0.25);
+}
+
 /* Mobile: single column, form below content */
 @media (max-width: 991px) {
   .hero.hero-section .hero-content {
