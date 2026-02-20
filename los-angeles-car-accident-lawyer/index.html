@@ -416,41 +416,48 @@
             </div>
           </div>
         </div>
-        <div class="hero-form-column">
-          <div class="hero-form-card">
-            <div class="form-container" style="text-align: center;">
-              <div style="text-align: center; margin-bottom: 16px;">
-                <div class="cta-badge" style="color: #ffffff !important; background: rgba(251,186,0,0.45); padding: 0.5rem 1rem; border-radius: 999px; font-weight: 700; font-size: 0.85rem;">Free &amp; Confidential</div>
+        <div class="hero-form-column" style="width:100%;">
+          <style>
+            #ial-hero-form-card{background:linear-gradient(180deg,#0d3a6e 0%,#0a2d52 50%,#072847 100%)!important;border:2px solid rgba(251,186,0,0.6)!important;border-radius:12px!important;padding:2rem!important;box-shadow:0 16px 48px rgba(0,0,0,0.4)!important;text-align:center!important;}
+            #ial-hero-form-card *{box-sizing:border-box;}
+            #ial-hero-form-card .ial-badge{display:inline-block!important;background:rgba(251,186,0,0.35)!important;color:#fff!important;font-size:0.85rem!important;font-weight:700!important;text-transform:uppercase!important;letter-spacing:0.06em!important;padding:0.5rem 1.25rem!important;border-radius:999px!important;border:1px solid rgba(251,186,0,0.5)!important;margin-bottom:12px!important;}
+            #ial-hero-form-card .ial-heading{font-size:1.5rem!important;font-weight:700!important;color:#fff!important;margin:0 0 0.5rem!important;line-height:1.25!important;text-align:center!important;}
+            #ial-hero-form-card .ial-intro{font-size:1.05rem!important;color:rgba(255,255,255,0.95)!important;text-align:center!important;margin:0 0 1.5rem!important;line-height:1.5!important;}
+            #ial-hero-form-card .ial-label{display:block!important;font-size:0.9rem!important;font-weight:700!important;color:#fff!important;margin-bottom:0.4rem!important;text-transform:uppercase!important;letter-spacing:0.05em!important;text-align:center!important;}
+            #ial-hero-form-card .ial-input{display:block!important;width:100%!important;padding:0.85rem 1rem!important;border:2px solid rgba(255,255,255,0.35)!important;border-radius:8px!important;font-size:1rem!important;background:#fff!important;color:#1f2937!important;margin-bottom:1rem!important;-webkit-appearance:none!important;appearance:none!important;}
+            #ial-hero-form-card .ial-input:focus{outline:none!important;border-color:#fbba00!important;box-shadow:0 0 0 3px rgba(251,186,0,0.25)!important;}
+            #ial-hero-form-card .ial-input::placeholder{color:#64748b!important;opacity:0.95!important;}
+            #ial-hero-form-card .ial-textarea{min-height:90px!important;resize:vertical!important;}
+            #ial-hero-form-card .ial-checkbox-wrap{display:flex!important;align-items:flex-start!important;gap:0.5rem!important;text-align:left!important;margin-bottom:0.75rem!important;}
+            #ial-hero-form-card .ial-checkbox-wrap input[type=checkbox]{margin-top:0.25rem!important;flex-shrink:0!important;accent-color:#fbba00!important;}
+            #ial-hero-form-card .ial-checkbox-label{font-size:0.85rem!important;color:rgba(255,255,255,0.92)!important;line-height:1.4!important;font-weight:500!important;}
+            #ial-hero-form-card .ial-submit{display:block!important;width:100%!important;padding:1.1rem 1.5rem!important;font-size:1.15rem!important;font-weight:800!important;color:#fff!important;background:linear-gradient(180deg,#fbba00 0%,#e5a800 100%)!important;border:none!important;border-radius:10px!important;cursor:pointer!important;text-transform:uppercase!important;letter-spacing:0.04em!important;margin-top:0.5rem!important;box-shadow:0 4px 14px rgba(251,186,0,0.4)!important;transition:transform 0.15s ease,box-shadow 0.15s ease!important;}
+            #ial-hero-form-card .ial-submit:hover{transform:translateY(-1px)!important;box-shadow:0 6px 20px rgba(251,186,0,0.5)!important;}
+            @media(max-width:991px){#ial-hero-form-card{padding:1.5rem 1.25rem!important;}}
+            @media(max-width:600px){#ial-hero-form-card{padding:1.25rem 1rem!important;}#ial-hero-form-card .ial-heading{font-size:1.25rem!important;}#ial-hero-form-card .ial-intro{font-size:0.95rem!important;}}
+          </style>
+          <div id="ial-hero-form-card">
+            <div class="ial-badge">Free &amp; Confidential</div>
+            <h2 class="ial-heading">Get Your Free Case Evaluation</h2>
+            <p class="ial-intro">Answer a few quick questions and an experienced personal injury attorney will review your case at no cost.</p>
+            <form action="https://formsubmit.co/ial.leads.2024@gmail.com" method="POST" id="case-evaluation-form">
+              <input type="hidden" name="_subject" value="New Los Angeles Car Accident Lead">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_autoresponse" value="Thank you — we received your request. Our legal team will contact you shortly.">
+              <input type="hidden" name="_next" value="https://call.insideraccidentlawyers.com/thank-you.html">
+              <label class="ial-label">Full Name *</label>
+              <input type="text" class="ial-input" name="full_name" placeholder="Your Full Name" required>
+              <label class="ial-label">Phone Number *</label>
+              <input type="tel" class="ial-input" name="phone" placeholder="(555) 555-5555" required>
+              <label class="ial-label">Tell Us About Your Accident *</label>
+              <textarea class="ial-input ial-textarea" name="accident_reason" rows="3" placeholder="Brief description of your accident..." required></textarea>
+              <div class="ial-checkbox-wrap">
+                <input type="checkbox" name="text_consent" id="text_consent">
+                <label for="text_consent" class="ial-checkbox-label">I agree to receive text messages. Message and data rates may apply. Reply STOP to opt out.</label>
               </div>
-              <h2 class="cta-heading" style="text-align: center; color: #ffffff !important; font-size: 1.5rem; font-weight: 700; margin: 0 0 0.5rem;">Get Your Free Case Evaluation</h2>
-              <p class="hero-form-intro" style="color: #ffffff !important; text-align: center; font-size: 1.125rem; margin-bottom: 2rem; line-height: 1.5;">Answer a few quick questions and an experienced personal injury attorney will review your case at no cost.</p>
-              <form action="https://formsubmit.co/ial.leads.2024@gmail.com" method="POST" id="case-evaluation-form">
-                <input type="hidden" name="_subject" value="New Los Angeles Car Accident Lead">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_autoresponse" value="Thank you — we received your request. Our legal team will contact you shortly.">
-                <input type="hidden" name="_next" value="https://call.insideraccidentlawyers.com/thank-you.html">
-                <div class="form-group">
-                  <label class="form-label">Full Name *</label>
-                  <input type="text" class="form-input" name="full_name" placeholder="Your Full Name" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Phone Number *</label>
-                  <input type="tel" class="form-input" name="phone" placeholder="(555) 555-5555" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Tell us about your accident *</label>
-                  <textarea class="form-input" name="accident_reason" rows="3" placeholder="Brief description of your accident..." required></textarea>
-                </div>
-                <div class="form-group">
-                  <div class="form-checkbox">
-                    <input type="checkbox" name="text_consent" id="text_consent">
-                    <label for="text_consent" style="color: #0d3a6e !important; font-size: 0.9rem; line-height: 1.4; font-weight: 500;">I agree to receive text messages. Message and data rates may apply. Reply STOP to opt out.</label>
-                  </div>
-                </div>
-                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 24px;">Get My Free Review</button>
-              </form>
-            </div>
+              <button type="submit" class="ial-submit">Get My Free Review</button>
+            </form>
           </div>
         </div>
       </div>
