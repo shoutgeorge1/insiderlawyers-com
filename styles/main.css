@@ -405,11 +405,11 @@
 }
 
 .hero.hero-section .hero-form-card {
-  background: linear-gradient(180deg, #0d3a6e 0%, #0a2d52 50%, #072847 100%);
-  border: 2px solid rgba(251, 186, 0, 0.6);
+  background: linear-gradient(180deg, #e0f0fa 0%, #c8e2f4 50%, #b0d4ee 100%);
+  border: 2px solid #7eb8e0;
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(1, 54, 108, 0.15), 0 0 0 1px rgba(1, 54, 108, 0.08);
 }
 
 .hero.hero-section .hero-form-card .form__header {
@@ -449,7 +449,7 @@
   display: block;
   font-size: 0.95rem;
   font-weight: 700;
-  color: #fff;
+  color: #01366c;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -459,7 +459,7 @@
 .hero.hero-section .hero-form-card .form-control {
   width: 100%;
   padding: 0.875rem 1rem;
-  border: 2px solid rgba(255, 255, 255, 0.4);
+  border: 2px solid #7eb8e0;
   border-radius: 8px;
   font-size: 1.0625rem;
   background: #fff;
@@ -498,33 +498,32 @@
   border-radius: 10px;
 }
 
-/* Case form – badge, heading, intro, checkbox: white on dark blue card */
+/* Case form – light blue card, navy text for contrast and CTR */
 .hero-form-card .form-container { padding: 0; text-align: center; }
 .hero-form-card .cta-badge {
   display: inline-block;
-  background: rgba(251, 186, 0, 0.25);
-  color: #fff;
+  background: rgba(1, 54, 108, 0.12);
+  color: #01366c;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   padding: 0.5rem 1rem;
   border-radius: 999px;
-  border: 1px solid rgba(251, 186, 0, 0.5);
+  border: 1px solid rgba(1, 54, 108, 0.25);
 }
 .hero-form-card .cta-heading {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  color: #01366c;
   margin: 0 0 0.5rem;
   line-height: 1.25;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .hero-form-card .hero-form-intro {
   text-align: center;
   font-size: 1.125rem;
   margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: #0d3a6e;
   line-height: 1.5;
 }
 .hero-form-card .form-checkbox {
@@ -534,7 +533,7 @@
   text-align: left;
 }
 .hero-form-card .form-checkbox input { margin-top: 0.25rem; flex-shrink: 0; accent-color: #fbba00; }
-.hero-form-card .form-checkbox label { font-size: 0.9rem; color: rgba(255, 255, 255, 0.95); line-height: 1.4; font-weight: 500; }
+.hero-form-card .form-checkbox label { font-size: 0.9rem; color: #0d3a6e; line-height: 1.4; font-weight: 500; }
 
 /* Mobile: single column, form below content */
 @media (max-width: 991px) {
