@@ -944,10 +944,14 @@
   var popup = document.getElementById("smsPopup");
   if (!popup) return;
 
-  if (!sessionStorage.getItem("smsPopupShown")) {
+  function isMobile() { return window.matchMedia("(max-width: 768px)").matches; }
+
+  if (!sessionStorage.getItem("smsPopupShown") && isMobile()) {
     setTimeout(function() {
-      popup.classList.add("show");
-      sessionStorage.setItem("smsPopupShown", "true");
+      if (isMobile()) {
+        popup.classList.add("show");
+        sessionStorage.setItem("smsPopupShown", "true");
+      }
     }, 20000);
   }
 
