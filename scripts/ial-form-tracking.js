@@ -19,6 +19,19 @@
     form.appendChild(hp);
   }
 
+  function ensureHidden(form, name, value) {
+    var el = form.querySelector('input[name="' + name + '"]');
+    if (el) {
+      el.value = value || '';
+      return;
+    }
+    var input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = name;
+    input.value = value || '';
+    form.appendChild(input);
+  }
+
   function run() {
     var form = document.getElementById('case-evaluation-form');
     if (!form) return;
@@ -33,52 +46,21 @@
         return false;
       }
 
-      var fd = new FormData(form);
-      fd.delete('website_url');
-
       var parts = [];
       for (var k = 0; k < TRACK_KEYS.length; k++) {
         var key = TRACK_KEYS[k];
         var v = null;
         try { v = localStorage.getItem('ial_' + key); } catch (err) {}
         if (v) {
-          fd.set(key, v);
+          ensureHidden(form, key, v);
           parts.push(key + '=' + encodeURIComponent(v));
         }
       }
-      if (parts.length) fd.set('tracking', parts.join(' | '));
+      if (parts.length) ensureHidden(form, 'tracking', parts.join(' | '));
 
-      var nextUrl = '';
-      var nextInput = form.querySelector('input[name="_next"]');
-      if (nextInput && nextInput.value) nextUrl = nextInput.value;
+      if (hp) hp.removeAttribute('name');
 
-      var action = form.getAttribute('action') || form.action;
-      if (!action) return false;
-
-      var submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        if (submitBtn.textContent) submitBtn.setAttribute('data-original-text', submitBtn.textContent);
-        submitBtn.textContent = 'Sending…';
-      }
-
-      fetch(action, {
-        method: 'POST',
-        body: fd,
-        headers: { 'Accept': 'application/json' }
-      })
-        .then(function(res) {
-          if (nextUrl) window.location.href = nextUrl;
-          else if (res.ok) window.location.href = 'https://call.insideraccidentlawyers.com/thank-you.html';
-        })
-        .catch(function() {
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            if (submitBtn.getAttribute('data-original-text')) submitBtn.textContent = submitBtn.getAttribute('data-original-text');
-            else submitBtn.textContent = 'Get My Free Review';
-          }
-        });
-
+      form.submit();
       return false;
     }, false);
   }
