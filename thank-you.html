@@ -3,106 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex,follow">
   <title>Thank You | Insider Accident Lawyers</title>
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/settlements.css">
+  <link rel="canonical" href="https://www.insiderlawyers.com/thank-you/">
+  <link rel="icon" href="/images/la/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --brand-navy: #01366c; --brand-blue: #01468a; --brand-accent-yellow: #fbba00; --brand-gray-700: #374151; }
-    .thank-you-hero {
-      min-height: 60vh;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(180deg, #01366c 0%, #012d5a 40%, #011e3d 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+    }
+
+    /* Header */
+    .ty-header {
+      background: #fff;
+      padding: 0.75rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .ty-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .ty-header-logo img { height: 60px; width: auto; display: block; }
+    .ty-header-right { text-align: right; }
+    .ty-header-label { font-size: 0.75rem; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .ty-header-phone {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #01366c;
+      text-decoration: none;
+      line-height: 1.3;
+    }
+    .ty-header-phone:hover { color: #01468a; }
+    .ty-header-lang { font-size: 0.75rem; color: #888; }
+
+    /* Main */
+    .ty-main {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 3rem 1.5rem;
-      background: linear-gradient(135deg, #01366c 0%, #01468a 50%, #012a50 100%);
+    }
+    .ty-card {
+      max-width: 560px;
+      width: 100%;
       text-align: center;
-      color: #fff;
     }
-    .thank-you-hero h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
+    .ty-checkmark {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      border: 3px solid rgba(255,255,255,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .ty-checkmark svg { width: 36px; height: 36px; }
+
+    .ty-card h1 {
+      font-size: 2rem;
       font-weight: 800;
-      margin-bottom: 1rem;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
       color: #fff;
     }
-    .thank-you-hero p {
-      font-size: 1.25rem;
-      opacity: 0.95;
-      max-width: 520px;
-      margin: 0 auto 2rem;
+    .ty-card .ty-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
       line-height: 1.6;
+      margin-bottom: 2rem;
     }
-    .thank-you-hero .btn-primary {
+
+    .ty-cta {
       display: inline-block;
       background: linear-gradient(180deg, #ffd54f 0%, #ffbf00 50%, #f5a623 100%);
       color: #01366c;
       font-weight: 800;
-      padding: 1rem 2rem;
+      font-size: 1.15rem;
+      padding: 1rem 2.25rem;
       border-radius: 10px;
       text-decoration: none;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 0 #c99400, 0 6px 20px rgba(255,191,0,0.35);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 0 #c99400, 0 6px 20px rgba(255,191,0,0.3);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      letter-spacing: 0.01em;
     }
-    .thank-you-hero .btn-primary:hover {
-      transform: translateY(-3px);
+    .ty-cta:hover {
+      transform: translateY(-2px);
       box-shadow: 0 6px 0 #c99400, 0 10px 28px rgba(255,191,0,0.45);
     }
+
+    .ty-divider {
+      width: 60px;
+      height: 2px;
+      background: rgba(255,255,255,0.2);
+      margin: 2rem auto;
+      border: none;
+    }
+
+    .ty-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .ty-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.15s;
+    }
+    .ty-links a:hover { color: #fff; }
+
+    /* Footer */
+    .ty-footer {
+      background: rgba(0,0,0,0.2);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .ty-footer p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 0 auto 0.4rem;
+    }
+    .ty-footer a { color: rgba(255,255,255,0.65); }
+
+    @media (max-width: 600px) {
+      .ty-header-inner { flex-wrap: wrap; justify-content: center; text-align: center; }
+      .ty-header-right { text-align: center; }
+      .ty-card h1 { font-size: 1.6rem; }
+      .ty-card .ty-sub { font-size: 1rem; }
+      .ty-cta { font-size: 1.05rem; padding: 0.9rem 1.75rem; }
+      .ty-main { padding: 2rem 1.25rem; }
+    }
   </style>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WS8XT5FC');</script>
 </head>
 <body>
-  <header class="header" id="header">
-    <div class="mid-container">
-      <div class="header__left">
-        <figure class="header__logo">
-          <img src="https://www.insiderlawyers.com/images/la/logo.png" width="271" height="111" alt="Insider Accident Lawyers" class="header__logo-img" fetchpriority="high">
-        </figure>
-      </div>
-      <div class="header__middle">
-        <div class="header__middle__title"><a href="/" style="color:inherit;text-decoration:none;">Over $100 Million Recovered</a></div>
-        <p>in Verdicts &amp; Settlements<small><sup><a href="#footer-verdicts-note" id="verdicts-asterisk" style="color:inherit;text-decoration:none;">*</a></sup></small></p>
-      </div>
-      <div class="header__right">
-        <span class="header__title">Available 24/7 - Call Now:</span>
-        <a class="link header__number" href="tel:844-467-4335" data-callrail-phone="844-467-4335">844-467-4335</a>
-        <span class="header__lang">Hablamos Español</span>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8XT5FC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header class="ty-header">
+    <div class="ty-header-inner">
+      <a href="/" class="ty-header-logo">
+        <img src="https://www.insiderlawyers.com/images/la/logo.png" alt="Insider Accident Lawyers" width="271" height="111">
+      </a>
+      <div class="ty-header-right">
+        <span class="ty-header-label">Available 24/7</span>
+        <a href="tel:844-467-4335" class="ty-header-phone" data-callrail-phone="844-467-4335">844-467-4335</a>
+        <span class="ty-header-lang">Hablamos Espa&ntilde;ol</span>
       </div>
     </div>
   </header>
 
-  <section class="thank-you-hero">
-    <div>
+  <main class="ty-main">
+    <div class="ty-card">
+      <div class="ty-checkmark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
       <h1>Thank You</h1>
-      <p>We've received your case review request. A member of our team will contact you within 24 hours.</p>
-      <a href="tel:844-467-4335" class="btn-primary" data-callrail-phone="844-467-4335">Call Now: 844-467-4335</a>
+      <p class="ty-sub">We've received your case review request.<br>A member of our team will contact you within 24 hours.</p>
+      <a href="tel:844-467-4335" class="ty-cta" data-callrail-phone="844-467-4335">Call Now: 844-467-4335</a>
+      <hr class="ty-divider">
+      <div class="ty-links">
+        <a href="/">Return to Homepage</a>
+        <a href="/#case-evaluation">Submit Another Case</a>
+      </div>
     </div>
-  </section>
+  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer__main">
-        <div class="footer__brand">
-          <h3 class="footer__firm">Insider Accident Lawyers</h3>
-          <p>Los Angeles personal injury attorneys. Real trial lawyers, real results.</p>
-        </div>
-        <div class="footer__contact">
-          <h3 class="footer__heading">Free Consultation</h3>
-          <a href="tel:844-467-4335" class="footer__phone" data-callrail-phone="844-467-4335">844-467-4335</a>
-          <p>Available 24/7 · Hablamos Español</p>
-          <p>3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010</p>
-        </div>
-      </div>
-      <div class="footer__disclaimer">
-        <p id="footer-verdicts-note"><strong>* Results Disclaimer:</strong> Prior verdicts and settlements do not guarantee a similar outcome. Case value depends on specific facts, liability, injuries, evidence, insurance coverage, and applicable law.</p>
-        <p>Attorney advertising. This site provides general information only and is not legal advice. No attorney-client relationship is created by using this site or submitting a form.</p>
-        <p>Countrywide Trial Lawyers A Professional Law Corporation DBA Insider Accident Lawyers. California Entity #4851715. 3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010.</p>
-        <p><a href="/legal/results-disclaimer">Results Disclaimer</a> · <a href="/legal/disclaimer">Legal Disclaimer</a> · <a href="/legal/terms">Terms of Use</a> · <a href="/legal/accessibility">Accessibility Statement</a> · <a href="https://www.insideraccidentlawyers.com/privacy-policy">Privacy Policy</a></p>
-        <p class="footer__copyright">© 2026 Insider Accident Lawyers. All Rights Reserved.</p>
-      </div>
-    </div>
+  <footer class="ty-footer">
+    <p><strong>*</strong> Past verdicts and settlements. Results vary; no guarantee of similar outcome. Attorney advertising.</p>
+    <p>Countrywide Trial Lawyers, A Professional Law Corporation DBA Insider Accident Lawyers. 3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010.</p>
+    <p>&copy; 2026 Insider Accident Lawyers. All Rights Reserved. <a href="https://www.insideraccidentlawyers.com/privacy-policy">Privacy Policy</a></p>
   </footer>
+
 </body>
 </html>
