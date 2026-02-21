@@ -1,11 +1,12 @@
 /**
  * Google Ads / UTM form tracking for insiderlawyers.com lead form.
- * Reads ial_* from localStorage, adds tracking + combined "tracking" field, honeypot check.
- * Include after utm-gclid-tracking.js on home and PPC pages.
+ * Uses FormSubmit AJAX endpoint so we control the redirect and can see errors.
+ * v5
  */
 (function() {
   'use strict';
   var TRACK_KEYS = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+  var THANK_YOU = 'https://www.insiderlawyers.com/thank-you/';
 
   function addHoneypot(form) {
     if (form.querySelector('input[name="website_url"]')) return;
@@ -17,19 +18,6 @@
     hp.style.cssText = 'position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;';
     hp.setAttribute('aria-hidden', 'true');
     form.appendChild(hp);
-  }
-
-  function ensureHidden(form, name, value) {
-    var el = form.querySelector('input[name="' + name + '"]');
-    if (el) {
-      el.value = value || '';
-      return;
-    }
-    var input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = name;
-    input.value = value || '';
-    form.appendChild(input);
   }
 
   function run() {
@@ -47,25 +35,59 @@
         return false;
       }
 
+      var fd = new FormData(form);
+
+      fd.delete('website_url');
+
       var parts = [];
       for (var k = 0; k < TRACK_KEYS.length; k++) {
         var key = TRACK_KEYS[k];
         var v = null;
         try { v = localStorage.getItem('ial_' + key); } catch (err) {}
         if (v) {
-          ensureHidden(form, key, v);
+          fd.set(key, v);
           parts.push(key + '=' + encodeURIComponent(v));
         }
       }
-      if (parts.length) ensureHidden(form, 'tracking', parts.join(' | '));
+      if (parts.length) fd.set('tracking', parts.join(' | '));
 
-      if (hp) hp.removeAttribute('name');
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalText = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending\u2026';
+      }
 
-      var nextInput = form.querySelector('input[name="_next"]');
-      if (nextInput) nextInput.value = 'https://www.insiderlawyers.com/thank-you/';
-      else ensureHidden(form, '_next', 'https://www.insiderlawyers.com/thank-you/');
+      var actionUrl = form.getAttribute('action') || '';
+      var ajaxUrl = actionUrl.replace('https://formsubmit.co/', 'https://formsubmit.co/ajax/');
 
-      form.submit();
+      fetch(ajaxUrl, {
+        method: 'POST',
+        body: fd,
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+          if (data && data.success) {
+            window.location.href = THANK_YOU;
+          } else {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = originalText;
+            }
+            alert('Something went wrong. Please call us at 844-467-4335.');
+            console.error('FormSubmit response:', data);
+          }
+        })
+        .catch(function(err) {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+          }
+          alert('Connection error. Please call us at 844-467-4335.');
+          console.error('FormSubmit error:', err);
+        });
+
       return false;
     }, true);
   }
