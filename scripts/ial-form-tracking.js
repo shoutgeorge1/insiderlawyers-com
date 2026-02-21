@@ -40,6 +40,7 @@
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
+      e.stopImmediatePropagation();
 
       var hp = form.querySelector('input[name="website_url"]');
       if (hp && hp.value && hp.value.trim() !== '') {
