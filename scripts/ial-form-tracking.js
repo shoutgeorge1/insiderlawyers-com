@@ -61,6 +61,10 @@
 
       if (hp) hp.removeAttribute('name');
 
+      var nextInput = form.querySelector('input[name="_next"]');
+      if (nextInput) nextInput.value = 'https://www.insiderlawyers.com/thank-you/';
+      else ensureHidden(form, '_next', 'https://www.insiderlawyers.com/thank-you/');
+
       form.submit();
       return false;
     }, true);
