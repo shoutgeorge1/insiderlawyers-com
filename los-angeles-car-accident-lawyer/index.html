@@ -210,6 +210,10 @@
   </script>
 </head>
 <body class="home-ppc">
+<script>
+(function(){ var k=['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content']; var q=window.location.search?new URLSearchParams(window.location.search):null; if(q){ for(var i=0;i<k.length;i++){ var v=q.get(k[i]); if(v) try{ localStorage.setItem('ial_'+k[i],v); }catch(e){} } }
+})();
+</script>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8XT5FC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
@@ -778,5 +782,6 @@
   <script>window.addEventListener('load', function() { document.body.classList.add('loaded'); });</script>
 <!-- SMS popup hidden — waiting for A2P approval -->
 <script src="/scripts/utm-gclid-tracking.js"></script>
+<script src="/scripts/ial-form-tracking.js"></script>
 </body>
 </html>
