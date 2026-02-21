@@ -8,13 +8,24 @@
   <link rel="canonical" href="https://www.insiderlawyers.com/thank-you/">
   <link rel="stylesheet" href="/styles/main.css?v=2">
   <style>
-    .thank-you-section { min-height: 60vh; display: flex; align-items: center; justify-content: center; padding: 3rem 1.5rem; text-align: center; background: linear-gradient(180deg, #f8fafc 0%, #fff 100%); }
-    .thank-you-card { max-width: 520px; }
-    .thank-you-badge { display: inline-block; background: rgba(1, 54, 108, 0.1); color: #01366c; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.4rem 1rem; border-radius: 999px; margin-bottom: 1rem; border: 1px solid rgba(1, 54, 108, 0.2); }
-    .thank-you-card h1 { font-size: 1.75rem; color: #01366c; margin: 0 0 1rem; line-height: 1.3; }
-    .thank-you-card p { font-size: 1.1rem; color: #374151; margin: 0 0 1.5rem; line-height: 1.6; }
-    .thank-you-cta { display: inline-block; background: linear-gradient(180deg, #ffd54f 0%, #ffbf00 50%, #f5a623 100%); color: #01366c; font-weight: 800; padding: 1rem 1.75rem; border-radius: 10px; text-decoration: none; font-size: 1.15rem; box-shadow: 0 4px 0 #c99400, 0 6px 20px rgba(255,191,0,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .ty-nav { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 0.6rem 1.5rem; }
+    .ty-nav .ty-nav-inner { max-width: 1400px; margin: 0 auto; display: flex; gap: 1.5rem; align-items: center; }
+    .ty-nav a { color: #01366c; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+    .ty-nav a:hover { color: #01468a; text-decoration: underline; }
+    .thank-you-section { min-height: 50vh; display: flex; align-items: center; justify-content: center; padding: 3rem 1.5rem; background: #f8fafc; }
+    .thank-you-card { max-width: 540px; width: 100%; background: #fff; border-radius: 12px; box-shadow: 0 4px 24px rgba(1, 54, 108, 0.08); border: 1px solid #e5e7eb; padding: 2.5rem 2rem; text-align: center; }
+    .thank-you-badge { display: inline-block; background: rgba(1, 54, 108, 0.08); color: #01366c; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.35rem 0.9rem; border-radius: 999px; margin-bottom: 1.25rem; }
+    .thank-you-card h1 { font-size: 1.65rem; color: #01366c; margin: 0 0 0.75rem; line-height: 1.35; font-weight: 700; }
+    .thank-you-card .ty-lead { font-size: 1.05rem; color: #374151; margin: 0 0 1.5rem; line-height: 1.6; }
+    .thank-you-cta { display: inline-block; background: linear-gradient(180deg, #ffd54f 0%, #ffbf00 50%, #f5a623 100%); color: #01366c; font-weight: 800; padding: 0.95rem 1.6rem; border-radius: 10px; text-decoration: none; font-size: 1.1rem; box-shadow: 0 4px 0 #c99400, 0 6px 20px rgba(255,191,0,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .thank-you-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 0 #c99400, 0 10px 28px rgba(255,191,0,0.45); }
+    .ty-links { margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    .ty-links a { color: #01468a; font-weight: 600; text-decoration: none; }
+    .ty-links a:hover { text-decoration: underline; }
+    .ty-links span { color: #9ca3af; margin: 0 0.5rem; }
+    .ty-footer .footer__disclaimer { max-width: 800px; margin: 0 auto; }
+    .ty-footer .footer__disclaimer p { font-size: 0.85rem; color: rgba(255,255,255,0.88); line-height: 1.5; margin: 0 0 0.75rem; }
+    .ty-footer .footer__copyright { margin-top: 0.5rem; }
   </style>
 </head>
 <body class="home-ppc">
@@ -37,24 +48,33 @@
     </div>
   </header>
 
+  <nav class="ty-nav" aria-label="Thank you page links">
+    <div class="ty-nav-inner">
+      <a href="/">Home</a>
+      <a href="/#case-evaluation">Free Case Review</a>
+    </div>
+  </nav>
+
   <section class="thank-you-section">
     <div class="thank-you-card">
       <div class="thank-you-badge">Submission Received</div>
       <h1>Thank you — we received your request.</h1>
-      <p>Our legal team will contact you shortly. If you need immediate assistance, you can call now.</p>
+      <p class="ty-lead">Our legal team will contact you shortly. If you need immediate assistance, call now.</p>
       <a href="tel:844-467-4335" class="thank-you-cta" data-callrail-phone="844-467-4335">Call 844-467-4335</a>
-      <p style="margin-top: 2rem; font-size: 0.95rem;"><a href="/" style="color: #01468a; font-weight: 600;">Return to homepage</a> · <a href="/#case-evaluation" style="color: #01468a; font-weight: 600;">Free Case Review</a></p>
+      <div class="ty-links">
+        <a href="/">Return to homepage</a><span>·</span><a href="/#case-evaluation">Free Case Review</a>
+      </div>
     </div>
   </section>
 
-  <footer class="footer" id="footer">
+  <footer class="site-footer ty-footer" id="footer">
     <div class="container">
       <div class="footer__disclaimer">
         <p><strong>*</strong> Past verdicts and settlements obtained by attorneys at Insider Accident Lawyers and prior firms. Results vary; no guarantee of similar outcome.</p>
         <p>Attorney advertising. Prior results do not guarantee a similar outcome. This site does not provide legal advice.</p>
         <p>Countrywide Trial Lawyers A Professional Law Corporation DBA Insider Accident Lawyers. California Entity #4851715. 3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010. <a href="https://www.insideraccidentlawyers.com/privacy-policy">Privacy Policy</a></p>
         <p class="footer__copyright">© 2026 Insider Accident Lawyers. All Rights Reserved.</p>
-        <p style="font-size:12px;color:#666;text-align:center;margin-top:20px;line-height:1.4;">By texting 213-636-8571, you agree to receive messages from Insider Accident Lawyers. Message &amp; data rates may apply. Reply STOP to opt out.</p>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.75);text-align:center;margin-top:1rem;line-height:1.4;">By texting 213-636-8571, you agree to receive messages from Insider Accident Lawyers. Message &amp; data rates may apply. Reply STOP to opt out.</p>
       </div>
     </div>
   </footer>
