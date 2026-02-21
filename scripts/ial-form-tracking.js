@@ -62,7 +62,7 @@
 
       form.submit();
       return false;
-    }, false);
+    }, true);
   }
 
   if (document.readyState === 'loading') {
