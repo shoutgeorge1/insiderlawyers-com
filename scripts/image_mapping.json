@@ -1,0 +1,658 @@
+{
+  "images": [
+    {
+      "url": "https://www.insiderlawyers.com/",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/eae86759-a617-47e4-82d3-7687bbc2fab0.png",
+      "alt_text": "Modern Los Angeles law office with skyline view at golden hour.",
+      "suggested_filename": "insider-lawyers-home-los-angeles.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/adjuster-claim-valuation",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/8dec9a91-25cb-4d0c-ad4f-f7c04de19844.png",
+      "alt_text": "Professional reviewing insurance claim documents with calculator.",
+      "suggested_filename": "insurance-adjuster-claim-valuation.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/at-fault-driver-no-insurance",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/6120f6f0-16a5-4d22-a9e4-41cd37766962.png",
+      "alt_text": "Car pulled over on highway shoulder at twilight with hazard lights.",
+      "suggested_filename": "at-fault-driver-no-insurance-accident.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/attorney-referrals",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/260a2a2e-3336-4196-a761-2ffabd44634a.png",
+      "alt_text": "Two legal professionals shaking hands in a modern office.",
+      "suggested_filename": "attorney-referrals-partnership.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/brain-injury",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/ec13ce8e-e841-417d-bef7-9ac49be0b621.png",
+      "alt_text": "Medical professional reviewing brain MRI scan on digital screen.",
+      "suggested_filename": "brain-injury-mri-scan-review.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/california-car-accident-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/934d57ac-240e-4464-b1bc-1cc522946bfa.png",
+      "alt_text": "Luxury car driving on California highway at sunset.",
+      "suggested_filename": "california-car-accident-lawyer-highway.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/california-comparative-negligence-personal-injury",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/220a6a13-ad78-415e-b63c-15ad581d6a2b.png",
+      "alt_text": "Scales of justice on a wooden desk in natural light.",
+      "suggested_filename": "california-comparative-negligence-scales.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/can-i-sue-uninsured-driver-personally",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/9e4d7f30-8ca1-47f8-948d-d075e8987401.png",
+      "alt_text": "Person making a call near a car on a city street at dusk.",
+      "suggested_filename": "sue-uninsured-driver-personally.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/car-accident-lawyer-near-me-los-angeles",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/80a68cb7-12a9-47d3-9a06-3d34ffa89035.png",
+      "alt_text": "Busy downtown Los Angeles street scene with traffic at golden hour.",
+      "suggested_filename": "car-accident-lawyer-los-angeles-downtown.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/comparative-negligence-california-explained",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/9ebaecda-a2d4-4b61-95d1-6d443408122c.png",
+      "alt_text": "Lawyer explaining legal documents to a client in an office.",
+      "suggested_filename": "comparative-negligence-explained-lawyer.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/delayed-pain-after-car-accident",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/773af470-8662-4bf4-b314-645936ff8988.png",
+      "alt_text": "Person sitting on bed holding neck in discomfort, morning light.",
+      "suggested_filename": "delayed-pain-after-car-accident.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/demand-letter-negotiation",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/a4f2e1a4-0b0b-4164-ae04-3ff2df4c4854.png",
+      "alt_text": "Professionals negotiating with documents at a glass conference table.",
+      "suggested_filename": "demand-letter-negotiation-meeting.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/demand-letters-explained",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/06a23d6e-50f8-4082-9e3a-6266b1dfb531.png",
+      "alt_text": "Fountain pen resting on a legal document on a dark wood desk.",
+      "suggested_filename": "legal-demand-letter-preparation.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/does-filing-um-claim-raise-rates",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/d1cd54ce-c330-4e2e-8661-197084a8bf08.png",
+      "alt_text": "Insurance policy papers and spectacles on a desk.",
+      "suggested_filename": "insurance-claim-rates-review.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/do-i-need-police-report-accident",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/d2011607-6e63-49b9-9db5-40ca7d47e710.png",
+      "alt_text": "Police officer writing a report near a patrol car at twilight.",
+      "suggested_filename": "police-report-accident-scene.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/electric-scooter-ebike-accident-lawyer-los-angeles",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/cf7c2993-3e5b-497d-9b0f-338fe0e0ac0b.png",
+      "alt_text": "Electric scooter on a sidewalk in Santa Monica at sunset.",
+      "suggested_filename": "electric-scooter-accident-lawyer-santa-monica.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/evidence-preservation-car-accident-california",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/a8562808-caa5-4bea-b46c-4816f6e08921.png",
+      "alt_text": "Person using smartphone to photograph car damage for evidence.",
+      "suggested_filename": "evidence-preservation-accident-photos.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/herniated-disc-car-accident-settlement-california",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/ae7033ca-2c61-44ab-ac71-523336cf7b65.png",
+      "alt_text": "Anatomical spine model on a doctor's desk.",
+      "suggested_filename": "herniated-disc-spine-model-doctor.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/hit-and-run-accident-lawyer-los-angeles",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/7d95d9ae-afca-495a-88fe-704898da1af4.png",
+      "alt_text": "Car taillights disappearing down a dark street, noir style.",
+      "suggested_filename": "hit-and-run-accident-lawyer-night.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/hit-and-run-accidents-los-angeles",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/30d881da-1704-48d2-bb1a-69c6e666b4a1.png",
+      "alt_text": "Shattered safety glass on asphalt under street lamp at night.",
+      "suggested_filename": "hit-and-run-accident-evidence-glass.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/how-adjusters-value-claims",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/751264a9-8d8e-4f45-bb9e-8b46b99910a8.png",
+      "alt_text": "Close-up of a calculator and a red pen on a stack of insurance claim forms.",
+      "suggested_filename": "insurance-adjuster-claim-valuation-calculator.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/how-insurance-calculates-settlement-offers",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/db7dceeb-76fe-4377-bdaa-bc9224ad8221.png",
+      "alt_text": "Data charts and graphs on a tablet screen being reviewed by a professional.",
+      "suggested_filename": "insurance-settlement-calculation-tablet.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/how-long-does-a-car-accident-settlement-take-california",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/e835f13c-f064-4a37-b4a0-da2db3977b1e.png",
+      "alt_text": "A calendar on a wall with dates circled, sunlight casting shadows across it.",
+      "suggested_filename": "car-accident-settlement-timeline-calendar.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/how-much-is-my-car-accident-worth-california",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/0d268f8b-3a8f-49f3-9392-19392f51fd92.png",
+      "alt_text": "A balanced scale of justice with gold coins or weights on one side.",
+      "suggested_filename": "car-accident-claim-worth-scales.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/index.html",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/7f082136-fe90-4205-94ba-cb733a16c190.png",
+      "alt_text": "Cinematic wide shot of the Los Angeles skyline at dusk.",
+      "suggested_filename": "insider-lawyers-los-angeles-skyline-dusk.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/injuries-truck-accidents",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/966a8f5a-b339-4872-a913-88c98d84d0be.png",
+      "alt_text": "A large semi-truck driving on a highway, shot from a low angle.",
+      "suggested_filename": "truck-accident-injuries-semi-truck.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/insurance-company-playbook",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/8a870daf-a6d3-46bd-892d-670a23d2d688.png",
+      "alt_text": "A thick, bound book sitting on a boardroom table.",
+      "suggested_filename": "insurance-company-playbook-manual.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/insurance-company-tactics-personal-injury",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/c8261a6e-8cd2-454a-9b9f-e9f14daeb404.png",
+      "alt_text": "Two chess pieces (white and black) on a board, close up.",
+      "suggested_filename": "insurance-company-tactics-chess.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/legal/accessibility",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/12fef735-b9df-4fc3-bb2d-1c4406d60a52.png",
+      "alt_text": "Close up of a Braille sign or a wheelchair ramp access point.",
+      "suggested_filename": "legal-accessibility-braille-sign.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/legal/disclaimer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/548f2dcc-ca3f-4d73-8b88-f741f63e7085.png",
+      "alt_text": "A gavel resting on a closed law book.",
+      "suggested_filename": "legal-disclaimer-gavel-book.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/legal/results-disclaimer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/a27f997c-4065-4b93-b115-e92d08bbb984.png",
+      "alt_text": "A close-up of a fountain pen signing a document.",
+      "suggested_filename": "legal-results-disclaimer-signature.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/legal/terms",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/993a68aa-7454-42b6-9cac-00e2d34e3b20.png",
+      "alt_text": "A stack of legal books or files on a desk, with a pair of reading glasses on top.",
+      "suggested_filename": "legal-terms-books-glasses.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/lit-referral-brain-injury",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/908f43d6-3dd4-4130-821d-d65bbe2791bf.png",
+      "alt_text": "Two lawyers discussing a case in front of a digital screen displaying brain imaging.",
+      "suggested_filename": "litigation-referral-brain-injury-discussion.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/lit-referral-catastrophic-cases",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/7a584ddf-6b90-413b-9af2-9d2178a5978b.png",
+      "alt_text": "A serious discussion between two senior attorneys in a high-end office with a city view.",
+      "suggested_filename": "litigation-referral-catastrophic-cases-attorneys.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/lit-referral-core",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/97f129e9-1a58-4dbc-9e6c-55bfc9423272.png",
+      "alt_text": "A handshake between two professionals in suits, close up.",
+      "suggested_filename": "litigation-referral-core-partnership.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/lit-referral-coverage-disputes",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/292897bb-dc47-4ecf-a1d5-27d4c25812b5.png",
+      "alt_text": "A magnifying glass resting on an insurance policy document.",
+      "suggested_filename": "litigation-referral-coverage-disputes-review.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/lit-referral-criteria",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/7dc878d4-262e-4e1d-83ec-3e5f660399de.png",
+      "alt_text": "A checklist on a clipboard being checked off with a pen.",
+      "suggested_filename": "litigation-referral-criteria-checklist.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/lit-referral-economics",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/92e86151-e439-4e18-bfa7-4a825809723e.png",
+      "alt_text": "A calculator and financial charts on a desk.",
+      "suggested_filename": "litigation-referral-economics-finance.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/lit-referral-process",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/40c6cfa3-3b00-4527-9acf-a4dda435a255.png",
+      "alt_text": "A flowchart or diagram on a whiteboard being drawn by a hand with a marker.",
+      "suggested_filename": "litigation-referral-process-strategy.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/lit-referral-trial-ready-cocounsel",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/12189353-fd12-4fb2-8384-fb0c585dcae0.png",
+      "alt_text": "A lawyer standing in a courtroom, back to camera, facing the judge's bench.",
+      "suggested_filename": "litigation-referral-trial-ready-courtroom.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/lit-referral-truck-litigation",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/19582e95-0aa9-449d-a8c4-565e093d142d.png",
+      "alt_text": "A close-up of a truck tire tread on asphalt. Low angle.",
+      "suggested_filename": "litigation-referral-truck-litigation-tire.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/lit-referral-wrongful-death",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/50373639-6da2-4f24-b869-5621f24d35d2.png",
+      "alt_text": "A single white rose on a polished dark table. Soft, respectful lighting.",
+      "suggested_filename": "litigation-referral-wrongful-death-rose.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-auto-accident-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/3ec49934-84ba-4e64-8ff7-86f0d965227d.png",
+      "alt_text": "A busy Los Angeles freeway interchange at night, long exposure car light trails.",
+      "suggested_filename": "los-angeles-auto-accident-freeway-night.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-bicycle-accident-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/5660da21-4a78-4ea1-9b45-e22035bb9ab8.png",
+      "alt_text": "A bicycle helmet resting on a park bench. Blurred city background.",
+      "suggested_filename": "los-angeles-bicycle-accident-helmet.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-brain-injury-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/2f841a41-82dc-4a4d-96d4-db17fd29356c.png",
+      "alt_text": "Abstract artistic representation of neural networks or brain synapses.",
+      "suggested_filename": "los-angeles-brain-injury-neural-network.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-car-accident-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/ec0c0ab8-c8a8-4de6-a993-91b85117e9fd.png",
+      "alt_text": "A car key and a legal business card on a dashboard.",
+      "suggested_filename": "los-angeles-car-accident-lawyer-dashboard.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-car-crash-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/8e8ec5ca-b1e7-43fd-ad67-765a56aaed99.png",
+      "alt_text": "Reflections of red and blue emergency lights on a wet car hood.",
+      "suggested_filename": "los-angeles-car-crash-emergency-lights.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-catastrophic-injury-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/c17144e7-6663-4867-805b-69558950ab6f.png",
+      "alt_text": "A pair of crutches leaning against a modern office wall.",
+      "suggested_filename": "los-angeles-catastrophic-injury-crutches.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-motorcycle-accident-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/ead298e3-6855-40ff-8def-a40112c77bf9.png",
+      "alt_text": "A motorcycle leather jacket draped over a chair. Helmet nearby.",
+      "suggested_filename": "los-angeles-motorcycle-accident-gear.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-pedestrian-accident-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/df7e2bd7-c26c-4954-ad63-3b3302245d54.png",
+      "alt_text": "A crosswalk signal showing the 'Walk' icon (white figure). City street background.",
+      "suggested_filename": "los-angeles-pedestrian-accident-crosswalk.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-premises-liability-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/cda1cf6c-f073-4398-9e44-1707ee912891.png",
+      "alt_text": "A 'Caution: Wet Floor' sign on a polished marble floor in a lobby.",
+      "suggested_filename": "los-angeles-premises-liability-wet-floor.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-product-liability-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/b42a1b89-0a72-4cb4-a2d4-d3490f03a6c6.png",
+      "alt_text": "A generic electronic device with smoke or sparks on a table.",
+      "suggested_filename": "los-angeles-product-liability-defective-device.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-slip-and-fall-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/375eb92b-59af-4716-9a15-4831f607cab7.png",
+      "alt_text": "A close-up of a cracked uneven sidewalk pavement.",
+      "suggested_filename": "los-angeles-slip-and-fall-sidewalk.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-spine-injury-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/1520a446-9f4c-48d3-9b18-4f21a1c69635.png",
+      "alt_text": "A 3D medical rendering of a human spine on a tablet screen held by a doctor.",
+      "suggested_filename": "los-angeles-spine-injury-medical-tablet.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-truck-accident-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/eccc0dd8-f74f-40ab-bc67-78600bb35d86.png",
+      "alt_text": "The front grille of a large semi-truck, filling the frame.",
+      "suggested_filename": "los-angeles-truck-accident-semi-grille.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-uber-lyft-accident-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/88379e22-9e84-4f83-b90e-1b0df077e6cb.png",
+      "alt_text": "A smartphone mounted on a car dashboard showing a ride-share map app.",
+      "suggested_filename": "los-angeles-uber-lyft-accident-app.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/los-angeles-wrongful-death-lawyer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/49ff6ca8-c29e-4be2-bf25-8411237455f0.png",
+      "alt_text": "A folded American flag or a solemn legal document on a dark wood desk.",
+      "suggested_filename": "los-angeles-wrongful-death-legal-desk.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/lowball-offer-response",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/5a50e2cf-1a27-46d2-8743-b886048d345b.png",
+      "alt_text": "A hand crumpling a piece of paper (symbolizing a low offer) or pushing it away.",
+      "suggested_filename": "lowball-offer-response-rejection.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/major-car-accident",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/611f458c-a346-4a64-adfc-6a209e70b63c.png",
+      "alt_text": "Wide shot of a highway traffic jam with emergency lights in the far distance.",
+      "suggested_filename": "major-car-accident-traffic-jam.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/motorcycle-accident-case",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/dd765347-87d8-4f05-90f3-1c890cdbba46.png",
+      "alt_text": "A motorcycle helmet with scratches on it, resting on a table.",
+      "suggested_filename": "motorcycle-accident-case-helmet.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/parking-lot-accident-lawyer-los-angeles",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/b0e493ac-64c9-4358-83b8-e165754ed340.png",
+      "alt_text": "A wide shot of a parking lot at dusk, with shopping carts and parked cars.",
+      "suggested_filename": "parking-lot-accident-lawyer-dusk.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/passenger-in-uninsured-car",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/8db6846c-fade-45f9-a2dd-8d67d4f17de7.png",
+      "alt_text": "View from the passenger seat of a car, looking out the side window at a blurred city street.",
+      "suggested_filename": "passenger-in-uninsured-car-rain.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/pedestrian-accident-lawyer-los-angeles",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/47d8fc43-6a8f-4e8a-8610-13e39eee230c.png",
+      "alt_text": "A pair of sneakers lying on the asphalt near a crosswalk line.",
+      "suggested_filename": "pedestrian-accident-lawyer-sneakers.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/pedestrian-right-of-way",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/c4432f32-0196-416a-8b1f-700fa998cb2a.png",
+      "alt_text": "A 'Yield to Pedestrians' road sign, close up.",
+      "suggested_filename": "pedestrian-right-of-way-sign.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/b539af81-17b4-4be1-bb7b-eca1f41f0ac3.png",
+      "alt_text": "A clean, modern medical waiting room with comfortable chairs and a plant.",
+      "suggested_filename": "personal-injury-medical-waiting-room.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/animal-attacks",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/671aab42-542a-4025-a57b-695d81c13d93.png",
+      "alt_text": "A 'Beware of Dog' sign on a wooden fence.",
+      "suggested_filename": "personal-injury-animal-attacks-sign.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/auto-accidents",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/aefe4790-7eff-4e99-9e68-6cc786dbc0e3.png",
+      "alt_text": "Abstract blur of car headlights and taillights on a highway at night.",
+      "suggested_filename": "personal-injury-auto-accidents-blur.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/bicycle-accidents",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/9506d676-6cf5-46a1-a7c9-ed69b64eb165.png",
+      "alt_text": "A bicycle wheel rim, slightly bent, leaning against a wall.",
+      "suggested_filename": "personal-injury-bicycle-accidents-wheel.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/brain-injuries",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/d42d4eb5-0500-494c-9f38-d775399e0a28.png",
+      "alt_text": "A human head silhouette with glowing connections inside, representing the brain.",
+      "suggested_filename": "personal-injury-brain-injuries-illustration.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/catastrophic-injuries",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/a6f7f347-4f0c-433d-8cd7-5efeaf802e9e.png",
+      "alt_text": "A hospital bed with modern monitoring equipment, empty and made up.",
+      "suggested_filename": "personal-injury-catastrophic-injuries-hospital-bed.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/motorcycle-accidents",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/061c7309-9009-4f2d-bda9-599972aba25b.png",
+      "alt_text": "A motorcycle glove resting on a fuel tank. Chrome details. Sunset reflection.",
+      "suggested_filename": "personal-injury-motorcycle-accidents-glove.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/pedestrian-accidents",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/f9d16dae-0ff1-4479-92b0-a11ad55be7dc.png",
+      "alt_text": "A blurred motion shot of feet walking on a crosswalk. Urban street level.",
+      "suggested_filename": "personal-injury-pedestrian-accidents-walking.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/premises-liability",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/5d571114-9eda-4275-9890-22139dfc2fb2.png",
+      "alt_text": "A broken stair step or uneven flooring detail. Close up. Hazard theme.",
+      "suggested_filename": "personal-injury-premises-liability-hazard.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/product-liability",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/051881de-9a20-4ea2-be40-0704c93397ee.png",
+      "alt_text": "A recall notice letter on a table next to a generic product box.",
+      "suggested_filename": "personal-injury-product-liability-recall.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/slip-and-fall",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/a8bae82a-8e99-4480-8659-21b39865b9f3.png",
+      "alt_text": "A wet floor surface with a reflection of a window. Abstract, moody.",
+      "suggested_filename": "personal-injury-slip-and-fall-wet-floor.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/spine-injuries",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/d02c2534-091d-4564-8a12-8fd79f309870.png",
+      "alt_text": "An X-ray film of a spine held up against a light box. Medical blue tones.",
+      "suggested_filename": "personal-injury-spine-injuries-xray.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/truck-accidents",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/8fb51269-d0c8-444f-b677-6835902188bc.png",
+      "alt_text": "A view from a car side mirror showing a large truck behind. Perspective of a driver.",
+      "suggested_filename": "personal-injury-truck-accidents-mirror-view.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/truck-accidents/fmcsa-hours-of-service",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/528f5c7b-d21e-420f-a5ba-a5f60c595d64.png",
+      "alt_text": "A truck driver's logbook and a cup of coffee on a dashboard.",
+      "suggested_filename": "truck-accidents-fmcsa-logbook.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/truck-accidents/truck-accident-evidence",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/0a37cea4-a5cb-438a-bbab-601f2d575964.png",
+      "alt_text": "A tire skid mark on asphalt measured by a ruler or tape measure.",
+      "suggested_filename": "truck-accident-evidence-skid-marks.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/truck-accidents/truck-accident-liability",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/67c55fa2-5e5e-49c2-9bb4-045d9f594bba.png",
+      "alt_text": "A gavel resting on a toy truck or a document with a truck diagram.",
+      "suggested_filename": "truck-accident-liability-gavel.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury/wrongful-death",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/d6260bec-62be-4177-a13f-fb44afa6a55a.png",
+      "alt_text": "A framed photo (blurred) with a black ribbon on a mantelpiece. Candlelight.",
+      "suggested_filename": "personal-injury-wrongful-death-memorial.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury-claim-process-california",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/2c4e3f23-bf05-4c65-9e4a-bdeb226f42e8.png",
+      "alt_text": "A flowchart of steps (abstract) on a glass wall in a modern office.",
+      "suggested_filename": "personal-injury-claim-process-flowchart.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/personal-injury-court",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/ef63f411-ea3f-4b0a-860f-5bf913ab17bf.png",
+      "alt_text": "The exterior of a Los Angeles courthouse building. Low angle, imposing architecture.",
+      "suggested_filename": "personal-injury-court-building.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/post-dog-bite",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/e20579e9-d850-481e-a2c6-231875407ecf.png",
+      "alt_text": "A first aid kit open on a table with bandages. Clean, medical context.",
+      "suggested_filename": "post-dog-bite-first-aid.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/proving-claim-value",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/106d1561-cfb4-4075-92b3-3195eb4926d7.png",
+      "alt_text": "A magnifying glass over a financial spreadsheet or check. Focus on the numbers.",
+      "suggested_filename": "proving-claim-value-analysis.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/proving-truck-accident-case",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/33e7b9fc-bdb0-463b-9c5d-e9b587d662c4.png",
+      "alt_text": "A digital tablet showing a 3D reconstruction of a truck accident.",
+      "suggested_filename": "proving-truck-accident-case-reconstruction.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/rear-end-accident-lawyer-los-angeles",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/bbd2b1cb-b571-43e0-980f-baec88fe5b0d.png",
+      "alt_text": "A close-up of a car bumper with a dent. Realistic texture.",
+      "suggested_filename": "rear-end-accident-bumper-damage.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/recorded-statement-should-you-give-one",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/381576aa-6360-4aea-b26b-f123a1c2e0ce.png",
+      "alt_text": "A digital voice recorder on a desk with the red 'recording' light on.",
+      "suggested_filename": "recorded-statement-voice-recorder.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/recover-destroyed-scooter-ebike",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/0d02077e-02c0-4668-b6f3-1efdd4e4fbbc.png",
+      "alt_text": "A damaged electric scooter leaning against a wall in a repair shop or garage.",
+      "suggested_filename": "recover-destroyed-scooter-repair.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/scooter-accident-driver-fled",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/b3ba68e4-97ab-4e11-a8d4-17f6ccb0a4cb.png",
+      "alt_text": "A blurred motion shot of a car driving away from a scooter lying on the ground.",
+      "suggested_filename": "scooter-accident-hit-and-run-fleeing.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/scooter-accident-no-license-plate",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/56d9af1a-1cfa-44e6-a185-8e4205b50951.png",
+      "alt_text": "A close-up of the back of a car with no license plate.",
+      "suggested_filename": "scooter-accident-no-license-plate.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/should-i-accept-insurance-first-offer",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/31ba4e58-dedb-4f46-9875-6c4f7b989049.png",
+      "alt_text": "A hand holding a check, hesitating. Background is a blurred insurance document.",
+      "suggested_filename": "insurance-settlement-offer-check-hesitation.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/soft-tissue-injury-settlement-california",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/412179f7-4aa6-4909-b565-096d51ccbba9.png",
+      "alt_text": "A person holding their shoulder or neck in a doctor's office.",
+      "suggested_filename": "soft-tissue-injury-medical-exam.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/spinal-fusion-surgery-car-accident-settlement-california",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/86396ffb-b6c1-4f3d-97e0-6ef43e279c39.png",
+      "alt_text": "A medical X-ray showing spinal hardware (screws/rods).",
+      "suggested_filename": "spinal-fusion-surgery-xray-hardware.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/t-bone-accident-lawyer-los-angeles",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/da90c1bc-db4d-4198-b7f8-f8c2c65df33d.png",
+      "alt_text": "A T-bone intersection accident scene (no people). Broken glass and skid marks.",
+      "suggested_filename": "t-bone-accident-intersection-scene.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/traumatic-brain-injury-car-accident-settlement-california",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/d998f79d-ee72-4b26-b1b2-07744b8c2c63.png",
+      "alt_text": "A silhouette of a head with a highlighted brain area on a medical screen.",
+      "suggested_filename": "traumatic-brain-injury-medical-scan.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/truck-accident-legal-rights",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/bd543c5b-d75b-44e3-960d-81bad276b000.png",
+      "alt_text": "A gavel resting on a thick book labeled 'Transportation Law'.",
+      "suggested_filename": "truck-accident-legal-rights-gavel.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/uber-accident-lawyer-los-angeles",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/31ba4451-aa06-4dcb-b945-2454b1ec7b62.png",
+      "alt_text": "A smartphone with a ride-share app open, resting on a legal file.",
+      "suggested_filename": "uber-accident-lawyer-app-file.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/uber-or-lyft-accident",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/c9b23bdf-a8de-478f-9278-6969c0b1ed9c.png",
+      "alt_text": "Two cars at an accident scene, one with a trade dress sticker in the window.",
+      "suggested_filename": "uber-lyft-accident-scene-night.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/underinsured-motorist-claims-explained",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/b242120a-ae25-4a98-9251-876a100aca33.png",
+      "alt_text": "A pie chart or graph on a tablet showing insurance coverage limits.",
+      "suggested_filename": "underinsured-motorist-claims-explained-chart.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/uninsured-driver-accident-lawyer-los-angeles",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/47f6db4d-fae5-4977-8d26-9c9d61921655.png",
+      "alt_text": "A driver looking frustrated at their phone next to a car with a dent.",
+      "suggested_filename": "uninsured-driver-accident-frustration.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/uninsured-motorist-claims-california",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/2925a3d5-cc4d-4557-b3a0-a28603b8dc8f.png",
+      "alt_text": "A California license plate (blurred) on a car bumper.",
+      "suggested_filename": "uninsured-motorist-claims-california-plate.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/what-if-i-cant-afford-deductible",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/c2104065-eb55-44e6-86bb-2a620c3f932e.png",
+      "alt_text": "A wallet open on a table with a few bills and a credit card.",
+      "suggested_filename": "cant-afford-deductible-wallet.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/what-if-liability-disputed",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/b327ef45-1375-4ab7-aa19-fc1c10fe8d75.png",
+      "alt_text": "Two toy cars colliding on a desk with a magnifying glass over the impact point.",
+      "suggested_filename": "liability-disputed-investigation.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/what-is-uninsured-motorist-coverage",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/57a7b961-1bc9-40e3-b433-dab3f2eac824.png",
+      "alt_text": "An insurance policy document with the words 'Uninsured Motorist' highlighted.",
+      "suggested_filename": "uninsured-motorist-coverage-policy.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/what-to-do-after-car-accident-california",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/a1e579e2-e1b5-41a2-ba07-691bd95c9a48.png",
+      "alt_text": "A checklist on a clipboard with a car key and a pen.",
+      "suggested_filename": "what-to-do-after-car-accident-checklist.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/when-should-i-call-lawyer-accident",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/958d1937-d1ef-4354-9277-14d8469599b0.png",
+      "alt_text": "A hand holding a smartphone with a 'Call' icon on screen.",
+      "suggested_filename": "call-lawyer-accident-smartphone.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/who-is-liable-scooter-accident",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/45ea51c5-da24-4cb9-857d-ff36d8c1d891.png",
+      "alt_text": "An electric scooter fallen on a sidewalk crack.",
+      "suggested_filename": "scooter-accident-liability-hazard.jpg"
+    },
+    {
+      "url": "https://www.insiderlawyers.com/why-insurance-delays-claims",
+      "local_path": "C:\\Users\\georgea\\.cursor\\projects\\c-Users-georgea-insiderlawyer-com-images/assets/d43afc7f-b2cc-40c2-95a1-1f84feebf93a.png",
+      "alt_text": "An hourglass with sand running out on a desk next to a stack of files.",
+      "suggested_filename": "insurance-claim-delay-hourglass.jpg"
+    }
+  ]
+}

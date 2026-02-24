@@ -1819,3 +1819,20 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
     padding-bottom: 5rem;
   }
 }
+
+/* Content / page hero images (article and silo pages) */
+.content-hero-img,
+.page-hero-img,
+.silo-hero-img {
+  margin: 24px 0 32px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(1, 54, 108, 0.12);
+}
+.content-hero-img img,
+.page-hero-img img,
+.silo-hero-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
