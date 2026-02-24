@@ -177,6 +177,14 @@
     {"source": "/los-angeles-product-liability-lawyer", "destination": "/los-angeles-product-liability-lawyer/index.html"},
     {"source": "/los-angeles-product-liability-lawyer/", "destination": "/los-angeles-product-liability-lawyer/index.html"},
     {"source": "/los-angeles-uber-lyft-accident-lawyer", "destination": "/los-angeles-uber-lyft-accident-lawyer/index.html"},
-    {"source": "/los-angeles-uber-lyft-accident-lawyer/", "destination": "/los-angeles-uber-lyft-accident-lawyer/index.html"}
+    {"source": "/los-angeles-uber-lyft-accident-lawyer/", "destination": "/los-angeles-uber-lyft-accident-lawyer/index.html"},
+    {"source": "/motor-vehicle", "destination": "/motor-vehicle/index.html"},
+    {"source": "/motor-vehicle/", "destination": "/motor-vehicle/index.html"},
+    {"source": "/motor-vehicle/bus-accident-lawyer-los-angeles", "destination": "/motor-vehicle/bus-accident-lawyer-los-angeles/index.html"},
+    {"source": "/motor-vehicle/bus-accident-lawyer-los-angeles/", "destination": "/motor-vehicle/bus-accident-lawyer-los-angeles/index.html"},
+    {"source": "/premises-liability", "destination": "/premises-liability/index.html"},
+    {"source": "/premises-liability/", "destination": "/premises-liability/index.html"},
+    {"source": "/premises-liability/negligent-security-lawyer-los-angeles", "destination": "/premises-liability/negligent-security-lawyer-los-angeles/index.html"},
+    {"source": "/premises-liability/negligent-security-lawyer-los-angeles/", "destination": "/premises-liability/negligent-security-lawyer-los-angeles/index.html"}
   ]
 }

@@ -1,7 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/los-angeles-car-accident", "destination": "https://pi-search-caraccident-lp.vercel.app" },
-    { "source": "/los-angeles-car-accident/", "destination": "https://pi-search-caraccident-lp.vercel.app/" },
-    { "source": "/los-angeles-car-accident/:path*", "destination": "https://pi-search-caraccident-lp.vercel.app/:path*" }
-  ]
-}
