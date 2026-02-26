@@ -1804,9 +1804,13 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
 }
 @media (min-width: 901px) {
   .header-nav-wrap .nav-link {
-    font-size: 0.72rem;
-    padding: 6px 10px;
-    min-height: 34px;
+    font-size: 0.68rem;
+    padding: 5px 8px;
+    min-height: 32px;
+  }
+  .header-nav-row {
+    gap: 4px;
+    padding: 5px 0;
   }
 }
 .header-nav-wrap .nav-link--dropdown {
