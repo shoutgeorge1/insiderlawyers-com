@@ -11,20 +11,37 @@
         mobileMenuToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
       });
     }
-    var dropdownToggles = document.querySelectorAll('.header-nav-row .nav-link--dropdown');
+    var dropdownToggles = document.querySelectorAll('.header-nav-row .nav-link--dropdown, #primary-nav .nav-link--dropdown');
     dropdownToggles.forEach(function(toggle) {
       toggle.setAttribute('role', 'button');
       toggle.setAttribute('tabindex', '0');
       toggle.setAttribute('aria-expanded', 'false');
-      function handleToggle() {
+      function handleToggle(e) {
         if (window.innerWidth > 900) return;
         var parentItem = toggle.closest('.nav-item');
         if (!parentItem) return;
         var willOpen = !parentItem.classList.contains('is-open');
         parentItem.classList.toggle('is-open', willOpen);
         toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
       }
-      toggle.addEventListener('click', handleToggle);
+      toggle.addEventListener('click', function(e) {
+        if (toggle._touched) {
+          toggle._touched = false;
+          e.preventDefault();
+          e.stopPropagation();
+          return;
+        }
+        handleToggle(e);
+      });
+      toggle.addEventListener('touchend', function(e) {
+        if (window.innerWidth > 900) return;
+        toggle._touched = true;
+        handleToggle(e);
+      }, { passive: false });
       toggle.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();

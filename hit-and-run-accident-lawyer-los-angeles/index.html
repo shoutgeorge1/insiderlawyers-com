@@ -210,6 +210,7 @@
     </style>
 
 <link rel="stylesheet" href="/styles/footer.css">
+<script src="/scripts/site-nav.js?v=2" defer></script>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8XT5FC" height="0" width="0" style="display:none"></iframe></noscript>
@@ -237,38 +238,6 @@
             window.dataLayer.push({ event: 'scroll_90' });
           }
         }, { passive: true });
-        document.body.addEventListener('click', function(e) {
-          var btn = e.target && e.target.closest && e.target.closest('.mobile-menu-toggle');
-          if (!btn) return;
-          var nw = document.getElementById('header-nav-wrap');
-          if (!nw) return;
-          e.preventDefault();
-          e.stopPropagation();
-          var willOpen = !nw.classList.contains('is-open');
-          nw.classList.toggle('is-open', willOpen);
-          btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-        });
-        var dropdownToggles = document.querySelectorAll('.header-nav-row .nav-link--dropdown');
-        dropdownToggles.forEach(function(toggle) {
-          toggle.setAttribute('role', 'button');
-          toggle.setAttribute('tabindex', '0');
-          toggle.setAttribute('aria-expanded', 'false');
-          function handleToggle() {
-            if (window.innerWidth > 900) return;
-            var parentItem = toggle.closest('.nav-item');
-            if (!parentItem) return;
-            var willOpen = !parentItem.classList.contains('is-open');
-            parentItem.classList.toggle('is-open', willOpen);
-            toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-          }
-          toggle.addEventListener('click', handleToggle);
-          toggle.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              handleToggle();
-            }
-          });
-        });
         var header = document.querySelector('.sticky-header');
         var lastScrollY = 0;
         var scrollThreshold = 80;
@@ -312,10 +281,10 @@
             <div id="header-nav-wrap" class="header-nav-wrap">
             <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
             <nav class="header-nav-row" id="primary-nav" aria-label="Primary">
-                <a class="nav-link nav-link--primary" href="/#case-evaluation">Free Case Review</a>
+                <a class="nav-link nav-link--primary" href="/#case-evaluation">Case Review</a>
                 <a class="nav-link" href="/">Home</a>
                 <div class="nav-item">
-                    <span class="nav-link nav-link--dropdown">For Victims — After an Accident</span>
+                    <span class="nav-link nav-link--dropdown">After Accident</span>
                     <div class="nav-dropdown">
                         <a href="/what-to-do-after-car-accident-california">What To Do After a Car Accident</a>
                         <a href="/do-i-need-police-report-accident">Do I Need a Police Report?</a>
@@ -338,7 +307,7 @@
                     </div>
                 </div>
                 <div class="nav-item">
-                    <span class="nav-link nav-link--dropdown">For Victims — Insurance &amp; Claims</span>
+                    <span class="nav-link nav-link--dropdown">Insurance &amp; Claims</span>
                     <div class="nav-dropdown">
                         <a href="/insurance-company-playbook">Insurance Company Playbook</a>
                         <a href="/insurance-company-tactics-personal-injury">Insurance Company Tactics</a>
@@ -402,7 +371,7 @@
                     </div>
                 </div>
                 <div class="nav-item">
-                    <span class="nav-link nav-link--dropdown">Referrals &amp; Firm</span>
+                    <span class="nav-link nav-link--dropdown">Referrals</span>
                     <div class="nav-dropdown">
                         <a href="/attorney-referrals">Attorney Referrals</a>
                         <a href="/lit-referral-core">Litigation Referral Core</a>
@@ -428,7 +397,7 @@
                     </div>
                 </div>
                 <div class="nav-item">
-                    <span class="nav-link nav-link--dropdown">LA Lawyer by Accident Type</span>
+                    <span class="nav-link nav-link--dropdown">LA by Accident Type</span>
                     <div class="nav-dropdown">
                         <a href="/motor-vehicle">Motor Vehicle (LA)</a>
                         <a href="/premises-liability">Premises Liability (LA)</a>
