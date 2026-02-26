@@ -126,6 +126,8 @@
     {"source": "/motorcycle-accident-case/", "destination": "/motorcycle-accident-case/index.html"},
     {"source": "/attorney-referrals", "destination": "/attorney-referrals/index.html"},
     {"source": "/attorney-referrals/", "destination": "/attorney-referrals/index.html"},
+    {"source": "/settlements", "destination": "/settlements/index.html"},
+    {"source": "/settlements/", "destination": "/settlements/index.html"},
     {"source": "/lit-referral-core", "destination": "/lit-referral-core/index.html"},
     {"source": "/lit-referral-core/", "destination": "/lit-referral-core/index.html"},
     {"source": "/lit-referral-process", "destination": "/lit-referral-process/index.html"},
