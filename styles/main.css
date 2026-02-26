@@ -230,12 +230,11 @@
     background: linear-gradient(180deg, #fff 0%, #f8fafd 100%) !important;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
   }
-  /* Header stays in place on mobile - no scroll-hide (fixes flow interruption) */
   .header.header--hidden,
   .sticky-header.header--hidden {
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
   }
   .header .mid-container {
     flex-direction: column;
@@ -1941,15 +1940,4 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   width: 100%;
   height: auto;
   display: block;
-}
-
-/* Mobile: header stays in place site-wide (no scroll-hide) */
-@media (max-width: 767px) {
-  .header.header--hidden,
-  .sticky-header.header--hidden {
-    transform: none !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    visibility: visible !important;
-  }
 }

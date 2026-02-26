@@ -319,6 +319,28 @@
             if (typeof dataLayer !== 'undefined') dataLayer.push({ 'event': 'scroll_90' });
           }
         }, { passive: true });
+        var header = document.getElementById('header');
+        var lastScrollY = 0;
+        var scrollThreshold = 80;
+        if (header) {
+          window.addEventListener('scroll', function() {
+            if (window.innerWidth > 767) {
+              header.classList.remove('header--hidden');
+              return;
+            }
+            var currentScrollY = window.scrollY;
+            if (currentScrollY > scrollThreshold) {
+              if (currentScrollY > lastScrollY) {
+                header.classList.add('header--hidden');
+              } else {
+                header.classList.remove('header--hidden');
+              }
+            } else {
+              header.classList.remove('header--hidden');
+            }
+            lastScrollY = currentScrollY;
+          }, { passive: true });
+        }
       });
     });
   </script>
