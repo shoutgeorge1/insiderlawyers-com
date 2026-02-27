@@ -1479,6 +1479,14 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+.site-footer .footer-section--prominent {
+  border-color: rgba(251, 186, 0, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+}
+.site-footer .footer-section--prominent h3 {
+  font-size: 1rem;
+  color: #fbba00;
+}
 .site-footer .footer-section ul {
   list-style: none;
   padding: 0;
