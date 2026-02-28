@@ -807,9 +807,71 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Content section - California Personal Injury Lawyers header */
+/* Content section - California Personal Injury Lawyers header + silo/inner pages */
 .content-section {
   background: #fff;
+  padding: 2rem 0 3rem;
+}
+.content-section .container {
+  padding: 0 24px;
+}
+.content-section .lead-text {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #374151;
+  margin-bottom: 1.25rem;
+}
+.content-section .content-body h2 {
+  font-size: 1.35rem;
+  margin: 1.75rem 0 0.75rem;
+  color: #01366c;
+}
+.content-section .content-body p {
+  margin-bottom: 1rem;
+  line-height: 1.65;
+}
+.content-section .silo-list {
+  list-style: none;
+  padding-left: 0;
+}
+.content-section .silo-list li {
+  margin: 0.6rem 0;
+}
+.content-section .silo-list a {
+  color: #01468a;
+  font-weight: 600;
+  text-decoration: none;
+}
+.content-section .silo-list a:hover {
+  text-decoration: underline;
+}
+.content-section .silo-cta .btn-primary,
+.content-section .silo-cta .btn-secondary {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 0.75rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.content-section .silo-cta .btn-primary {
+  background: linear-gradient(180deg, #ffd54f 0%, #ffbf00 50%, #f5a623 100%);
+  color: #01366c;
+  box-shadow: 0 4px 0 #c99400, 0 6px 20px rgba(255, 191, 0, 0.35);
+}
+.content-section .silo-cta .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #c99400, 0 10px 28px rgba(255, 191, 0, 0.45);
+}
+.content-section .silo-cta .btn-secondary {
+  background: #fff;
+  color: #01366c;
+  border: 2px solid #01366c;
+}
+.content-section .silo-cta .btn-secondary:hover {
+  background: #f0f6fc;
 }
 .head-group {
   margin: 0;
