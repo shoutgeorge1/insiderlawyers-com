@@ -85,8 +85,20 @@ def process_file(path):
         )
 
     # 3) Fix scroll script
+    NEW_SCROLL_INNER = "var header=document.getElementById('header');var navWrap=document.getElementById('header-nav-wrap');var ly=0;function setHeaderHidden(hidden){if(header)header.classList.toggle('header--hidden',hidden);if(navWrap)navWrap.classList.toggle('header--hidden',hidden);}(header||navWrap)&&window.addEventListener('scroll',function(){if(window.innerWidth>767){setHeaderHidden(false);return;}var y=window.scrollY;if(y>80)setHeaderHidden(y>ly);else setHeaderHidden(false);ly=y;},{passive:true});"
+
     content = content.replace(SCROLL_SCRIPT_OLD, SCROLL_SCRIPT_NEW)
-    # Toggle header--hidden on both header and navWrap
+    # Multi-line Type B: var header = document.querySelector('.sticky-header'); ... if (header) { window.addEventListener('scroll', ...); }
+    content = re.sub(
+        r"var\s+header\s*=\s*document\.querySelector\s*\(\s*['\"]\.sticky-header['\"]\s*\)\s*;"
+        r"[\s\S]*?"
+        r"\},\s*\{\s*passive:\s*true\s*\}\s*\)\s*;\s*\n\s*\}\s*",
+        NEW_SCROLL_INNER + " ",
+        content,
+        count=1,
+        flags=re.DOTALL,
+    )
+    # Toggle header--hidden on both header and navWrap (Type A minified)
     content = re.sub(
         r"if\s*\(\s*h\s*\)\s*\{[^}]*window\.addEventListener\s*\(\s*['\"]scroll['\"]\s*,\s*function\s*\(\)\s*\{[^}]*h\.classList\.(add|remove)\s*\(\s*['\"]header--hidden['\"]\s*\)",
         "function setHeaderHidden(hidden){if(header)header.classList.toggle('header--hidden',hidden);if(navWrap)navWrap.classList.toggle('header--hidden',hidden);}(header||navWrap)&&window.addEventListener('scroll',function(){if(window.innerWidth>767){setHeaderHidden(false);return;}var y=window.scrollY;if(y>80)setHeaderHidden(y>ly);else setHeaderHidden(false);ly=y;},{passive:true});",
@@ -97,16 +109,41 @@ def process_file(path):
     # Fix remaining h.classList in that script block (simplify: replace "if(h)" block with our version)
     content = re.sub(
         r"var\s+ly\s*=\s*0\s*;[^;]*;\s*if\s*\(\s*h\s*\)\s*\{[^}]*\}\s*\}\s*\}\)",
-        "var ly=0;function setHeaderHidden(hidden){if(header)header.classList.toggle('header--hidden',hidden);if(navWrap)navWrap.classList.toggle('header--hidden',hidden);}(header||navWrap)&&window.addEventListener('scroll',function(){if(window.innerWidth>767){setHeaderHidden(false);return;}var y=window.scrollY;if(y>80)setHeaderHidden(y>ly);else setHeaderHidden(false);ly=y;},{passive:true});",
+        "var ly=0;" + NEW_SCROLL_INNER,
         content,
         count=1,
         flags=re.DOTALL,
     )
-    # If we still have h. in scroll handler, replace h with header (fallback)
-    if 'var h=' in content or "querySelector('.sticky-header')" in content:
-        content = content.replace("querySelector('.sticky-header')", "getElementById('header')")
-        content = re.sub(r'\bh\.classList\.(add|remove)\(\s*[\'"]header--hidden[\'"]\s*\)', r"header.classList.\1('header--hidden');if(navWrap)navWrap.classList.\1('header--hidden')", content)
-        content = re.sub(r'\bif\s*\(\s*h\s*\)', 'if(header||navWrap)', content)
+    # Fallback: replace querySelector with getElementById and add navWrap; make scroll toggle both
+    if "querySelector('.sticky-header')" in content or 'querySelector(".sticky-header")' in content:
+        content = content.replace("document.querySelector('.sticky-header')", "document.getElementById('header')")
+        content = content.replace('document.querySelector(".sticky-header")', 'document.getElementById("header")')
+        # Add navWrap after the header variable (same script block)
+        content = re.sub(
+            r"(var\s+header\s*=\s*document\.getElementById\s*\(\s*['\"]header['\"]\s*\)\s*;)\s*",
+            r"\1 var navWrap=document.getElementById('header-nav-wrap'); ",
+            content,
+            count=1,
+        )
+        content = re.sub(
+            r"(var\s+h\s*=\s*document\.getElementById\s*\(\s*['\"]header['\"]\s*\)\s*;)\s*",
+            r"\1 var navWrap=document.getElementById('header-nav-wrap'); ",
+            content,
+            count=1,
+        )
+        # Toggle both header and navWrap on scroll (header.classList -> both)
+        content = re.sub(
+            r"header\.classList\.(add|remove)\s*\(\s*['\"]header--hidden['\"]\s*\)\s*;",
+            r"header.classList.\1('header--hidden');if(navWrap)navWrap.classList.\1('header--hidden');",
+            content,
+        )
+        content = re.sub(
+            r"\bh\.classList\.(add|remove)\s*\(\s*['\"]header--hidden['\"]\s*\)",
+            r"header.classList.\1('header--hidden');if(navWrap)navWrap.classList.\1('header--hidden')",
+            content,
+        )
+        content = re.sub(r"\bif\s*\(\s*h\s*\)\b", "if(header||navWrap)", content)
+        content = re.sub(r"\bif\s*\(\s*header\s*\)\b", "if(header||navWrap)", content, count=1)
 
     if content == original:
         return False
