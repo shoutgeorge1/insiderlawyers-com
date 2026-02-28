@@ -6,6 +6,6 @@ alwaysApply: true
 # Work scope: https://www.insiderlawyers.com/
 
 - **Only URL in scope:** https://www.insiderlawyers.com/
-- **Codebase for that site:** this repo (insiderlawyers-com). Do not modify other projects in the workspace (call-insideraccidentlawyers-com, insideraccidentlawyers-com, pi-search-caraccident-lp) unless the user explicitly asks.
+- **Codebase for that site:** this repo (insiderlawyers-com). Do not modify other projects in the workspace unless the user explicitly asks.
+- **Header, menu, and footer** must be the same across the whole website. When in doubt, check the **home page** (`index.html`) as the reference.
 - Only make changes, fixes, or features that affect the www.insiderlawyers.com deployment.
-- When in doubt, assume deployment targets www.insiderlawyers.com.

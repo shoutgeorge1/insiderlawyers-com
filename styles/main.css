@@ -4,11 +4,19 @@
    Fully responsive, maintains branding
    ============================================ */
 
-/* Site header - BD&J-style: left logo, middle stat, right phone. Force contrast so header never looks faint. */
+/* Global container for header-nav-wrap and content – ensures menu/layout consistent on all pages (home, motor-vehicle, premises-liability, etc.) */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Site header - BD&J-style: left logo, middle stat, right phone. Target ~2in total height on desktop. */
 .header {
   background: #fff !important;
   border-bottom: 3px solid #fbba00;
-  padding: 0.5rem 0 0.65rem;
+  padding: 0.35rem 0 0.4rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -39,12 +47,12 @@
 }
 .header__logo-img {
   display: block;
-  height: 58px;
+  height: 48px;
   width: auto;
-  max-width: 180px;
-  min-width: 120px;
+  max-width: 160px;
+  min-width: 100px;
   object-fit: contain;
-  min-height: 46px;
+  min-height: 38px;
   /* Bold + shiny metallic: dark base with highlight and depth */
   filter: brightness(0) contrast(1.25)
     drop-shadow(0 0 1px rgba(255,255,255,0.9))
@@ -128,7 +136,7 @@
   flex: 0 0 auto;
   text-align: right;
   background: linear-gradient(135deg, #01366c 0%, #01468a 100%);
-  padding: 0.9rem 1.5rem;
+  padding: 0.55rem 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(1, 54, 108, 0.3);
 }
@@ -168,60 +176,60 @@
 }
 @media (min-width: 768px) {
   .header__logo-img {
-    height: 72px;
-    max-width: 220px;
+    height: 58px;
+    max-width: 200px;
   }
   .header__middle__title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 0.95;
   }
   .header__middle p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
   .header__number {
-    font-size: 2.1rem;
+    font-size: 1.75rem;
     line-height: 1;
   }
-  .header__right .header__number { font-size: 2.5rem; }
+  .header__right .header__number { font-size: 2rem; }
   .header__title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-  .header__right .header__title { font-size: 1rem; }
+  .header__right .header__title { font-size: 0.9rem; }
   .header__lang {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-  .header__right .header__lang { font-size: 1rem; }
-  .header__right { padding: 1rem 1.75rem; }
+  .header__right .header__lang { font-size: 0.9rem; }
+  .header__right { padding: 0.65rem 1.25rem; }
 }
 @media (min-width: 992px) {
   .header .mid-container {
     padding-left: 0; /* logo to far left */
   }
   .header {
-    padding: 0.55rem 0 0.7rem;
+    padding: 0.4rem 0 0.5rem;
   }
   .header__logo-img {
-    height: 90px;
-    max-width: 280px;
+    height: 64px;
+    max-width: 220px;
   }
   .header__middle__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 0.9;
   }
   .header__number {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1;
   }
-  .header__right .header__number { font-size: 2.75rem; }
+  .header__right .header__number { font-size: 2.25rem; }
   .header__title {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
-  .header__right .header__title { font-size: 1.05rem; }
+  .header__right .header__title { font-size: 0.95rem; }
   .header__lang {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
-  .header__right .header__lang { font-size: 1.05rem; }
-  .header__right { padding: 1.1rem 2rem; }
+  .header__right .header__lang { font-size: 0.95rem; }
+  .header__right { padding: 0.7rem 1.5rem; }
 }
 
 /* MOBILE ONLY: 3-row centered, scroll-hide, bigger logo/tagline/phone */
@@ -232,6 +240,14 @@
   }
   .header.header--hidden,
   .sticky-header.header--hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .header-nav-wrap {
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+  }
+  .header-nav-wrap.header--hidden {
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
@@ -1767,15 +1783,15 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px 0;
+  gap: 8px;
+  padding: 6px 0;
   position: relative;
 }
 @media (min-width: 901px) {
   .header-nav-row {
     flex-wrap: nowrap;
-    gap: 6px;
-    padding: 6px 0;
+    gap: 4px;
+    padding: 4px 0;
   }
 }
 .header-nav-wrap .nav-link {

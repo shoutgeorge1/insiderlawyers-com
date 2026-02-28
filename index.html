@@ -112,7 +112,6 @@
     .hero-review-badge-rating .rating-stars { color: #fbba00; }
     .hero-google-badge-wrap { display: inline-flex; padding: 6px 8px; border-radius: 10px; background: rgba(255,255,255,0.1); }
     .hero-google-badge-wrap img { height: 36px; width: auto; }
-    .header { min-height: 111px; }
     .header-nav-wrap {
       background: #fff;
       border-top: 1px solid rgba(1,54,108,0.12);
@@ -349,33 +348,11 @@
             if (typeof dataLayer !== 'undefined') dataLayer.push({ 'event': 'scroll_90' });
           }
         }, { passive: true });
-        var header = document.getElementById('header');
-        var lastScrollY = 0;
-        var scrollThreshold = 80;
-        if (header) {
-          window.addEventListener('scroll', function() {
-            if (window.innerWidth > 767) {
-              header.classList.remove('header--hidden');
-              return;
-            }
-            var currentScrollY = window.scrollY;
-            if (currentScrollY > scrollThreshold) {
-              if (currentScrollY > lastScrollY) {
-                header.classList.add('header--hidden');
-              } else {
-                header.classList.remove('header--hidden');
-              }
-            } else {
-              header.classList.remove('header--hidden');
-            }
-            lastScrollY = currentScrollY;
-          }, { passive: true });
-        }
       });
     });
   </script>
 </head>
-<body class="home-ppc page-is-home">
+<body>
 <script>
 (function(){ var k=['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content']; var q=window.location.search?new URLSearchParams(window.location.search):null; if(q){ for(var i=0;i<k.length;i++){ var v=q.get(k[i]); if(v) try{ localStorage.setItem('ial_'+k[i],v); }catch(e){} } }
 })();
