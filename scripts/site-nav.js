@@ -1,7 +1,48 @@
 (function() {
+  // #region agent log
+  function debugLog(location, message, data, hypothesisId) {
+    var payload = { sessionId: '92bc37', location: location, message: message, data: data || {}, timestamp: Date.now() };
+    if (hypothesisId) payload.hypothesisId = hypothesisId;
+    fetch('http://127.0.0.1:7246/ingest/947b9d3f-79c7-44a4-b813-d8911803c79c', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '92bc37' }, body: JSON.stringify(payload) }).catch(function() {});
+  }
+  // #endregion
   function initSiteNav() {
     var navWrap = document.getElementById('header-nav-wrap');
     var mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    var header = document.getElementById('header');
+    if (header && navWrap) {
+      var lastScrollY = 0;
+      var scrollThreshold = 80;
+      window.addEventListener('scroll', function() {
+        if (window.innerWidth > 767) {
+          header.classList.remove('header--hidden');
+          navWrap.classList.remove('header--hidden');
+          return;
+        }
+        var currentScrollY = window.scrollY;
+        if (currentScrollY > scrollThreshold) {
+          if (currentScrollY > lastScrollY) {
+            header.classList.add('header--hidden');
+            navWrap.classList.add('header--hidden');
+            debugLog('site-nav.js:scroll', 'Mobile header hidden', { scrollY: currentScrollY, hidden: true }, 'H3');
+          } else {
+            header.classList.remove('header--hidden');
+            navWrap.classList.remove('header--hidden');
+          }
+        } else {
+          header.classList.remove('header--hidden');
+          navWrap.classList.remove('header--hidden');
+        }
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+      if (typeof requestAnimationFrame !== 'undefined') {
+        requestAnimationFrame(function() {
+          var hr = header.getBoundingClientRect();
+          var nr = navWrap.getBoundingClientRect();
+          debugLog('site-nav.js:init', 'Header heights on load', { headerHeight: hr.height, navHeight: nr.height, innerWidth: window.innerWidth, totalPx: hr.height + nr.height }, 'H1');
+        });
+      }
+    }
     if (navWrap && mobileMenuToggle) {
       mobileMenuToggle.setAttribute('type', 'button');
       mobileMenuToggle.addEventListener('click', function(e) {
