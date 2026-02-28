@@ -1,0 +1,11 @@
+---
+description: Scope all work to the live site https://www.insiderlawyers.com/ and this codebase
+alwaysApply: true
+---
+
+# Work scope: https://www.insiderlawyers.com/
+
+- **Only URL in scope:** https://www.insiderlawyers.com/
+- **Codebase for that site:** this repo (insiderlawyers-com). Do not modify other projects in the workspace (call-insideraccidentlawyers-com, insideraccidentlawyers-com, pi-search-caraccident-lp) unless the user explicitly asks.
+- Only make changes, fixes, or features that affect the www.insiderlawyers.com deployment.
+- When in doubt, assume deployment targets www.insiderlawyers.com.
