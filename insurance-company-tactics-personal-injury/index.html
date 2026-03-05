@@ -163,48 +163,29 @@
             window.dataLayer.push({ event: 'scroll_90' });
           }
         }, { passive: true });
-        var header = document.querySelector('.sticky-header');
-        var lastScrollY = 0;
-        var scrollThreshold = 80;
-        if (header) {
-          window.addEventListener('scroll', function() {
-            if (window.innerWidth > 767) {
-              header.classList.remove('header--hidden');
-              return;
-            }
-            var currentScrollY = window.scrollY;
-            if (currentScrollY > scrollThreshold) {
-              if (currentScrollY > lastScrollY) {
-                header.classList.add('header--hidden');
-              } else {
-                header.classList.remove('header--hidden');
-              }
-            } else {
-              header.classList.remove('header--hidden');
-            }
-            lastScrollY = currentScrollY;
-          }, { passive: true });
-        }
-      });
+        var header=document.getElementById('header');var navWrap=document.getElementById('header-nav-wrap');var ly=0;function setHeaderHidden(hidden){if(header)header.classList.toggle('header--hidden',hidden);if(navWrap)navWrap.classList.toggle('header--hidden',hidden);}(header||navWrap)&&window.addEventListener('scroll',function(){if(window.innerWidth>767){setHeaderHidden(false);return;}var y=window.scrollY;if(y>80)setHeaderHidden(y>ly);else setHeaderHidden(false);ly=y;},{passive:true}); });
     </script>
-    <header class="sticky-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="header-col header-col--logo">
-                    <a href="/"><img src="https://www.insiderlawyers.com/images/la/logo.png" alt="Insider Accident Lawyers" class="header-logo"></a>
-                </div>
-                <div class="header-col header-col--proof">
-                    <div class="header-proof-title">Over $100 Million Recovered</div>
-                    <p>in Verdicts &amp; Settlements<small><sup><a href="#results-disclaimer-note" aria-label="Results disclaimer reference">*</a></sup></small></p>
-                </div>
-                <div class="header-col header-col--call">
-                    <span class="header-call-label">Available 24/7 &#8212; Call Now:</span>
-                    <a href="tel:844-467-4335" class="header-call-number" data-callrail-phone="844-467-4335">844-467-4335</a>
-                    <span class="header-lang">Hablamos Espa&#241;ol</span>
-                </div>
+        <header class="header" id="header">
+        <div class="mid-container">
+            <div class="header__left">
+                <figure class="header__logo" id="logo"><a href="/"><img src="https://www.insiderlawyers.com/images/la/logo.png" width="271" height="111" alt="Insider Accident Lawyers" class="header__logo-img"></a></figure>
             </div>
-            <div id="header-nav-wrap" class="header-nav-wrap">
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <div class="header__middle">
+                <div class="header__middle__title"><a href="/#case-results" style="color:inherit;text-decoration:none;">Over $100 Million Recovered</a></div>
+                <p>in Verdicts &amp; Settlements<small><sup><a href="#footer-verdicts-note" id="verdicts-asterisk" style="color:inherit;text-decoration:none;">*</a></sup></small></p>
+            </div>
+            <div class="header__right">
+                <span class="header__title">Available 24/7 &#8212; Call Now:</span>
+                <a class="link header__number" href="tel:844-467-4335" data-callrail-phone="844-467-4335">844-467-4335</a>
+                <span class="header__lang">Hablamos Espa&#241;ol</span>
+            </div>
+        </div>
+    </header>
+    <div class="header-nav-wrap" id="header-nav-wrap">
+        <div class="container">
+            <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
             <nav class="header-nav-row" id="primary-nav" aria-label="Primary">
                 <a class="nav-link nav-link--primary" href="/#case-evaluation">Case Review</a>
                 <a class="nav-link" href="/">Home</a>
@@ -352,9 +333,13 @@
                     </div>
                 </div>
             </nav>
-            </div>
         </div>
-    </header>
+    </div>
+    <a href="tel:844-467-4335" class="tap-to-call-bar" data-callrail-phone="844-467-4335" aria-label="Tap to call for free consultation">
+        <svg class="tap-to-call-bar__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <span class="tap-to-call-bar__text">Tap to Call</span>
+    </a>
+
     <main>
     <section class="section-content">
         <div class="container">

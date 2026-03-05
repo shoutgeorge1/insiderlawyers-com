@@ -14,27 +14,27 @@ The home page header (`.header` + `mid-container` + `header__left` / `header__mi
 - `attorney-referrals/index.html`, `california-car-accident-lawyer/index.html` (header + CSS cleanup)
 - `demand-letters-explained/index.html`
 
-## Remaining pages
+## Updating remaining pages
 
-About 70+ HTML files under `insiderlawyers-com/` (excluding `_old-site-extract/` and `components/`) still use the old `<header class="sticky-header">` and inline header/nav styles.
+Two scripts handle the rest of the site:
 
-To update them all in one go (requires Python 3):
+1. **`unify-header-replacements.py`** – Exact-match replacement for the most common template (inline scroll script + specific CSS). Run first; it updates ~45 pages.
+2. **`unify-header.py`** – Flexible replacement for all other pages: finds `<header class="sticky-header">`, swaps in the home-page header HTML, closing + tap-to-call, and fixes both minified and multi-line scroll scripts. Handles the remaining ~33 pages (e.g. settlements, lit-referral-core, personal-injury/*).
+
+To update all remaining pages in one go (run from repo root):
 
 ```bash
 cd insiderlawyers-com
-python scripts/unify-header.py
+python3 scripts/unify-header-replacements.py   # optional: already-run pages
+python3 scripts/unify-header.py
 ```
 
-On Windows, if `python` is not in PATH, try:
+On Windows, if `python` is not in PATH, try `py scripts/unify-header.py`.
 
-```bash
-py scripts/unify-header.py
-```
-
-The script will:
+What the scripts do:
 
 1. Replace the old header block (sticky-header + header-content + three cols + nav wrap opening) with the new header bar + `header-nav-wrap` + same nav.
 2. Replace `</nav> … </div> </div> </header>` with `</nav> … </div> </div>` + tap-to-call bar.
-3. Update the scroll script to use `#header` and `#header-nav-wrap` and toggle `header--hidden` on both.
+3. Update the scroll script to use `#header` and `#header-nav-wrap` and toggle `header--hidden` on both (handles both inline minified and multi-line `var header = document.querySelector('.sticky-header')` styles).
 
-After running, remove any remaining inline header/nav CSS (`.sticky-header`, `.header-content`, `.header-col--*`, `.header-proof-title`, `.header-call-*`, `.header-logo`, `.header-nav-row`, `.nav-link`, `.nav-item`, `.nav-dropdown`, `.mobile-menu-toggle`, and the `@media (max-width: 900px)` / `@media (max-width: 767px)` blocks that only target those) from pages that still have them, so `main.css` controls the header everywhere.
+**After running:** Some pages may still contain dead inline CSS (e.g. `.sticky-header`, `.header-content`, `.header-col--*`) in their `<style>` block. That is harmless; `main.css` controls the header. You can optionally remove those rules for smaller HTML.
