@@ -16,28 +16,38 @@
   </div>
 </header>
 <div class="header-nav-wrap" id="header-nav-wrap">
-  <div class="container">
-    <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+  <div class="header-nav-inner container">
+    <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
-    <nav class="header-nav-row" id="primary-nav" aria-label="Primary">
+    <nav class="header-nav-row" id="primary-nav" aria-label="Primary navigation">
+      <div class="mobile-nav-cta" aria-hidden="true">
+        <a class="mobile-nav-cta__link" href="tel:844-467-4335" data-callrail-phone="844-467-4335">Call 844-467-4335</a>
+        <span class="mobile-nav-cta__sub">Free Consultation · 24/7</span>
+      </div>
       <a class="nav-link nav-link--primary" href="/#case-evaluation">Contact</a>
       <a class="nav-link" href="/">Home</a>
       <a class="nav-link" href="/personal-injury">Personal Injury</a>
       <a class="nav-link" href="/personal-injury/auto-accidents">Car Accidents</a>
       <a class="nav-link" href="/premises-liability">Premises Liability</a>
-      <div class="nav-item">
-        <span class="nav-link nav-link--dropdown">Locations</span>
-        <div class="nav-dropdown">
+      <div class="nav-item nav-item--dropdown">
+        <button type="button" class="nav-link nav-link--dropdown" aria-expanded="false" aria-controls="nav-dropdown-locations" id="nav-toggle-locations">
+          <span>Locations</span>
+          <span class="nav-dropdown-chevron" aria-hidden="true"></span>
+        </button>
+        <div class="nav-dropdown" id="nav-dropdown-locations" role="region" aria-label="Locations">
           <a href="/los-angeles-car-accident-lawyer">Los Angeles Car Accident Lawyer</a>
           <a href="/parking-lot-accident-lawyer-los-angeles">Parking Lot Accident Lawyer</a>
           <a href="/premises-liability">Premises Liability (LA)</a>
           <a href="/motor-vehicle">Motor Vehicle (LA)</a>
         </div>
       </div>
-      <div class="nav-item">
-        <span class="nav-link nav-link--dropdown">Resources</span>
-        <div class="nav-dropdown">
+      <div class="nav-item nav-item--dropdown">
+        <button type="button" class="nav-link nav-link--dropdown" aria-expanded="false" aria-controls="nav-dropdown-resources" id="nav-toggle-resources">
+          <span>Resources</span>
+          <span class="nav-dropdown-chevron" aria-hidden="true"></span>
+        </button>
+        <div class="nav-dropdown" id="nav-dropdown-resources" role="region" aria-label="Resources">
           <a href="/attorney-referrals">Attorney Referrals</a>
           <a href="/settlements">Settlements</a>
           <a href="/legal/disclaimer">Legal Disclaimer</a>
@@ -49,7 +59,3 @@
     </nav>
   </div>
 </div>
-<a href="tel:844-467-4335" class="tap-to-call-bar" data-callrail-phone="844-467-4335" aria-label="Tap to call for free consultation">
-  <svg class="tap-to-call-bar__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-  <span class="tap-to-call-bar__text">Tap to Call</span>
-</a>
