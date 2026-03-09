@@ -11,11 +11,6 @@
         navWrap.classList.toggle('is-open', willOpen);
         mobileMenuToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
         mobileMenuToggle.setAttribute('aria-label', willOpen ? 'Close menu' : 'Open menu');
-        if (willOpen) {
-          document.body.classList.add('menu-open');
-        } else {
-          document.body.classList.remove('menu-open');
-        }
       });
     }
 

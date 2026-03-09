@@ -12,15 +12,20 @@
   padding: 0 24px;
 }
 
-/* Site header - BD&J-style: left logo, middle stat, right phone. Target ~2in total height on desktop. */
+/* Site header - no sticky on mobile; sticky on desktop only (SEO legal: simple, reliable). */
 .header {
   background: #fff !important;
   border-bottom: 3px solid #fbba00;
   padding: 0.35rem 0 0.4rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
+}
+@media (min-width: 901px) {
+  .header {
+    position: sticky;
+    top: 0;
+  }
 }
 .header .mid-container {
   width: 100%;
@@ -897,6 +902,54 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   .trust-badges-row .trust-badge-img {
     height: 140px;
   }
+}
+
+/* Practice areas nav – internal links from homepage for crawl/indexing */
+.practice-areas-nav {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(1, 54, 108, 0.1);
+  text-align: center;
+}
+.practice-areas-nav .section-title { font-size: 1.5rem; }
+.practice-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+.practice-areas-col__title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #01366c;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid #fbba00;
+}
+.practice-areas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.practice-areas-list li { margin: 0.5rem 0; }
+.practice-areas-list a {
+  color: #01468a;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.practice-areas-list a:hover { text-decoration: underline; }
+@media (max-width: 900px) {
+  .practice-areas-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+@media (max-width: 600px) {
+  .practice-areas-grid { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
+  .practice-areas-col { text-align: left; }
+  .practice-areas-nav { margin-top: 1.5rem; padding-top: 1.5rem; }
 }
 
 /* Hero: team image directly below H1 (above the fold on mobile) */
@@ -1910,16 +1963,18 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   background: #eef4fb;
   color: #01468a;
 }
-/* Body scroll lock when mobile menu is open */
-body.menu-open {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-}
-
 /* Mobile-only: call CTA hidden on desktop */
 .mobile-nav-cta {
   display: none;
+}
+
+/* Mobile: no sticky header/nav – plain in-document flow (SEO legal best practice) */
+@media (max-width: 900px) {
+  .header,
+  .header-nav-wrap,
+  .sticky-header {
+    position: static;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1952,29 +2007,13 @@ body.menu-open {
   .header-nav-wrap.is-open .header-nav-row {
     display: flex !important;
   }
-  /* Full-screen mobile menu panel */
-  .header-nav-wrap.is-open {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    background: #fff;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    border-bottom: none;
-    box-shadow: none;
-  }
+  /* In-document expanded menu (no overlay, no fixed panel – plain jane) */
   .header-nav-wrap.is-open .header-nav-inner {
     flex-direction: column;
     align-items: stretch;
-    padding: 1rem 1.25rem 2rem;
-    min-height: 100%;
   }
-  .header-nav-wrap.is-open .mobile-menu-toggle {
-    align-self: flex-end;
-    margin-bottom: 0.5rem;
+  .header-nav-wrap.is-open .header-nav-row {
+    padding: 0.5rem 0 1rem 0;
   }
   /* Hamburger to X when open */
   .header-nav-wrap.is-open .mobile-menu-toggle span:nth-child(1) {
