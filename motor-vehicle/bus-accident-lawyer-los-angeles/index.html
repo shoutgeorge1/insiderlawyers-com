@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -18,6 +18,7 @@
   </script>
   <link rel="stylesheet" href="/styles/main.css?v=2">
   <link rel="stylesheet" href="/styles/settlements.css?v=2">
+  <script src="/scripts/site-nav.js?v=2" defer></script>
   <style>
     .content-body h2{position:relative;padding:12px 16px;background:linear-gradient(180deg,#f9fbfe 0%,#f1f6fc 100%);border:1px solid #dce6f2;border-left:4px solid #01366c;border-radius:10px;margin:2rem 0 1rem;}
     .content-body h3{color:#0f3f72;margin:1.25rem 0 .5rem;}
@@ -37,22 +38,60 @@
   </style>
 </head>
 <body>
-  <header class="sticky-header">
-    <div class="container">
-      <div class="header-content">
-        <div class="header-col header-col--logo"><a href="/"><img src="https://www.insiderlawyers.com/images/la/logo.png" alt="Insider Accident Lawyers" class="header-logo"></a></div>
-        <div class="header-col header-col--proof"><div class="header-proof-title">Over $100 Million Recovered</div><p>in Verdicts &amp; Settlements<sup>*</sup></p></div>
-        <div class="header-col header-col--call"><span class="header-call-label">Available 24/7</span><a href="tel:844-467-4335" class="header-call-number" data-callrail-phone="844-467-4335">844-467-4335</a><span class="header-lang">Hablamos Espa&#241;ol</span></div>
-      </div>
-      <nav class="header-nav-wrap" aria-label="Primary">
-        <a class="nav-link nav-link--primary" href="/#case-evaluation">Free Case Review</a>
-        <a class="nav-link" href="/">Home</a>
-        <a class="nav-link" href="/motor-vehicle">Motor Vehicle</a>
-        <a class="nav-link" href="/los-angeles-car-accident-lawyer">LA Car Accident Lawyer</a>
-        <a class="nav-link" href="/personal-injury">Personal Injury</a>
-      </nav>
+  <header class="header" id="header">
+  <div class="mid-container">
+    <div class="header__left">
+      <figure class="header__logo" id="logo"><a href="/"><img src="https://www.insiderlawyers.com/images/la/logo.png" width="271" height="111" alt="Insider Accident Lawyers" class="header__logo-img" fetchpriority="high"></a></figure>
     </div>
-  </header>
+    <div class="header__middle">
+      <div class="header__middle__title"><a href="/#case-results" style="color:inherit;text-decoration:none;">Over $100 Million Recovered</a></div>
+      <p>in Verdicts &amp; Settlements<small><sup><a href="/#footer-verdicts-note" id="verdicts-asterisk" style="color:inherit;text-decoration:none;">*</a></sup></small></p>
+    </div>
+    <div class="header__right">
+      <span class="header__title">Available 24/7 &#8212; Call Now:</span>
+      <a class="link header__number" href="tel:844-467-4335" data-callrail-phone="844-467-4335">844-467-4335</a>
+      <span class="header__lang">Hablamos Espa&#241;ol</span>
+    </div>
+  </div>
+</header>
+<div class="header-nav-wrap" id="header-nav-wrap">
+  <div class="container">
+    <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="header-nav-row" id="primary-nav" aria-label="Primary">
+      <a class="nav-link nav-link--primary" href="/#case-evaluation">Contact</a>
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/personal-injury">Personal Injury</a>
+      <a class="nav-link" href="/personal-injury/auto-accidents">Car Accidents</a>
+      <a class="nav-link" href="/premises-liability">Premises Liability</a>
+      <div class="nav-item">
+        <span class="nav-link nav-link--dropdown">Locations</span>
+        <div class="nav-dropdown">
+          <a href="/los-angeles-car-accident-lawyer">Los Angeles Car Accident Lawyer</a>
+          <a href="/parking-lot-accident-lawyer-los-angeles">Parking Lot Accident Lawyer</a>
+          <a href="/premises-liability">Premises Liability (LA)</a>
+          <a href="/motor-vehicle">Motor Vehicle (LA)</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-link nav-link--dropdown">Resources</span>
+        <div class="nav-dropdown">
+          <a href="/attorney-referrals">Attorney Referrals</a>
+          <a href="/settlements">Settlements</a>
+          <a href="/legal/disclaimer">Legal Disclaimer</a>
+          <a href="/legal/terms">Terms of Use</a>
+          <a href="/legal/accessibility">Accessibility</a>
+          <a href="https://www.insideraccidentlawyers.com/privacy-policy">Privacy Policy</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<a href="tel:844-467-4335" class="tap-to-call-bar" data-callrail-phone="844-467-4335" aria-label="Tap to call for free consultation">
+  <svg class="tap-to-call-bar__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  <span class="tap-to-call-bar__text">Tap to Call</span>
+</a>
   <main>
     <section class="section-content">
       <div class="container">
@@ -99,13 +138,51 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="container">
-      <p><strong>*</strong> Past verdicts and settlements. Results vary. Attorney advertising.</p>
-      <p>Countrywide Trial Lawyers DBA Insider Accident Lawyers. 3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010. <a href="https://www.insideraccidentlawyers.com/privacy-policy">Privacy Policy</a></p>
+  <footer class="site-footer" id="footer-contact">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Practice Areas</h3>
+        <ul>
+          <li><a href="/personal-injury">Personal Injury</a></li>
+          <li><a href="/los-angeles-car-accident-lawyer">Car Accident Lawyer</a></li>
+          <li><a href="/personal-injury/slip-and-fall">Slip and Fall Lawyer</a></li>
+          <li><a href="/parking-lot-accident-lawyer-los-angeles">Parking Lot Accident Lawyer</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Locations</h3>
+        <ul>
+          <li><a href="/los-angeles-car-accident-lawyer">Los Angeles Car Accident Lawyer</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="/attorney-referrals">Attorney Referrals</a></li>
+          <li><a href="/settlements">Settlements</a></li>
+          <li><a href="/legal/disclaimer">Legal Disclaimer</a></li>
+          <li><a href="/legal/terms">Terms of Use</a></li>
+          <li><a href="/legal/accessibility">Accessibility</a></li>
+          <li><a href="https://www.insideraccidentlawyers.com/privacy-policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p><a href="tel:844-467-4335" class="footer__phone" data-callrail-phone="844-467-4335">844-467-4335</a></p>
+        <p>Available 24/7 &#183; Hablamos Espa&#241;ol</p>
+        <p><a href="/#case-evaluation">Free Case Review</a></p>
+        <p>3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010</p>
+      </div>
+    </div>
+    <div class="footer__disclaimer">
+      <p id="footer-verdicts-note"><strong>*</strong> Past verdicts and settlements obtained by attorneys at Insider Accident Lawyers and prior firms. Results vary; no guarantee of similar outcome. Each case is unique.</p>
+      <p>Attorney advertising. Prior results do not guarantee a similar outcome. This site does not provide legal advice; viewing does not create an attorney-client relationship.</p>
+      <p>Countrywide Trial Lawyers A Professional Law Corporation DBA Insider Accident Lawyers. California Entity #4851715. 3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010. <a href="https://www.insideraccidentlawyers.com/privacy-policy">Privacy Policy</a></p>
       <p class="footer__copyright">© 2026 Insider Accident Lawyers. All Rights Reserved.</p>
     </div>
-  </footer>
+  </div>
+</footer>
   <script src="/scripts/utm-gclid-tracking.js"></script>
 </body>
 </html>
