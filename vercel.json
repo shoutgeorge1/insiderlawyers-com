@@ -4,6 +4,8 @@
   "installCommand": "",
   "outputDirectory": ".",
   "redirects": [
+    {"source": "/los-angeles-bed-sore-lawyer", "destination": "/los-angeles-nursing-home-neglect-lawyer", "statusCode": 301},
+    {"source": "/los-angeles-bed-sore-lawyer/", "destination": "/los-angeles-nursing-home-neglect-lawyer", "statusCode": 301},
     {"source": "/los-angeles-auto-accident-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
     {"source": "/los-angeles-car-crash-lawyer", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
     {"source": "/car-accident-lawyer-near-me-los-angeles", "destination": "/los-angeles-car-accident-lawyer", "statusCode": 302},
