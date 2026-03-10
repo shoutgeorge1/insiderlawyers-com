@@ -69,7 +69,7 @@
     .trust-badge { color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem; }
     .hero-team-photo { margin-bottom: 1.25rem; }
     .hero-team-photo .team-photo { max-width: 100%; width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
-    @media (min-width: 769px) { .hero-team-photo .team-photo { max-width: 480px; } }
+    @media (min-width: 769px) { .hero-team-photo .team-photo { max-width: 640px; } }
     .hero-attorney-img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
     .hero-review-badge-rating .rating-num { font-size: 1.25rem; font-weight: 800; }
     .hero-google-badge-wrap { display: inline-flex; padding: 6px 8px; border-radius: 10px; background: rgba(255,255,255,0.1); }
@@ -134,15 +134,19 @@
     @media (max-width: 768px) { .content-list-prominent { font-size: 1.12rem; } }
     .content-hero-img { margin: 1.5rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(1,54,108,.1); max-width: 420px; }
     .content-hero-img img { width: 100%; height: auto; display: block; object-fit: cover; }
-    @media (max-width: 768px) { .content-hero-img { max-width: 100%; } }
+    .content-hero-img--crop-top { max-height: 320px; }
+    .content-hero-img--crop-top img { object-fit: cover; object-position: top center; width: 100%; height: 280px; }
+    @media (max-width: 768px) { .content-hero-img { max-width: 100%; } .content-hero-img--crop-top { max-height: none; } .content-hero-img--crop-top img { height: 220px; } }
     .team-group-section { padding: 2rem 0; }
     .team-group-section__img { display: block; width: 100%; max-width: 900px; height: auto; margin: 0 auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,.1); }
     @media (max-width: 768px) { .team-group-section__img { max-width: 100%; } }
-    .why-families { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem 2.5rem; margin: 2.5rem 0; }
-    .why-families__item { display: flex; align-items: flex-start; gap: 1.25rem; font-size: 1.2rem; line-height: 1.5; font-weight: 600; color: #1e293b; }
-    .why-families__icon { flex-shrink: 0; width: 96px; height: 96px; }
+    .why-families-block { margin-bottom: 3.5rem; }
+    .why-families { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem 3rem; margin: 2rem 0 0; }
+    .why-families__item { display: flex; align-items: flex-start; gap: 1.5rem; font-size: 1.22rem; line-height: 1.5; font-weight: 600; color: #1e293b; }
+    .why-families__icon { flex-shrink: 0; width: 120px; height: 120px; }
     .why-families__icon img { width: 100%; height: auto; }
-    @media (max-width: 768px) { .why-families { gap: 1.5rem; } .why-families__icon { width: 72px; height: 72px; } .why-families__item { font-size: 1.1rem; } }
+    @media (max-width: 768px) { .why-families { grid-template-columns: 1fr; gap: 1.5rem; } .why-families__icon { width: 88px; height: 88px; } .why-families__item { font-size: 1.1rem; } }
+    .case-results .head-group:not(:first-child) { margin-top: 3rem; padding-top: 0; }
     .trusted-mid { text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 12px; margin: 2rem 0; border: 1px solid #e2e8f0; }
     .trust-badges-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
     .trusted-mid .trust-badges-row { justify-content: center; margin-top: 0.75rem; }
@@ -593,7 +597,7 @@
         <p class="lead-text">Pressure ulcers develop when residents are <strong>not repositioned regularly</strong>. Poor blood flow leads to skin breakdown, deep wounds, and infection.</p>
         <p><strong>Four stages:</strong> Stage 1 (redness, skin intact) → Stage 2 (partial-thickness loss) → <a href="/stage-3-stage-4-bed-sore-lawsuit">Stage 3 and Stage 4</a> (full-thickness loss; may expose tissue or bone). <strong>Stage 3 and Stage 4 ulcers are often strong evidence of neglect.</strong></p>
         <p>Learn more: <a href="/pressure-ulcers-nursing-home-neglect">Pressure ulcers and neglect</a>, <a href="/nursing-home-repositioning-standards">repositioning standards</a>.</p>
-        <figure class="content-hero-img">
+        <figure class="content-hero-img content-hero-img--crop-top">
           <img src="/images/nursing-home/nurse-documenting-patient-care.png" alt="Medical professional documenting patient care" width="1200" height="630" loading="lazy">
         </figure>
       </div>
@@ -660,37 +664,39 @@
           <li>Medical expert consultation</li>
         </ul>
         <p>We work to show the facility failed the standard of care and caused your loved one’s injuries.</p>
-        <figure class="content-hero-img">
+        <figure class="content-hero-img content-hero-img--crop-top">
           <img src="/images/nursing-home/attorney-reviewing-records.png" alt="Attorney reviewing medical records" width="1200" height="630" loading="lazy">
         </figure>
       </div>
     </div>
   </section>
 
-  <section class="content-section" id="case-results" style="padding:2rem 0; background:#fff;">
+  <section class="content-section case-results" id="case-results" style="padding:2rem 0; background:#fff;">
     <div class="container">
       <div class="content-body">
-        <header class="head-group">
-          <h2 class="h2 section-title tail">
-            <span class="tail__before"></span>Why Families Choose Insider Accident Lawyers<span class="tail__after"></span>
-          </h2>
-        </header>
-        <div class="why-families">
-          <div class="why-families__item">
-            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/trial-strategy.png" width="96" height="96" alt="" loading="lazy"></div>
-            <div>Focus on serious injury cases</div>
-          </div>
-          <div class="why-families__item">
-            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/medical-network.png" width="96" height="96" alt="" loading="lazy"></div>
-            <div>Experience with medical negligence claims</div>
-          </div>
-          <div class="why-families__item">
-            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/insurance-defense.png" width="96" height="96" alt="" loading="lazy"></div>
-            <div>Trial-ready litigation strategy</div>
-          </div>
-          <div class="why-families__item">
-            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/no-fee.png" width="96" height="96" alt="" loading="lazy"></div>
-            <div>Contingency fee representation</div>
+        <div class="why-families-block">
+          <header class="head-group">
+            <h2 class="h2 section-title tail">
+              <span class="tail__before"></span>Why Families Choose Insider Accident Lawyers<span class="tail__after"></span>
+            </h2>
+          </header>
+          <div class="why-families">
+            <div class="why-families__item">
+              <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/trial-strategy.png" width="120" height="120" alt="" loading="lazy"></div>
+              <div>Focus on serious injury cases</div>
+            </div>
+            <div class="why-families__item">
+              <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/medical-network.png" width="120" height="120" alt="" loading="lazy"></div>
+              <div>Experience with medical negligence claims</div>
+            </div>
+            <div class="why-families__item">
+              <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/insurance-defense.png" width="120" height="120" alt="" loading="lazy"></div>
+              <div>Trial-ready litigation strategy</div>
+            </div>
+            <div class="why-families__item">
+              <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/no-fee.png" width="120" height="120" alt="" loading="lazy"></div>
+              <div>Contingency fee representation</div>
+            </div>
           </div>
         </div>
 
