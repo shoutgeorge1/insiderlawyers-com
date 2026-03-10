@@ -142,10 +142,11 @@
     @media (max-width: 768px) { .team-group-section__img { max-width: 100%; } }
     .why-families-block { margin-bottom: 3.5rem; }
     .why-families { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem 3rem; margin: 2rem 0 0; }
+    @media (min-width: 900px) { .why-families { grid-template-columns: repeat(3, 1fr); } }
     .why-families__item { display: flex; align-items: flex-start; gap: 1.5rem; font-size: 1.22rem; line-height: 1.5; font-weight: 600; color: #1e293b; }
-    .why-families__icon { flex-shrink: 0; width: 120px; height: 120px; }
-    .why-families__icon img { width: 100%; height: auto; }
-    @media (max-width: 768px) { .why-families { grid-template-columns: 1fr; gap: 1.5rem; } .why-families__icon { width: 88px; height: 88px; } .why-families__item { font-size: 1.1rem; } }
+    .why-families__icon { flex-shrink: 0; width: 132px; height: 132px; min-width: 132px; min-height: 132px; display: flex; align-items: center; justify-content: center; background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 14px; padding: 14px; box-sizing: border-box; }
+    .why-families__icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    @media (max-width: 768px) { .why-families { grid-template-columns: 1fr; gap: 1.5rem; } .why-families__icon { width: 100px; height: 100px; min-width: 100px; min-height: 100px; padding: 10px; border-radius: 12px; } .why-families__item { font-size: 1.1rem; } }
     .case-results .head-group:not(:first-child) { margin-top: 3rem; padding-top: 0; }
     .trusted-mid { text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 12px; margin: 2rem 0; border: 1px solid #e2e8f0; }
     .trust-badges-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
@@ -680,23 +681,35 @@
               <span class="tail__before"></span>Why Families Choose Insider Accident Lawyers<span class="tail__after"></span>
             </h2>
           </header>
+          <p class="lead-text">How we help in nursing home neglect cases:</p>
           <div class="why-families">
             <div class="why-families__item">
               <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/trial-strategy.png" width="120" height="120" alt="" loading="lazy"></div>
-              <div>Focus on serious injury cases</div>
+              <div>Trial-ready strategy from day one</div>
             </div>
             <div class="why-families__item">
               <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/medical-network.png" width="120" height="120" alt="" loading="lazy"></div>
-              <div>Experience with medical negligence claims</div>
+              <div>Access to trusted medical experts</div>
             </div>
             <div class="why-families__item">
               <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/insurance-defense.png" width="120" height="120" alt="" loading="lazy"></div>
-              <div>Trial-ready litigation strategy</div>
+              <div>We handle facility and legal pressure</div>
+            </div>
+            <div class="why-families__item">
+              <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/local-attorney.png" width="120" height="120" alt="" loading="lazy"></div>
+              <div>Direct access to Los Angeles attorneys</div>
             </div>
             <div class="why-families__item">
               <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/no-fee.png" width="120" height="120" alt="" loading="lazy"></div>
-              <div>Contingency fee representation</div>
+              <div>No win, no fee — zero upfront costs</div>
             </div>
+            <div class="why-families__item">
+              <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/clock-247.png" width="120" height="120" alt="" loading="lazy"></div>
+              <div>Real support — 24/7 availability</div>
+            </div>
+          </div>
+          <div class="btn-set text-center" style="margin-top:2rem;">
+            <a href="#case-evaluation" class="btn btn--lg btn--xl">Start My Free Case Review</a>
           </div>
         </div>
 
@@ -779,57 +792,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block highlights">
-    <div class="mid-container">
-      <header class="head-group">
-        <h2 class="h2 highlights__title tail">
-          <span class="tail__before"></span>How Insider Helps in Nursing Home Neglect Cases<span class="tail__after"></span>
-        </h2>
-      </header>
-      <div class="items">
-        <div class="item">
-          <div class="highlights__icon">
-            <img src="https://www.insiderlawyers.com/images/highlights/trial-strategy.png" width="168" height="168" alt="Trial Strategy Icon" loading="lazy">
-          </div>
-          <div class="highlights__disc">Trial-Ready Strategy <br> From Day One</div>
-        </div>
-        <div class="item">
-          <div class="highlights__icon">
-            <img src="https://www.insiderlawyers.com/images/highlights/medical-network.png" width="168" height="168" alt="Medical Network Icon" loading="lazy">
-          </div>
-          <div class="highlights__disc">Access to Trusted <br> Medical Experts</div>
-        </div>
-        <div class="item">
-          <div class="highlights__icon">
-            <img src="https://www.insiderlawyers.com/images/highlights/insurance-defense.png" width="168" height="168" alt="Legal Defense Icon" loading="lazy">
-          </div>
-          <div class="highlights__disc">We Handle Facility <br> &amp; Legal Pressure</div>
-        </div>
-        <div class="item">
-          <div class="highlights__icon">
-            <img src="https://www.insiderlawyers.com/images/highlights/local-attorney.png" width="168" height="168" alt="Local Attorney Icon" loading="lazy">
-          </div>
-          <div class="highlights__disc">Direct Access to <br> Los Angeles Attorneys</div>
-        </div>
-        <div class="item">
-          <div class="highlights__icon">
-            <img src="https://www.insiderlawyers.com/images/highlights/no-fee.png" width="168" height="168" alt="No Fee Icon" loading="lazy">
-          </div>
-          <div class="highlights__disc">No Win, No Fee <br> Zero Upfront Costs</div>
-        </div>
-        <div class="item">
-          <div class="highlights__icon">
-            <img src="https://www.insiderlawyers.com/images/highlights/clock-247.png" width="168" height="168" alt="24/7 Availability Icon" loading="lazy">
-          </div>
-          <div class="highlights__disc">Real Support <br> 24/7 Availability</div>
-        </div>
-      </div>
-      <div class="btn-set text-center">
-        <a href="#case-evaluation" class="btn btn--lg btn--xl">Start My Free Case Review</a>
       </div>
     </div>
   </section>
