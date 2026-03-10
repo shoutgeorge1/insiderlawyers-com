@@ -190,6 +190,27 @@
     .footer__copyright { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin-top: 1rem; }
     .footer__disclaimer a { color: rgba(255,255,255,0.8); text-decoration: underline; }
     .footer__disclaimer a:hover { color: #ffd54f; }
+    .tap-to-call-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: linear-gradient(135deg, #01366c 0%, #01468a 100%);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      box-shadow: 0 2px 8px rgba(1,54,108,0.25);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .tap-to-call-bar:hover { background: linear-gradient(135deg, #01468a 0%, #01366c 100%); color: #ffd54f; }
+    .tap-to-call-bar__icon { width: 1.25rem; height: 1.25rem; flex-shrink: 0; }
+    .tap-to-call-bar__text { white-space: nowrap; }
+    @media (min-width: 769px) {
+      .tap-to-call-bar { display: none; }
+    }
   </style>
   <!-- Google Tag Manager (same as main site www.insiderlawyers.com) -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -423,7 +444,7 @@
   </div>
   <a href="tel:844-467-4335" class="tap-to-call-bar" data-callrail-phone="844-467-4335" aria-label="Tap to call for free consultation">
     <svg class="tap-to-call-bar__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-    <span class="tap-to-call-bar__text">Call Now: 844-467-4335</span>
+    <span class="tap-to-call-bar__text">Call Now</span>
   </a>
   <section class="hero hero-section" id="case-evaluation">
     <div class="container">
