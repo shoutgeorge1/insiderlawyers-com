@@ -67,6 +67,9 @@
     }
     .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 0 #c99400, 0 10px 28px rgba(255,191,0,0.45); }
     .trust-badge { color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .hero-team-photo { margin-bottom: 1.25rem; }
+    .hero-team-photo .team-photo { max-width: 100%; width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+    @media (min-width: 769px) { .hero-team-photo .team-photo { max-width: 480px; } }
     .hero-attorney-img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
     .hero-review-badge-rating .rating-num { font-size: 1.25rem; font-weight: 800; }
     .hero-google-badge-wrap { display: inline-flex; padding: 6px 8px; border-radius: 10px; background: rgba(255,255,255,0.1); }
@@ -88,7 +91,7 @@
     .qualification-filter__inner--image-right .qualification-filter__content { order: 1; }
     .qualification-filter__inner--image-right .qualification-filter__media { order: 2; }
     .qualification-filter__media { background: rgba(0,0,0,0.15); }
-    .qualification-filter__media img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 200px; }
+    .qualification-filter__media img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 180px; max-height: 220px; }
     .qualification-filter__content { padding: 2rem 2.25rem; }
     .qualification-filter h2 { color: #fff; margin-bottom: 0.75rem; font-size: 1.65rem; font-weight: 800; letter-spacing: -0.02em; }
     .qualification-filter .qualification-filter__lead { color: rgba(255,255,255,0.95); font-size: 1.1rem; margin-bottom: 1rem; line-height: 1.55; }
@@ -129,8 +132,12 @@
     .content-list-prominent { font-size: 1.2rem; font-weight: 600; line-height: 1.68; color: #1e293b; margin: 1.25rem 0 !important; padding-left: 1.5rem !important; }
     .content-list-prominent li { margin: 0.5rem 0; }
     @media (max-width: 768px) { .content-list-prominent { font-size: 1.12rem; } }
-    .content-hero-img { margin: 1.5rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(1,54,108,.12); max-width: 560px; }
-    .content-hero-img img { width: 100%; height: auto; display: block; }
+    .content-hero-img { margin: 1.5rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(1,54,108,.1); max-width: 420px; }
+    .content-hero-img img { width: 100%; height: auto; display: block; object-fit: cover; }
+    @media (max-width: 768px) { .content-hero-img { max-width: 100%; } }
+    .team-group-section { padding: 2rem 0; }
+    .team-group-section__img { display: block; width: 100%; max-width: 900px; height: auto; margin: 0 auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,.1); }
+    @media (max-width: 768px) { .team-group-section__img { max-width: 100%; } }
     .why-families { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem 2.5rem; margin: 2.5rem 0; }
     .why-families__item { display: flex; align-items: flex-start; gap: 1.25rem; font-size: 1.2rem; line-height: 1.5; font-weight: 600; color: #1e293b; }
     .why-families__icon { flex-shrink: 0; width: 96px; height: 96px; }
@@ -423,6 +430,9 @@
             <span class="h1-line1">Nursing Home Neglect Lawyer</span>
             <span class="h1-line2">in Los Angeles</span>
           </h1>
+          <div class="hero-team-photo">
+            <img src="https://www.insiderlawyers.com/images/team-attorneys.png" alt="Our Legal Team" class="team-photo" width="560" height="257" loading="eager">
+          </div>
           <p class="hero-subhead" style="font-size:1.3rem; font-weight:700; color:#ffd54f;">Holding nursing homes accountable for bed sores, elder abuse, and serious neglect.</p>
           <p class="hero-desc">Our attorneys pursue serious nursing home negligence cases involving preventable injuries and facility understaffing.</p>
           <p class="cta-btn-row" style="margin-bottom:1rem;">
@@ -433,9 +443,6 @@
             <li><span class="hero-highlight">No Fee Unless We Win</span></li>
             <li><span class="hero-highlight">Available 24/7</span></li>
           </ul>
-          <div class="hero-team-photo" style="margin-top:1.5rem;">
-            <img src="https://www.insiderlawyers.com/images/team-attorneys.png" alt="Our Legal Team" class="team-photo" width="670" height="308" loading="eager">
-          </div>
           <div class="hero-review-badges">
             <div class="hero-review-badge-item">
               <img src="https://www.insiderlawyers.com/images/hero/google-logo.png" alt="Google Reviews" width="80" height="32" loading="lazy">
