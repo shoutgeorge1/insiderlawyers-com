@@ -87,6 +87,25 @@
     .qualification-filter ul { margin: 1rem 0; padding-left: 1.25rem; }
     .qualification-filter li { margin: 0.5rem 0; }
     .qualification-filter .btn-primary { margin-top: 1rem; }
+    .content-hero-img { margin: 1.5rem 0; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(1,54,108,.12); }
+    .content-hero-img img { width: 100%; height: auto; display: block; }
+    .why-families { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+    .why-families__item { display: flex; align-items: flex-start; gap: 0.75rem; }
+    .why-families__icon { flex-shrink: 0; width: 48px; height: 48px; }
+    .why-families__icon img { width: 100%; height: auto; }
+    .trusted-mid { text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 12px; margin: 2rem 0; border: 1px solid #e2e8f0; }
+    .trust-badges-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+    .trusted-mid .trust-badges-row { justify-content: center; margin-top: 0.75rem; }
+    .trust-badge-img { height: auto; max-height: 75px; object-fit: contain; }
+    .case-value-block { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .case-value-block__item { padding: 1rem; background: #f0f6fc; border-left: 4px solid #01366c; border-radius: 8px; }
+    .case-value-block__amount { font-size: 1.25rem; font-weight: 800; color: #01366c; }
+    .attorney-strip { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: #f8fafc; border-radius: 12px; margin: 2rem 0; flex-wrap: wrap; }
+    .attorney-strip__photo { width: 100px; height: 120px; border-radius: 8px; object-fit: cover; }
+    .sticky-mobile-call { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(180deg, #01366c 0%, #01468a 100%); color: #fff; padding: 12px 16px; z-index: 999; box-shadow: 0 -4px 20px rgba(0,0,0,.2); text-align: center; }
+    .sticky-mobile-call a { color: #fbba00; font-weight: 800; font-size: 1.25rem; text-decoration: none; }
+    @media (min-width: 769px) { .sticky-mobile-call { display: none !important; } }
+    @media (max-width: 768px) { .sticky-mobile-call { display: block; } }
   </style>
   <!-- Google Tag Manager (same as main site www.insiderlawyers.com) -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -286,6 +305,9 @@
             <span class="h1-line1">Los Angeles</span>
             <span class="h1-line2">Nursing Home Neglect Lawyer</span>
           </h1>
+          <div class="hero-team-photo">
+            <img src="https://www.insiderlawyers.com/images/team-attorneys.png" alt="Our Legal Team" class="team-photo" width="670" height="308">
+          </div>
           <p class="hero-subhead">Holding facilities accountable for elder abuse, bed sores, and serious neglect.</p>
           <p class="hero-desc">When a nursing home fails to provide proper care, residents can suffer pressure ulcers, infections, falls, and dehydration. We pursue serious neglect cases in Los Angeles.</p>
           <p style="margin-bottom:1rem;">
@@ -313,9 +335,6 @@
           </div>
         </div>
         <div class="hero-form-column" style="width:100%;">
-          <figure style="margin:0 0 1.5rem 0; border-radius:12px; overflow:hidden; box-shadow:0 8px 24px rgba(1,54,108,.2);">
-            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&amp;q=80" alt="Legal and injury claim guidance" style="width:100%; height:auto; display:block;" loading="lazy">
-          </figure>
           <style>
             #ial-hero-form-card{background:linear-gradient(180deg,#2878b5 0%,#1e6a9e 50%,#165c8a 100%)!important;border:2px solid rgba(255,255,255,0.3)!important;border-radius:12px!important;padding:2rem!important;box-shadow:0 12px 40px rgba(1,54,108,0.25)!important;text-align:center!important;}
             #ial-hero-form-card *{box-sizing:border-box;}
@@ -404,9 +423,9 @@
           <li>Untreated infections</li>
           <li>Medication errors</li>
         </ul>
-        <p>Many cases stem from understaffing—not enough staff to turn residents, monitor wounds, or ensure nutrition and hydration. An <a href="/los-angeles-personal-injury-lawyer">Los Angeles personal injury lawyer</a> with elder abuse experience can investigate.</p>
-        <figure style="margin:24px 0; border-radius:12px; overflow:hidden; box-shadow:0 8px 24px rgba(1,54,108,.12);">
-          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&amp;q=80" alt="Legal and injury claim guidance" style="width:100%; height:auto; display:block;" loading="lazy">
+        <p>Many cases stem from understaffing. An <a href="/los-angeles-personal-injury-lawyer">Los Angeles personal injury lawyer</a> with elder abuse experience can investigate.</p>
+        <figure class="content-hero-img">
+          <img src="/images/nursing-home/nurse-giving-water.png" alt="Nurse assisting elderly patient with care" width="1200" height="630" loading="lazy">
         </figure>
       </div>
     </div>
@@ -420,18 +439,36 @@
             <span class="tail__before"></span>Pressure Ulcers and Bed Sores<span class="tail__after"></span>
           </h2>
         </header>
-        <p class="lead-text">Pressure ulcers (bed sores) develop when sustained pressure cuts off blood flow—often in residents who can’t reposition themselves. They’re a serious sign of neglect.</p>
+        <p class="lead-text">Pressure ulcers develop when residents are <strong>left in the same position too long</strong>.</p>
+        <p>Without proper repositioning, pressure reduces blood flow to the skin. Over time this causes:</p>
+        <ul style="margin:0.75rem 0; padding-left:1.25rem;">
+          <li>Skin breakdown</li>
+          <li>Deep wounds</li>
+          <li>Infection</li>
+          <li>Tissue death</li>
+        </ul>
+        <figure class="content-hero-img" style="margin:1.5rem 0;">
+          <img src="/images/nursing-home/pressure-ulcer-stages.png" alt="Medical diagram: four stages of pressure ulcers" width="1200" height="630" loading="lazy">
+        </figure>
         <p><strong>Four stages:</strong></p>
-        <ul style="margin:1rem 0; padding-left:1.25rem;">
-          <li><strong>Stage 1</strong> — Redness or discoloration; skin intact.</li>
+        <ul style="margin:0.5rem 0; padding-left:1.25rem;">
+          <li><strong>Stage 1</strong> — Redness; skin intact.</li>
           <li><strong>Stage 2</strong> — Partial-thickness loss; blister or shallow open area.</li>
           <li><strong>Stage 3</strong> — Full-thickness loss; may expose fat.</li>
           <li><strong>Stage 4</strong> — Exposed muscle, tendon, or bone; highest risk of infection and death.</li>
         </ul>
-        <p>Stage 3 and 4 ulcers are often strong evidence of neglect. Proper repositioning and wound care prevent or catch most bed sores early. When a facility lets wounds reach advanced stages, a <strong>pressure ulcer lawyer</strong> or <strong>bed sore lawyer</strong> can hold them accountable. Severe cases can lead to infection, sepsis, or wrongful death.</p>
-        <figure style="margin:24px 0; border-radius:12px; overflow:hidden; box-shadow:0 8px 24px rgba(1,54,108,.12);">
-          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&amp;q=80" alt="Legal and injury claim guidance" style="width:100%; height:auto; display:block;" loading="lazy">
-        </figure>
+        <p>Stage 3 and Stage 4 ulcers are often <strong>strong evidence of neglect</strong>. A <a href="/los-angeles-bed-sore-lawyer">bed sore lawyer</a> can hold the facility accountable.</p>
+        <div style="background:#f0f6fc; padding:1.5rem; border-radius:12px; margin:2rem 0; border:1px solid #d0e0f0;">
+          <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:#01366c;">Learn More: Nursing Home &amp; Elder Abuse</h3>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin:0.4rem 0;"><a href="/pressure-ulcers-nursing-home-neglect">Pressure Ulcers From Nursing Home Neglect</a></li>
+            <li style="margin:0.4rem 0;"><a href="/stage-3-stage-4-bed-sore-lawsuit">Stage 3 and Stage 4 Bed Sores</a></li>
+            <li style="margin:0.4rem 0;"><a href="/signs-of-nursing-home-neglect">Signs of Nursing Home Neglect</a></li>
+            <li style="margin:0.4rem 0;"><a href="/los-angeles-bed-sore-lawyer">Los Angeles Bed Sore Lawyer</a></li>
+            <li style="margin:0.4rem 0;"><a href="/nursing-home-repositioning-standards">How Often Should Residents Be Repositioned?</a></li>
+            <li style="margin:0.4rem 0;"><a href="/nursing-home-wrongful-death">Wrongful Death in Nursing Homes</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -452,7 +489,10 @@
           <li><strong>Inadequate wound care</strong> — Ignoring or undertreating wounds so they worsen.</li>
           <li><strong>Failure to monitor</strong> — Not tracking weight, hydration, infections, or condition changes.</li>
         </ul>
-        <p>Many facilities put profits before safety. An elder abuse lawyer can investigate whether the facility’s choices caused your loved one’s injuries.</p>
+        <p>Many facilities put profits before safety.</p>
+        <figure class="content-hero-img">
+          <img src="/images/nursing-home/nurse-chart.png" alt="Nurse documenting patient care in facility" width="1200" height="630" loading="lazy">
+        </figure>
       </div>
     </div>
   </section>
@@ -521,15 +561,85 @@
 
   <section class="content-section" style="padding:2rem 0; background:#fff;">
     <div class="container">
+      <div class="content-body">
+        <div class="attorney-strip">
+          <img src="https://www.insiderlawyers.com/images/la/harvey-goldhammer.webp" alt="Harvey Goldhammer" class="attorney-strip__photo" width="100" height="120" loading="lazy">
+          <div>
+            <strong>Harvey Goldhammer</strong>
+            <div style="color:#01366c; font-size:0.95rem;">Trial Attorney – Personal Injury Litigation</div>
+          </div>
+        </div>
+
+        <header class="head-group">
+          <h2 class="h2 section-title tail">
+            <span class="tail__before"></span>Why Families Choose Insider Accident Lawyers<span class="tail__after"></span>
+          </h2>
+        </header>
+        <div class="why-families">
+          <div class="why-families__item">
+            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/trial-strategy.png" width="48" height="48" alt="" loading="lazy"></div>
+            <div>Focus on serious injury cases</div>
+          </div>
+          <div class="why-families__item">
+            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/medical-network.png" width="48" height="48" alt="" loading="lazy"></div>
+            <div>Experience with medical negligence claims</div>
+          </div>
+          <div class="why-families__item">
+            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/insurance-defense.png" width="48" height="48" alt="" loading="lazy"></div>
+            <div>Trial-ready litigation strategy</div>
+          </div>
+          <div class="why-families__item">
+            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/no-fee.png" width="48" height="48" alt="" loading="lazy"></div>
+            <div>Contingency fee representation</div>
+          </div>
+        </div>
+
+        <div class="trusted-mid">
+          <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Trusted By Families Across California</h3>
+          <div class="trust-badges-row">
+            <img src="https://www.insiderlawyers.com/images/la/superlawyers-stacked.png" alt="Super Lawyers" class="trust-badge-img" width="100" height="75" loading="lazy">
+            <img src="https://www.insiderlawyers.com/images/la/google-badge.png" alt="Google Reviews" class="trust-badge-img" width="100" height="75" loading="lazy">
+            <img src="https://www.insiderlawyers.com/images/la/lacba-featured-59015-255.jpg" alt="LACBA" class="trust-badge-img" width="100" height="75" loading="lazy">
+          </div>
+        </div>
+
+        <header class="head-group">
+          <h2 class="h2 section-title tail">
+            <span class="tail__before"></span>Nursing Home Neglect Case Results<span class="tail__after"></span>
+          </h2>
+        </header>
+        <p class="lead-text">Past results in nursing home and elder abuse matters.*</p>
+        <div class="case-value-block">
+          <div class="case-value-block__item">
+            <div class="case-value-block__amount">$1,100,000</div>
+            <div>Stage 4 Pressure Ulcer — settlement</div>
+          </div>
+          <div class="case-value-block__item">
+            <div class="case-value-block__amount">$850,000</div>
+            <div>Sepsis From Untreated Bedsore — settlement</div>
+          </div>
+          <div class="case-value-block__item">
+            <div class="case-value-block__amount">$2,000,000</div>
+            <div>Wrongful Death From Neglect — verdict</div>
+          </div>
+        </div>
+        <p style="font-size:0.9rem; color:#64748b;">* Results depend on the facts of each case. No guarantee of similar outcome.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" style="padding:2rem 0; background:#fff;">
+    <div class="container">
       <div class="qualification-filter">
-        <h2>Do You Have a Nursing Home Neglect Case?</h2>
-        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.95);">If these apply, you may have a strong claim. Contact us for a free consultation.</p>
+        <h2>Do I Have a Case?</h2>
+        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.95);">Checklist:</p>
         <ul>
-          <li>Your loved one developed Stage 3 or Stage 4 bed sores</li>
-          <li>The injury occurred in a nursing home or assisted living facility</li>
-          <li>Hospitalization or serious medical complications occurred</li>
+          <li>Your loved one developed bed sores in a nursing home</li>
+          <li>The wound progressed to Stage 3 or Stage 4</li>
+          <li>Hospital treatment was required</li>
         </ul>
-        <a href="#case-evaluation" class="btn-primary">Free Consultation</a>
+        <p style="margin-top:1rem; color:rgba(255,255,255,0.95); font-weight:600;">If yes, you may have a nursing home negligence claim.</p>
+        <a href="#case-evaluation" class="btn-primary" style="margin-top:1rem;">Free Consultation</a>
         <a href="tel:844-467-4335" style="color:#fff; margin-left:0.75rem; font-weight:700;" data-callrail-phone="844-467-4335">Call 844-467-4335</a>
       </div>
     </div>
@@ -780,6 +890,9 @@
       </div>
     </div>
   </footer>
+  <div class="sticky-mobile-call" aria-label="Call for free consultation">
+    <a href="tel:844-467-4335" data-callrail-phone="844-467-4335">CALL NOW</a> · Free Consultation
+  </div>
   <script>window.addEventListener('load', function() { document.body.classList.add('loaded'); });</script>
   <script src="/scripts/utm-gclid-tracking.js"></script>
   <script src="/scripts/ial-form-tracking.js?v=5"></script>
