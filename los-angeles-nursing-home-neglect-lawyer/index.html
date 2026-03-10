@@ -84,6 +84,9 @@
     }
     .qualification-filter { background: linear-gradient(135deg, #01366c 0%, #01468a 100%); color: #fff; padding: 0; border-radius: 16px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(1,54,108,0.25); overflow: hidden; }
     .qualification-filter__inner { display: grid; grid-template-columns: minmax(200px, 340px) 1fr; gap: 0; align-items: center; min-height: 200px; }
+    .qualification-filter__inner--image-right { grid-template-columns: 1fr minmax(200px, 340px); }
+    .qualification-filter__inner--image-right .qualification-filter__content { order: 1; }
+    .qualification-filter__inner--image-right .qualification-filter__media { order: 2; }
     .qualification-filter__media { background: rgba(0,0,0,0.15); }
     .qualification-filter__media img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 200px; }
     .qualification-filter__content { padding: 2rem 2.25rem; }
@@ -94,7 +97,10 @@
     .qualification-filter .qualification-filter__outcome { color: #fff; font-size: 1.15rem; font-weight: 600; margin-top: 1rem; line-height: 1.5; }
     .qualification-filter .cta-btn-row { margin-top: 1.25rem; }
     @media (max-width: 768px) {
-      .qualification-filter__inner { grid-template-columns: 1fr; }
+      .qualification-filter__inner,
+      .qualification-filter__inner--image-right { grid-template-columns: 1fr; }
+      .qualification-filter__inner--image-right .qualification-filter__content,
+      .qualification-filter__inner--image-right .qualification-filter__media { order: unset; }
       .qualification-filter__media img { min-height: 180px; max-height: 220px; }
       .qualification-filter__content { padding: 1.75rem 1.5rem; }
       .qualification-filter h2 { font-size: 1.45rem; }
@@ -104,25 +110,40 @@
     .content-body .lead-text { font-size: 1.28rem; line-height: 1.62; color: #1e293b; }
     .content-body ul { font-size: 1.15rem; line-height: 1.68; margin: 1.1rem 0; padding-left: 1.5rem; color: #334155; }
     .content-body ul li { margin: 0.5rem 0; }
-    .content-body .faq-item h3 { font-size: 1.22rem; margin-bottom: 0.5rem; color: #01366c; font-weight: 700; }
-    .content-body .faq-item p { margin-bottom: 0; font-size: 1.15rem; line-height: 1.68; color: #334155; }
+    .faq-accordion { margin-top: 1.5rem; }
+    .faq-item { border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 0.75rem; overflow: hidden; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .faq-item:last-child { margin-bottom: 0; }
+    .faq-item__trigger { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 1.25rem 1.35rem; text-align: left; font-size: 1.2rem; font-weight: 700; color: #01366c; background: none; border: none; cursor: pointer; font-family: inherit; line-height: 1.35; transition: background 0.2s ease, color 0.2s ease; }
+    .faq-item__trigger:hover { background: #f8fafc; color: #012a54; }
+    .faq-item__trigger:focus { outline: none; box-shadow: 0 0 0 3px rgba(1,54,108,0.25); }
+    .faq-item__question-text { padding-right: 1rem; }
+    .faq-item__icon { flex-shrink: 0; width: 24px; height: 24px; color: #01366c; transition: transform 0.25s ease; }
+    .faq-item.is-open .faq-item__icon { transform: rotate(180deg); }
+    .faq-item__answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease; }
+    .faq-item.is-open .faq-item__answer { grid-template-rows: 1fr; }
+    .faq-item__answer-inner { overflow: hidden; min-height: 0; }
+    .faq-item__answer p { margin: 0; padding: 0 1.35rem 1.35rem; font-size: 1.15rem; line-height: 1.68; color: #334155; padding-top: 0; border-top: 1px solid #e2e8f0; margin-top: 0; }
+    .faq-item.is-open .faq-item__answer p { padding: 1rem 1.35rem 1.35rem; margin-top: 0; border-top-color: #e2e8f0; }
+    @media (max-width: 768px) { .faq-item__trigger { font-size: 1.1rem; padding: 1.1rem 1.15rem; } .faq-item__answer p { font-size: 1.1rem; padding-left: 1.15rem; padding-right: 1.15rem; padding-bottom: 1.15rem; } .faq-item.is-open .faq-item__answer p { padding: 0.9rem 1.15rem 1.15rem; } }
     @media (max-width: 768px) { .content-body p, .content-body ul { font-size: 1.1rem; } .content-body .lead-text { font-size: 1.2rem; } .content-body .faq-item p { font-size: 1.1rem; } }
     .content-list-prominent { font-size: 1.2rem; font-weight: 600; line-height: 1.68; color: #1e293b; margin: 1.25rem 0 !important; padding-left: 1.5rem !important; }
     .content-list-prominent li { margin: 0.5rem 0; }
     @media (max-width: 768px) { .content-list-prominent { font-size: 1.12rem; } }
     .content-hero-img { margin: 1.5rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(1,54,108,.12); max-width: 560px; }
     .content-hero-img img { width: 100%; height: auto; display: block; }
-    .why-families { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
-    .why-families__item { display: flex; align-items: flex-start; gap: 0.75rem; }
-    .why-families__icon { flex-shrink: 0; width: 48px; height: 48px; }
+    .why-families { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem 2.5rem; margin: 2.5rem 0; }
+    .why-families__item { display: flex; align-items: flex-start; gap: 1.25rem; font-size: 1.2rem; line-height: 1.5; font-weight: 600; color: #1e293b; }
+    .why-families__icon { flex-shrink: 0; width: 96px; height: 96px; }
     .why-families__icon img { width: 100%; height: auto; }
+    @media (max-width: 768px) { .why-families { gap: 1.5rem; } .why-families__icon { width: 72px; height: 72px; } .why-families__item { font-size: 1.1rem; } }
     .trusted-mid { text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 12px; margin: 2rem 0; border: 1px solid #e2e8f0; }
     .trust-badges-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
     .trusted-mid .trust-badges-row { justify-content: center; margin-top: 0.75rem; }
     .trust-badge-img { height: auto; max-height: 120px; object-fit: contain; }
     .case-value-block { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
     .case-value-block__item { padding: 1rem; background: #f0f6fc; border-left: 4px solid #01366c; border-radius: 8px; font-size: 1.08rem; line-height: 1.5; color: #334155; }
-    .case-value-block__amount { font-size: 1.25rem; font-weight: 800; color: #01366c; }
+    .case-value-block__amount { font-size: 1.25rem; font-weight: 800; color: #01366c; transition: transform 0.3s ease; }
+    .case-value-block__amount.animated { transform: scale(1.02); }
     .case-value-disclaimer { font-size: 1rem; line-height: 1.55; color: #64748b; margin-top: 0.5rem; }
     .attorney-strip { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: #f8fafc; border-radius: 12px; margin: 2rem 0; flex-wrap: wrap; }
     .attorney-strip__photo { width: 100px; height: 120px; border-radius: 8px; object-fit: cover; }
@@ -136,6 +157,29 @@
       .cta-btn-row .btn-primary { margin-right: 0 !important; margin-left: 0 !important; }
       .cta-btn-row a[href^="tel:"] { margin-left: 0 !important; display: block; text-align: center; padding: 0.75rem 1rem; }
     }
+    .site-footer { background: #0c2334; color: rgba(255,255,255,0.9); padding: 3rem 0 2rem; margin-top: 0; }
+    .site-footer .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+    .footer-content { display: grid; grid-template-columns: 1.2fr 1fr 1fr auto; gap: 2.5rem 2rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    @media (max-width: 992px) { .footer-content { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .footer-content { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; } }
+    .footer-section { min-width: 0; }
+    .footer-section h3, .footer-section h4 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 1rem; letter-spacing: 0.02em; text-transform: uppercase; }
+    .footer-section h4 { font-size: 0.95rem; opacity: 0.95; }
+    .footer-section p { font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem; color: rgba(255,255,255,0.88); }
+    .footer-section p:last-of-type { margin-bottom: 0; }
+    .footer-section .footer__phone { color: #ffd54f; font-weight: 800; font-size: 1.35rem; text-decoration: none; }
+    .footer-section .footer__phone:hover { text-decoration: underline; }
+    .footer-section .footer__contact-row { margin-bottom: 0.75rem; }
+    .footer-section ul { list-style: none; margin: 0; padding: 0; }
+    .footer-section ul li { margin-bottom: 0.5rem; }
+    .footer-section ul li a { color: rgba(255,255,255,0.88); text-decoration: none; font-size: 0.95rem; line-height: 1.5; }
+    .footer-section ul li a:hover { color: #ffd54f; text-decoration: underline; }
+    .footer__disclaimer { padding-top: 2rem; margin-top: 0; }
+    .footer__disclaimer p { font-size: 0.8rem; line-height: 1.55; color: rgba(255,255,255,0.65); margin-bottom: 0.75rem; max-width: 72ch; }
+    .footer__disclaimer p:last-of-type { margin-bottom: 0; }
+    .footer__copyright { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin-top: 1rem; }
+    .footer__disclaimer a { color: rgba(255,255,255,0.8); text-decoration: underline; }
+    .footer__disclaimer a:hover { color: #ffd54f; }
   </style>
   <!-- Google Tag Manager (same as main site www.insiderlawyers.com) -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -215,6 +259,50 @@
           }
         }, { passive: true });
       });
+      (function() {
+        var block = document.getElementById('case-value-block');
+        if (!block) return;
+        var amounts = block.querySelectorAll('.case-value-block__amount[data-value]');
+        var duration = 1600;
+        var easeOutQuart = function(t) { return 1 - (--t) * t * t * t; };
+        function formatNum(n) { return '$' + n.toLocaleString(); }
+        function animateValue(el) {
+          var target = parseInt(el.getAttribute('data-value'), 10);
+          if (isNaN(target)) return;
+          var start = 0;
+          var startTime = null;
+          function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var elapsed = timestamp - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+            var eased = easeOutQuart(progress);
+            var current = Math.round(start + (target - start) * eased);
+            el.textContent = formatNum(current);
+            if (progress < 1) requestAnimationFrame(step); else { el.classList.add('animated'); setTimeout(function() { el.classList.remove('animated'); }, 400); }
+          }
+          requestAnimationFrame(step);
+        }
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (!entry.isIntersecting) return;
+            observer.disconnect();
+            amounts.forEach(function(el) { animateValue(el); });
+          });
+        }, { threshold: 0.3, rootMargin: '0px 0px -50px 0px' });
+        observer.observe(block);
+      })();
+      (function() {
+        var accordion = document.getElementById('faq-accordion');
+        if (!accordion) return;
+        accordion.querySelectorAll('.faq-item__trigger').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var item = this.closest('.faq-item');
+            var isOpen = item.classList.contains('is-open');
+            item.classList.toggle('is-open');
+            this.setAttribute('aria-expanded', !isOpen);
+          });
+        });
+      })();
     });
   </script>
 </head>
@@ -345,9 +433,9 @@
             <li><span class="hero-highlight">No Fee Unless We Win</span></li>
             <li><span class="hero-highlight">Available 24/7</span></li>
           </ul>
-          <figure class="content-hero-img" style="margin-top:1.5rem; max-width:560px;">
-            <span class="img-placeholder" style="display:block; background:#1e3a5f; color:rgba(255,255,255,0.7); padding:3rem 1.5rem; text-align:center; border-radius:12px; font-size:0.95rem;">[IMAGE: caregiver assisting elderly resident]</span>
-          </figure>
+          <div class="hero-team-photo" style="margin-top:1.5rem;">
+            <img src="https://www.insiderlawyers.com/images/team-attorneys.png" alt="Our Legal Team" class="team-photo" width="670" height="308" loading="eager">
+          </div>
           <div class="hero-review-badges">
             <div class="hero-review-badge-item">
               <img src="https://www.insiderlawyers.com/images/hero/google-logo.png" alt="Google Reviews" width="80" height="32" loading="lazy">
@@ -436,10 +524,7 @@
   <section class="content-section" style="padding:2rem 0; background:#fff;">
     <div class="container">
       <div class="qualification-filter">
-        <div class="qualification-filter__inner">
-          <div class="qualification-filter__media">
-            <span class="img-placeholder" style="display:block; width:100%; min-height:200px; background:#0a2540; color:rgba(255,255,255,0.6); padding:2rem; text-align:center; font-size:0.9rem;">[IMAGE: caregiver assisting elderly resident]</span>
-          </div>
+        <div class="qualification-filter__inner qualification-filter__inner--image-right">
           <div class="qualification-filter__content">
             <h2>Do You Have a Nursing Home Neglect Case?</h2>
             <p class="qualification-filter__lead">Short checklist:</p>
@@ -454,6 +539,9 @@
               <a href="#case-evaluation" class="btn-primary">Free Consultation</a>
               <a href="tel:844-467-4335" style="color:#fff; margin-left:0.75rem; font-weight:700;" data-callrail-phone="844-467-4335">Call Now: 844-INSIDE-5</a>
             </div>
+          </div>
+          <div class="qualification-filter__media">
+            <img src="/images/nursing-home/caregiver-elderly-resident.png" alt="Caregiver with elderly resident in care setting" width="340" height="240" loading="lazy">
           </div>
         </div>
       </div>
@@ -481,7 +569,7 @@
         </ul>
         <p>Many cases stem from understaffing. We investigate facility care and hold responsible parties accountable.</p>
         <figure class="content-hero-img">
-          <span class="img-placeholder" style="display:block; background:#e2e8f0; color:#64748b; padding:3rem 1.5rem; text-align:center; border-radius:12px; font-size:0.95rem;">[IMAGE: nurse assisting elderly patient]</span>
+          <img src="/images/nursing-home/nurse-assisting-elderly-patient.png" alt="Nurse assisting elderly patient with care" width="1200" height="630" loading="lazy">
         </figure>
       </div>
     </div>
@@ -499,7 +587,7 @@
         <p><strong>Four stages:</strong> Stage 1 (redness, skin intact) → Stage 2 (partial-thickness loss) → <a href="/stage-3-stage-4-bed-sore-lawsuit">Stage 3 and Stage 4</a> (full-thickness loss; may expose tissue or bone). <strong>Stage 3 and Stage 4 ulcers are often strong evidence of neglect.</strong></p>
         <p>Learn more: <a href="/pressure-ulcers-nursing-home-neglect">Pressure ulcers and neglect</a>, <a href="/nursing-home-repositioning-standards">repositioning standards</a>.</p>
         <figure class="content-hero-img">
-          <span class="img-placeholder" style="display:block; background:#e2e8f0; color:#64748b; padding:3rem 1.5rem; text-align:center; border-radius:12px; font-size:0.95rem;">[IMAGE: medical professional reviewing wound chart]</span>
+          <img src="/images/nursing-home/nurse-documenting-patient-care.png" alt="Medical professional documenting patient care" width="1200" height="630" loading="lazy">
         </figure>
       </div>
     </div>
@@ -521,7 +609,7 @@
           <li><strong>Failure to monitor</strong> — Not tracking weight, hydration, infections, or condition changes.</li>
         </ul>
         <figure class="content-hero-img">
-          <span class="img-placeholder" style="display:block; background:#e2e8f0; color:#64748b; padding:3rem 1.5rem; text-align:center; border-radius:12px; font-size:0.95rem;">[IMAGE: nurse documenting patient care]</span>
+          <img src="/images/nursing-home/resident-in-care-setting.png" alt="Resident in nursing care setting" width="1200" height="630" loading="lazy">
         </figure>
       </div>
     </div>
@@ -566,7 +654,7 @@
         </ul>
         <p>We work to show the facility failed the standard of care and caused your loved one’s injuries.</p>
         <figure class="content-hero-img">
-          <span class="img-placeholder" style="display:block; background:#e2e8f0; color:#64748b; padding:3rem 1.5rem; text-align:center; border-radius:12px; font-size:0.95rem;">[IMAGE: attorney reviewing medical records]</span>
+          <img src="/images/nursing-home/attorney-reviewing-records.png" alt="Attorney reviewing medical records" width="1200" height="630" loading="lazy">
         </figure>
       </div>
     </div>
@@ -582,19 +670,19 @@
         </header>
         <div class="why-families">
           <div class="why-families__item">
-            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/trial-strategy.png" width="48" height="48" alt="" loading="lazy"></div>
+            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/trial-strategy.png" width="96" height="96" alt="" loading="lazy"></div>
             <div>Focus on serious injury cases</div>
           </div>
           <div class="why-families__item">
-            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/medical-network.png" width="48" height="48" alt="" loading="lazy"></div>
+            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/medical-network.png" width="96" height="96" alt="" loading="lazy"></div>
             <div>Experience with medical negligence claims</div>
           </div>
           <div class="why-families__item">
-            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/insurance-defense.png" width="48" height="48" alt="" loading="lazy"></div>
+            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/insurance-defense.png" width="96" height="96" alt="" loading="lazy"></div>
             <div>Trial-ready litigation strategy</div>
           </div>
           <div class="why-families__item">
-            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/no-fee.png" width="48" height="48" alt="" loading="lazy"></div>
+            <div class="why-families__icon"><img src="https://www.insiderlawyers.com/images/highlights/no-fee.png" width="96" height="96" alt="" loading="lazy"></div>
             <div>Contingency fee representation</div>
           </div>
         </div>
@@ -605,17 +693,17 @@
           </h2>
         </header>
         <p class="lead-text">Representative results obtained by attorneys at Insider Accident Lawyers.*</p>
-        <div class="case-value-block">
+        <div class="case-value-block" id="case-value-block">
           <div class="case-value-block__item">
-            <div class="case-value-block__amount">$2,500,000</div>
+            <div class="case-value-block__amount" data-value="2500000">$0</div>
             <div>Wrongful Death — settlement</div>
           </div>
           <div class="case-value-block__item">
-            <div class="case-value-block__amount">$2,400,000</div>
+            <div class="case-value-block__amount" data-value="2400000">$0</div>
             <div>Serious Injury — settlement</div>
           </div>
           <div class="case-value-block__item">
-            <div class="case-value-block__amount">$1,100,000</div>
+            <div class="case-value-block__amount" data-value="1100000">$0</div>
             <div>Personal Injury — settlement</div>
           </div>
         </div>
@@ -632,21 +720,51 @@
             <span class="tail__before"></span>Frequently Asked Questions<span class="tail__after"></span>
           </h2>
         </header>
-        <div class="faq-item" style="margin-bottom:1.5rem;">
-          <h3>What qualifies as nursing home neglect?</h3>
-          <p>Failure to provide needed care that results in harm—for example, not turning residents (causing bed sores), inadequate food or water, ignored infections, medication errors, or preventable falls. When that failure causes injury, a nursing home neglect lawyer can help you pursue a claim. See <a href="/nursing-home-neglect-vs-abuse">neglect vs. abuse</a> for the distinction.</p>
-        </div>
-        <div class="faq-item" style="margin-bottom:1.5rem;">
-          <h3>Can a nursing home be sued for bed sores?</h3>
-          <p>Yes. If your loved one developed bed sores because the facility failed to provide adequate repositioning, wound care, or monitoring, you may have a negligence claim. A <a href="/can-you-sue-nursing-home-bed-sores">bed sore lawsuit</a> can hold the facility accountable. We review records and advise.</p>
-        </div>
-        <div class="faq-item" style="margin-bottom:1.5rem;">
-          <h3>How do pressure ulcers develop?</h3>
-          <p>Prolonged pressure on the skin cuts off blood flow. Immobile residents must be repositioned regularly. When staff do not, or skip proper support and wound care, ulcers form and can progress through four stages. <a href="/what-causes-bed-sores">What causes bed sores</a> and <a href="/stage-3-stage-4-bed-sore-lawsuit">Stage 3 and 4</a> are often evidence of neglect.</p>
-        </div>
-        <div class="faq-item" style="margin-bottom:1.5rem;">
-          <h3>How long do I have to file in California?</h3>
-          <p>Generally two years from the injury or from when you knew (or should have known) of the harm. Wrongful death also has a two-year deadline. A lawyer can confirm the deadline for your case.</p>
+        <div class="faq-accordion" id="faq-accordion">
+          <div class="faq-item" id="faq-1">
+            <button type="button" class="faq-item__trigger" aria-expanded="false" aria-controls="faq-answer-1" id="faq-q1">
+              <span class="faq-item__question-text">What qualifies as nursing home neglect?</span>
+              <svg class="faq-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-1" role="region" aria-labelledby="faq-q1">
+              <div class="faq-item__answer-inner">
+                <p>Failure to provide needed care that results in harm—for example, not turning residents (causing bed sores), inadequate food or water, ignored infections, medication errors, or preventable falls. When that failure causes injury, a nursing home neglect lawyer can help you pursue a claim. See <a href="/nursing-home-neglect-vs-abuse">neglect vs. abuse</a> for the distinction.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" id="faq-2">
+            <button type="button" class="faq-item__trigger" aria-expanded="false" aria-controls="faq-answer-2" id="faq-q2">
+              <span class="faq-item__question-text">Can a nursing home be sued for bed sores?</span>
+              <svg class="faq-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-2" role="region" aria-labelledby="faq-q2">
+              <div class="faq-item__answer-inner">
+                <p>Yes. If your loved one developed bed sores because the facility failed to provide adequate repositioning, wound care, or monitoring, you may have a negligence claim. A <a href="/can-you-sue-nursing-home-bed-sores">bed sore lawsuit</a> can hold the facility accountable. We review records and advise.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" id="faq-3">
+            <button type="button" class="faq-item__trigger" aria-expanded="false" aria-controls="faq-answer-3" id="faq-q3">
+              <span class="faq-item__question-text">How do pressure ulcers develop?</span>
+              <svg class="faq-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-3" role="region" aria-labelledby="faq-q3">
+              <div class="faq-item__answer-inner">
+                <p>Prolonged pressure on the skin cuts off blood flow. Immobile residents must be repositioned regularly. When staff do not, or skip proper support and wound care, ulcers form and can progress through four stages. <a href="/what-causes-bed-sores">What causes bed sores</a> and <a href="/stage-3-stage-4-bed-sore-lawsuit">Stage 3 and 4</a> are often evidence of neglect.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" id="faq-4">
+            <button type="button" class="faq-item__trigger" aria-expanded="false" aria-controls="faq-answer-4" id="faq-q4">
+              <span class="faq-item__question-text">How long do I have to file in California?</span>
+              <svg class="faq-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-4" role="region" aria-labelledby="faq-q4">
+              <div class="faq-item__answer-inner">
+                <p>Generally two years from the injury or from when you knew (or should have known) of the harm. Wrongful death also has a two-year deadline. A lawyer can confirm the deadline for your case.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -820,15 +938,15 @@
   <footer class="site-footer" id="footer-contact">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-section">
+        <div class="footer-section footer-section--brand">
           <h3>Insider Accident Lawyers</h3>
           <p>Los Angeles personal injury and elder abuse attorneys. Real trial lawyers, real results.</p>
-          <p><a href="tel:844-467-4335" class="footer__phone" data-callrail-phone="844-467-4335">844-INSIDE-5</a></p>
+          <p class="footer__contact-row"><a href="tel:844-467-4335" class="footer__phone" data-callrail-phone="844-467-4335">844-INSIDE-5</a></p>
           <p>Available 24/7 · Hablamos Español</p>
           <p>No Fee Unless We Win</p>
           <p>3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010</p>
         </div>
-        <div class="footer-section footer-section--prominent">
+        <div class="footer-section">
           <h3>Practice Areas</h3>
           <ul>
             <li><a href="/personal-injury">Personal Injury</a></li>
@@ -856,7 +974,7 @@
           </ul>
         </div>
         <div class="footer-section">
-          <h4>Legal</h4>
+          <h3>Legal</h3>
           <ul>
             <li><a href="/legal/results-disclaimer">Results Disclaimer</a></li>
             <li><a href="/legal/disclaimer">Legal Disclaimer</a></li>
