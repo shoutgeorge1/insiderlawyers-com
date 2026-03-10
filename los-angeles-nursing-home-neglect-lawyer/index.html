@@ -82,21 +82,34 @@
     @media (max-width: 600px) {
       .home-ppc .our-attorneys-photo-wrap { width: 150px; height: 185px; border-radius: 10px; }
     }
-    .qualification-filter { background: linear-gradient(135deg, #01366c 0%, #01468a 100%); color: #fff; padding: 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(1,54,108,0.25); }
-    .qualification-filter h2 { color: #fff; margin-bottom: 1rem; font-size: 1.5rem; }
-    .qualification-filter ul { margin: 1rem 0; padding-left: 1.25rem; }
+    .qualification-filter { background: linear-gradient(135deg, #01366c 0%, #01468a 100%); color: #fff; padding: 0; border-radius: 16px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(1,54,108,0.25); overflow: hidden; }
+    .qualification-filter__inner { display: grid; grid-template-columns: minmax(200px, 340px) 1fr; gap: 0; align-items: center; min-height: 200px; }
+    .qualification-filter__media { background: rgba(0,0,0,0.15); }
+    .qualification-filter__media img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 200px; }
+    .qualification-filter__content { padding: 2rem 2.25rem; }
+    .qualification-filter h2 { color: #fff; margin-bottom: 0.75rem; font-size: 1.65rem; font-weight: 800; letter-spacing: -0.02em; }
+    .qualification-filter .qualification-filter__lead { color: rgba(255,255,255,0.95); font-size: 1.1rem; margin-bottom: 1rem; line-height: 1.55; }
+    .qualification-filter ul { margin: 1rem 0; padding-left: 1.35rem; font-size: 1.12rem; line-height: 1.6; color: rgba(255,255,255,0.95); }
     .qualification-filter li { margin: 0.5rem 0; }
-    .qualification-filter .btn-primary { margin-top: 1rem; }
-    .content-body p { font-size: 1.1rem; line-height: 1.7; margin-bottom: 1rem; color: #334155; }
-    .content-body .lead-text { font-size: 1.2rem; line-height: 1.6; }
-    .content-body ul { font-size: 1.1rem; line-height: 1.65; margin: 1.1rem 0; padding-left: 1.5rem; color: #334155; }
-    .content-body ul li { margin: 0.45rem 0; }
-    .content-body .faq-item h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #01366c; }
-    .content-body .faq-item p { margin-bottom: 0; }
-    @media (max-width: 768px) { .content-body p, .content-body ul { font-size: 1.05rem; } .content-body .lead-text { font-size: 1.15rem; } }
-    .content-list-prominent { font-size: 1.15rem; font-weight: 600; line-height: 1.65; color: #1e293b; margin: 1.25rem 0 !important; padding-left: 1.5rem !important; }
+    .qualification-filter .qualification-filter__outcome { color: #fff; font-size: 1.15rem; font-weight: 600; margin-top: 1rem; line-height: 1.5; }
+    .qualification-filter .cta-btn-row { margin-top: 1.25rem; }
+    @media (max-width: 768px) {
+      .qualification-filter__inner { grid-template-columns: 1fr; }
+      .qualification-filter__media img { min-height: 180px; max-height: 220px; }
+      .qualification-filter__content { padding: 1.75rem 1.5rem; }
+      .qualification-filter h2 { font-size: 1.45rem; }
+      .qualification-filter ul { font-size: 1.08rem; }
+    }
+    .content-body p { font-size: 1.18rem; line-height: 1.72; margin-bottom: 1rem; color: #334155; }
+    .content-body .lead-text { font-size: 1.28rem; line-height: 1.62; color: #1e293b; }
+    .content-body ul { font-size: 1.15rem; line-height: 1.68; margin: 1.1rem 0; padding-left: 1.5rem; color: #334155; }
+    .content-body ul li { margin: 0.5rem 0; }
+    .content-body .faq-item h3 { font-size: 1.22rem; margin-bottom: 0.5rem; color: #01366c; font-weight: 700; }
+    .content-body .faq-item p { margin-bottom: 0; font-size: 1.15rem; line-height: 1.68; color: #334155; }
+    @media (max-width: 768px) { .content-body p, .content-body ul { font-size: 1.1rem; } .content-body .lead-text { font-size: 1.2rem; } .content-body .faq-item p { font-size: 1.1rem; } }
+    .content-list-prominent { font-size: 1.2rem; font-weight: 600; line-height: 1.68; color: #1e293b; margin: 1.25rem 0 !important; padding-left: 1.5rem !important; }
     .content-list-prominent li { margin: 0.5rem 0; }
-    @media (max-width: 768px) { .content-list-prominent { font-size: 1.1rem; } }
+    @media (max-width: 768px) { .content-list-prominent { font-size: 1.12rem; } }
     .content-hero-img { margin: 1.5rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(1,54,108,.12); max-width: 560px; }
     .content-hero-img img { width: 100%; height: auto; display: block; }
     .why-families { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
@@ -108,8 +121,13 @@
     .trusted-mid .trust-badges-row { justify-content: center; margin-top: 0.75rem; }
     .trust-badge-img { height: auto; max-height: 120px; object-fit: contain; }
     .case-value-block { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .case-value-block__item { padding: 1rem; background: #f0f6fc; border-left: 4px solid #01366c; border-radius: 8px; }
+    .case-value-block__item { padding: 1rem; background: #f0f6fc; border-left: 4px solid #01366c; border-radius: 8px; font-size: 1.08rem; line-height: 1.5; color: #334155; }
     .case-value-block__amount { font-size: 1.25rem; font-weight: 800; color: #01366c; }
+    .case-value-disclaimer { font-size: 1rem; line-height: 1.55; color: #64748b; margin-top: 0.5rem; }
+    .case-results__sub { font-size: 1.15rem; line-height: 1.5; color: #334155; }
+    .scoreboard-card__narrative { font-size: 1.08rem; line-height: 1.55; }
+    .scoreboard-card__meta { font-size: 1rem; line-height: 1.5; }
+    .case-results__disclaimer { font-size: 1rem; line-height: 1.5; }
     .attorney-strip { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: #f8fafc; border-radius: 12px; margin: 2rem 0; flex-wrap: wrap; }
     .attorney-strip__photo { width: 100px; height: 120px; border-radius: 8px; object-fit: cover; }
     .sticky-mobile-call { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(180deg, #01366c 0%, #01468a 100%); color: #fff; padding: 12px 16px; z-index: 999; box-shadow: 0 -4px 20px rgba(0,0,0,.2); text-align: center; }
@@ -564,14 +582,6 @@
   <section class="content-section" style="padding:2rem 0; background:#fff;">
     <div class="container">
       <div class="content-body">
-        <div class="attorney-strip">
-          <img src="https://www.insiderlawyers.com/images/la/harvey-goldhammer.webp" alt="Harvey Goldhammer" class="attorney-strip__photo" width="100" height="120" loading="lazy">
-          <div>
-            <strong>Harvey Goldhammer</strong>
-            <div style="color:#01366c; font-size:0.95rem;">Trial Attorney – Personal Injury Litigation</div>
-          </div>
-        </div>
-
         <header class="head-group">
           <h2 class="h2 section-title tail">
             <span class="tail__before"></span>Why Families Choose Insider Accident Lawyers<span class="tail__after"></span>
@@ -596,36 +606,27 @@
           </div>
         </div>
 
-        <div class="trusted-mid">
-          <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Trusted By Families Across California</h3>
-          <div class="trust-badges-row">
-            <img src="https://www.insiderlawyers.com/images/la/superlawyers-stacked.png" alt="Super Lawyers" class="trust-badge-img" width="100" height="75" loading="lazy">
-            <img src="https://www.insiderlawyers.com/images/la/google-badge.png" alt="Google Reviews" class="trust-badge-img" width="100" height="75" loading="lazy">
-            <img src="https://www.insiderlawyers.com/images/la/lacba-featured-59015-255.jpg" alt="LACBA" class="trust-badge-img" width="100" height="75" loading="lazy">
-          </div>
-        </div>
-
         <header class="head-group">
           <h2 class="h2 section-title tail">
-            <span class="tail__before"></span>Nursing Home Neglect Case Results<span class="tail__after"></span>
+            <span class="tail__before"></span>Verified Settlements<span class="tail__after"></span>
           </h2>
         </header>
-        <p class="lead-text">Past results in nursing home and elder abuse matters.*</p>
+        <p class="lead-text">Representative results obtained by attorneys at Insider Accident Lawyers.*</p>
         <div class="case-value-block">
           <div class="case-value-block__item">
+            <div class="case-value-block__amount">$2,500,000</div>
+            <div>Wrongful Death — settlement</div>
+          </div>
+          <div class="case-value-block__item">
+            <div class="case-value-block__amount">$2,400,000</div>
+            <div>Serious Injury — settlement</div>
+          </div>
+          <div class="case-value-block__item">
             <div class="case-value-block__amount">$1,100,000</div>
-            <div>Stage 4 Pressure Ulcer — settlement</div>
-          </div>
-          <div class="case-value-block__item">
-            <div class="case-value-block__amount">$850,000</div>
-            <div>Sepsis From Untreated Bedsore — settlement</div>
-          </div>
-          <div class="case-value-block__item">
-            <div class="case-value-block__amount">$2,000,000</div>
-            <div>Wrongful Death From Neglect — verdict</div>
+            <div>Personal Injury — settlement</div>
           </div>
         </div>
-        <p style="font-size:0.9rem; color:#64748b;">* Results depend on the facts of each case. No guarantee of similar outcome.</p>
+        <p class="case-value-disclaimer">* Past verdicts and settlements. Results depend on the facts of each case. No guarantee of similar outcome.</p>
       </div>
     </div>
   </section>
@@ -633,17 +634,24 @@
   <section class="content-section" style="padding:2rem 0; background:#fff;">
     <div class="container">
       <div class="qualification-filter">
-        <h2>Do I Have a Case?</h2>
-        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.95);">Checklist:</p>
-        <ul>
-          <li>Your loved one developed bed sores in a nursing home</li>
-          <li>The wound progressed to Stage 3 or Stage 4</li>
-          <li>Hospital treatment was required</li>
-        </ul>
-        <p style="margin-top:1rem; color:rgba(255,255,255,0.95); font-weight:600;">If yes, you may have a nursing home negligence claim.</p>
-        <div class="cta-btn-row" style="margin-top:1rem;">
-          <a href="#case-evaluation" class="btn-primary">Free Consultation</a>
-          <a href="tel:844-467-4335" style="color:#fff; margin-left:0.75rem; font-weight:700;" data-callrail-phone="844-467-4335">Call 844-467-4335</a>
+        <div class="qualification-filter__inner">
+          <div class="qualification-filter__media">
+            <img src="https://www.insiderlawyers.com/images/nursing-home/nurse-helping-patient.png" alt="Caregiver assisting resident" width="340" height="240" loading="lazy">
+          </div>
+          <div class="qualification-filter__content">
+            <h2>Do I Have a Case?</h2>
+            <p class="qualification-filter__lead">Checklist:</p>
+            <ul>
+              <li>Your loved one developed bed sores in a nursing home</li>
+              <li>The wound progressed to Stage 3 or Stage 4</li>
+              <li>Hospital treatment was required</li>
+            </ul>
+            <p class="qualification-filter__outcome">If yes, you may have a nursing home negligence claim.</p>
+            <div class="cta-btn-row">
+              <a href="#case-evaluation" class="btn-primary">Free Consultation</a>
+              <a href="tel:844-467-4335" style="color:#fff; margin-left:0.75rem; font-weight:700;" data-callrail-phone="844-467-4335">Call 844-467-4335</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -658,19 +666,19 @@
           </h2>
         </header>
         <div class="faq-item" style="margin-bottom:1.5rem;">
-          <h3 style="font-size:1.15rem; margin-bottom:0.5rem;">What qualifies as nursing home neglect?</h3>
+          <h3>What qualifies as nursing home neglect?</h3>
           <p>Failure to provide needed care, resulting in harm—e.g., not turning residents (causing bed sores), inadequate food or water, ignored infections, medication errors, or preventable falls. When that failure causes injury, a nursing home neglect lawyer can help you pursue a claim.</p>
         </div>
         <div class="faq-item" style="margin-bottom:1.5rem;">
-          <h3 style="font-size:1.15rem; margin-bottom:0.5rem;">How do pressure ulcers develop?</h3>
+          <h3>How do pressure ulcers develop?</h3>
           <p>Prolonged pressure on the skin cuts off blood flow. Immobile residents must be repositioned regularly. When staff don’t, or skip proper support and wound care, ulcers form and can progress through four stages. Stage 3 and 4 are often evidence of neglect.</p>
         </div>
         <div class="faq-item" style="margin-bottom:1.5rem;">
-          <h3 style="font-size:1.15rem; margin-bottom:0.5rem;">Can I sue a nursing home for bed sores?</h3>
+          <h3>Can I sue a nursing home for bed sores?</h3>
           <p>Yes. If your loved one developed bed sores because the facility failed to provide adequate repositioning, wound care, or monitoring, you may have a negligence claim. A bed sore attorney can review the records and advise.</p>
         </div>
         <div class="faq-item" style="margin-bottom:1.5rem;">
-          <h3 style="font-size:1.15rem; margin-bottom:0.5rem;">How long do I have to file in California?</h3>
+          <h3>How long do I have to file in California?</h3>
           <p>Generally two years from the injury or from when you knew (or should have known) of the harm. Wrongful death also has a two-year deadline. A lawyer can confirm the deadline for your case.</p>
         </div>
       </div>
