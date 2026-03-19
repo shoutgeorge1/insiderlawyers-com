@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /social-assets/
 
 Sitemap: https://www.insiderlawyers.com/sitemap.xml
