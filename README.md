@@ -1,5 +1,15 @@
 # PI Search – Car Accident LP (Insider Accident Lawyers)
 
+## Google Search Console verification (www.insiderlawyers.com)
+
+The repository root file **`google0f074189c817401a.html`** is required for Google Search Console **HTML file** domain verification of **https://www.insiderlawyers.com/**. It must remain in the deployed site root so this URL resolves:
+
+`https://www.insiderlawyers.com/google0f074189c817401a.html`
+
+**Do not** delete this file, add it to `.gitignore`, or add Vercel redirects/rewrites that override that path. This project deploys the repo root as static output (`vercel.json` → `outputDirectory: "."`); builds that wipe the output directory must not remove root static assets. If you add an automated build step, copy or preserve `google0f074189c817401a.html` in the deployment root.
+
+---
+
 **Canonical URL for this minim LP (once configured):** [https://call.insideraccidentlawyers.com/los-angeles-car-accident/](https://call.insideraccidentlawyers.com/los-angeles-car-accident/)  
 The root **https://call.insideraccidentlawyers.com/** is the long-form site and is not changed or replaced.
 
