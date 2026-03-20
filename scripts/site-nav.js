@@ -2,6 +2,13 @@
   function initTapToCallBar() {
     var bar = document.getElementById("tap-to-call-bar");
     if (!bar) return;
+    var body = document.body;
+    if (
+      !body.classList.contains("home-ppc") &&
+      !body.classList.contains("ppc-page")
+    ) {
+      return;
+    }
     var threshold = 120;
     var reduceMotion = false;
     try {

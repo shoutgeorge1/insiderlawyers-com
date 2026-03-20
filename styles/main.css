@@ -107,13 +107,17 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: header-title-zoom 0.65s ease-out forwards;
+  animation: none;
   /* Polished metal: crisp highlight edge + reflective sheen */
   filter: drop-shadow(0 0 1px rgba(255,255,255,0.95))
     drop-shadow(0 0 3px rgba(255,255,255,0.4))
     drop-shadow(0 0 8px rgba(180,215,255,0.35))
     drop-shadow(0 1px 2px rgba(0,30,70,0.4))
     drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+}
+body.home-ppc .header__middle__title,
+body.ppc-page .header__middle__title {
+  animation: header-title-zoom 0.65s ease-out forwards;
 }
 /* Metallic reflection sheen under title */
 .header__middle__title::after {
@@ -286,25 +290,6 @@
     scroll-margin-top: 5rem;
     scroll-margin-bottom: 2rem;
   }
-  /* CTA buttons - use hover color/state by default on mobile for prominence */
-  .btn-primary,
-  .hero.hero-section .hero-form-card .btn-primary,
-  .block.highlights .btn,
-  .why-choose__cta .btn,
-  .btn-settlements {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 0 #c99400, 0 10px 28px rgba(255,191,0,0.45);
-  }
-  .btn-primary:active,
-  .block.highlights .btn:active,
-  .why-choose__cta .btn:active,
-  .btn-settlements:active {
-    transform: translateY(0);
-  }
-  /* Call bar number - bright by default */
-  .call-bar__number {
-    color: #ffd700;
-  }
   /* Tel links - better touch feedback */
   a[href^="tel:"] {
     -webkit-tap-highlight-color: rgba(255, 219, 0, 0.35);
@@ -315,6 +300,34 @@
   .why-choose__cta .btn,
   .btn-settlements {
     min-height: 48px;
+  }
+  /* Strong mobile CTA emphasis — PPC / hero conversion only */
+  body.home-ppc .btn-primary,
+  body.home-ppc .hero.hero-section .hero-form-card .btn-primary,
+  body.ppc-page .btn-primary,
+  body.ppc-page .hero.hero-section .hero-form-card .btn-primary,
+  body.home-ppc .block.highlights .btn,
+  body.ppc-page .block.highlights .btn,
+  body.home-ppc .why-choose__cta .btn,
+  body.ppc-page .why-choose__cta .btn,
+  body.home-ppc .btn-settlements,
+  body.ppc-page .btn-settlements {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #c99400, 0 10px 28px rgba(255,191,0,0.45);
+  }
+  body.home-ppc .btn-primary:active,
+  body.home-ppc .block.highlights .btn:active,
+  body.home-ppc .why-choose__cta .btn:active,
+  body.home-ppc .btn-settlements:active,
+  body.ppc-page .btn-primary:active,
+  body.ppc-page .block.highlights .btn:active,
+  body.ppc-page .why-choose__cta .btn:active,
+  body.ppc-page .btn-settlements:active {
+    transform: translateY(0);
+  }
+  body.home-ppc .call-bar__number,
+  body.ppc-page .call-bar__number {
+    color: #ffd700;
   }
 }
 
@@ -664,8 +677,11 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   }
 }
 
-/* Full-width call bar */
-.call-bar {
+/* Full-width call bar — giant type; only inside PPC wrappers */
+body.home-ppc .call-bar,
+body.ppc-page .call-bar,
+body.landing-page .call-bar,
+.hero-conversion .call-bar {
   width: 100%;
   padding: 1.25rem 1.5rem;
   background: linear-gradient(90deg, #012a50 0%, #01366c 25%, #01468a 50%, #01508f 75%, #01366c 100%);
@@ -674,7 +690,10 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   border-bottom: 3px solid rgba(255,219,0,0.4);
   box-shadow: 0 4px 20px rgba(1,54,108,0.3);
 }
-.call-bar__inner {
+body.home-ppc .call-bar__inner,
+body.ppc-page .call-bar__inner,
+body.landing-page .call-bar__inner,
+.hero-conversion .call-bar__inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -683,14 +702,20 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   max-width: 1400px;
   margin: 0 auto;
 }
-.call-bar__text {
+body.home-ppc .call-bar__text,
+body.ppc-page .call-bar__text,
+body.landing-page .call-bar__text,
+.hero-conversion .call-bar__text {
   font-size: clamp(1.75rem, 4vw, 3rem);
   font-weight: 900;
   color: #fff;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
-.call-bar__number {
+body.home-ppc .call-bar__number,
+body.ppc-page .call-bar__number,
+body.landing-page .call-bar__number,
+.hero-conversion .call-bar__number {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
   color: #ffd700;
@@ -698,23 +723,38 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   letter-spacing: 0.02em;
   transition: color 0.2s ease, transform 0.2s ease;
 }
-.call-bar__number:hover {
+body.home-ppc .call-bar__number:hover,
+body.ppc-page .call-bar__number:hover,
+body.landing-page .call-bar__number:hover,
+.hero-conversion .call-bar__number:hover {
   color: #fff;
   transform: scale(1.03);
 }
 @media (max-width: 600px) {
-  .call-bar {
+  body.home-ppc .call-bar,
+  body.ppc-page .call-bar,
+  body.landing-page .call-bar,
+  .hero-conversion .call-bar {
     padding: 1rem 1rem;
   }
 }
 @media (max-width: 767px) {
-  .call-bar__text {
+  body.home-ppc .call-bar__text,
+  body.ppc-page .call-bar__text,
+  body.landing-page .call-bar__text,
+  .hero-conversion .call-bar__text {
     font-size: 2.75rem;
   }
-  .call-bar__number {
+  body.home-ppc .call-bar__number,
+  body.ppc-page .call-bar__number,
+  body.landing-page .call-bar__number,
+  .hero-conversion .call-bar__number {
     font-size: 3.5rem;
   }
-  .call-bar__number:hover {
+  body.home-ppc .call-bar__number:hover,
+  body.ppc-page .call-bar__number:hover,
+  body.landing-page .call-bar__number:hover,
+  .hero-conversion .call-bar__number:hover {
     color: #ffd700;
   }
   .footer__phone:hover {
@@ -2028,12 +2068,37 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   .header-nav-wrap .mobile-menu-toggle span {
     transition: transform 0.2s ease, opacity 0.2s ease;
   }
-  /* Prominent Call CTA at top of mobile menu (legal standard) */
+  /* Mobile menu phone CTA — calm default; bold on PPC bodies only */
   .mobile-nav-cta {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.2rem;
+    padding: 0.65rem 0.85rem;
+    margin-bottom: 0.5rem;
+    background: #f3f6fa;
+    border-radius: 8px;
+    border: 1px solid #dce6f2;
+  }
+  .mobile-nav-cta__link {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #01366c !important;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    -webkit-tap-highlight-color: rgba(1, 54, 108, 0.12);
+  }
+  .mobile-nav-cta__link:hover,
+  .mobile-nav-cta__link:active {
+    color: #01468a !important;
+  }
+  .mobile-nav-cta__sub {
+    font-size: 0.8rem;
+    color: #4b5563;
+    font-weight: 600;
+  }
+  body.home-ppc .mobile-nav-cta,
+  body.ppc-page .mobile-nav-cta {
     padding: 1rem 1.25rem;
     margin-bottom: 0.75rem;
     background: linear-gradient(135deg, #01366c 0%, #01468a 100%);
@@ -2041,22 +2106,23 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
     border: 2px solid #fbba00;
     box-shadow: 0 4px 12px rgba(1, 54, 108, 0.25);
   }
-  .mobile-nav-cta__link {
+  body.home-ppc .mobile-nav-cta__link,
+  body.ppc-page .mobile-nav-cta__link {
     font-size: 1.5rem;
     font-weight: 900;
     color: #fff !important;
-    text-decoration: none;
-    letter-spacing: 0.02em;
     -webkit-tap-highlight-color: rgba(255, 219, 0, 0.2);
   }
-  .mobile-nav-cta__link:hover,
-  .mobile-nav-cta__link:active {
+  body.home-ppc .mobile-nav-cta__link:hover,
+  body.home-ppc .mobile-nav-cta__link:active,
+  body.ppc-page .mobile-nav-cta__link:hover,
+  body.ppc-page .mobile-nav-cta__link:active {
     color: #ffd700 !important;
   }
-  .mobile-nav-cta__sub {
+  body.home-ppc .mobile-nav-cta__sub,
+  body.ppc-page .mobile-nav-cta__sub {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.9);
-    font-weight: 600;
   }
   /* Nav links: large tap targets, readable font (legal / a11y) */
   .header-nav-wrap .nav-link {
@@ -2344,7 +2410,8 @@ html {
   box-sizing: border-box;
 }
 @media (max-width: 900px) {
-  .tap-to-call-bar {
+  body.home-ppc .tap-to-call-bar,
+  body.ppc-page .tap-to-call-bar {
     display: flex;
   }
 }
@@ -2394,5 +2461,61 @@ body.has-tap-bar-visible {
   .header-nav-wrap .mobile-nav-cta {
     display: none !important;
   }
+}
+
+/* --- SEO rhythm: in-flow CTA + plain breadcrumbs (no icons) --- */
+.content-cta-strip {
+  padding: 0.85rem 0;
+  background: #f3f6fa;
+  border-top: 1px solid #dce6f2;
+  border-bottom: 1px solid #dce6f2;
+  text-align: center;
+}
+.content-cta-strip__inner {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #01366c;
+}
+.content-cta-strip a {
+  color: #01468a;
+  font-weight: 700;
+  text-decoration: none;
+}
+.content-cta-strip a:hover {
+  text-decoration: underline;
+}
+.content-cta-strip__sep {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.breadcrumb.breadcrumb--plain {
+  padding: 0.45rem 0 0.35rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+.breadcrumb.breadcrumb--plain .container {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.breadcrumb.breadcrumb--plain a {
+  color: #01468a;
+  text-decoration: none;
+  font-weight: 600;
+}
+.breadcrumb.breadcrumb--plain a:hover {
+  text-decoration: underline;
+}
+.breadcrumb--plain .breadcrumb__sep {
+  margin: 0 0.35rem;
+  color: #9ca3af;
+  font-weight: 400;
+}
+.breadcrumb--plain .breadcrumb__current {
+  color: #1f2937;
+  font-weight: 600;
 }
 
