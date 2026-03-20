@@ -3,7 +3,11 @@
 
   function isConversionBody() {
     var b = document.body;
-    return b.classList.contains("home-ppc") || b.classList.contains("ppc-page");
+    return (
+      b.classList.contains("home-ppc") ||
+      b.classList.contains("ppc-page") ||
+      b.classList.contains("has-sticky-cta")
+    );
   }
 
   function setNavOpen(open) {

@@ -2428,7 +2428,8 @@ body:not(.home-ppc):not(.ppc-page) #call-bar {
 }
 @media (max-width: 900px) {
   body.home-ppc .tap-to-call-bar,
-  body.ppc-page .tap-to-call-bar {
+  body.ppc-page .tap-to-call-bar,
+  body.has-sticky-cta .tap-to-call-bar {
     display: flex;
   }
 }

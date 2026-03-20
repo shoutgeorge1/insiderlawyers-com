@@ -153,12 +153,50 @@
         .footer-social__link:hover{background:#fbba00;color:#01366c;border-color:#fbba00}
         .footer-social__link svg{width:18px;height:18px;fill:currentColor}
         @media (max-width: 600px){.footer-social{justify-content:center}.footer-social__label{font-size:1rem}.footer-social__link{width:38px;height:38px}}
+        /* Conversion strips — personal-injury hub (no change to content-heading pattern in .content-body) */
+        .pi-soft-cta,.pi-conversion-form,.pi-bottom-cta{padding:40px 0;background:var(--brand-light-blue);border-top:1px solid var(--brand-border);border-bottom:1px solid var(--brand-border)}
+        .pi-soft-cta .container,.pi-bottom-cta .container{max-width:900px;text-align:center}
+        .pi-soft-cta .cta-eyebrow{font-size:.85rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-blue);margin:0 0 8px}
+        .pi-soft-cta h2{font-size:clamp(1.35rem,3vw,1.75rem);margin:0 0 12px;color:var(--brand-navy)}
+        .pi-soft-cta p{margin:0 0 20px;color:var(--brand-gray-700);line-height:1.6}
+        .pi-soft-cta .btn.btn-primary{display:inline-block;background:var(--brand-accent-yellow);color:var(--brand-navy);font-weight:700;padding:14px 28px;border-radius:8px;text-decoration:none;font-size:1.05rem;border:none;cursor:pointer;box-shadow:0 2px 8px rgba(1,54,108,.12)}
+        .pi-soft-cta .btn.btn-primary:hover{background:#e6b300;color:var(--brand-navy)}
+        .pi-conversion-form{background:#fff;border-top:1px solid #dce6f2;border-bottom:1px solid #dce6f2;padding:48px 0}
+        .pi-conversion-form .conversion-flex{display:flex;flex-wrap:wrap;gap:2rem;align-items:flex-start;max-width:1100px;margin:0 auto}
+        .pi-conversion-form .conversion-copy{flex:1 1 280px;min-width:0}
+        .pi-conversion-form .conversion-copy h2{font-size:1.5rem;margin:0 0 16px;padding:0;background:none;border:none}
+        .pi-conversion-form .conversion-copy ul{list-style:none;padding:0;margin:0 0 16px}
+        .pi-conversion-form .conversion-copy li{margin:10px 0;font-weight:600;color:var(--brand-gray-700)}
+        .pi-conversion-form .conversion-phone{font-size:1.05rem;margin:0;color:var(--brand-navy)}
+        .pi-conversion-form .conversion-phone a{font-weight:800;color:var(--brand-blue);text-decoration:underline}
+        .pi-conversion-form .conversion-form-wrapper{flex:1 1 320px;min-width:0;max-width:100%}
+        .pi-conversion-form .ial-hero-form-card{background:linear-gradient(180deg,#2878b5 0%,#1e6a9e 50%,#165c8a 100%);border:2px solid rgba(255,255,255,.3);border-radius:12px;padding:1.75rem;box-shadow:0 12px 40px rgba(1,54,108,.2);text-align:center}
+        .pi-conversion-form .ial-hero-form-card *{box-sizing:border-box}
+        .pi-conversion-form .ial-badge{display:inline-block;background:rgba(251,186,0,.35);color:#fff;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:.45rem 1rem;border-radius:999px;border:1px solid rgba(251,186,0,.5);margin-bottom:12px}
+        .pi-conversion-form .ial-heading{font-size:1.35rem;font-weight:700;color:#fff;margin:0 0 .5rem;line-height:1.25}
+        .pi-conversion-form .ial-intro{font-size:.98rem;color:rgba(255,255,255,.95);margin:0 0 1.25rem;line-height:1.5}
+        .pi-conversion-form .ial-label{display:block;font-size:.85rem;font-weight:700;color:#fff;margin-bottom:.35rem;text-transform:uppercase;letter-spacing:.05em;text-align:center}
+        .pi-conversion-form .ial-input{display:block;width:100%;padding:.8rem 1rem;border:2px solid rgba(255,255,255,.35);border-radius:8px;font-size:1rem;background:#fff;color:#1f2937;margin-bottom:.85rem}
+        .pi-conversion-form .ial-input:focus{outline:none;border-color:#fbba00;box-shadow:0 0 0 3px rgba(251,186,0,.25)}
+        .pi-conversion-form .ial-textarea{min-height:88px;resize:vertical}
+        .pi-conversion-form .ial-checkbox-wrap{display:flex;align-items:flex-start;gap:.5rem;text-align:left;margin-bottom:.65rem}
+        .pi-conversion-form .ial-checkbox-wrap input{margin-top:.2rem;flex-shrink:0;accent-color:#fbba00}
+        .pi-conversion-form .ial-checkbox-label{font-size:.8rem;color:rgba(255,255,255,.92);line-height:1.4}
+        .pi-conversion-form .ial-submit{display:block;width:100%;padding:1rem 1.25rem;font-size:1.05rem;font-weight:800;color:#fff;background:linear-gradient(180deg,#fbba00 0%,#e5a800 100%);border:none;border-radius:10px;cursor:pointer;text-transform:uppercase;letter-spacing:.04em;margin-top:.35rem;box-shadow:0 4px 14px rgba(251,186,0,.35)}
+        .pi-bottom-cta{background:linear-gradient(180deg,#f1f6fc 0%,#e8f0fa 100%);text-align:center;padding:44px 0}
+        .pi-bottom-cta h2{margin:0 0 12px;font-size:1.5rem}
+        .pi-bottom-cta p{margin:0 auto 18px;max-width:640px;color:var(--brand-gray-700)}
+        .pi-bottom-cta .btn.btn-primary{display:inline-block;background:var(--brand-accent-yellow);color:var(--brand-navy);font-weight:700;padding:14px 28px;border-radius:8px;text-decoration:none;font-size:1.05rem}
+        .pi-bottom-cta .btn.btn-primary:hover{background:#e6b300}
+        .pi-bottom-cta .cta-phone{margin:16px 0 0;font-weight:700}
+        .pi-bottom-cta .cta-phone a{color:var(--brand-blue);text-decoration:underline}
+        @media(max-width:768px){.pi-conversion-form .conversion-flex{flex-direction:column}.pi-conversion-form .ial-hero-form-card{padding:1.35rem 1.1rem}}
     </style>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-WS8XT5FC');</script>
 
 <link rel="stylesheet" href="/styles/footer.css">
 </head>
-<body>
+<body class="seo-page has-sticky-cta">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS8XT5FC" height="0" width="0" style="display:none"></iframe></noscript>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -172,6 +210,27 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+  document.querySelectorAll("[data-lead-cta]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      window.dataLayer.push({
+        event: "lead_click",
+        lead_label: this.getAttribute("data-lead-label") || "cta",
+        cta_href: this.getAttribute("href") || "",
+        page_path: location.pathname,
+      });
+    });
+  });
+  var piCaseForm = document.getElementById("case-evaluation-form");
+  if (piCaseForm) {
+    piCaseForm.addEventListener("submit", function () {
+      window.dataLayer.push({
+        event: "form_submit",
+        form_name: "case_evaluation",
+        form_placement: "personal_injury_mid",
+        page_path: location.pathname,
+      });
+    });
+  }
   setTimeout(function () {
     window.dataLayer.push({ event: "engaged_30s" });
   }, 30000);
@@ -385,9 +444,74 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p class="lead-text">Insider Accident Lawyers is a <strong>personal injury lawyer Los Angeles</strong> and <strong>Los Angeles personal injury lawyer</strong> firm that represents injured people throughout California with trial-focused representation. As injury attorneys in Los Angeles and a personal injury law firm California clients and referring lawyers rely on, our attorneys are former insurance defense lawyers—so we understand how insurance carrier negotiations and liability disputes are evaluated, and we use that insight to build stronger cases. We are known for referral work from major law firms, and our Spanish-speaking intake team makes it easier to get answers quickly. We handle complex injury and liability cases with the mindset of preparing for Los Angeles Superior Court even when a settlement is likely. Whether you need a <a href="/los-angeles-car-accident-lawyer">car accident attorney in Los Angeles</a>, <a href="/los-angeles-auto-accident-lawyer">auto accident attorney Los Angeles</a>, or counsel for truck, brain injury, or wrongful death, our team's Los Angeles litigation experience shapes every step, from investigation to policy limits strategy, so clients can pursue full, fair recovery.</p>
                 <figure class="content-hero-img" style="margin:24px 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(1,54,108,.12);"><img decoding="async" src="/images/personal-injury-medical-waiting-room.jpg" alt="Illustration: Personal Injury Lawyer Los Angeles" style="width:100%;height:auto;display:block;"></figure>
                 <p>If you already have counsel and want neutral guidance on communication, case pace, or <a href="/changing-personal-injury-lawyer-california">changing a personal injury lawyer in California</a>—including second opinions and what to expect when a case feels stalled—our cluster on switching lawyers and second opinions may help.</p>
-                
+            </div>
+        </div>
+    </section>
+
+    <section class="pi-soft-cta" aria-label="Case review call to action">
+      <div class="container">
+        <p class="cta-eyebrow">Injured in an accident?</p>
+        <h2>Speak With a Los Angeles Personal Injury Attorney Today</h2>
+        <p>Free case review. No fee unless we win. Available 24/7.</p>
+        <a href="/#case-evaluation" class="btn btn-primary" data-lead-cta="1" data-lead-label="pi_soft_case_review">Start Free Case Review</a>
+      </div>
+    </section>
+
+    <section class="section-content">
+        <div class="container">
+            <div class="content-body">
                 <h2>Personal Injury Lawyer Los Angeles, CA</h2>
                 <p>If you were hurt in Los Angeles or elsewhere in California, a <strong>personal injury lawyer Los Angeles CA</strong> can help you pursue medical bills, lost wages, and pain and suffering. The right <strong>Los Angeles personal injury lawyer</strong> combines trial readiness with insurer-side insight so your case is valued fairly. We serve as <a href="/los-angeles-car-accident-lawyer">car accident attorneys Los Angeles</a>, <a href="/california-car-accident-lawyer">California car accident</a> and injury counsel, and we handle <a href="/personal-injury/truck-accidents">truck accidents</a>, <a href="/personal-injury/brain-injuries">brain injuries</a>, <a href="/personal-injury/wrongful-death">wrongful death</a>, and other serious injury matters with the same trial-focused approach.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pi-conversion-form" aria-label="Free case evaluation">
+      <div class="container conversion-flex">
+        <div class="conversion-copy">
+          <h2>Find Out What Your Injury Case May Be Worth</h2>
+          <ul>
+            <li>✔ Free consultation</li>
+            <li>✔ No upfront fees</li>
+            <li>✔ We deal with insurance companies</li>
+            <li>✔ Available 24/7</li>
+          </ul>
+          <p class="conversion-phone">
+            Or call now: <a href="tel:844-467-4335" data-callrail-phone="844-467-4335">(844) INSIDER</a>
+          </p>
+        </div>
+        <div class="conversion-form-wrapper">
+          <div class="ial-hero-form-card">
+            <div class="ial-badge">Free &amp; Confidential</div>
+            <h2 class="ial-heading">Get Your Free Case Evaluation</h2>
+            <p class="ial-intro">Tell us what happened — an experienced <strong>Los Angeles injury or premises liability attorney</strong> will review your situation at no cost. We help with injury and premises cases, or refer you to the right counsel.</p>
+            <form action="https://formsubmit.co/ial.leads.2024@gmail.com" method="POST" id="case-evaluation-form">
+              <input type="hidden" name="_subject" value="New Case Inquiry">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_autoresponse" value="Thank you — we received your request. Our legal team will contact you shortly.">
+              <input type="hidden" name="_next" value="https://www.insiderlawyers.com/thank-you/">
+              <input type="hidden" name="_url" value="https://www.insiderlawyers.com/personal-injury">
+              <label class="ial-label" for="pi-case-full-name">Full Name *</label>
+              <input id="pi-case-full-name" type="text" class="ial-input" name="full_name" placeholder="Your Full Name" required>
+              <label class="ial-label" for="pi-case-phone">Phone Number *</label>
+              <input id="pi-case-phone" type="tel" class="ial-input" name="phone" placeholder="(555) 555-5555" required>
+              <label class="ial-label" for="pi-case-accident">Tell Us About Your Situation *</label>
+              <textarea id="pi-case-accident" class="ial-input ial-textarea" name="accident_reason" rows="3" placeholder="Brief description of your injury or legal concern..." required></textarea>
+              <div class="ial-checkbox-wrap">
+                <input type="checkbox" name="text_consent" id="pi-case-text-consent" value="yes">
+                <label for="pi-case-text-consent" class="ial-checkbox-label">I agree to receive text messages. Message and data rates may apply. Reply STOP to opt out.</label>
+              </div>
+              <button type="submit" class="ial-submit">Get My Free Review</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-content">
+        <div class="container">
+            <div class="content-body">
 
                 <h2>Key Takeaways</h2>
                 <ul>
@@ -511,7 +635,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 <ul class="plus-list">
                     <li>This framework helps prioritize evidence, avoid valuation gaps, and move negotiations with stronger leverage.</li>
                 </ul>
+            </div>
+        </div>
+    </section>
 
+    <section class="pi-bottom-cta" aria-label="Request a free review">
+      <div class="container">
+        <h2>Don’t Wait to Protect Your Rights</h2>
+        <p>Evidence disappears and insurance companies move fast. Speak with an attorney now.</p>
+        <a href="/#case-evaluation" class="btn btn-primary" data-lead-cta="1" data-lead-label="pi_bottom_case_review">Request Free Case Review</a>
+        <p class="cta-phone"><a href="tel:844-467-4335" data-callrail-phone="844-467-4335">Call 24/7</a></p>
+      </div>
+    </section>
+
+    <section class="section-content">
+        <div class="container">
+            <div class="content-body">
                 <h2>FAQs</h2>
                 <p class="lead-text">These are the questions most accident victims ask early.</p>
                 <div class="faq-item">
