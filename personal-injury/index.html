@@ -154,35 +154,57 @@
         .footer-social__link svg{width:18px;height:18px;fill:currentColor}
         @media (max-width: 600px){.footer-social{justify-content:center}.footer-social__label{font-size:1rem}.footer-social__link{width:38px;height:38px}}
         /* Conversion strips — personal-injury hub */
-        .pi-soft-cta,.pi-conversion-form,.pi-bottom-cta{padding:40px 0;background:var(--brand-light-blue);border-top:1px solid var(--brand-border);border-bottom:1px solid var(--brand-border)}
-        .pi-soft-cta .container,.pi-bottom-cta .container{max-width:900px;text-align:center}
+        .pi-soft-cta{padding:44px 16px;background:linear-gradient(165deg,#e4edf6 0%,#f2f6fb 42%,#e9f0f7 100%);border-top:1px solid #c5d6e6;border-bottom:1px solid #c5d6e6}
+        .pi-conversion-form{padding:52px 16px;background:linear-gradient(155deg,#eef4fa 0%,#f7fafc 38%,#e8f0f8 100%);border-top:1px solid #c5d6e6;border-bottom:1px solid #c5d6e6;position:relative}
+        .pi-conversion-form::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 85% 55% at 18% 12%,rgba(251,186,0,.08),transparent 62%),radial-gradient(ellipse 70% 50% at 92% 88%,rgba(1,70,138,.06),transparent 58%);pointer-events:none}
+        .pi-conversion-form > .container{position:relative;z-index:1}
+        .pi-bottom-cta{padding:44px 16px;background:linear-gradient(165deg,#e4edf6 0%,#f2f6fb 55%,#e9f0f7 100%);border-top:1px solid #c5d6e6;border-bottom:1px solid #c5d6e6}
+        .pi-soft-cta .container,.pi-bottom-cta .container{max-width:920px;text-align:center}
+        .pi-cta-panel{background:linear-gradient(168deg,#fff 0%,#fafcfe 55%,#f5f9fc 100%);border:1px solid #c8d8e8;border-radius:16px;padding:2rem 1.85rem;box-shadow:0 14px 44px rgba(1,54,108,.12),0 1px 0 rgba(255,255,255,.75) inset;position:relative;overflow:hidden}
+        .pi-cta-panel::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--brand-accent-yellow),#ffd34d,var(--brand-blue));border-radius:16px 16px 0 0}
+        .pi-cta-panel > *{position:relative;z-index:1}
         .pi-soft-cta .cta-eyebrow{font-size:.85rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-blue);margin:0 0 8px}
-        .pi-soft-cta h2{font-size:clamp(1.35rem,3vw,1.75rem);margin:0 0 12px;color:var(--brand-navy)}
-        .pi-soft-cta p{margin:0 0 12px;color:var(--brand-gray-700);line-height:1.6}
-        .pi-cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;margin-top:8px}
-        .pi-cta-row .btn{margin:0}
+        .pi-soft-cta h2{font-size:clamp(1.35rem,3vw,1.85rem);margin:0 0 12px;color:var(--brand-navy);line-height:1.25;letter-spacing:-.02em}
+        .pi-soft-cta p{margin:0 0 12px;color:var(--brand-gray-700);line-height:1.65;max-width:34rem;margin-left:auto;margin-right:auto}
+        .pi-cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;margin-top:12px}
+        .pi-cta-row .btn{margin:0;min-width:11.5rem;padding:14px 22px;font-weight:700;box-shadow:0 3px 12px rgba(1,54,108,.12)}
         .pi-soft-cta a.btn-secondary,.pi-bottom-cta a.btn-secondary{color:#fff!important;text-decoration:none}
-        .pi-conversion-form{background:#fafbfc;border-top:1px solid #dce6f2;border-bottom:1px solid #dce6f2;padding:48px 0}
-        .pi-conversion-form .conversion-flex{display:flex;flex-wrap:wrap;gap:2rem;align-items:flex-start;max-width:1000px;margin:0 auto}
-        .pi-conversion-form .conversion-copy{flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:12px}
-        .pi-conversion-form .conversion-copy h2{font-size:1.45rem;margin:0;padding:0;background:none;border:none;color:var(--brand-navy);text-align:left}
-        .pi-conversion-form .conversion-copy p{margin:0;color:var(--brand-gray-700);line-height:1.55;text-align:left}
-        .pi-conversion-form .conversion-form-wrapper{flex:1 1 340px;min-width:0;max-width:100%}
-        .pi-case-form-card{background:var(--brand-white);border:1px solid var(--brand-border);border-radius:12px;padding:1.5rem 1.35rem;box-shadow:0 6px 24px rgba(1,54,108,.08)}
-        .pi-case-form-card .pi-form-label{display:block;font-size:.92rem;font-weight:600;color:var(--brand-navy);margin:0 0 6px}
-        .pi-case-form-card .pi-form-input{display:block;width:100%;padding:.72rem .9rem;border:1px solid #cbd5e1;border-radius:8px;font-size:1rem;font-family:inherit;color:var(--brand-gray-900);margin-bottom:14px;background:#fff}
-        .pi-case-form-card .pi-form-input:focus{outline:none;border-color:var(--brand-blue);box-shadow:0 0 0 3px rgba(1,70,138,.15)}
-        .pi-case-form-card textarea.pi-form-input{min-height:100px;resize:vertical;margin-bottom:12px}
-        .pi-case-form-card .pi-form-check{display:flex;align-items:flex-start;gap:.5rem;margin:4px 0 16px}
-        .pi-case-form-card .pi-form-check input{margin-top:.2rem;flex-shrink:0;accent-color:var(--brand-blue)}
+        .pi-conversion-form .conversion-flex{display:flex;flex-wrap:wrap;gap:1.75rem;align-items:stretch;max-width:1040px;margin:0 auto}
+        .pi-conversion-form .conversion-copy{flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:14px}
+        .pi-conversion-copy-panel{background:linear-gradient(180deg,#fff 0%,#fafcfe 100%);border:1px solid #c8d8e8;border-radius:14px;padding:1.6rem 1.5rem 1.65rem;box-shadow:0 12px 36px rgba(1,54,108,.1);border-left:4px solid var(--brand-accent-yellow)}
+        .pi-conversion-copy-panel .pi-conversion-eyebrow{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--brand-blue);margin:0 0 4px}
+        .pi-conversion-copy-panel h2{font-size:1.5rem;margin:0;padding:0;background:none;border:none;color:var(--brand-navy);text-align:left;line-height:1.28;letter-spacing:-.02em}
+        .pi-conversion-copy-panel p{margin:0;color:var(--brand-gray-700);line-height:1.6;text-align:left;font-size:1.02rem}
+        .pi-trust-chips{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+        .pi-trust-chips li{font-size:.8rem;font-weight:700;color:#0f3f72;background:rgba(1,70,138,.09);border:1px solid rgba(1,70,138,.14);padding:.42rem .75rem;border-radius:999px;margin:0}
+        .pi-conversion-form .conversion-form-wrapper{flex:1 1 340px;min-width:0;max-width:100%;display:flex}
+        .pi-case-form-card{background:var(--brand-white);border:1px solid #c8d8e8;border-radius:14px;padding:0 1.4rem 1.45rem;box-shadow:0 14px 40px rgba(1,54,108,.11);width:100%;overflow:hidden;align-self:stretch}
+        .pi-form-card-head{margin:0 0 1.2rem;padding:1.15rem 1.4rem 1.05rem;background:linear-gradient(180deg,#f4f8fc 0%,#e9f1f8 100%);border-bottom:1px solid #dce6f0}
+        .pi-form-card-kicker{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--brand-blue);margin:0 0 6px}
+        .pi-form-card-sub{font-size:.94rem;color:var(--brand-gray-700);margin:0;line-height:1.45}
+        .pi-case-form-card .pi-form-label{display:block;font-size:.9rem;font-weight:700;color:var(--brand-navy);margin:0 0 6px}
+        .pi-case-form-card .pi-form-input{display:block;width:100%;padding:.78rem 1rem;border:1px solid #b8c7d6;border-radius:9px;font-size:1rem;font-family:inherit;color:var(--brand-gray-900);margin-bottom:14px;background:#fff;transition:border-color .15s,box-shadow .15s}
+        .pi-case-form-card .pi-form-input:hover{border-color:#94a8bc}
+        .pi-case-form-card .pi-form-input:focus{outline:none;border-color:var(--brand-blue);box-shadow:0 0 0 3px rgba(1,70,138,.16)}
+        .pi-case-form-card textarea.pi-form-input{min-height:104px;resize:vertical;margin-bottom:12px;line-height:1.45}
+        .pi-case-form-card .pi-form-check{display:flex;align-items:flex-start;gap:.55rem;margin:2px 0 16px}
+        .pi-case-form-card .pi-form-check input{margin-top:.22rem;flex-shrink:0;accent-color:var(--brand-blue)}
         .pi-case-form-card .pi-form-check label{font-size:.82rem;color:var(--brand-gray-700);line-height:1.45;margin:0}
-        .pi-case-form-card .pi-form-submit{width:100%;margin:0;padding:14px 20px;font-size:1.02rem;border:none;cursor:pointer;border-radius:8px}
-        .pi-conversion-call{align-self:flex-start}
-        .pi-bottom-cta{background:linear-gradient(180deg,#f1f6fc 0%,#e8f0fa 100%);text-align:center;padding:44px 0}
-        .pi-bottom-cta h2{margin:0 0 12px;font-size:1.5rem}
-        .pi-bottom-cta p{margin:0 auto 16px;max-width:640px;color:var(--brand-gray-700)}
-        .pi-bottom-cta .pi-cta-row{margin-top:4px}
-        @media(max-width:768px){.pi-conversion-form .conversion-flex{flex-direction:column}.pi-case-form-card{padding:1.25rem 1.1rem}.pi-conversion-form .conversion-copy h2,.pi-conversion-form .conversion-copy p{text-align:center}.pi-conversion-call{align-self:center}}
+        .pi-case-form-card .pi-form-submit{width:100%;margin:0;padding:15px 20px;font-size:1.04rem;font-weight:800;border:none;cursor:pointer;border-radius:9px;letter-spacing:.02em}
+        .pi-conversion-call{align-self:flex-start;margin-top:2px;min-width:11.5rem;text-align:center;font-weight:700;box-shadow:0 3px 12px rgba(1,54,108,.12)}
+        .pi-bottom-cta .pi-cta-panel{margin:0 auto}
+        .pi-bottom-cta h2{margin:0 0 12px;font-size:clamp(1.35rem,3vw,1.65rem);color:var(--brand-navy);letter-spacing:-.02em;line-height:1.25}
+        .pi-bottom-cta p{margin:0 auto 14px;max-width:34rem;color:var(--brand-gray-700);line-height:1.65}
+        .pi-bottom-cta .pi-cta-row{margin-top:8px}
+        @media(max-width:768px){
+          .pi-conversion-form .conversion-flex{flex-direction:column}
+          .pi-case-form-card .pi-form-card-head{padding:1rem 1.15rem}
+          .pi-case-form-card{padding:0 1.15rem 1.25rem}
+          .pi-conversion-copy-panel h2,.pi-conversion-copy-panel p,.pi-conversion-copy-panel .pi-conversion-eyebrow{text-align:center}
+          .pi-trust-chips{justify-content:center}
+          .pi-conversion-call{align-self:center;margin-left:auto;margin-right:auto}
+          .pi-cta-row .btn{min-width:min(100%,16rem)}
+        }
     </style>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-WS8XT5FC');</script>
 
@@ -442,12 +464,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <section class="pi-soft-cta" aria-label="Case review call to action">
       <div class="container">
-        <p class="cta-eyebrow">Injured in an accident?</p>
-        <h2>Speak With a Los Angeles Personal Injury Attorney Today</h2>
-        <p>Free case review. No fee unless we win. Available 24/7.</p>
-        <div class="pi-cta-row">
-          <a href="tel:844-467-4335" class="btn btn-secondary" data-callrail-phone="844-467-4335">Call 844-467-4335</a>
-          <a href="/#case-evaluation" class="btn btn-primary" data-lead-cta="1" data-lead-label="pi_soft_case_review">Free case review</a>
+        <div class="pi-cta-panel">
+          <p class="cta-eyebrow">Injured in an accident?</p>
+          <h2>Speak With a Los Angeles Personal Injury Attorney Today</h2>
+          <p>Free case review. No fee unless we win. Available 24/7.</p>
+          <div class="pi-cta-row">
+            <a href="tel:844-467-4335" class="btn btn-secondary" data-callrail-phone="844-467-4335">Call 844-467-4335</a>
+            <a href="/#case-evaluation" class="btn btn-primary" data-lead-cta="1" data-lead-label="pi_soft_case_review">Free case review</a>
+          </div>
         </div>
       </div>
     </section>
@@ -626,11 +650,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <section class="pi-bottom-cta" aria-label="Request a free review">
       <div class="container">
-        <h2>Don’t Wait to Protect Your Rights</h2>
-        <p>Evidence disappears and insurance companies move fast. Speak with an attorney now.</p>
-        <div class="pi-cta-row">
-          <a href="tel:844-467-4335" class="btn btn-secondary" data-callrail-phone="844-467-4335">Call 844-467-4335</a>
-          <a href="/#case-evaluation" class="btn btn-primary" data-lead-cta="1" data-lead-label="pi_bottom_case_review">Free case review</a>
+        <div class="pi-cta-panel">
+          <h2>Don’t Wait to Protect Your Rights</h2>
+          <p>Evidence disappears and insurance companies move fast. Speak with an attorney now.</p>
+          <div class="pi-cta-row">
+            <a href="tel:844-467-4335" class="btn btn-secondary" data-callrail-phone="844-467-4335">Call 844-467-4335</a>
+            <a href="/#case-evaluation" class="btn btn-primary" data-lead-cta="1" data-lead-label="pi_bottom_case_review">Free case review</a>
+          </div>
         </div>
       </div>
     </section>
