@@ -2,12 +2,17 @@
 
 **Date:** 2026-03-19 (local)
 
-## Commit
+## Commits
+
+| Role | Hash | Message |
+|------|------|---------|
+| **Baseline stabilization** | `a54e8cf` | Baseline stabilization push — template SSOT, navigation hard lock, interaction reset, GTM hostname governance |
+| **This report** | `99b599c` | docs: add push_baseline_summary for baseline stabilization |
+
+### Baseline commit stats
 
 | Field | Value |
 |--------|--------|
-| **Hash** | `a54e8cf` |
-| **Message** | Baseline stabilization push — template SSOT, navigation hard lock, interaction reset, GTM hostname governance |
 | **Files changed** | **137** |
 | **Diffstat** | +4040 / −2189 lines (repository-wide; includes GTM guard injection + legacy inline nav CSS removal across HTML) |
 
@@ -17,7 +22,7 @@
 |--------|--------|
 | **Remote** | `origin` → `https://github.com/shoutgeorge1/insiderlawyers-com.git` |
 | **Branch** | `master` |
-| **Push** | **Succeeded** — `dd52d68..a54e8cf` → `origin/master` |
+| **Push** | **Succeeded** — baseline: `dd52d68..a54e8cf`; report: `a54e8cf..99b599c` → `origin/master` |
 
 ## Explicitly excluded from this commit (per safety rules)
 
