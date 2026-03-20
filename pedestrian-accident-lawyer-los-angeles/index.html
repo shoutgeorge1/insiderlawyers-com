@@ -49,8 +49,7 @@
         .btn-primary:hover{background:#e6b300;transform:translateY(-2px)}
         .btn-secondary{display:inline-block;background:var(--brand-blue);color:var(--brand-white);font-weight:600;padding:14px 28px;border-radius:8px;text-decoration:none;font-size:18px;margin:24px 0;transition:all .3s}
         .btn-secondary:hover{background:#0f3261;transform:translateY(-2px)}
-        .sticky-header{position:sticky;top:0;background:var(--brand-white);border-bottom:3px solid var(--brand-accent-yellow);padding:10px 0 8px;z-index:1000;box-shadow:0 4px 14px rgba(1,54,108,.12);transition:transform .25s ease}
-        @media(max-width:767px){.sticky-header.header--hidden{transform:translateY(-100%)}}
+        
         .header-content{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
         .header-col--proof{text-align:center;display:flex;flex-direction:column;align-items:center}
         .header-proof-title{font-family:Roboto,Arial,sans-serif;font-size:1rem;font-weight:900;color:var(--brand-navy);line-height:1.1;letter-spacing:-.01em;text-transform:uppercase;background:linear-gradient(180deg,#ffffff 0%,#f4f8fd 100%);border:1px solid rgba(1,54,108,.2);border-radius:999px;padding:7px 14px;box-shadow:0 3px 10px rgba(1,54,108,.1)}
@@ -79,26 +78,7 @@
         .content-body a:hover{color:var(--brand-navy)}
         .content-body a.btn-secondary{color:#fff!important;text-decoration:none}
         .content-body a.btn-secondary:hover{color:#fff!important}
-        @media(max-width:900px){
-          .sticky-header{padding:8px 0}
-          .header-content{grid-template-columns:1fr;gap:10px}
-          .header-col--logo{order:1;text-align:center}
-          .header-col--call{order:2;text-align:center}
-          .header-col--proof{order:3;text-align:center}
-          .header-proof-title{font-size:.95rem}
-          .header-col--proof p{font-size:.75rem}
-          .mobile-menu-toggle{display:inline-flex}
-          .header-nav-row{display:none;flex-direction:column;gap:8px;padding:8px 0 4px}
-          .header-nav-wrap.is-open .header-nav-row{display:flex}
-          .nav-link{width:100%;justify-content:space-between;min-height:36px;padding:7px 12px}
-          .nav-item{display:block;width:100%;padding-bottom:0}
-          .nav-item .nav-link{width:100%}
-          .nav-dropdown{position:static;display:none;margin-top:6px;min-width:0;box-shadow:none;border:1px solid #dce6f3;grid-template-columns:1fr}
-          .nav-item.is-open .nav-dropdown{display:grid}
-          .header-call-label{font-size:.7rem}
-          .header-call-number{font-size:1rem;padding:.58rem .85rem}
-          .header-logo{max-width:180px}
-        }
+        
         @media(max-width:768px){
           h1{font-size:28px}
           h2{font-size:24px}
@@ -367,6 +347,10 @@ document.addEventListener("DOMContentLoaded", function () {
 <a href="tel:844-467-4335" class="tap-to-call-bar" id="tap-to-call-bar" data-callrail-phone="844-467-4335" aria-label="Call for free consultation">Call 844-467-4335</a>
 
 <main>
+<nav class="breadcrumb breadcrumb--plain" aria-label="Breadcrumb">
+  <div class="container"><a href="/">Home</a> <span class="breadcrumb__sep">&gt;</span> <span class="breadcrumb__current">Pedestrian Accident Lawyer Los Angeles</span></div>
+</nav>
+
     <section class="section-content">
         <div class="container">
             <div class="content-body">

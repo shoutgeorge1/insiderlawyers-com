@@ -12,7 +12,7 @@
   padding: 0 24px;
 }
 
-/* Site header - no sticky on mobile; sticky on desktop only (SEO legal: simple, reliable). */
+/* Site header — static (scrolls with page); tap bar is the only fixed affordance on mobile PPC bodies. */
 .header {
   background: #fff !important;
   border-bottom: 3px solid #fbba00;
@@ -20,12 +20,6 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 100;
-}
-@media (min-width: 901px) {
-  .header {
-    position: sticky;
-    top: 0;
-  }
 }
 .header .mid-container {
   width: 100%;
@@ -1755,14 +1749,13 @@ body.landing-page .call-bar__number:hover,
   }
 }
 
-/* Legacy header uniformity: .sticky-header + .header-content match .header when main.css is loaded – compact for all sections */
+/* Legacy .sticky-header class name (some templates) — visual only, no sticky/fixed positioning */
 .sticky-header {
   background: #fff !important;
   border-bottom: 3px solid #fbba00;
   padding: 0.35rem 0 0.45rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
 }
 .sticky-header > .container {
@@ -1973,8 +1966,8 @@ body.landing-page .call-bar__number:hover,
   position: absolute;
   left: 0;
   top: 100%;
-  min-width: 880px;
-  max-width: 1100px;
+  min-width: min(880px, calc(100vw - 32px));
+  max-width: min(1100px, calc(100vw - 24px));
   background: #fff;
   border: 1px solid #d3e0f0;
   border-radius: 10px;
@@ -2018,8 +2011,14 @@ body.landing-page .call-bar__number:hover,
 }
 
 @media (max-width: 900px) {
+  .header.header--unified,
+  .header-nav-wrap {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
   .header-nav-wrap .header-nav-inner,
   .header-nav-wrap .container {
+    max-width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -2235,6 +2234,16 @@ body.landing-page .call-bar__number:hover,
 /* ========== Global template unification (layout / mobile UX) ========== */
 html {
   scroll-padding-top: 88px;
+  overflow-x: clip;
+}
+body {
+  overflow-x: clip;
+}
+@supports not (overflow: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }
 @media (max-width: 900px) {
   html {
