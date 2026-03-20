@@ -3,6 +3,8 @@
 import json
 from pathlib import Path
 
+from gtm_head_guard import GTM_HEAD_GUARD
+
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "insurance-says-injury-is-minor-california" / "index.html"
 SPLIT_END = "            </div>\n        </div>\n    </section>\n    </main>"
@@ -74,7 +76,8 @@ def build_document(t, slug, title, desc, wp_name, wp_desc, faq_items, body_html)
         % (json.dumps(wp_name), json.dumps(u), json.dumps(wp_desc))
     )
     wp_script = f"    <script type=\"application/ld+json\">\n    {wp}\n    </script>"
-    head_inner = f"""
+    head_inner = (
+        f"""
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css?v=2">
@@ -101,10 +104,13 @@ def build_document(t, slug, title, desc, wp_name, wp_desc, faq_items, body_html)
     <style>
 {style_block}
     </style>
-    <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f)}})(window,document,'script','dataLayer','GTM-WS8XT5FC');</script>
+"""
+        + GTM_HEAD_GUARD
+        + """
 
 <link rel="stylesheet" href="/styles/footer.css">
 """
+    )
     return (
         pre_head
         + head_inner

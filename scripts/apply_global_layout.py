@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Apply global header/footer chrome and normalize body scripts (static HTML)."""
+"""Apply global header/footer chrome and normalize body scripts (static HTML).
+
+For GTM: use `components/gtm-head-snippet.html` and run `normalize_gtm_head.py`
+so the container loads only on approved production hostnames.
+"""
 from __future__ import annotations
 
 import re

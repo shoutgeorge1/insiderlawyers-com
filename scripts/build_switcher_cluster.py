@@ -4,6 +4,8 @@ import json
 import os
 import re
 
+from gtm_head_guard import GTM_HEAD_GUARD
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REF = os.path.join(ROOT, "when-should-i-call-lawyer-accident", "index.html")
 
@@ -56,7 +58,8 @@ def head_html(title, meta_desc, path, schema_name, schema_desc):
             "addressCountry": "US",
         },
     }
-    return f"""<!DOCTYPE html>
+    return (
+        f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -86,11 +89,14 @@ def head_html(title, meta_desc, path, schema_name, schema_desc):
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     {STYLE_BLOCK}
-    <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f)}})(window,document,'script','dataLayer','GTM-WS8XT5FC');</script>
+"""
+        + GTM_HEAD_GUARD
+        + """
 
 <link rel="stylesheet" href="/styles/footer.css">
 </head>
 """
+    )
 
 
 CTA_MID = """

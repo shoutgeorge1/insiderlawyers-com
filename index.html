@@ -145,13 +145,6 @@
       }
     }
   </style>
-  <!-- Google Tag Manager (same as main site www.insiderlawyers.com) -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WS8XT5FC');</script>
-  <!-- End Google Tag Manager -->
   <!-- GTM Tracking Events: phone_click, form_start, form_submit, engaged_30s, scroll_90 -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -226,6 +219,33 @@
       });
     });
   </script>
+<script>
+(function() {
+
+var allowedHosts = [
+"insiderlawyers.com",
+"www.insiderlawyers.com",
+"insideraccidentlawyers.com",
+"www.insideraccidentlawyers.com",
+"call.insideraccidentlawyers.com"
+];
+
+if (allowedHosts.includes(window.location.hostname)) {
+
+(function(w,d,s,l,i){
+w[l]=w[l]||[];
+w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WS8XT5FC');
+
+}
+
+})();
+</script>
 </head>
 <body class="ppc-page landing-page">
 <script>

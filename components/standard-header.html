@@ -1,8 +1,11 @@
 <!--
-  Production site header + navigation live in:
-  `components/global-chrome-before-main.html`
-  (plus `components/global-footer.html` for the matching footer).
+  Site chrome (single source of truth)
+  ─────────────────────────────────────
+  • Header + primary nav: `components/global-chrome-before-main.html`
+    Injected before `<main>` by `scripts/apply_global_layout.py` (or your deploy step).
+  • Footer: `components/global-footer.html`
+  • GTM &lt;head&gt; loader (production hostnames only): `components/gtm-head-snippet.html`
+    Re-apply across static pages with: `python scripts/normalize_gtm_head.py`
 
-  Do not paste a divergent header into individual pages; run or sync from
-  `scripts/apply_global_layout.py` when updating chrome sitewide.
+  Do not paste divergent header/nav into individual pages; sync chrome from the files above.
 -->

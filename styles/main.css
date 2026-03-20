@@ -2252,6 +2252,10 @@ body:not(.home-ppc):not(.ppc-page) #call-bar {
   body.nav-open {
     overflow: hidden;
   }
+  /* Keep expanded nav above page content; tap-to-call stays bottom-fixed (z-index 950). */
+  body.nav-open .header.header--unified {
+    z-index: 1100;
+  }
   body.nav-open .header-nav-wrap .header-nav-row {
     max-width: 100%;
     overflow-x: hidden;
