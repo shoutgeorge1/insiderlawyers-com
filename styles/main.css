@@ -671,11 +671,9 @@ body.page-is-home .hero.hero-section .hero-form-card .form-control:focus {
   }
 }
 
-/* Full-width call bar — giant type; only inside PPC wrappers */
+/* Full-width call bar — giant type; PPC / home PPC only (not generic landing-page) */
 body.home-ppc .call-bar,
-body.ppc-page .call-bar,
-body.landing-page .call-bar,
-.hero-conversion .call-bar {
+body.ppc-page .call-bar {
   width: 100%;
   padding: 1.25rem 1.5rem;
   background: linear-gradient(90deg, #012a50 0%, #01366c 25%, #01468a 50%, #01508f 75%, #01366c 100%);
@@ -685,9 +683,7 @@ body.landing-page .call-bar,
   box-shadow: 0 4px 20px rgba(1,54,108,0.3);
 }
 body.home-ppc .call-bar__inner,
-body.ppc-page .call-bar__inner,
-body.landing-page .call-bar__inner,
-.hero-conversion .call-bar__inner {
+body.ppc-page .call-bar__inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -697,9 +693,7 @@ body.landing-page .call-bar__inner,
   margin: 0 auto;
 }
 body.home-ppc .call-bar__text,
-body.ppc-page .call-bar__text,
-body.landing-page .call-bar__text,
-.hero-conversion .call-bar__text {
+body.ppc-page .call-bar__text {
   font-size: clamp(1.75rem, 4vw, 3rem);
   font-weight: 900;
   color: #fff;
@@ -707,9 +701,7 @@ body.landing-page .call-bar__text,
   text-transform: uppercase;
 }
 body.home-ppc .call-bar__number,
-body.ppc-page .call-bar__number,
-body.landing-page .call-bar__number,
-.hero-conversion .call-bar__number {
+body.ppc-page .call-bar__number {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
   color: #ffd700;
@@ -718,37 +710,27 @@ body.landing-page .call-bar__number,
   transition: color 0.2s ease, transform 0.2s ease;
 }
 body.home-ppc .call-bar__number:hover,
-body.ppc-page .call-bar__number:hover,
-body.landing-page .call-bar__number:hover,
-.hero-conversion .call-bar__number:hover {
+body.ppc-page .call-bar__number:hover {
   color: #fff;
   transform: scale(1.03);
 }
 @media (max-width: 600px) {
   body.home-ppc .call-bar,
-  body.ppc-page .call-bar,
-  body.landing-page .call-bar,
-  .hero-conversion .call-bar {
+  body.ppc-page .call-bar {
     padding: 1rem 1rem;
   }
 }
 @media (max-width: 767px) {
   body.home-ppc .call-bar__text,
-  body.ppc-page .call-bar__text,
-  body.landing-page .call-bar__text,
-  .hero-conversion .call-bar__text {
+  body.ppc-page .call-bar__text {
     font-size: 2.75rem;
   }
   body.home-ppc .call-bar__number,
-  body.ppc-page .call-bar__number,
-  body.landing-page .call-bar__number,
-  .hero-conversion .call-bar__number {
+  body.ppc-page .call-bar__number {
     font-size: 3.5rem;
   }
   body.home-ppc .call-bar__number:hover,
-  body.ppc-page .call-bar__number:hover,
-  body.landing-page .call-bar__number:hover,
-  .hero-conversion .call-bar__number:hover {
+  body.ppc-page .call-bar__number:hover {
     color: #ffd700;
   }
   .footer__phone:hover {
@@ -2043,25 +2025,25 @@ body.landing-page .call-bar__number:hover,
     margin: 0;
     list-style: none;
   }
-  .header-nav-wrap.is-open .header-nav-row {
+  body.nav-open .header-nav-wrap .header-nav-row {
     display: flex !important;
   }
   /* In-document expanded menu (no overlay, no fixed panel – plain jane) */
-  .header-nav-wrap.is-open .header-nav-inner {
+  body.nav-open .header-nav-wrap .header-nav-inner {
     flex-direction: column;
     align-items: stretch;
   }
-  .header-nav-wrap.is-open .header-nav-row {
+  body.nav-open .header-nav-wrap .header-nav-row {
     padding: 0.5rem 0 1rem 0;
   }
   /* Hamburger to X when open */
-  .header-nav-wrap.is-open .mobile-menu-toggle span:nth-child(1) {
+  body.nav-open .header-nav-wrap .mobile-menu-toggle span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
-  .header-nav-wrap.is-open .mobile-menu-toggle span:nth-child(2) {
+  body.nav-open .header-nav-wrap .mobile-menu-toggle span:nth-child(2) {
     opacity: 0;
   }
-  .header-nav-wrap.is-open .mobile-menu-toggle span:nth-child(3) {
+  body.nav-open .header-nav-wrap .mobile-menu-toggle span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
   }
   .header-nav-wrap .mobile-menu-toggle span {
@@ -2248,6 +2230,32 @@ body {
 @media (max-width: 900px) {
   html {
     scroll-padding-top: 72px;
+  }
+}
+
+/* Conversion UI: giant call strip + in-menu phone CTA only on PPC-class bodies */
+body:not(.home-ppc):not(.ppc-page) #call-bar {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  body:not(.home-ppc):not(.ppc-page) .mobile-nav-cta {
+    display: none !important;
+  }
+}
+
+/* Mobile menu open — single source of truth: body.nav-open (set by site-nav.js only) */
+@media (max-width: 900px) {
+  html.nav-open-lock {
+    overflow: hidden;
+    height: 100%;
+  }
+  body.nav-open {
+    overflow: hidden;
+  }
+  body.nav-open .header-nav-wrap .header-nav-row {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 }
 
