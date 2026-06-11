@@ -3475,24 +3475,36 @@ body.has-tap-bar-visible {
 }
 
 /* ============================================================
-   THIRD-PARTY CHAT WIDGET (ApexChat via GTM)
-   On mobile the bottom bar (`apexchat_bar_invitation_wrapper`)
-   and the agent-avatar bubble (`apexchat_prechat_invitation_wrapper`)
-   cover the page's own form, hero bullets, and primary CTAs.
-   Hide every ApexChat surface on mobile; desktop keeps them.
-   To bring them back on mobile, delete this block.
+   THIRD-PARTY CHAT WIDGET (ApexChat via GTM) — fully suppressed
+   ApexChat injects, on EVERY viewport:
+     - a "LIVE CHAT" tab stuck to the left edge over the hero
+       (#apexchat_tab_invitation_wrapper)
+     - a timed centered "Do you want to chat?" popup over the H1
+       (#apexchat_popup_message_invitation_*, #apexchat_dompopup_*)
+     - an "Online Agent" avatar bubble over the form
+       (#apexchat_prechat_invitation_wrapper)
+     - exit-intent popups (#apexchat_exitpopup2_*)
+   All of these cover the page's own form, hero, and CTAs and make
+   the site look broken. Hidden on ALL viewports here, and actively
+   removed in privacy-choices.js so they never even flash.
+   To re-enable chat, delete this block AND the killer in
+   scripts/privacy-choices.js.
    ============================================================ */
-@media (max-width: 900px) {
-  [id^="apexchat_"],
-  [class*="apexchat_"],
-  [class*="livechat_bar_widget"] {
-    display: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-  }
-  body.livechat_bar_widget_bottom {
-    padding-bottom: 0 !important;
-  }
+[id^="apexchat_"],
+[id^="apexchat"],
+[class*="apexchat_"],
+[class*="apexchat"],
+[class*="livechat_bar_widget"],
+[class*="livechat-rd-plus"],
+[id*="invitation_wrapper"],
+[id*="invitation_frame"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+body.livechat_bar_widget_bottom {
+  padding-bottom: 0 !important;
 }
 
 /* ============================================================
