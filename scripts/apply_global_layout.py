@@ -33,6 +33,8 @@ ROOT = site_root()
 COMP = ROOT / "components"
 CHROME_PATH = COMP / "global-chrome-before-main.html"
 FOOTER_PATH = COMP / "global-footer.html"
+CHROME_PATH_ES = COMP / "global-chrome-before-main-es.html"
+FOOTER_PATH_ES = COMP / "global-footer-es.html"
 
 SLIM_TRACK_SCRIPT = """
 <script>
@@ -100,6 +102,39 @@ def replace_chrome(html: str, chrome: str) -> str | None:
     return prefix + chrome + "\n<main" + post
 
 
+def replace_chrome_no_main(html: str, chrome: str) -> str | None:
+    """Replace <header>...</header> in pages that have no <main> wrapper.
+
+    Many older LA-* lawyer pages and the legal pages were generated without
+    a <main>. We still want the chrome and footer to refresh on those pages,
+    and we still want to strip the legacy tap-to-call bar.
+    """
+    lower = html.lower()
+    if "<header" not in lower:
+        return None
+    if "<main" in lower:
+        return None
+    header_start = lower.find("<header")
+    header_close = lower.find("</header>", header_start)
+    if header_close == -1:
+        return None
+    after_header = header_close + len("</header>")
+    prefix = html[:header_start]
+    prefix = clean_prefix_scripts(prefix)
+    prefix = inject_slim_tracking(prefix)
+    return prefix + chrome + "\n" + html[after_header:]
+
+
+def strip_tap_to_call_bar(html: str) -> str:
+    """Remove legacy <a class="tap-to-call-bar">...</a> elements."""
+    return re.sub(
+        r'<a[^>]*class="[^"]*tap-to-call-bar[^"]*"[^>]*>[\s\S]*?</a>\s*',
+        "",
+        html,
+        flags=re.I,
+    )
+
+
 def replace_chrome_home(html: str, chrome: str) -> str | None:
     marker = '<section class="hero hero-section"'
     if marker not in html:
@@ -134,6 +169,12 @@ def normalize_body_end(html: str) -> str:
         html,
         flags=re.I,
     )
+    html = re.sub(
+        r'<script\s+src="/scripts/privacy-choices\.js"[^>]*>\s*</script>\s*',
+        "",
+        html,
+        flags=re.I,
+    )
     html = re.sub(r"</div>v>\s*", "</div>\n", html, flags=re.I)
     needle = "</body>"
     idx = html.lower().rfind(needle)
@@ -142,34 +183,53 @@ def normalize_body_end(html: str) -> str:
     insert = (
         '<script src="/scripts/site-nav.js?v=3" defer></script>\n'
         '<script src="/scripts/utm-gclid-tracking.js"></script>\n'
+        '<script src="/scripts/privacy-choices.js" defer></script>\n'
     )
     return html[:idx] + insert + html[idx:]
 
 
+SKIP_DIR_PREFIXES = (
+    "components/",
+    "scripts/",
+    "_old-site-extract/",
+    "_dev/",
+    "node_modules/",
+    "social-assets/",
+)
+
+
 def should_process(path: Path) -> bool:
     rel = str(path.relative_to(ROOT)).replace("\\", "/")
-    if rel.startswith("components/"):
+    if any(rel.startswith(prefix) for prefix in SKIP_DIR_PREFIXES):
         return False
-    if "/legal/" in "/" + rel + "/":
-        pass
+    if rel == "google0f074189c817401a.html":
+        return False
     return path.suffix.lower() == ".html"
 
 
 def main() -> None:
-    chrome = CHROME_PATH.read_text(encoding="utf-8")
-    footer = FOOTER_PATH.read_text(encoding="utf-8")
+    chrome_en = CHROME_PATH.read_text(encoding="utf-8")
+    footer_en = FOOTER_PATH.read_text(encoding="utf-8")
+    chrome_es = CHROME_PATH_ES.read_text(encoding="utf-8") if CHROME_PATH_ES.is_file() else chrome_en
+    footer_es = FOOTER_PATH_ES.read_text(encoding="utf-8") if FOOTER_PATH_ES.is_file() else footer_en
     changed: list[str] = []
     skipped: list[str] = []
     for path in sorted(ROOT.rglob("*.html")):
         if not should_process(path):
             continue
         rel = str(path.relative_to(ROOT)).replace("\\", "/")
+        is_es = rel == "es/index.html" or rel.startswith("es/")
+        chrome = chrome_es if is_es else chrome_en
+        footer = footer_es if is_es else footer_en
         raw = path.read_text(encoding="utf-8", errors="replace")
         out = raw
         out = replace_footer(out, footer)
+        out = strip_tap_to_call_bar(out)
         new = replace_chrome(out, chrome)
         if new is None:
             new = replace_chrome_home(out, chrome)
+        if new is None:
+            new = replace_chrome_no_main(out, chrome)
         if new is None:
             skipped.append(rel)
             out = normalize_body_end(out)
@@ -185,7 +245,7 @@ def main() -> None:
     print("Updated", len(changed), "files")
     if skipped:
         print("Skipped (no <header>/<main>):", len(skipped))
-        for s in skipped[:15]:
+        for s in skipped:
             print(" ", s)
 
 
