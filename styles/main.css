@@ -2724,3 +2724,260 @@ body.has-tap-bar-visible {
   font-weight: 600;
 }
 
+/* ============================================================
+   HEADER RESET (June 2026): clean two-row chrome
+   - Row 1 (.header__top): brand on left, phone on right
+     (mobile: brand + hamburger; phone moves into opened menu)
+   - Row 2 (.header-nav-wrap): nav only
+   - Tagline removed from markup; killed in CSS too
+   This block intentionally overrides the older .header-unified
+   single-row layout above. Keep at end of file.
+   ============================================================ */
+.header.header--unified {
+  padding: 0;
+  border-bottom: 2px solid #fbba00;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+.header.header--unified .mid-container.header-unified__shell,
+.header-unified__shell {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  max-width: 1180px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
+.header__top .header__left {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+.header__top .header__logo {
+  margin: 0;
+}
+.header.header--unified .header-unified__tagline {
+  display: none !important;
+}
+.header__top .header-unified__desktop-call {
+  flex: 0 0 auto;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #01366c;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(1, 54, 108, 0.2);
+  background: linear-gradient(180deg, #ffffff 0%, #f3f6fa 100%);
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.header__top .header-unified__desktop-call:hover {
+  color: #01468a;
+  border-color: #9fbadb;
+}
+.header__top .mobile-menu-toggle {
+  display: none;
+  width: 44px;
+  height: 40px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(1, 54, 108, 0.25);
+  border-radius: 8px;
+  background: #fff;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.header__top .mobile-menu-toggle span {
+  width: 22px;
+  height: 2px;
+  background: #01366c;
+  border-radius: 2px;
+  display: block;
+}
+.header.header--unified .header-nav-wrap {
+  flex: 0 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.header.header--unified .header-nav-wrap .container.header-nav-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: block;
+}
+
+/* ---------- Desktop (>=901px): show phone + nav row, hide hamburger ---------- */
+@media (min-width: 901px) {
+  .header.header--unified {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+  }
+  .header__top {
+    padding: 12px 20px;
+  }
+  .header__top .mobile-menu-toggle {
+    display: none !important;
+  }
+  .header__top .header-unified__desktop-call {
+    display: inline-flex;
+  }
+  .header.header--unified .header-nav-wrap .header-nav-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 0;
+    margin: 0;
+  }
+  .header.header--unified .header-nav-wrap .mobile-nav-cta {
+    display: none !important;
+  }
+}
+
+/* ---------- Mobile (<=900px): brand + hamburger only on top row, phone moves to opened menu ---------- */
+@media (max-width: 900px) {
+  .header.header--unified,
+  .header-nav-wrap {
+    position: static;
+  }
+  .header__top {
+    padding: 8px 14px;
+  }
+  .header__top .header-unified__desktop-call {
+    display: none !important;
+  }
+  .header__top .mobile-menu-toggle {
+    display: inline-flex;
+  }
+  .header__top .header__brand-sub {
+    display: none;
+  }
+  .header.header--unified .header-nav-wrap .container.header-nav-inner {
+    padding: 0;
+  }
+  .header.header--unified .header-nav-wrap .header-nav-row {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    border-top: 1px solid rgba(1, 54, 108, 0.12);
+  }
+  body.nav-open .header.header--unified .header-nav-wrap .header-nav-row {
+    display: flex !important;
+  }
+  body.nav-open .header.header--unified .header-nav-wrap .header-nav-row > * {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid rgba(1, 54, 108, 0.08);
+    padding: 14px 18px;
+    font-size: 1rem;
+    min-height: 48px;
+    justify-content: flex-start;
+    text-align: left;
+    background: #fff;
+    box-shadow: none;
+    transform: none;
+  }
+  body.nav-open .header.header--unified .header-nav-wrap .nav-link--primary {
+    background: linear-gradient(180deg, #01468a 0%, #01366c 100%);
+    color: #fff !important;
+    border-bottom-color: #01366c;
+  }
+  body.nav-open .header.header--unified .header-nav-wrap .nav-item {
+    padding: 0;
+  }
+  body.nav-open .header.header--unified .header-nav-wrap .nav-item .nav-link--dropdown {
+    width: 100%;
+    border-bottom: 1px solid rgba(1, 54, 108, 0.08);
+    padding: 14px 18px;
+  }
+  body.nav-open .header.header--unified .header-nav-wrap .nav-dropdown {
+    position: static;
+    display: none;
+    min-width: 0;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    background: #f6f9fd;
+  }
+  body.nav-open .header.header--unified .header-nav-wrap .nav-item.is-open .nav-dropdown {
+    display: block;
+  }
+  body.nav-open .header.header--unified .header-nav-wrap .nav-dropdown a {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(1, 54, 108, 0.06);
+  }
+  .header.header--unified .header-nav-wrap .mobile-nav-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 16px 18px;
+    background: linear-gradient(180deg, #01468a 0%, #01366c 100%);
+    color: #fff;
+    border-bottom: 1px solid rgba(1, 54, 108, 0.2);
+  }
+  .header.header--unified .header-nav-wrap .mobile-nav-cta__link {
+    display: inline-block;
+    color: #fff !important;
+    font-weight: 800;
+    font-size: 1.05rem;
+    text-decoration: none;
+    padding: 0;
+  }
+  .header.header--unified .header-nav-wrap .mobile-nav-cta__sub {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.82rem;
+  }
+  body.nav-open .header.header--unified .mobile-menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  body.nav-open .header.header--unified .mobile-menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  body.nav-open .header.header--unified .mobile-menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  .header.header--unified .mobile-menu-toggle span {
+    transition: transform 0.18s ease, opacity 0.18s ease;
+  }
+}
+
+/* belt-and-suspenders: header itself stays inside the viewport */
+.header.header--unified {
+  max-width: 100%;
+  box-sizing: border-box;
+}
