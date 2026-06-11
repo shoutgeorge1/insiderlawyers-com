@@ -1679,11 +1679,120 @@ body.ppc-page .call-bar__number:hover {
 .site-footer .footer-section--legal h4 {
   color: #fbba00;
 }
-/* Legacy cookie/privacy banner placeholder — full styling lives at the
-   end of this file (the compact bottom-docked toast + modal block).
-   This block is intentionally minimal so the later !important rules win
-   without conflicting on properties that aren't redefined there. */
-#privacy-choices-modal { display: none; }
+/* Cookie / privacy choices banner */
+#privacy-choices-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #01366c;
+  color: #fff;
+  padding: 16px 20px;
+  z-index: 9999;
+  box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  line-height: 1.55;
+  display: none;
+}
+#privacy-choices-banner.is-visible { display: block; }
+#privacy-choices-banner .pc-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+#privacy-choices-banner p {
+  margin: 0;
+  flex: 1 1 320px;
+  min-width: 260px;
+}
+#privacy-choices-banner a {
+  color: #fbba00;
+  text-decoration: underline;
+}
+#privacy-choices-banner .pc-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+#privacy-choices-banner button {
+  background: #fbba00;
+  color: #01366c;
+  border: 0;
+  border-radius: 6px;
+  padding: 9px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13.5px;
+}
+#privacy-choices-banner button.pc-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+#privacy-choices-banner button:hover { opacity: 0.92; }
+#privacy-choices-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+#privacy-choices-modal.is-visible { display: flex; }
+#privacy-choices-modal .pc-modal {
+  background: #fff;
+  color: #1f2937;
+  max-width: 520px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 24px 26px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+#privacy-choices-modal h2 {
+  color: #01366c;
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+#privacy-choices-modal p { font-size: 14px; line-height: 1.6; margin-bottom: 12px; }
+#privacy-choices-modal label.pc-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+#privacy-choices-modal label.pc-toggle:last-of-type { border-bottom: 1px solid #e5e7eb; margin-bottom: 14px; }
+#privacy-choices-modal label.pc-toggle input { margin-top: 4px; flex-shrink: 0; }
+#privacy-choices-modal .pc-modal-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+#privacy-choices-modal button {
+  background: #fbba00;
+  color: #01366c;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+}
+#privacy-choices-modal button.pc-secondary {
+  background: transparent;
+  color: #01366c;
+  border: 1px solid #cbd5e1;
+}
 @media (min-width: 900px) {
   .site-footer .footer-content {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1964,89 +2073,19 @@ body.ppc-page .call-bar__number:hover {
 }
 @media (min-width: 901px) {
   .header-nav-wrap .nav-link {
-    font-size: 0.86rem;
-    padding: 8px 12px;
-    min-height: 38px;
-    background: transparent;
-    border: 1px solid transparent;
-    box-shadow: none;
-    font-weight: 600;
-    letter-spacing: 0.005em;
-  }
-  .header-nav-wrap .nav-link:hover {
-    background: #eef4fb;
-    border-color: transparent;
-    transform: none;
-  }
-  .header-nav-wrap .nav-link--primary {
-    background: linear-gradient(180deg, #fbba00 0%, #f1ab00 100%);
-    color: #01366c !important;
-    border-color: #d49800;
-    font-weight: 800;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-  }
-  .header-nav-wrap .nav-link--primary:hover {
-    background: linear-gradient(180deg, #ffc833 0%, #f7b300 100%);
-    color: #01366c !important;
-    border-color: #c98c00;
-  }
-  .header-nav-wrap .nav-link--lang {
-    border: 1px solid rgba(1, 54, 108, 0.25);
-    border-radius: 999px;
-    padding: 6px 12px;
-    margin-left: 6px;
+    font-size: 0.68rem;
+    padding: 5px 8px;
     min-height: 32px;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-  }
-  .header-nav-wrap .nav-link--lang:hover {
-    background: #01366c;
-    color: #fff;
-    border-color: #01366c;
   }
   .header-nav-row {
-    gap: 2px;
-    padding: 6px 0;
-  }
-}
-@media (min-width: 901px) and (max-width: 1199px) {
-  .header-nav-wrap .nav-link {
-    font-size: 0.8rem;
-    padding: 7px 9px;
-  }
-  .header-nav-wrap .nav-link--lang {
-    font-size: 0.74rem;
-    padding: 5px 10px;
-  }
-  .header-nav-row {
-    gap: 0;
+    gap: 4px;
+    padding: 5px 0;
   }
 }
 .header-nav-wrap .nav-link--dropdown {
-  cursor: pointer;
+  cursor: default;
   font-family: inherit;
   text-align: left;
-  position: relative;
-}
-@media (min-width: 901px) {
-  .header-nav-wrap .nav-link--dropdown::after {
-    content: "";
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    margin-left: 8px;
-    border-right: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
-    transform: translateY(-2px) rotate(45deg);
-    opacity: 0.55;
-    transition: transform 0.15s ease, opacity 0.15s ease;
-  }
-  .header-nav-wrap .nav-item:hover .nav-link--dropdown::after,
-  .header-nav-wrap .nav-item:focus-within .nav-link--dropdown::after {
-    opacity: 1;
-    transform: translateY(0) rotate(225deg);
-  }
 }
 .header-nav-wrap button.nav-link--dropdown {
   border: 1px solid rgba(1, 54, 108, 0.2);
@@ -2092,19 +2131,18 @@ body.ppc-page .call-bar__number:hover {
   position: absolute;
   left: 0;
   top: 100%;
-  min-width: 280px;
-  max-width: min(360px, calc(100vw - 24px));
+  min-width: min(880px, calc(100vw - 32px));
+  max-width: min(1100px, calc(100vw - 24px));
   background: #fff;
   border: 1px solid #d3e0f0;
   border-radius: 10px;
-  box-shadow: 0 12px 30px rgba(1, 54, 108, 0.18);
-  padding: 8px;
+  box-shadow: 0 10px 26px rgba(1, 54, 108, 0.15);
+  padding: 12px;
   display: none;
   z-index: 1200;
-  grid-template-columns: 1fr;
-  gap: 0;
-  align-items: stretch;
-  margin-top: -2px;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 6px 12px;
+  align-items: start;
 }
 .header-nav-wrap .nav-item:hover .nav-dropdown,
 .header-nav-wrap .nav-item:focus-within .nav-dropdown {
@@ -2785,11 +2823,6 @@ body.has-tap-bar-visible {
   padding: 0 16px;
   display: block;
 }
-.header.header--unified .header-nav-wrap {
-  border-top: 1px solid rgba(1, 54, 108, 0.08);
-  border-bottom: 2px solid #fbba00;
-  background: #fff;
-}
 
 /* ---------- Desktop (>=901px): show phone + nav row, hide hamburger ---------- */
 @media (min-width: 901px) {
@@ -2800,7 +2833,7 @@ body.has-tap-bar-visible {
     background: #fff;
   }
   .header__top {
-    padding: 14px 20px;
+    padding: 12px 20px;
   }
   .header__top .mobile-menu-toggle {
     display: none !important;
@@ -2811,9 +2844,9 @@ body.has-tap-bar-visible {
   .header.header--unified .header-nav-wrap .header-nav-row {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    gap: 2px;
+    gap: 4px;
     padding: 6px 0;
     margin: 0;
   }
@@ -3194,28 +3227,17 @@ body.has-tap-bar-visible {
    ============================================================ */
 .header__brand-mark {
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: 1.55rem;
+  letter-spacing: 0.05em;
+  font-size: 1.4rem;
   font-weight: 800;
-  color: #01366c;
-  line-height: 1;
 }
 .header__brand-mark-accent {
   color: #fbba00;
 }
 .header__brand-sub {
-  font-size: 0.66rem;
-  letter-spacing: 0.16em;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
   color: #5a6573;
-  margin-top: 4px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-@media (max-width: 900px) {
-  .header__brand-mark { font-size: 1.35rem; }
-}
-@media (max-width: 480px) {
-  .header__brand-mark { font-size: 1.15rem; letter-spacing: 0.04em; }
 }
 
 /* Actions cluster (right side of top row): phone + hamburger */
@@ -3335,33 +3357,28 @@ body.has-tap-bar-visible {
 }
 
 /* ============================================================
-   COOKIE CONSENT (June 2026 rewrite)
-   - Compact bottom-right card on desktop (~380 px)
-   - Bottom sheet on mobile with safe-area padding
-   - Accessible modal with close button, focus trap, ESC, body
-     scroll lock (added via .pc-modal-open on <html>/<body>)
-   - Scoped to #privacy-choices-banner / #privacy-choices-modal
-     selectors so it cannot leak into other UI
+   COOKIE CONSENT — modern bottom-docked toast (not a full bar)
+   Desktop: ~420 px card bottom-right with shadow.
+   Mobile:  full-width strip across the bottom of the viewport.
+   Always visible on first paint until visitor picks a choice.
    ============================================================ */
 #privacy-choices-banner {
   position: fixed !important;
   bottom: 20px !important;
-  right: 20px !important;
-  left: auto !important;
+  left: 20px !important;
+  right: auto !important;
   top: auto !important;
-  inset: auto 20px 20px auto !important;
+  inset: auto auto 20px 20px !important;
   width: min(380px, calc(100vw - 40px));
   max-width: 380px;
   z-index: 9998 !important;
   background: #ffffff !important;
   color: #1f2937;
-  border: 1px solid #e2e8f0;
-  border-top: 3px solid #fbba00;
-  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
   padding: 16px 18px 16px;
-  box-shadow: 0 16px 40px rgba(2, 21, 50, 0.22),
+  box-shadow: 0 12px 36px rgba(2, 21, 50, 0.22),
               0 2px 6px rgba(2, 21, 50, 0.08) !important;
-  font-family: "Inter", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 0.86rem;
   line-height: 1.5;
   display: none;
@@ -3373,15 +3390,11 @@ body.has-tap-bar-visible {
   content: "Cookies & Privacy";
   display: block;
   font-weight: 800;
-  font-size: 0.74rem;
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #01366c;
   margin-bottom: 8px;
-}
-html[lang="es"] #privacy-choices-banner::before,
-html[lang^="es-"] #privacy-choices-banner::before {
-  content: "Cookies y Privacidad";
 }
 #privacy-choices-banner .pc-inner {
   max-width: none !important;
@@ -3400,7 +3413,6 @@ html[lang^="es-"] #privacy-choices-banner::before {
   text-underline-offset: 2px;
   font-weight: 600;
 }
-#privacy-choices-banner a:hover { color: #01468a; }
 #privacy-choices-banner .pc-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3410,23 +3422,19 @@ html[lang^="es-"] #privacy-choices-banner::before {
 #privacy-choices-banner button {
   background: #fbba00;
   color: #01366c;
-  border: 1px solid #d49800;
+  border: 0;
   border-radius: 8px;
   padding: 10px 12px;
   font-weight: 800;
   cursor: pointer;
-  font-family: inherit;
   font-size: 0.82rem;
   letter-spacing: 0.01em;
   transition: filter 0.15s ease, background-color 0.15s ease;
   line-height: 1.1;
   white-space: nowrap;
-  text-align: center;
 }
-#privacy-choices-banner button:hover { filter: brightness(0.96); }
-#privacy-choices-banner button:focus-visible {
-  outline: 2px solid #01468a;
-  outline-offset: 2px;
+#privacy-choices-banner button:hover {
+  filter: brightness(0.96);
 }
 #privacy-choices-banner #pc-accept {
   grid-column: 1 / -1;
@@ -3453,151 +3461,26 @@ html[lang^="es-"] #privacy-choices-banner::before {
     width: 100%;
     max-width: none;
     border-radius: 14px 14px 0 0;
-    padding: 14px 16px calc(16px + env(safe-area-inset-bottom, 0px));
+    padding: 14px 16px 16px;
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
   }
-  #privacy-choices-banner::before { margin-bottom: 6px; }
-  #privacy-choices-banner p { font-size: 0.82rem; margin-bottom: 10px; }
-  #privacy-choices-banner .pc-actions { grid-template-columns: 1fr 1fr; gap: 8px; }
-  #privacy-choices-banner #pc-accept { padding: 12px 14px; font-size: 0.92rem; }
-}
-
-/* ---------- Modal (Preferences) ---------- */
-#privacy-choices-modal {
-  position: fixed !important;
-  inset: 0 !important;
-  background: rgba(2, 21, 50, 0.55) !important;
-  z-index: 10000 !important;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  font-family: "Inter", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-#privacy-choices-modal.is-visible { display: flex !important; }
-html.pc-modal-open,
-body.pc-modal-open {
-  overflow: hidden !important;
-}
-#privacy-choices-modal .pc-modal {
-  position: relative;
-  background: #fff;
-  color: #1f2937;
-  max-width: 560px;
-  width: 100%;
-  border-radius: 14px;
-  padding: 28px 28px 24px;
-  box-shadow: 0 24px 60px rgba(2, 21, 50, 0.35);
-  max-height: calc(100vh - 48px);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-#privacy-choices-modal .pc-modal-close {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  background: transparent;
-  border: 0;
-  font-size: 26px;
-  line-height: 1;
-  color: #6b7280;
-  cursor: pointer;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-family: inherit;
-}
-#privacy-choices-modal .pc-modal-close:hover { background: #f3f4f6; color: #01366c; }
-#privacy-choices-modal .pc-modal-close:focus-visible {
-  outline: 2px solid #01468a;
-  outline-offset: 2px;
-}
-#privacy-choices-modal h2 {
-  color: #01366c;
-  margin: 0 0 8px;
-  font-size: 1.25rem;
-  font-weight: 800;
-  padding-right: 28px;
-}
-#privacy-choices-modal .pc-modal-intro {
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: #374151;
-  margin-bottom: 14px;
-}
-#privacy-choices-modal .pc-category {
-  border-top: 1px solid #e5e7eb;
-}
-#privacy-choices-modal .pc-category:last-of-type { border-bottom: 1px solid #e5e7eb; }
-#privacy-choices-modal label.pc-toggle {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 12px 4px;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #1f2937;
-  cursor: pointer;
-}
-#privacy-choices-modal label.pc-toggle input {
-  margin-top: 4px;
-  flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  accent-color: #01366c;
-  cursor: pointer;
-}
-#privacy-choices-modal label.pc-toggle input[disabled] { cursor: not-allowed; opacity: 0.7; }
-#privacy-choices-modal label.pc-toggle strong { color: #01366c; }
-#privacy-choices-modal .pc-gpc-note {
-  font-size: 0.78rem;
-  color: #6b7280;
-  margin: 14px 0 16px;
-  line-height: 1.55;
-}
-#privacy-choices-modal .pc-modal-actions {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-#privacy-choices-modal .pc-modal-actions button {
-  background: #fbba00;
-  color: #01366c;
-  border: 1px solid #d49800;
-  border-radius: 8px;
-  padding: 10px 16px;
-  font-weight: 800;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 0.88rem;
-}
-#privacy-choices-modal .pc-modal-actions button:hover { filter: brightness(0.96); }
-#privacy-choices-modal .pc-modal-actions button:focus-visible {
-  outline: 2px solid #01468a;
-  outline-offset: 2px;
-}
-#privacy-choices-modal .pc-modal-actions button.pc-secondary {
-  background: transparent;
-  color: #01366c;
-  border-color: #cbd5e1;
-  font-weight: 700;
-}
-#privacy-choices-modal .pc-modal-actions button.pc-secondary:hover {
-  background: #f3f6fa;
-  filter: none;
-}
-
-@media (max-width: 599px) {
-  #privacy-choices-modal { padding: 0; align-items: flex-end; }
-  #privacy-choices-modal .pc-modal {
-    border-radius: 16px 16px 0 0;
-    max-height: 92vh;
-    padding: 22px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+  #privacy-choices-banner::before {
+    margin-bottom: 6px;
   }
-  #privacy-choices-modal .pc-modal-actions { flex-direction: column-reverse; align-items: stretch; }
-  #privacy-choices-modal .pc-modal-actions button { width: 100%; padding: 12px 16px; }
+  #privacy-choices-banner p {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+  #privacy-choices-banner .pc-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  #privacy-choices-banner #pc-accept {
+    padding: 12px 14px;
+    font-size: 0.92rem;
+  }
 }
 
 /* ============================================================
