@@ -3206,3 +3206,246 @@ body.has-tap-bar-visible {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+/* ============================================================
+   HEADER POLISH (June 2026 follow-up)
+   - INSIDER LAWYERS treated as an uppercase wordmark logo
+   - Phone CTA + hamburger live in a .header__actions cluster
+     on the right (mobile = compact yellow phone button + ham)
+   - Yellow phone button gives the call a real visual handle on
+     every viewport (replaces the older white text-pill style)
+   Keep at end of file.
+   ============================================================ */
+.header__brand-mark {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.header__brand-mark-accent {
+  color: #fbba00;
+}
+.header__brand-sub {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: #5a6573;
+}
+
+/* Actions cluster (right side of top row): phone + hamburger */
+.header__top .header__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+/* Phone CTA — yellow pill on every viewport */
+.header__top .header__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+  font-weight: 800;
+  white-space: nowrap;
+  line-height: 1;
+  background: linear-gradient(180deg, #fbba00 0%, #f1ab00 100%);
+  color: #01366c !important;
+  border: 1px solid #d49800;
+  border-radius: 8px;
+  padding: 0 14px;
+  height: 40px;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: filter 0.15s ease, transform 0.1s ease;
+}
+.header__top .header__phone:hover {
+  filter: brightness(0.96);
+  color: #01366c !important;
+}
+.header__top .header__phone:active {
+  transform: translateY(1px);
+}
+.header__top .header__phone .header__phone-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  color: #01366c;
+}
+.header__top .header__phone .header__phone-num {
+  letter-spacing: 0.01em;
+}
+
+/* Dead-code: the legacy white desktop-call pill is no longer in the
+   markup, but if any cached copy renders it, suppress it. */
+.header__top .header-unified__desktop-call {
+  display: none !important;
+}
+
+/* Desktop refinements (>=901): larger phone pill, hamburger hidden */
+@media (min-width: 901px) {
+  .header__top .header__phone {
+    padding: 0 16px;
+    height: 42px;
+    font-size: 1rem;
+  }
+  .header__top .header__phone .header__phone-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Mobile (<=900): keep phone pill + smaller hamburger */
+@media (max-width: 900px) {
+  .header__top {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+  .header__top .header__phone {
+    padding: 0 12px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  .header__top .mobile-menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Small phones: collapse phone to icon-only square, shrink wordmark */
+@media (max-width: 480px) {
+  .header__top {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+  .header__brand-mark {
+    font-size: 1.18rem;
+    letter-spacing: 0.04em;
+  }
+  .header__brand-sub {
+    display: none;
+  }
+  .header__top .header__phone {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+  }
+  .header__top .header__phone .header__phone-num {
+    display: none;
+  }
+  .header__top .header__phone .header__phone-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .header__top .mobile-menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+  .header__top .mobile-menu-toggle span {
+    width: 20px;
+  }
+}
+
+/* ============================================================
+   COOKIE CONSENT — integrated into the footer (not floating)
+   Overrides the older fixed-bottom banner styles. The banner is
+   injected by privacy-choices.js as the first child of
+   `.site-footer .container`, so when shown it appears as the
+   top row of the footer instead of a viewport overlay.
+   ============================================================ */
+#privacy-choices-banner {
+  position: static !important;
+  inset: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  z-index: auto !important;
+  box-shadow: none !important;
+  background: rgba(0, 0, 0, 0.22) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 0 0 26px 0;
+  color: #fff;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  display: none;
+}
+#privacy-choices-banner.is-visible {
+  display: block;
+}
+#privacy-choices-banner .pc-inner {
+  max-width: none !important;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  align-items: center;
+  justify-content: space-between;
+}
+#privacy-choices-banner p {
+  margin: 0;
+  flex: 1 1 320px;
+  min-width: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+#privacy-choices-banner a {
+  color: #fbba00;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+#privacy-choices-banner .pc-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+}
+#privacy-choices-banner button {
+  background: #fbba00;
+  color: #01366c;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  transition: filter 0.15s ease;
+}
+#privacy-choices-banner button:hover {
+  filter: brightness(0.95);
+}
+#privacy-choices-banner button.pc-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  font-weight: 700;
+}
+#privacy-choices-banner button.pc-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  filter: none;
+}
+
+@media (max-width: 599px) {
+  #privacy-choices-banner {
+    padding: 16px 16px 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  #privacy-choices-banner .pc-inner {
+    gap: 12px;
+  }
+  #privacy-choices-banner .pc-actions {
+    width: 100%;
+  }
+  #privacy-choices-banner .pc-actions button {
+    flex: 1 1 calc(50% - 5px);
+    min-width: 0;
+    padding: 11px 8px;
+    font-size: 0.82rem;
+  }
+  #privacy-choices-banner #pc-accept {
+    flex-basis: 100%;
+  }
+}

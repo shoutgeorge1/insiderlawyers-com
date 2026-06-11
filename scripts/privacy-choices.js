@@ -80,7 +80,12 @@
 
   function ensureBanner() {
     if (document.getElementById('privacy-choices-banner')) return;
-    var html = '' +
+
+    // The cookie/consent notice is mounted INSIDE the footer (as the first
+    // child of `.site-footer .container`) so it reads as part of the footer
+    // chrome rather than a floating overlay. The full-screen modal still
+    // lives on document.body because it overlays the whole page.
+    var bannerHtml = '' +
       '<div id="privacy-choices-banner" role="region" aria-label="Cookie and privacy choices">' +
         '<div class="pc-inner">' +
           '<p>We use cookies, pixels, and call tracking (including Google Analytics, Google Ads, Meta, Reddit, Taboola, and CallRail) to measure performance and improve this site. You can manage your choices anytime. See our <a href="/cookie-policy">Cookie Policy</a> and <a href="/privacy-policy">Privacy Policy</a>.</p>' +
@@ -90,7 +95,9 @@
             '<button type="button" id="pc-manage" class="pc-secondary">Manage choices</button>' +
           '</div>' +
         '</div>' +
-      '</div>' +
+      '</div>';
+
+    var modalHtml = '' +
       '<div id="privacy-choices-modal" role="dialog" aria-modal="true" aria-labelledby="pc-modal-title">' +
         '<div class="pc-modal">' +
           '<h2 id="pc-modal-title">Cookie &amp; Privacy Choices</h2>' +
@@ -107,9 +114,22 @@
           '</div>' +
         '</div>' +
       '</div>';
-    var wrap = document.createElement('div');
-    wrap.innerHTML = html;
-    while (wrap.firstChild) document.body.appendChild(wrap.firstChild);
+
+    var bannerWrap = document.createElement('div');
+    bannerWrap.innerHTML = bannerHtml;
+    var bannerEl = bannerWrap.firstChild;
+    var footerHost = document.querySelector('.site-footer .container');
+    if (footerHost) {
+      footerHost.insertBefore(bannerEl, footerHost.firstChild);
+    } else {
+      // Pages without the global footer fall back to body append so the
+      // notice is still reachable.
+      document.body.appendChild(bannerEl);
+    }
+
+    var modalWrap = document.createElement('div');
+    modalWrap.innerHTML = modalHtml;
+    document.body.appendChild(modalWrap.firstChild);
   }
 
   function showBanner() {
