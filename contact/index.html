@@ -201,12 +201,19 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="contact-form" id="contact-form">
               <h3>General contact form</h3>
               <!--
-                DEV NOTE: connect the form's `action` to the team's standard intake
-                endpoint (Formspree, CRM webhook, etc.). Until then the form will not
-                submit. Do NOT remove the disclaimer copy under the submit button; it
-                is required to keep this site neutral and non-misleading.
+                Wired to the same formsubmit.co endpoint used by the homepage and
+                LA PPC lead forms (ial.leads.2024@gmail.com). Submission redirects
+                to /thank-you/. Distinguish on the receiving end via the _subject
+                hidden field. Do NOT remove the disclaimer copy under the submit
+                button; it is required to keep this site neutral and non-misleading.
               -->
-              <form action="" method="post" novalidate>
+              <form action="https://formsubmit.co/ial.leads.2024@gmail.com" method="POST" id="general-contact-form" novalidate>
+                <input type="hidden" name="_subject" value="Insider Lawyers - Contact Form">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://www.insiderlawyers.com/thank-you/">
+                <input type="hidden" name="_url" value="https://www.insiderlawyers.com/contact">
+                <input type="hidden" name="form_type" value="contact">
                 <div class="field">
                   <label for="contact-name">Full name</label>
                   <input type="text" id="contact-name" name="full_name" autocomplete="name" required>

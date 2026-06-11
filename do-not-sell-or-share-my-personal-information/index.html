@@ -189,7 +189,11 @@ document.addEventListener("DOMContentLoaded", function () {
               <li>Mail: Insider Lawyers &mdash; Privacy, c/o Countrywide Trial Lawyers, A Professional Law Corporation, 3435 Wilshire Blvd, Suite 1620, Los Angeles, CA 90010</li>
             </ul>
 
-            <form class="privacy-form" id="ca-privacy-form" action="" method="POST" aria-label="California privacy request form">
+            <form class="privacy-form" id="ca-privacy-form" action="https://formsubmit.co/ial.leads.2024@gmail.com" method="POST" aria-label="California privacy request form">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://www.insiderlawyers.com/thank-you/">
+              <input type="hidden" name="_url" value="https://www.insiderlawyers.com/do-not-sell-or-share-my-personal-information">
               <input type="hidden" name="_subject" value="California Privacy Request (Do Not Sell or Share)">
               <input type="hidden" name="form_type" value="ccpa_opt_out">
 
@@ -225,9 +229,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
               <button type="submit" class="btn-primary">Submit Privacy Request</button>
               <!--
-                Developer note: connect this form's action attribute to your standard intake endpoint
-                (e.g., Formspree, CRM webhook, or internal API). Do not remove the verification checkbox
-                or the disclaimer copy.
+                Wired to the same formsubmit.co endpoint used by the homepage and
+                LA PPC lead forms (ial.leads.2024@gmail.com). The _subject hidden
+                field lets intake distinguish CCPA/CPRA privacy requests from regular
+                leads. Do not remove the verification checkbox or the disclaimer copy.
               -->
             </form>
 
