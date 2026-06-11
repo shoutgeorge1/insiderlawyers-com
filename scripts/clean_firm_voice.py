@@ -16,7 +16,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-SKIP_DIR_PARTS = {"_old-site-extract", "_dev", "node_modules", "components", "legal", "scripts", "styles"}
+SKIP_DIR_PARTS = {"_old-site-extract", "_dev", "node_modules", "components", "legal", "scripts", "styles", "es"}
 
 
 PAGE_HINTS: dict[str, str] = {

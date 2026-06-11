@@ -17,7 +17,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-SKIP_DIR_PARTS = {"_old-site-extract", "_dev", "node_modules", "components", "scripts", "styles"}
+SKIP_DIR_PARTS = {"_old-site-extract", "_dev", "node_modules", "components", "scripts", "styles", "es"}
 
 
 # Regex patterns and their replacements. Each tuple is (compiled regex, replacement).

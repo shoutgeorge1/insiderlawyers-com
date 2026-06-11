@@ -7,6 +7,10 @@
   'use strict';
   var TRACK_KEYS = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
   var THANK_YOU = 'https://www.insiderlawyers.com/thank-you/';
+  var LANG = (document.documentElement.getAttribute('lang') || 'en').slice(0,2).toLowerCase();
+  var COPY = LANG === 'es'
+    ? { sending: 'Enviando\u2026', generic: 'Algo sali\u00f3 mal. Por favor llame al 844-467-4335.', net: 'Error de conexi\u00f3n. Por favor llame al 844-467-4335.' }
+    : { sending: 'Sending\u2026',  generic: 'Something went wrong. Please call us at 844-467-4335.', net: 'Connection error. Please call us at 844-467-4335.' };
 
   function addHoneypot(form) {
     if (form.querySelector('input[name="website_url"]')) return;
@@ -55,7 +59,7 @@
       var originalText = submitBtn ? submitBtn.textContent : '';
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending\u2026';
+        submitBtn.textContent = COPY.sending;
       }
 
       var actionUrl = form.getAttribute('action') || '';
@@ -75,7 +79,7 @@
               submitBtn.disabled = false;
               submitBtn.textContent = originalText;
             }
-            alert('Something went wrong. Please call us at 844-467-4335.');
+            alert(COPY.generic);
             console.error('FormSubmit response:', data);
           }
         })
@@ -84,7 +88,7 @@
             submitBtn.disabled = false;
             submitBtn.textContent = originalText;
           }
-          alert('Connection error. Please call us at 844-467-4335.');
+          alert(COPY.net);
           console.error('FormSubmit error:', err);
         });
 
