@@ -170,7 +170,7 @@ def normalize_body_end(html: str) -> str:
         flags=re.I,
     )
     html = re.sub(
-        r'<script\s+src="/scripts/privacy-choices\.js"[^>]*>\s*</script>\s*',
+        r'<script\s+src="/scripts/privacy-choices\.js[^"]*"[^>]*>\s*</script>\s*',
         "",
         html,
         flags=re.I,
@@ -183,7 +183,7 @@ def normalize_body_end(html: str) -> str:
     insert = (
         '<script src="/scripts/site-nav.js?v=3" defer></script>\n'
         '<script src="/scripts/utm-gclid-tracking.js"></script>\n'
-        '<script src="/scripts/privacy-choices.js" defer></script>\n'
+        '<script src="/scripts/privacy-choices.js?v=2" defer></script>\n'
     )
     return html[:idx] + insert + html[idx:]
 

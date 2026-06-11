@@ -2857,7 +2857,13 @@ body.has-tap-bar-visible {
 
 /* ---------- Mobile (<=900px): brand + hamburger only on top row, phone moves to opened menu ---------- */
 @media (max-width: 900px) {
-  .header.header--unified,
+  /* Sticky header on mobile too: the top bar stays pinned while scrolling. */
+  .header.header--unified {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+  }
   .header-nav-wrap {
     position: static;
   }
@@ -2888,6 +2894,9 @@ body.has-tap-bar-visible {
   }
   body.nav-open .header.header--unified .header-nav-wrap .header-nav-row {
     display: flex !important;
+    max-height: calc(100vh - 58px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   body.nav-open .header.header--unified .header-nav-wrap .header-nav-row > * {
     width: 100%;
@@ -3472,39 +3481,6 @@ body.has-tap-bar-visible {
     padding: 12px 14px;
     font-size: 0.92rem;
   }
-}
-
-/* ============================================================
-   THIRD-PARTY CHAT WIDGET (ApexChat via GTM) — fully suppressed
-   ApexChat injects, on EVERY viewport:
-     - a "LIVE CHAT" tab stuck to the left edge over the hero
-       (#apexchat_tab_invitation_wrapper)
-     - a timed centered "Do you want to chat?" popup over the H1
-       (#apexchat_popup_message_invitation_*, #apexchat_dompopup_*)
-     - an "Online Agent" avatar bubble over the form
-       (#apexchat_prechat_invitation_wrapper)
-     - exit-intent popups (#apexchat_exitpopup2_*)
-   All of these cover the page's own form, hero, and CTAs and make
-   the site look broken. Hidden on ALL viewports here, and actively
-   removed in privacy-choices.js so they never even flash.
-   To re-enable chat, delete this block AND the killer in
-   scripts/privacy-choices.js.
-   ============================================================ */
-[id^="apexchat_"],
-[id^="apexchat"],
-[class*="apexchat_"],
-[class*="apexchat"],
-[class*="livechat_bar_widget"],
-[class*="livechat-rd-plus"],
-[id*="invitation_wrapper"],
-[id*="invitation_frame"] {
-  display: none !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  opacity: 0 !important;
-}
-body.livechat_bar_widget_bottom {
-  padding-bottom: 0 !important;
 }
 
 /* ============================================================
