@@ -2981,3 +2981,228 @@ body.has-tap-bar-visible {
   max-width: 100%;
   box-sizing: border-box;
 }
+
+/* ============================================================
+   FOOTER RESET (June 2026): clean 4-column compact footer
+   - Desktop (>=900px): 4 equal columns, flush flat layout
+     (kills the older bordered-card + 2-col-grid look)
+   - Mobile (<=899px): single stacked column, left-aligned
+   - Required legal/privacy links + short attorney-advertising
+     disclaimer preserved verbatim
+   Keep at end of file.
+   ============================================================ */
+.site-footer {
+  background: linear-gradient(180deg, #012a50 0%, #01366c 50%, #012240 100%);
+  color: #fff;
+  padding: 2.25rem 0 1.25rem;
+  border-top: 3px solid #fbba00;
+}
+.site-footer .container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.site-footer .footer-content {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 28px;
+  max-width: none;
+  margin: 0 0 24px 0;
+  padding: 0 0 22px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  align-items: start;
+}
+.site-footer .footer-section {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-width: 0;
+}
+.site-footer .footer-section h3,
+.site-footer .footer-section h4 {
+  color: #fff;
+  margin: 0 0 10px 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.site-footer .footer-section--brand h3 {
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: #fff;
+}
+.site-footer .footer-section--brand p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 0.55rem 0;
+}
+.site-footer .footer-section--brand .footer__phone {
+  display: inline-block;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #fbba00 !important;
+  text-decoration: none;
+  margin: 0.15rem 0 0.25rem 0;
+}
+.site-footer .footer-section--brand .footer__phone:hover {
+  color: #fff !important;
+}
+.site-footer .footer-section--brand .footer__sub {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 0.6rem 0;
+}
+.site-footer .footer-section--brand .footer-cta-link {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #fbba00;
+  color: #01366c !important;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  text-decoration: none;
+  margin-top: 0.25rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.site-footer .footer-section--brand .footer-cta-link:hover {
+  background: #fff;
+  color: #01366c !important;
+}
+.site-footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer .footer-section li {
+  margin: 0;
+  padding: 0;
+}
+.site-footer .footer-section a,
+.site-footer .footer-section .footer-link-button {
+  display: block;
+  padding: 5px 0;
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-decoration: none;
+  font-size: 0.86rem;
+  line-height: 1.4;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.site-footer .footer-section a:hover,
+.site-footer .footer-section .footer-link-button:hover {
+  color: #fbba00 !important;
+}
+.site-footer .footer-section--legal h4 {
+  color: #fbba00;
+}
+.site-footer .footer__disclaimer {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  max-width: none;
+  margin: 0 auto;
+}
+.site-footer .footer__disclaimer p {
+  margin: 0.5rem 0;
+}
+.site-footer .footer__short-disclaimer {
+  font-weight: 600;
+  color: #fff !important;
+  font-size: 0.82rem;
+  margin: 0 0 0.85rem 0 !important;
+}
+.site-footer .footer__disclaimer a {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.site-footer .footer__disclaimer a:hover {
+  color: #fbba00 !important;
+}
+.site-footer .footer-sms-note {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.55;
+  margin: 0.85rem 0 0 0 !important;
+  text-align: left;
+}
+.site-footer .footer__copyright {
+  margin: 0.95rem 0 0 0 !important;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Desktop layout override: the old @media (min-width:900px) rule above
+   forced the .footer-content to 2 columns with max-width:920px and
+   centered it -- that's what made the footer look like a stacked block
+   of cards. Override here with the wider, 4-col flush layout. */
+@media (min-width: 900px) {
+  .site-footer .footer-content {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    gap: 32px;
+  }
+}
+
+/* Tablet (single break at narrower laptop / large tablet) */
+@media (max-width: 899px) and (min-width: 600px) {
+  .site-footer .footer-content {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px;
+  }
+  .site-footer .footer-section--brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile: stack everything cleanly */
+@media (max-width: 599px) {
+  .site-footer {
+    padding: 1.75rem 0 1.25rem;
+  }
+  .site-footer .container {
+    padding: 0 18px;
+  }
+  .site-footer .footer-content {
+    grid-template-columns: 1fr !important;
+    gap: 22px;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+  }
+  .site-footer .footer-section--brand .footer__phone {
+    font-size: 1.5rem;
+  }
+  .site-footer .footer-section--brand .footer-cta-link {
+    display: block;
+    text-align: center;
+    padding: 11px 14px;
+    font-size: 0.95rem;
+  }
+  .site-footer .footer-section a,
+  .site-footer .footer-section .footer-link-button {
+    padding: 8px 0;
+    font-size: 0.92rem;
+  }
+}
+
+/* Belt-and-suspenders: footer cannot push doc wider than viewport */
+.site-footer,
+.site-footer * {
+  box-sizing: border-box;
+}
+.site-footer {
+  max-width: 100%;
+  overflow-x: hidden;
+}
