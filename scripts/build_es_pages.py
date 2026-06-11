@@ -69,6 +69,22 @@ li{margin:6px 0}
 .toc-block h3{margin:0 0 8px;color:var(--brand-navy);font-size:16px;text-transform:uppercase;letter-spacing:.06em}
 .toc-block ul{margin:0;padding-left:20px;columns:2;column-gap:24px}
 .toc-block li{margin:4px 0;break-inside:avoid}
+/* Hero / section imagery (Spanish Tier 1) — neutral editorial photography
+   reused from approved English-side assets. Constant aspect ratio so
+   pages don't shift while loading. */
+.es-hero-img{margin:0 0 24px;border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(1,54,108,.14);background:#eef2f7}
+.es-hero-img img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.es-inline-image{display:grid;grid-template-columns:5fr 6fr;gap:28px;align-items:center;margin:30px 0;padding:18px;background:#f8fbfe;border:1px solid #e2ecf6;border-radius:14px}
+.es-inline-image .es-inline-image__media{margin:0;overflow:hidden;border-radius:10px;background:#eef2f7}
+.es-inline-image .es-inline-image__media img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.es-inline-image .es-inline-image__copy h3{margin-top:0;color:var(--brand-navy);font-size:1.2rem}
+.es-inline-image .es-inline-image__copy p{margin:0 0 8px;color:var(--brand-gray-700);font-size:0.96rem;line-height:1.6}
+.es-inline-image--flip{grid-template-columns:6fr 5fr}
+.es-inline-image--flip .es-inline-image__media{order:2}
+@media(max-width:760px){
+  .es-inline-image,.es-inline-image--flip{grid-template-columns:1fr;padding:14px}
+  .es-inline-image .es-inline-image__media{order:0!important}
+}
 @media(max-width:700px){.toc-block ul{columns:1}h1{font-size:28px}h2{font-size:22px}.container{padding:0 16px}}
 """
 
@@ -235,6 +251,13 @@ class Page:
         self.extra_head = extra_head
         self.page_kind = page_kind
         self.legal_source = legal_source
+        # Image fields populated from IMAGE_MAP after PAGES is built.
+        self.hero_image: str | None = None
+        self.hero_image_alt: str = ""
+        self.hero_image_width: int = 1200
+        self.hero_image_height: int = 720
+        self.section_image: str | None = None
+        self.section_image_alt: str = ""
 
     @property
     def es_url(self) -> str:
@@ -252,6 +275,226 @@ class Page:
     @property
     def fs_index(self) -> Path:
         return self.fs_dir / "index.html"
+
+
+# ---------------------------------------------------------------------------
+# Central image map (Spanish Tier 1)
+# ---------------------------------------------------------------------------
+# Each entry maps an ES path -> dict with:
+#   hero  : (src, alt)            # 16:10ish editorial photo near the top
+#   sect  : (src, alt)            # secondary contextual photo lower on page
+#
+# Rules:
+# - All images live locally under /images/ (no hotlinks, no base64).
+# - Reuse approved English-side assets (no duplicates).
+# - Skip legal/privacy pages on purpose (text-focused).
+# - Skip the contact page (text + form focused).
+# - Existing site-wide CSS scales images responsively (.es-hero-img, .es-inline-img).
+IMAGE_MAP: dict[str, dict[str, tuple[str, str]]] = {
+    # Hubs
+    "/es/segunda-opinion-reclamo-lesiones-california/": {
+        "hero": ("/images/insurance-adjuster-claim-valuation.jpg",
+                 "Persona revisando documentos de un reclamo por lesiones con una calculadora"),
+        "sect": ("/images/insurance-settlement-offer-check-hesitation.jpg",
+                 "Cheque de oferta de liquidaci\u00f3n de la aseguranza sobre una mesa"),
+    },
+    "/es/lesiones-personales/": {
+        "hero": ("/images/personal-injury-medical-waiting-room.jpg",
+                 "Sala de espera m\u00e9dica donde un lesionado contin\u00faa su tratamiento"),
+        "sect": ("/images/insurance-settlement-calculation-tablet.jpg",
+                 "Tableta digital con c\u00e1lculo de una oferta de liquidaci\u00f3n por lesiones"),
+    },
+    "/es/acuerdos-liquidaciones-lesiones/": {
+        "hero": ("/images/insurance-settlement-offer-check-hesitation.jpg",
+                 "Persona dudando antes de aceptar una oferta de liquidaci\u00f3n de la aseguranza"),
+        "sect": ("/images/legal-demand-letter-preparation.jpg",
+                 "Pluma sobre una carta de demanda preparada para enviar a la aseguranza"),
+    },
+    "/es/lista-revision-liquidacion-lesiones-california/": {
+        "hero": ("/images/insurance-settlement-calculation-tablet.jpg",
+                 "Revisi\u00f3n de los n\u00fameros de una oferta de liquidaci\u00f3n en una tableta"),
+        "sect": ("/images/what-to-do-after-car-accident-checklist.jpg",
+                 "Lista de verificaci\u00f3n para revisar una oferta de liquidaci\u00f3n"),
+    },
+    "/es/carta-demanda-lesiones-personales-california/": {
+        "hero": ("/images/legal-demand-letter-preparation.jpg",
+                 "Carta de demanda preparada para enviar a la compa\u00f1\u00eda de seguros"),
+        "sect": ("/images/demand-letter-negotiation-meeting.jpg",
+                 "Reuni\u00f3n de negociaci\u00f3n para discutir la carta de demanda"),
+    },
+    "/es/segunda-opinion-caso-lesiones-california/": {
+        "hero": ("/images/proving-claim-value-analysis.jpg",
+                 "An\u00e1lisis del valor de un caso de lesiones personales en California"),
+        "sect": ("/images/insurance-claim-rates-review.jpg",
+                 "Revisi\u00f3n de documentos de una p\u00f3liza de seguro y reclamo"),
+    },
+    # Accident hubs / types
+    "/es/accidentes-vehiculos/": {
+        "hero": ("/images/california-car-accident-lawyer-highway.jpg",
+                 "Carretera de California donde ocurren accidentes de veh\u00edculos"),
+        "sect": ("/images/evidence-preservation-accident-photos.jpg",
+                 "Fotos del lugar de un accidente para preservar evidencia"),
+    },
+    "/es/abogado-accidentes-auto-los-angeles/": {
+        "hero": ("/images/car-accident-lawyer-los-angeles-downtown.jpg",
+                 "Centro de Los \u00c1ngeles donde ocurren accidentes de auto diariamente"),
+        "sect": ("/images/los-angeles-car-crash-emergency-lights.jpg",
+                 "Luces de emergencia en la escena de un accidente en Los \u00c1ngeles"),
+    },
+    "/es/abogado-accidentes-auto-california/": {
+        "hero": ("/images/california-car-accident-lawyer-highway.jpg",
+                 "Carretera de California al atardecer despu\u00e9s de un accidente de auto"),
+        "sect": ("/images/insurance-adjuster-claim-valuation-calculator.jpg",
+                 "Ajustador de seguros calculando el valor de un reclamo por accidente"),
+    },
+    "/es/accidente-auto-grave/": {
+        "hero": ("/images/major-car-accident-traffic-jam.jpg",
+                 "Tr\u00e1fico detenido en la escena de un accidente de auto grave"),
+        "sect": ("/images/los-angeles-catastrophic-injury-crutches.jpg",
+                 "Persona usando muletas durante la recuperaci\u00f3n de una lesi\u00f3n grave"),
+    },
+    "/es/abogado-choque-por-alcance-los-angeles/": {
+        "hero": ("/images/rear-end-accident-bumper-damage.jpg",
+                 "Da\u00f1o en el par-choques despu\u00e9s de un choque por alcance en Los \u00c1ngeles"),
+        "sect": ("/images/delayed-pain-after-car-accident.jpg",
+                 "Dolor de cuello que aparece d\u00edas despu\u00e9s de un choque por alcance"),
+    },
+    "/es/abogado-choque-lateral-los-angeles/": {
+        "hero": ("/images/t-bone-accident-intersection-scene.jpg",
+                 "Intersecci\u00f3n donde ocurri\u00f3 un choque lateral tipo T-Bone en Los \u00c1ngeles"),
+        "sect": ("/images/los-angeles-car-crash-emergency-lights.jpg",
+                 "Luces de emergencia en la escena de un choque lateral"),
+    },
+    "/es/valor-reclamo-choque-lateral-california/": {
+        "hero": ("/images/t-bone-accident-intersection-scene.jpg",
+                 "Intersecci\u00f3n con un choque lateral en California"),
+        "sect": ("/images/insurance-settlement-calculation-tablet.jpg",
+                 "C\u00e1lculo del valor de un reclamo por choque lateral en una tableta"),
+    },
+    "/es/abogado-accidente-fuga-los-angeles/": {
+        "hero": ("/images/hit-and-run-accident-lawyer-night.jpg",
+                 "Calle de Los \u00c1ngeles de noche donde ocurri\u00f3 un accidente con fuga"),
+        "sect": ("/images/hit-and-run-accident-evidence-glass.jpg",
+                 "Vidrios rotos en la calle como evidencia de un accidente con fuga"),
+    },
+    "/es/abogado-accidente-uber-lyft-los-angeles/": {
+        "hero": ("/images/uber-lyft-accident-scene-night.jpg",
+                 "Escena nocturna de un accidente con un veh\u00edculo de Uber o Lyft en Los \u00c1ngeles"),
+        "sect": ("/images/uber-accident-lawyer-app-file.jpg",
+                 "Recibo de viaje de rideshare usado como evidencia en un reclamo"),
+    },
+    "/es/abogado-accidente-conductor-sin-seguro-los-angeles/": {
+        "hero": ("/images/uninsured-driver-accident-frustration.jpg",
+                 "Conductor frustrado tras un choque con un conductor sin seguro"),
+        "sect": ("/images/uninsured-motorist-coverage-policy.jpg",
+                 "P\u00f3liza de cobertura UM/UIM para conductores sin seguro"),
+    },
+    "/es/abogado-accidente-scooter-bicicleta-electrica-los-angeles/": {
+        "hero": ("/images/electric-scooter-accident-lawyer-santa-monica.jpg",
+                 "Scooter el\u00e9ctrico en una acera de Santa Monica despu\u00e9s de un accidente"),
+        "sect": ("/images/scooter-accident-liability-hazard.jpg",
+                 "Peligro en la calle que puede causar un accidente de scooter o bici el\u00e9ctrica"),
+    },
+    "/es/recuperar-scooter-bicicleta-electrica-danada/": {
+        "hero": ("/images/recover-destroyed-scooter-repair.jpg",
+                 "Scooter el\u00e9ctrico da\u00f1ado en reparaci\u00f3n despu\u00e9s de un accidente"),
+        "sect": ("/images/insurance-claim-rates-review.jpg",
+                 "Revisi\u00f3n de la cobertura de seguro para da\u00f1os al scooter o bicicleta"),
+    },
+    "/es/abogado-accidente-peaton-los-angeles/": {
+        "hero": ("/images/los-angeles-pedestrian-accident-crosswalk.jpg",
+                 "Cruce peatonal en Los \u00c1ngeles donde ocurren accidentes de peat\u00f3n"),
+        "sect": ("/images/pedestrian-right-of-way-sign.jpg",
+                 "Se\u00f1al de paso peatonal mostrando el derecho de paso del peat\u00f3n"),
+    },
+    "/es/abogado-accidente-estacionamiento-los-angeles/": {
+        "hero": ("/images/parking-lot-accident-lawyer-dusk.jpg",
+                 "Estacionamiento de Los \u00c1ngeles al atardecer donde ocurren accidentes"),
+        "sect": ("/images/evidence-preservation-accident-photos.jpg",
+                 "Fotos del estacionamiento para preservar evidencia despu\u00e9s del accidente"),
+    },
+    "/es/guia-reclamo-accidente-estacionamiento-california/": {
+        "hero": ("/images/parking-lot-accident-lawyer-dusk.jpg",
+                 "Estacionamiento en California, escenario com\u00fan de accidentes con baja velocidad"),
+        "sect": ("/images/what-to-do-after-car-accident-checklist.jpg",
+                 "Lista de pasos a seguir despu\u00e9s de un accidente en estacionamiento"),
+    },
+    "/es/responsabilidad-de-propiedad/": {
+        "hero": ("/images/los-angeles-premises-liability-wet-floor.jpg",
+                 "Piso mojado en un negocio sin se\u00f1al de advertencia para clientes"),
+        "sect": ("/images/los-angeles-slip-and-fall-sidewalk.jpg",
+                 "Acera deteriorada en Los \u00c1ngeles donde ocurre un resbal\u00f3n y ca\u00edda"),
+    },
+    "/es/abogado-negligencia-asilo-ancianos-los-angeles/": {
+        "hero": ("/images/nursing-home/caregiver-elderly-resident.png",
+                 "Cuidadora ayudando a una residente adulta mayor en un asilo de ancianos"),
+        "sect": ("/images/nursing-home/family-with-elderly-wheelchair.png",
+                 "Familiares acompa\u00f1ando a un adulto mayor en silla de ruedas"),
+    },
+    "/es/ulceras-presion-negligencia-asilo-ancianos/": {
+        "hero": ("/images/nursing-home/nurse-documenting-wound-care.png",
+                 "Enfermera documentando el cuidado de una herida en un asilo"),
+        "sect": ("/images/nursing-home/family-holding-hands-patient.png",
+                 "Familiar tomando la mano de un paciente adulto mayor"),
+    },
+    # Lesiones-personales subpages (legacy slugs)
+    "/es/lesiones-personales/accidentes-auto/": {
+        "hero": ("/images/personal-injury-auto-accidents-blur.jpg",
+                 "Tr\u00e1fico desenfocado de California en una escena de accidente de auto"),
+        "sect": ("/images/california-car-accident-lawyer-highway.jpg",
+                 "Carretera de California al atardecer"),
+    },
+    "/es/lesiones-personales/accidentes-camion/": {
+        "hero": ("/images/personal-injury-truck-accidents-mirror-view.jpg",
+                 "Vista del espejo retrovisor de un cami\u00f3n comercial en California"),
+        "sect": ("/images/truck-accident-evidence-skid-marks.jpg",
+                 "Marcas de frenado como evidencia de un accidente con cami\u00f3n"),
+    },
+    "/es/lesiones-personales/lesion-cerebral/": {
+        "hero": ("/images/personal-injury-brain-injuries-illustration.jpg",
+                 "Ilustraci\u00f3n m\u00e9dica de una lesi\u00f3n cerebral despu\u00e9s de un accidente"),
+        "sect": ("/images/brain-injury-mri-scan-review.jpg",
+                 "Revisi\u00f3n m\u00e9dica de una resonancia magn\u00e9tica del cerebro"),
+    },
+    "/es/lesiones-personales/lesiones-catastroficas/": {
+        "hero": ("/images/personal-injury-catastrophic-injuries-hospital-bed.jpg",
+                 "Cama de hospital donde un paciente se recupera de lesiones catastr\u00f3ficas"),
+        "sect": ("/images/los-angeles-catastrophic-injury-crutches.jpg",
+                 "Muletas y bastones usados durante la recuperaci\u00f3n de una lesi\u00f3n grave"),
+    },
+    "/es/lesiones-personales/lesiones-columna/": {
+        "hero": ("/images/personal-injury-spine-injuries-xray.jpg",
+                 "Radiograf\u00eda de la columna que muestra una lesi\u00f3n por accidente"),
+        "sect": ("/images/herniated-disc-spine-model-doctor.jpg",
+                 "M\u00e9dico explicando una hernia de disco con un modelo de columna"),
+    },
+    "/es/lesiones-personales/muerte-injusta/": {
+        "hero": ("/images/personal-injury-wrongful-death-memorial.jpg",
+                 "Memorial respetuoso para una v\u00edctima de muerte injusta"),
+        "sect": ("/images/los-angeles-wrongful-death-legal-desk.jpg",
+                 "Escritorio legal con documentos de un reclamo por muerte injusta"),
+    },
+    "/es/lesiones-personales/resbalon-caida/": {
+        "hero": ("/images/personal-injury-slip-and-fall-wet-floor.jpg",
+                 "Piso mojado en una tienda sin se\u00f1al de advertencia"),
+        "sect": ("/images/los-angeles-slip-and-fall-sidewalk.jpg",
+                 "Acera deteriorada en Los \u00c1ngeles, causa com\u00fan de ca\u00eddas"),
+    },
+}
+
+
+def apply_image_map() -> None:
+    """Populate Page image fields from IMAGE_MAP. Idempotent."""
+    for p in PAGES:
+        m = IMAGE_MAP.get(p.es_path)
+        if not m:
+            continue
+        hero = m.get("hero")
+        if hero:
+            p.hero_image, p.hero_image_alt = hero
+        sect = m.get("sect")
+        if sect:
+            p.section_image, p.section_image_alt = sect
 
 
 # ---------------------------------------------------------------------------
@@ -2628,8 +2871,67 @@ def render_related(p: Page) -> str:
     return f'<h2>P\u00e1ginas relacionadas</h2>\n<ul class="related-list">\n{items}\n</ul>'
 
 
+def render_hero_image(p: Page) -> str:
+    """Render the page's top editorial hero image (eagerly loaded, sized).
+
+    Returns empty string if the page has no image (legal/contact pages, etc.).
+    """
+    if not p.hero_image:
+        return ""
+    src = SITE + p.hero_image if p.hero_image.startswith("/") else p.hero_image
+    alt = escape(p.hero_image_alt or "")
+    return (
+        '<figure class="es-hero-img" aria-hidden="false">'
+        f'<img src="{src}" alt="{alt}" '
+        f'width="{p.hero_image_width}" height="{p.hero_image_height}" '
+        'loading="eager" fetchpriority="high" decoding="async">'
+        '</figure>'
+    )
+
+
+def render_section_image(p: Page, copy_heading: str, copy_body: str, flip: bool = False) -> str:
+    """Render a 50/50 image+text strip lower on the page (lazy loaded).
+
+    Returns empty string if the page has no secondary image.
+    """
+    if not p.section_image:
+        return ""
+    src = SITE + p.section_image if p.section_image.startswith("/") else p.section_image
+    alt = escape(p.section_image_alt or "")
+    cls = "es-inline-image es-inline-image--flip" if flip else "es-inline-image"
+    return (
+        f'<aside class="{cls}">'
+        '<figure class="es-inline-image__media">'
+        f'<img src="{src}" alt="{alt}" width="800" height="600" loading="lazy" decoding="async">'
+        '</figure>'
+        '<div class="es-inline-image__copy">'
+        f'<h3>{copy_heading}</h3>'
+        f'<p>{copy_body}</p>'
+        '</div>'
+        '</aside>'
+    )
+
+
 def render_content_page(p: Page) -> str:
     """Standard content page (most Tier 1 pages)."""
+
+    hero_img_html = render_hero_image(p)
+    section_img_html = render_section_image(
+        p,
+        copy_heading="\u00bfQuiere una revisi\u00f3n personal de su caso?",
+        copy_body=(
+            "Cu\u00e9ntenos brevemente lo que pas\u00f3 y un miembro del equipo le devuelve la "
+            "llamada en espa\u00f1ol para revisar los hechos, la oferta y las opciones."
+        ),
+    )
+
+    # Preload hero image on pages that have one (improves LCP).
+    preload_hero = ""
+    if p.hero_image:
+        src = SITE + p.hero_image if p.hero_image.startswith("/") else p.hero_image
+        preload_hero = f'<link rel="preload" as="image" href="{src}" fetchpriority="high">'
+
+    og_image = (SITE + p.hero_image) if p.hero_image else f"{SITE}/images/hero/ktown-bg.jpg"
 
     head = f"""<!DOCTYPE html>
 <html lang=\"es\">
@@ -2648,16 +2950,17 @@ def render_content_page(p: Page) -> str:
 <meta property=\"og:url\" content=\"{p.es_url}\">
 <meta property=\"og:locale\" content=\"es_US\">
 <meta property=\"og:site_name\" content=\"Insider Lawyers\">
-<meta property=\"og:image\" content=\"{SITE}/images/hero/ktown-bg.jpg\">
+<meta property=\"og:image\" content=\"{og_image}\">
 <meta name=\"twitter:card\" content=\"summary_large_image\">
 <meta name=\"twitter:title\" content=\"{escape(p.title)}\">
 <meta name=\"twitter:description\" content=\"{escape(p.description)}\">
-<meta name=\"twitter:image\" content=\"{SITE}/images/hero/ktown-bg.jpg\">
+<meta name=\"twitter:image\" content=\"{og_image}\">
 {render_article_schema(p)}
 {render_faq_schema(p)}
 <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
 <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
 <link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&display=swap\" rel=\"stylesheet\">
+{preload_hero}
 <style>{INLINE_CSS}</style>
 {GTM_HEAD}
 </head>
@@ -2672,8 +2975,10 @@ def render_content_page(p: Page) -> str:
 <div class=\"content-body\">
 <h1>{escape(p.h1)}</h1>
 <p class=\"lead-text\">{p.lead}</p>
+{hero_img_html}
 {cta_block("Solicite una revisi\u00f3n gratuita", "Cu\u00e9ntenos brevemente qu\u00e9 pas\u00f3 y d\u00f3nde est\u00e1 hoy el caso. Le explicamos sus opciones \u2014 incluida una segunda opini\u00f3n, revisi\u00f3n del acuerdo o consulta con un abogado si es necesario. Sin presi\u00f3n y sin compromiso. Enviar este formulario no crea una relaci\u00f3n abogado-cliente.")}
 {render_sections(p)}
+{section_img_html}
 {cta_block("\u00bfTiene una oferta sobre la mesa? Rev\u00edsela primero.", "Antes de firmar un release o aceptar una liquidaci\u00f3n en California, repase la <a href=\"/es/lista-revision-liquidacion-lesiones-california/\">lista de revisi\u00f3n del acuerdo</a> y solicite una revisi\u00f3n gratuita. Una vez firmado, el reclamo generalmente se cierra.")}
 {render_faqs(p)}
 {render_related(p)}
@@ -2736,13 +3041,26 @@ body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
 body:not(.loaded) *{{animation-play-state:paused;}}
 .content-section h2{{color:#01366c;}}
 .section-pad{{padding:2rem 0;}}
-.fact-card{{background:#fff;border:1px solid #dce6f2;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1rem;box-shadow:0 4px 14px rgba(1,54,108,0.05);}}
+.fact-card{{background:#fff;border:1px solid #dce6f2;border-radius:12px;padding:1.25rem 1.4rem;margin-bottom:1rem;box-shadow:0 4px 14px rgba(1,54,108,0.05);display:flex;flex-direction:column;}}
+.fact-card .fact-card__icon{{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;background:linear-gradient(180deg,#eaf2fb,#dce8f6);color:#01366c;margin-bottom:0.55rem;flex:0 0 auto;}}
+.fact-card .fact-card__icon svg{{width:22px;height:22px;}}
 .fact-card h3{{color:#01366c;margin:0 0 0.4rem;font-size:1.1rem;}}
-.fact-card p{{margin:0;color:#374151;line-height:1.6;}}
+.fact-card p{{margin:0;color:#374151;line-height:1.6;font-size:0.96rem;}}
 .fact-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;}}
 .es-faq{{background:#fff;border:1px solid #dce6f2;border-radius:10px;padding:1.25rem;margin-bottom:1rem;}}
 .es-faq h3{{color:#01366c;margin:0 0 0.5rem;font-size:1.1rem;}}
 .es-faq p{{margin:0;color:#374151;line-height:1.6;}}
+/* Spanish homepage: supporting claim-review image + trust strip */
+.es-home-support{{display:grid;grid-template-columns:5fr 6fr;gap:32px;align-items:center;margin:0 auto 0.5rem;max-width:1100px;}}
+.es-home-support__media{{margin:0;border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(1,54,108,0.12);background:#eef2f7;}}
+.es-home-support__media img{{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;}}
+.es-home-support__copy h3{{color:#01366c;margin:0 0 0.5rem;font-size:1.35rem;}}
+.es-home-support__copy p{{margin:0 0 0.6rem;color:#374151;font-size:1rem;line-height:1.65;}}
+.es-home-support__copy ul{{margin:0.4rem 0 0 1.1rem;padding:0;color:#374151;}}
+.es-home-support__copy ul li{{margin:0.25rem 0;}}
+.es-trust-bar{{background:linear-gradient(180deg,#01468a 0%,#01366c 100%);color:#fff;text-align:center;padding:1rem 1.25rem;border-radius:12px;margin:1.25rem auto 0;max-width:1100px;font-size:0.95rem;line-height:1.55;}}
+.es-trust-bar strong{{color:#fbba00;}}
+@media(max-width:760px){{.es-home-support{{grid-template-columns:1fr;gap:18px;}}}}
 </style>
 {FORM_TRACKING_INLINE}
 {GTM_HEAD}
@@ -2794,18 +3112,33 @@ body:not(.loaded) *{{animation-play-state:paused;}}
     </div>
   </div>
 </section>
-<section class=\"content-section defer-mobile section-pad\" style=\"background:#fff;\">
+<section class=\"content-section defer-mobile section-pad\" style=\"background:#fff;padding-top:3rem;\">
   <div class=\"container\" style=\"max-width:1100px;\">
-    <h2 style=\"text-align:center;color:#01366c;margin-bottom:0.5rem;\">Un recurso neutral para reclamos por lesiones en California</h2>
+    <aside class=\"es-home-support\">
+      <figure class=\"es-home-support__media\">
+        <img src=\"{SITE}/images/insurance-adjuster-claim-valuation.jpg\" alt=\"Persona revisando documentos de un reclamo por lesiones en California junto a una calculadora\" width=\"800\" height=\"600\" loading=\"lazy\" decoding=\"async\">
+      </figure>
+      <div class=\"es-home-support__copy\">
+        <h3>Una mirada neutral antes de firmar nada</h3>
+        <p>La aseguranza tiene su propio equipo. Usted merece una mirada independiente y en espa\u00f1ol sobre lo que realmente vale su caso, qu\u00e9 cubre el seguro disponible y qu\u00e9 pasa si firma el <em>release</em>.</p>
+        <ul>
+          <li>Revisi\u00f3n gratuita y sin compromiso, en espa\u00f1ol.</li>
+          <li>Le ayudamos a entender una oferta antes de aceptarla.</li>
+          <li>No tiene que despedir a su abogado actual para pedir una segunda opini\u00f3n.</li>
+        </ul>
+      </div>
+    </aside>
+    <h2 style=\"text-align:center;color:#01366c;margin:2rem 0 0.5rem;\">Un recurso neutral para reclamos por lesiones en California</h2>
     <p style=\"text-align:center;color:#374151;max-width:760px;margin:0 auto 1.5rem;\">Insider Lawyers en espa\u00f1ol es un recurso para personas lesionadas en California que est\u00e1n revisando una oferta de la aseguranza, decidiendo si aceptar un acuerdo o evaluando si pedir una segunda opini\u00f3n sobre su caso actual.</p>
     <div class=\"fact-grid\">
-      <div class=\"fact-card\"><h3>Revisi\u00f3n del reclamo</h3><p>Una mirada neutral a su caso \u2014 hechos, lesiones, cobertura y oferta. Le ayudamos a entender d\u00f3nde est\u00e1 hoy y qu\u00e9 sigue. <a href=\"/es/lesiones-personales/\">Vea la gu\u00eda de reclamos</a>.</p></div>
-      <div class=\"fact-card\"><h3>Segunda opini\u00f3n</h3><p>Si su caso est\u00e1 estancado o no le est\u00e1n explicando el valor, puede pedir una <a href=\"/es/segunda-opinion-reclamo-lesiones-california/\">segunda opini\u00f3n</a> sin despedir a su abogado actual.</p></div>
-      <div class=\"fact-card\"><h3>Revisi\u00f3n del acuerdo</h3><p>Antes de firmar un release, repase la <a href=\"/es/lista-revision-liquidacion-lesiones-california/\">lista de revisi\u00f3n</a>. Una vez firmado, el reclamo generalmente se cierra.</p></div>
-      <div class=\"fact-card\"><h3>Carta de demanda</h3><p>Entienda qu\u00e9 es y qu\u00e9 debe incluir una <a href=\"/es/carta-demanda-lesiones-personales-california/\">carta de demanda</a> y c\u00f3mo afecta la negociaci\u00f3n.</p></div>
-      <div class=\"fact-card\"><h3>Accidentes de auto</h3><p>Choque, conductor sin seguro, hit and run, peat\u00f3n, Uber/Lyft y otros tipos. <a href=\"/es/accidentes-vehiculos/\">Vea los tipos de accidente</a>.</p></div>
-      <div class=\"fact-card\"><h3>Resbal\u00f3n y propiedad</h3><p>Cuando el due\u00f1o de un negocio o propiedad fue negligente. <a href=\"/es/responsabilidad-de-propiedad/\">Vea responsabilidad de propiedad</a>.</p></div>
+      <div class=\"fact-card\"><span class=\"fact-card__icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 5h12l2 2v12H3z\"/><path d=\"M7 9h6M7 13h6M7 17h4\"/></svg></span><h3>Revisi\u00f3n del reclamo</h3><p>Una mirada neutral a su caso \u2014 hechos, lesiones, cobertura y oferta. Le ayudamos a entender d\u00f3nde est\u00e1 hoy y qu\u00e9 sigue. <a href=\"/es/lesiones-personales/\">Vea la gu\u00eda de reclamos</a>.</p></div>
+      <div class=\"fact-card\"><span class=\"fact-card__icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"M21 21l-4.3-4.3\"/></svg></span><h3>Segunda opini\u00f3n</h3><p>Si su caso est\u00e1 estancado o no le est\u00e1n explicando el valor, puede pedir una <a href=\"/es/segunda-opinion-reclamo-lesiones-california/\">segunda opini\u00f3n</a> sin despedir a su abogado actual.</p></div>
+      <div class=\"fact-card\"><span class=\"fact-card__icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\"/><path d=\"M8 12l3 3 5-6\"/></svg></span><h3>Revisi\u00f3n del acuerdo</h3><p>Antes de firmar un release, repase la <a href=\"/es/lista-revision-liquidacion-lesiones-california/\">lista de revisi\u00f3n</a>. Una vez firmado, el reclamo generalmente se cierra.</p></div>
+      <div class=\"fact-card\"><span class=\"fact-card__icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 6h16M4 12h12M4 18h8\"/><path d=\"M18 18l3-3M18 18l3 3\"/></svg></span><h3>Carta de demanda</h3><p>Entienda qu\u00e9 es y qu\u00e9 debe incluir una <a href=\"/es/carta-demanda-lesiones-personales-california/\">carta de demanda</a> y c\u00f3mo afecta la negociaci\u00f3n.</p></div>
+      <div class=\"fact-card\"><span class=\"fact-card__icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 13l2-5h10l2 5\"/><path d=\"M3 13v5h16v-5\"/><circle cx=\"7\" cy=\"18\" r=\"1.5\"/><circle cx=\"15\" cy=\"18\" r=\"1.5\"/></svg></span><h3>Accidentes de auto</h3><p>Choque, conductor sin seguro, hit and run, peat\u00f3n, Uber/Lyft y otros tipos. <a href=\"/es/accidentes-vehiculos/\">Vea los tipos de accidente</a>.</p></div>
+      <div class=\"fact-card\"><span class=\"fact-card__icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 21h16\"/><path d=\"M5 21v-7l7-5 7 5v7\"/><path d=\"M10 14h4v7h-4z\"/></svg></span><h3>Resbal\u00f3n y propiedad</h3><p>Cuando el due\u00f1o de un negocio o propiedad fue negligente. <a href=\"/es/responsabilidad-de-propiedad/\">Vea responsabilidad de propiedad</a>.</p></div>
     </div>
+    <p class=\"es-trust-bar\">L\u00e9anos en espa\u00f1ol &middot; <strong>Revisi\u00f3n gratuita 24/7</strong> &middot; Enviar este formulario no crea una relaci\u00f3n abogado-cliente.</p>
   </div>
 </section>
 <section class=\"content-section defer-mobile section-pad\" style=\"background:#f8fbfe;border-top:1px solid #e5eef7;\">
@@ -2937,49 +3270,31 @@ def inject_hreflang_into_english() -> tuple[int, list[str]]:
 # ---------------------------------------------------------------------------
 # Sitemap update
 # ---------------------------------------------------------------------------
-
-ES_MARKER_START = "<!-- ES_SITEMAP_START -->"
-ES_MARKER_END = "<!-- ES_SITEMAP_END -->"
-URLSET_ES_ATTR = ' xmlns:xhtml="http://www.w3.org/1999/xhtml"'
-
+#
+# As of June 2026 the sitemap system is owned by scripts/build_sitemaps.py,
+# which emits a sitemap index plus categorised child sitemaps. This script
+# no longer writes /sitemap.xml directly. It just delegates the sitemap
+# refresh to the orchestrator so any future regeneration of Spanish pages
+# automatically re-emits the categorised sitemap structure with the right
+# Spanish entries.
 
 def update_sitemap() -> tuple[int, list[str]]:
-    if not SITEMAP.is_file():
-        return 0, []
-    raw = SITEMAP.read_text(encoding="utf-8")
-
-    # Ensure xhtml namespace exists on <urlset>
-    m = re.search(r"<urlset\b[^>]*>", raw)
-    if m and "xmlns:xhtml" not in m.group(0):
-        new_tag = m.group(0).replace(">", URLSET_ES_ATTR + ">")
-        raw = raw[: m.start()] + new_tag + raw[m.end():]
-
-    # Remove any existing ES block
-    raw = re.sub(
-        re.escape(ES_MARKER_START) + r"[\s\S]*?" + re.escape(ES_MARKER_END) + r"\s*",
-        "",
-        raw,
-    )
-
-    # Build ES entries
-    entries = [ES_MARKER_START]
-    for p in PAGES:
-        entries.append("  <url>")
-        entries.append(f"    <loc>{p.es_url}</loc>")
-        entries.append(f"    <lastmod>{TODAY}</lastmod>")
-        entries.append(f"    <changefreq>{p.sitemap_changefreq}</changefreq>")
-        entries.append(f"    <priority>{p.sitemap_priority}</priority>")
-        entries.append(f"    <xhtml:link rel=\"alternate\" hreflang=\"en\" href=\"{p.en_url}\" />")
-        entries.append(f"    <xhtml:link rel=\"alternate\" hreflang=\"es\" href=\"{p.es_url}\" />")
-        entries.append(f"    <xhtml:link rel=\"alternate\" hreflang=\"x-default\" href=\"{p.en_url}\" />")
-        entries.append("  </url>")
-    entries.append(ES_MARKER_END)
-    block = "\n".join(entries) + "\n"
-
-    # Insert before </urlset>
-    raw = re.sub(r"</urlset>", block + "</urlset>", raw, count=1)
-
-    SITEMAP.write_text(raw, encoding="utf-8")
+    try:
+        import subprocess
+        out = subprocess.run(
+            [sys.executable, str(ROOT / "scripts" / "build_sitemaps.py")],
+            capture_output=True,
+            text=True,
+            timeout=120,
+            cwd=str(ROOT),
+        )
+        # Surface the orchestrator's output for the operator.
+        if out.stdout:
+            print(out.stdout)
+        if out.returncode != 0:
+            sys.stderr.write(out.stderr or "")
+    except Exception as exc:  # pragma: no cover
+        print(f"warning: could not run build_sitemaps.py: {exc}")
     return len(PAGES), [p.es_path for p in PAGES]
 
 
@@ -2988,16 +3303,25 @@ def update_sitemap() -> tuple[int, list[str]]:
 # ---------------------------------------------------------------------------
 
 def main() -> None:
+    apply_image_map()
     n_pages, pages_paths = write_pages()
     n_en, en_paths = inject_hreflang_into_english()
-    n_sm, _ = update_sitemap()
     print(f"Spanish pages written: {n_pages}")
     for x in pages_paths:
         print("  ES", x)
     print(f"English pages updated with hreflang: {n_en}")
     for x in en_paths:
         print("  EN", x)
-    print(f"Sitemap entries added: {n_sm}")
+    # Delegate sitemap rebuild to the orchestrator (single source of truth).
+    n_sm, _ = update_sitemap()
+    print(f"Spanish entries delegated to build_sitemaps.py: {n_sm}")
+    # Image coverage report.
+    with_img = [p.es_path for p in PAGES if p.hero_image]
+    without_img = [p.es_path for p in PAGES if not p.hero_image]
+    print(f"Pages with hero image: {len(with_img)}")
+    print(f"Pages intentionally without hero image: {len(without_img)}")
+    for x in without_img:
+        print("  no-img", x)
 
 
 if __name__ == "__main__":

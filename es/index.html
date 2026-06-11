@@ -43,13 +43,26 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;l
 body:not(.loaded) *{animation-play-state:paused;}
 .content-section h2{color:#01366c;}
 .section-pad{padding:2rem 0;}
-.fact-card{background:#fff;border:1px solid #dce6f2;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1rem;box-shadow:0 4px 14px rgba(1,54,108,0.05);}
+.fact-card{background:#fff;border:1px solid #dce6f2;border-radius:12px;padding:1.25rem 1.4rem;margin-bottom:1rem;box-shadow:0 4px 14px rgba(1,54,108,0.05);display:flex;flex-direction:column;}
+.fact-card .fact-card__icon{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;background:linear-gradient(180deg,#eaf2fb,#dce8f6);color:#01366c;margin-bottom:0.55rem;flex:0 0 auto;}
+.fact-card .fact-card__icon svg{width:22px;height:22px;}
 .fact-card h3{color:#01366c;margin:0 0 0.4rem;font-size:1.1rem;}
-.fact-card p{margin:0;color:#374151;line-height:1.6;}
+.fact-card p{margin:0;color:#374151;line-height:1.6;font-size:0.96rem;}
 .fact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;}
 .es-faq{background:#fff;border:1px solid #dce6f2;border-radius:10px;padding:1.25rem;margin-bottom:1rem;}
 .es-faq h3{color:#01366c;margin:0 0 0.5rem;font-size:1.1rem;}
 .es-faq p{margin:0;color:#374151;line-height:1.6;}
+/* Spanish homepage: supporting claim-review image + trust strip */
+.es-home-support{display:grid;grid-template-columns:5fr 6fr;gap:32px;align-items:center;margin:0 auto 0.5rem;max-width:1100px;}
+.es-home-support__media{margin:0;border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(1,54,108,0.12);background:#eef2f7;}
+.es-home-support__media img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;}
+.es-home-support__copy h3{color:#01366c;margin:0 0 0.5rem;font-size:1.35rem;}
+.es-home-support__copy p{margin:0 0 0.6rem;color:#374151;font-size:1rem;line-height:1.65;}
+.es-home-support__copy ul{margin:0.4rem 0 0 1.1rem;padding:0;color:#374151;}
+.es-home-support__copy ul li{margin:0.25rem 0;}
+.es-trust-bar{background:linear-gradient(180deg,#01468a 0%,#01366c 100%);color:#fff;text-align:center;padding:1rem 1.25rem;border-radius:12px;margin:1.25rem auto 0;max-width:1100px;font-size:0.95rem;line-height:1.55;}
+.es-trust-bar strong{color:#fbba00;}
+@media(max-width:760px){.es-home-support{grid-template-columns:1fr;gap:18px;}}
 </style>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -117,64 +130,7 @@ if (allowedHosts.includes(window.location.hostname)) {
 (function(){ var k=['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content']; var q=window.location.search?new URLSearchParams(window.location.search):null; if(q){ for(var i=0;i<k.length;i++){ var v=q.get(k[i]); if(v) try{ localStorage.setItem('ial_'+k[i],v); }catch(e){} } }
 })();
 </script>
-<header class="header header--unified" id="header" lang="es">
-  <div class="mid-container header-unified__shell">
-    <div class="header__top">
-      <div class="header__left">
-        <div class="header__logo header__logo--text" id="logo"><a href="/es/" class="header__brand" aria-label="Insider Lawyers — Recurso de reclamos por lesiones en California"><span class="header__brand-mark">Insider <span class="header__brand-mark-accent">Lawyers</span></span><span class="header__brand-sub">Recurso de Reclamos por Lesiones en California</span></a></div>
-      </div>
-      <div class="header__actions">
-        <a class="header__phone phone-link" href="tel:844-467-4335" data-callrail-phone="844-467-4335" aria-label="Llame a Insider Lawyers al 844-467-4335"><svg class="header__phone-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.23 15.26l-2.54-.29a1.5 1.5 0 0 0-1.31.43l-1.84 1.84a13.5 13.5 0 0 1-5.78-5.78l1.85-1.85a1.5 1.5 0 0 0 .43-1.31L9.75 5.78a1.5 1.5 0 0 0-1.49-1.32H4.86A1.5 1.5 0 0 0 3.36 6.06 16.78 16.78 0 0 0 17.94 20.64a1.5 1.5 0 0 0 1.6-1.5v-3.4a1.5 1.5 0 0 0-1.31-1.48z"/></svg><span class="header__phone-num">844-467-4335</span></a>
-        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir men&uacute;"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-    <div class="header-nav-wrap" id="header-nav-wrap">
-      <div class="container header-nav-inner">
-        <nav class="header-nav-row" id="primary-nav" aria-label="Navegaci&oacute;n principal">
-          <div class="mobile-nav-cta">
-            <a class="mobile-nav-cta__link phone-link" href="tel:844-467-4335" data-callrail-phone="844-467-4335">Llame al 844-467-4335</a>
-            <span class="mobile-nav-cta__sub">Revisi&oacute;n gratuita &middot; 24/7 &middot; Hablamos Espa&ntilde;ol</span>
-          </div>
-          <a class="nav-link nav-link--primary" href="/es/#case-evaluation">Revise su Reclamo Gratis</a>
-          <a class="nav-link" href="/es/">Inicio</a>
-          <div class="nav-item">
-            <span class="nav-link nav-link--dropdown">Gu&iacute;as de Reclamos</span>
-            <div class="nav-dropdown">
-              <a href="/es/lesiones-personales/">Reclamos por Lesiones en California</a>
-              <a href="/es/acuerdos-liquidaciones-lesiones/">Gu&iacute;a de Liquidaciones</a>
-              <a href="/es/lista-revision-liquidacion-lesiones-california/">Lista para Revisar el Acuerdo</a>
-              <a href="/es/carta-demanda-lesiones-personales-california/">Carta de Demanda</a>
-              <a href="/es/segunda-opinion-reclamo-lesiones-california/">Segunda Opini&oacute;n del Reclamo</a>
-              <a href="/es/segunda-opinion-caso-lesiones-california/">Segunda Opini&oacute;n del Caso</a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <span class="nav-link nav-link--dropdown">Tipos de Accidentes</span>
-            <div class="nav-dropdown">
-              <a href="/es/accidentes-vehiculos/">Accidentes de Veh&iacute;culos</a>
-              <a href="/es/abogado-accidentes-auto-los-angeles/">Accidente de Auto en Los &Aacute;ngeles</a>
-              <a href="/es/accidente-auto-grave/">Accidente de Auto Grave</a>
-              <a href="/es/abogado-choque-por-alcance-los-angeles/">Choque por Alcance</a>
-              <a href="/es/abogado-choque-lateral-los-angeles/">Choque Lateral (T-Bone)</a>
-              <a href="/es/abogado-accidente-fuga-los-angeles/">Accidente con Fuga</a>
-              <a href="/es/abogado-accidente-uber-lyft-los-angeles/">Accidente Uber/Lyft</a>
-              <a href="/es/abogado-accidente-conductor-sin-seguro-los-angeles/">Conductor sin Seguro</a>
-              <a href="/es/abogado-accidente-scooter-bicicleta-electrica-los-angeles/">Scooter / Bicicleta El&eacute;ctrica</a>
-              <a href="/es/abogado-accidente-peaton-los-angeles/">Accidente de Peat&oacute;n</a>
-              <a href="/es/responsabilidad-de-propiedad/">Resbal&oacute;n y Ca&iacute;da / Propiedad</a>
-              <a href="/es/abogado-negligencia-asilo-ancianos-los-angeles/">Negligencia en Asilos</a>
-            </div>
-          </div>
-          <a class="nav-link" href="/es/segunda-opinion-reclamo-lesiones-california/">Segunda Opini&oacute;n</a>
-          <a class="nav-link" href="/es/acuerdos-liquidaciones-lesiones/">Acuerdos</a>
-          <a class="nav-link" href="/es/contacto/">Contacto</a>
-          <a class="nav-link nav-link--lang" href="/" lang="en" hreflang="en" aria-label="English version">English</a>
-        </nav>
-      </div>
-    </div>
-  </div>
-</header>
-
+<header class="header header--unified" id="header"></header>
 <section class="hero hero-section" id="case-evaluation">
   <div class="container">
     <div class="hero-content">
@@ -237,18 +193,33 @@ if (allowedHosts.includes(window.location.hostname)) {
     </div>
   </div>
 </section>
-<section class="content-section defer-mobile section-pad" style="background:#fff;">
+<section class="content-section defer-mobile section-pad" style="background:#fff;padding-top:3rem;">
   <div class="container" style="max-width:1100px;">
-    <h2 style="text-align:center;color:#01366c;margin-bottom:0.5rem;">Un recurso neutral para reclamos por lesiones en California</h2>
+    <aside class="es-home-support">
+      <figure class="es-home-support__media">
+        <img src="https://www.insiderlawyers.com/images/insurance-adjuster-claim-valuation.jpg" alt="Persona revisando documentos de un reclamo por lesiones en California junto a una calculadora" width="800" height="600" loading="lazy" decoding="async">
+      </figure>
+      <div class="es-home-support__copy">
+        <h3>Una mirada neutral antes de firmar nada</h3>
+        <p>La aseguranza tiene su propio equipo. Usted merece una mirada independiente y en español sobre lo que realmente vale su caso, qué cubre el seguro disponible y qué pasa si firma el <em>release</em>.</p>
+        <ul>
+          <li>Revisión gratuita y sin compromiso, en español.</li>
+          <li>Le ayudamos a entender una oferta antes de aceptarla.</li>
+          <li>No tiene que despedir a su abogado actual para pedir una segunda opinión.</li>
+        </ul>
+      </div>
+    </aside>
+    <h2 style="text-align:center;color:#01366c;margin:2rem 0 0.5rem;">Un recurso neutral para reclamos por lesiones en California</h2>
     <p style="text-align:center;color:#374151;max-width:760px;margin:0 auto 1.5rem;">Insider Lawyers en español es un recurso para personas lesionadas en California que están revisando una oferta de la aseguranza, decidiendo si aceptar un acuerdo o evaluando si pedir una segunda opinión sobre su caso actual.</p>
     <div class="fact-grid">
-      <div class="fact-card"><h3>Revisión del reclamo</h3><p>Una mirada neutral a su caso — hechos, lesiones, cobertura y oferta. Le ayudamos a entender dónde está hoy y qué sigue. <a href="/es/lesiones-personales/">Vea la guía de reclamos</a>.</p></div>
-      <div class="fact-card"><h3>Segunda opinión</h3><p>Si su caso está estancado o no le están explicando el valor, puede pedir una <a href="/es/segunda-opinion-reclamo-lesiones-california/">segunda opinión</a> sin despedir a su abogado actual.</p></div>
-      <div class="fact-card"><h3>Revisión del acuerdo</h3><p>Antes de firmar un release, repase la <a href="/es/lista-revision-liquidacion-lesiones-california/">lista de revisión</a>. Una vez firmado, el reclamo generalmente se cierra.</p></div>
-      <div class="fact-card"><h3>Carta de demanda</h3><p>Entienda qué es y qué debe incluir una <a href="/es/carta-demanda-lesiones-personales-california/">carta de demanda</a> y cómo afecta la negociación.</p></div>
-      <div class="fact-card"><h3>Accidentes de auto</h3><p>Choque, conductor sin seguro, hit and run, peatón, Uber/Lyft y otros tipos. <a href="/es/accidentes-vehiculos/">Vea los tipos de accidente</a>.</p></div>
-      <div class="fact-card"><h3>Resbalón y propiedad</h3><p>Cuando el dueño de un negocio o propiedad fue negligente. <a href="/es/responsabilidad-de-propiedad/">Vea responsabilidad de propiedad</a>.</p></div>
+      <div class="fact-card"><span class="fact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h12l2 2v12H3z"/><path d="M7 9h6M7 13h6M7 17h4"/></svg></span><h3>Revisión del reclamo</h3><p>Una mirada neutral a su caso — hechos, lesiones, cobertura y oferta. Le ayudamos a entender dónde está hoy y qué sigue. <a href="/es/lesiones-personales/">Vea la guía de reclamos</a>.</p></div>
+      <div class="fact-card"><span class="fact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><h3>Segunda opinión</h3><p>Si su caso está estancado o no le están explicando el valor, puede pedir una <a href="/es/segunda-opinion-reclamo-lesiones-california/">segunda opinión</a> sin despedir a su abogado actual.</p></div>
+      <div class="fact-card"><span class="fact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 12l3 3 5-6"/></svg></span><h3>Revisión del acuerdo</h3><p>Antes de firmar un release, repase la <a href="/es/lista-revision-liquidacion-lesiones-california/">lista de revisión</a>. Una vez firmado, el reclamo generalmente se cierra.</p></div>
+      <div class="fact-card"><span class="fact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h12M4 18h8"/><path d="M18 18l3-3M18 18l3 3"/></svg></span><h3>Carta de demanda</h3><p>Entienda qué es y qué debe incluir una <a href="/es/carta-demanda-lesiones-personales-california/">carta de demanda</a> y cómo afecta la negociación.</p></div>
+      <div class="fact-card"><span class="fact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13l2-5h10l2 5"/><path d="M3 13v5h16v-5"/><circle cx="7" cy="18" r="1.5"/><circle cx="15" cy="18" r="1.5"/></svg></span><h3>Accidentes de auto</h3><p>Choque, conductor sin seguro, hit and run, peatón, Uber/Lyft y otros tipos. <a href="/es/accidentes-vehiculos/">Vea los tipos de accidente</a>.</p></div>
+      <div class="fact-card"><span class="fact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16"/><path d="M5 21v-7l7-5 7 5v7"/><path d="M10 14h4v7h-4z"/></svg></span><h3>Resbalón y propiedad</h3><p>Cuando el dueño de un negocio o propiedad fue negligente. <a href="/es/responsabilidad-de-propiedad/">Vea responsabilidad de propiedad</a>.</p></div>
     </div>
+    <p class="es-trust-bar">Léanos en español &middot; <strong>Revisión gratuita 24/7</strong> &middot; Enviar este formulario no crea una relación abogado-cliente.</p>
   </div>
 </section>
 <section class="content-section defer-mobile section-pad" style="background:#f8fbfe;border-top:1px solid #e5eef7;">
@@ -276,69 +247,11 @@ if (allowedHosts.includes(window.location.hostname)) {
     <p style="text-align:center;margin-top:1.5rem;"><a href="#case-evaluation" class="btn-primary-cta" style="padding:0.85rem 1.4rem;font-size:1.05rem;">Solicitar revisión gratuita</a></p>
   </div>
 </section>
-<footer class="site-footer" id="footer-contact" lang="es">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-section footer-section--brand">
-        <h3>Insider Lawyers</h3>
-        <p>Recurso en espa&ntilde;ol para personas lesionadas en California que necesitan entender su reclamo, revisar una oferta de la aseguranza o pedir una segunda opini&oacute;n.</p>
-        <p><a href="tel:844-467-4335" class="footer__phone phone-link" data-callrail-phone="844-467-4335">844-467-4335</a></p>
-        <p class="footer__sub">Revisi&oacute;n gratuita &middot; 24/7 &middot; Hablamos Espa&ntilde;ol</p>
-        <p class="footer-contact-cta"><a href="/es/#case-evaluation" class="footer-cta-link">Solicite una revisi&oacute;n gratuita &rarr;</a></p>
-        <p class="footer-contact-cta"><a href="/" lang="en" hreflang="en" class="footer-cta-link">English version &rarr;</a></p>
-      </div>
-      <div class="footer-section">
-        <h4>Recursos del Reclamo</h4>
-        <ul>
-          <li><a href="/es/lesiones-personales/">Gu&iacute;a de Reclamos por Lesiones</a></li>
-          <li><a href="/es/acuerdos-liquidaciones-lesiones/">Gu&iacute;a de Liquidaciones</a></li>
-          <li><a href="/es/lista-revision-liquidacion-lesiones-california/">Lista para Revisar el Acuerdo</a></li>
-          <li><a href="/es/carta-demanda-lesiones-personales-california/">Carta de Demanda</a></li>
-          <li><a href="/es/segunda-opinion-reclamo-lesiones-california/">Segunda Opini&oacute;n</a></li>
-          <li><a href="/es/contacto/">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Tipos de Accidentes</h4>
-        <ul>
-          <li><a href="/es/abogado-accidentes-auto-los-angeles/">Accidentes de Auto LA</a></li>
-          <li><a href="/es/accidente-auto-grave/">Accidente de Auto Grave</a></li>
-          <li><a href="/es/guia-reclamo-accidente-estacionamiento-california/">Accidente en Estacionamiento</a></li>
-          <li><a href="/es/valor-reclamo-choque-lateral-california/">Choque Lateral (T-Bone)</a></li>
-          <li><a href="/es/abogado-choque-por-alcance-los-angeles/">Choque por Alcance</a></li>
-          <li><a href="/es/abogado-accidente-fuga-los-angeles/">Accidente con Fuga</a></li>
-          <li><a href="/es/abogado-accidente-conductor-sin-seguro-los-angeles/">Conductor sin Seguro</a></li>
-          <li><a href="/es/abogado-negligencia-asilo-ancianos-los-angeles/">Negligencia en Asilos</a></li>
-        </ul>
-      </div>
-      <div class="footer-section footer-section--legal">
-        <h4>Legal y Privacidad</h4>
-        <ul>
-          <li><a href="/es/politica-privacidad/">Pol&iacute;tica de Privacidad</a></li>
-          <li><a href="/es/terminos-legales/">T&eacute;rminos Legales</a></li>
-          <li><a href="/es/aviso-legal/">Aviso Legal</a></li>
-          <li><a href="/es/politica-cookies/">Pol&iacute;tica de Cookies</a></li>
-          <li><a href="/es/derechos-privacidad-california/">Derechos de Privacidad de California</a></li>
-          <li><a href="/es/no-vender-compartir-informacion-personal/">No Vender ni Compartir Mi Informaci&oacute;n</a></li>
-          <li><a href="/es/accesibilidad/">Accesibilidad</a></li>
-          <li><a href="/es/contacto/">Contacto</a></li>
-          <li><button type="button" class="footer-link-button" data-privacy-choices-open="true">Preferencias de Cookies y Privacidad</button></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__disclaimer">
-      <p class="footer__short-disclaimer">Insider Lawyers ofrece informaci&oacute;n legal general y apoyo para la revisi&oacute;n de reclamos. Enviar informaci&oacute;n a trav&eacute;s de este sitio web no crea una relaci&oacute;n abogado-cliente. Si su situaci&oacute;n requiere representaci&oacute;n legal, es posible que un abogado calificado o un equipo legal se comunique con usted para revisar su caso. Los resultados anteriores no garantizan un resultado similar. Publicidad de abogado.</p>
-      <p>Insider Lawyers opera junto con Countrywide Trial Lawyers, A Professional Law Corporation DBA Insider Accident Lawyers (Entidad de California #4851715), 3435 Wilshire Blvd Suite 1620, Los Angeles, CA 90010. Consulte nuestra <a href="/es/politica-privacidad/">Pol&iacute;tica de Privacidad</a>, <a href="/es/terminos-legales/">T&eacute;rminos Legales</a> y <a href="/es/aviso-legal/">Aviso Legal</a>.</p>
-      <p class="footer-sms-note">Al enviar un mensaje al <a href="tel:844-467-4335" class="phone-link" data-callrail-phone="844-467-4335">844-467-4335</a> o al enviar un formulario, usted acepta recibir mensajes relacionados con la revisi&oacute;n de su reclamo. Pueden aplicarse tarifas por mensajes y datos. Responda STOP para cancelar o HELP para obtener ayuda. El consentimiento no es obligatorio. Consulte nuestra <a href="/es/politica-privacidad/">Pol&iacute;tica de Privacidad</a> y nuestros <a href="/es/terminos-legales/">T&eacute;rminos Legales</a>.</p>
-      <p class="footer__copyright">&copy; 2026 Insider Lawyers. Todos los derechos reservados.</p>
-    </div>
-  </div>
-</footer>
-
+<footer class="site-footer" id="footer-contact"></footer>
 <script>window.addEventListener('load', function() { document.body.classList.add('loaded'); });</script>
 <script src="/scripts/ial-form-tracking.js?v=5"></script>
 <script src="/scripts/site-nav.js?v=3" defer></script>
 <script src="/scripts/utm-gclid-tracking.js"></script>
-<script src="/scripts/privacy-choices.js?v=2" defer></script>
+<script src="/scripts/privacy-choices.js" defer></script>
 </body>
 </html>

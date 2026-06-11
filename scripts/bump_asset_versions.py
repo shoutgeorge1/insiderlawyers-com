@@ -24,8 +24,11 @@ SKIP_DIR_PREFIXES = (
 )
 
 REPLACEMENTS = [
-    ("/styles/main.css?v=2", "/styles/main.css?v=3"),
-    ('/scripts/privacy-choices.js"', '/scripts/privacy-choices.js?v=2"'),
+    ("/styles/main.css?v=2", "/styles/main.css?v=4"),
+    ("/styles/main.css?v=3", "/styles/main.css?v=4"),
+    ('/scripts/privacy-choices.js"', '/scripts/privacy-choices.js?v=3"'),
+    ('/scripts/privacy-choices.js?v=2"', '/scripts/privacy-choices.js?v=3"'),
+    ('/scripts/site-nav.js"', '/scripts/site-nav.js?v=2"'),
 ]
 
 

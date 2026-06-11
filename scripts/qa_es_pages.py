@@ -27,6 +27,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITEMAP = ROOT / "sitemap.xml"
+SITEMAP_ES = ROOT / "sitemap-es.xml"
+SITEMAP_LEGAL = ROOT / "sitemap-legal.xml"
 SITE = "https://www.insiderlawyers.com"
 
 # Same canonical mapping as build_es_pages.py - keep this in sync with PAGES list.
@@ -377,51 +379,83 @@ def hreflang_reciprocity(en_audits: list[dict], es_audits: list[dict]) -> list[s
 # --------------------------- sitemap ---------------------------
 
 def check_sitemap() -> tuple[list[str], list[str]]:
+    """Validate the categorised sitemap system used since June 2026.
+
+    /sitemap.xml is the sitemap index. ES content lives in
+    sitemap-es.xml; ES legal lives in sitemap-legal.xml. We accept either
+    trailing-slash or non-trailing-slash matches because cleanUrls makes
+    them equivalent at the URL level.
+    """
     issues: list[str] = []
     info: list[str] = []
+    ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9", "xhtml": "http://www.w3.org/1999/xhtml"}
+
     if not SITEMAP.is_file():
         return ["sitemap.xml missing"], info
-    raw = SITEMAP.read_text(encoding="utf-8")
+    raw_idx = SITEMAP.read_text(encoding="utf-8")
     try:
-        tree = ET.fromstring(raw)
+        idx_root = ET.fromstring(raw_idx)
     except ET.ParseError as e:
         return [f"sitemap.xml invalid XML: {e}"], info
-    # urlset must declare xhtml namespace
-    root_tag = tree.tag
-    if not root_tag.endswith("urlset"):
-        issues.append(f"sitemap root is {root_tag}, expected urlset")
-    if "xmlns:xhtml" not in raw:
-        issues.append("sitemap missing xmlns:xhtml")
-    # Gather all <loc> values
-    ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9", "xhtml": "http://www.w3.org/1999/xhtml"}
-    locs = [el.text.strip() for el in tree.findall("sm:url/sm:loc", ns) if el.text]
-    info.append(f"sitemap urls: {len(locs)}")
-    # ES URLs must all be present
-    expected = {SITE + es for _en, es in PAIRS}
-    missing = expected - set(locs)
+    if not idx_root.tag.endswith("sitemapindex"):
+        issues.append(f"sitemap.xml root is {idx_root.tag}, expected sitemapindex")
+    # Both ES + ES legal sources for hreflang URLs
+    es_files = [SITEMAP_ES, SITEMAP_LEGAL]
+    es_locs: list[tuple[str, ET.Element]] = []
+    for f in es_files:
+        if not f.is_file():
+            issues.append(f"missing child sitemap: {f.name}")
+            continue
+        try:
+            tree = ET.fromstring(f.read_text(encoding="utf-8"))
+        except ET.ParseError as e:
+            issues.append(f"{f.name} invalid XML: {e}")
+            continue
+        if not tree.tag.endswith("urlset"):
+            issues.append(f"{f.name} root is {tree.tag}, expected urlset")
+        if f.name == "sitemap-es.xml" and "xmlns:xhtml" not in f.read_text(encoding="utf-8"):
+            issues.append(f"{f.name} missing xmlns:xhtml")
+        for url_el in tree.findall("sm:url", ns):
+            loc_el = url_el.find("sm:loc", ns)
+            if loc_el is not None and loc_el.text:
+                es_locs.append((loc_el.text.strip(), url_el))
+
+    info.append(f"sitemap-es + sitemap-legal urls: {len(es_locs)}")
+
+    all_es_urls = {loc for loc, _ in es_locs}
+    expected_es = {SITE + es.rstrip("/") for _en, es in PAIRS}
+    # Allow either trailing-slash or not.
+    norm_present = {u.rstrip("/") for u in all_es_urls}
+    missing = expected_es - norm_present
     if missing:
         for m in sorted(missing):
             issues.append(f"sitemap missing ES url: {m}")
-    # ES file existence for each loc that starts with /es/
-    for loc in locs:
-        if "/es/" in loc:
-            rel = loc.split(SITE, 1)[-1]
-            file = file_for(rel)
-            if not file.is_file():
-                issues.append(f"sitemap loc has no file on disk: {loc}")
-    # xhtml link annotations on /es/ urls
-    es_urls = [el for el in tree.findall("sm:url", ns) if any("/es/" in (loc.text or "") for loc in el.findall("sm:loc", ns))]
-    info.append(f"sitemap es-url entries: {len(es_urls)}")
-    for el in es_urls:
-        loc = el.find("sm:loc", ns).text
-        hreflangs = el.findall("xhtml:link", ns)
-        codes = [(h.get("hreflang"), h.get("href")) for h in hreflangs]
-        cmap = {c: h for c, h in codes}
-        if "en" not in cmap or "es" not in cmap or "x-default" not in cmap:
-            issues.append(f"sitemap es entry {loc} missing hreflang annotations: {codes}")
-        else:
-            if cmap["es"] != loc:
-                issues.append(f"sitemap es entry {loc} hreflang es='{cmap['es']}'")
+
+    es_in_es_sitemap = [(loc, el) for loc, el in es_locs if "/es/" in loc or loc.endswith("/es/")]
+    info.append(f"es-url entries (es + legal): {len(es_in_es_sitemap)}")
+    for loc, _ in es_in_es_sitemap:
+        rel = loc.split(SITE, 1)[-1].rstrip("/")
+        if not rel:
+            rel = "/es"
+        file = file_for(rel)
+        if not file.is_file():
+            issues.append(f"sitemap loc has no file on disk: {loc}")
+
+    # Hreflang annotations: only enforced on sitemap-es.xml entries; ES
+    # legal pages are summary mirrors and not required to have a 1:1 EN
+    # counterpart hreflang.
+    if SITEMAP_ES.is_file():
+        es_only = ET.fromstring(SITEMAP_ES.read_text(encoding="utf-8"))
+        for el in es_only.findall("sm:url", ns):
+            loc_el = el.find("sm:loc", ns)
+            if loc_el is None or not loc_el.text:
+                continue
+            loc = loc_el.text.strip()
+            codes = {h.get("hreflang"): h.get("href") for h in el.findall("xhtml:link", ns)}
+            if not ({"en", "es", "x-default"} <= set(codes.keys())):
+                issues.append(f"sitemap es entry {loc} missing hreflang annotations: {sorted(codes.keys())}")
+            elif codes.get("es") != loc:
+                issues.append(f"sitemap es entry {loc} hreflang es='{codes.get('es')}'")
     return issues, info
 
 
