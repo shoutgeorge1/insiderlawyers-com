@@ -115,17 +115,12 @@
         '</div>' +
       '</div>';
 
+    // Banner is a slim toast docked to the bottom of the viewport
+    // (full-width strip on mobile, ~400 px card bottom-right on desktop).
+    // Always visible on first paint until the visitor makes a choice.
     var bannerWrap = document.createElement('div');
     bannerWrap.innerHTML = bannerHtml;
-    var bannerEl = bannerWrap.firstChild;
-    var footerHost = document.querySelector('.site-footer .container');
-    if (footerHost) {
-      footerHost.insertBefore(bannerEl, footerHost.firstChild);
-    } else {
-      // Pages without the global footer fall back to body append so the
-      // notice is still reachable.
-      document.body.appendChild(bannerEl);
-    }
+    document.body.appendChild(bannerWrap.firstChild);
 
     var modalWrap = document.createElement('div');
     modalWrap.innerHTML = modalHtml;

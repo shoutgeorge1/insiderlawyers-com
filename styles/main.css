@@ -3348,57 +3348,66 @@ body.has-tap-bar-visible {
 }
 
 /* ============================================================
-   COOKIE CONSENT — integrated into the footer (not floating)
-   Overrides the older fixed-bottom banner styles. The banner is
-   injected by privacy-choices.js as the first child of
-   `.site-footer .container`, so when shown it appears as the
-   top row of the footer instead of a viewport overlay.
+   COOKIE CONSENT — modern bottom-docked toast (not a full bar)
+   Desktop: ~420 px card bottom-right with shadow.
+   Mobile:  full-width strip across the bottom of the viewport.
+   Always visible on first paint until visitor picks a choice.
    ============================================================ */
 #privacy-choices-banner {
-  position: static !important;
-  inset: auto !important;
-  bottom: auto !important;
-  left: auto !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 20px !important;
   right: auto !important;
-  z-index: auto !important;
-  box-shadow: none !important;
-  background: rgba(0, 0, 0, 0.22) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  padding: 18px 22px;
-  margin: 0 0 26px 0;
-  color: #fff;
-  font-size: 0.88rem;
-  line-height: 1.55;
+  top: auto !important;
+  inset: auto auto 20px 20px !important;
+  width: min(380px, calc(100vw - 40px));
+  max-width: 380px;
+  z-index: 9998 !important;
+  background: #ffffff !important;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px 18px 16px;
+  box-shadow: 0 12px 36px rgba(2, 21, 50, 0.22),
+              0 2px 6px rgba(2, 21, 50, 0.08) !important;
+  font-size: 0.86rem;
+  line-height: 1.5;
   display: none;
 }
 #privacy-choices-banner.is-visible {
   display: block;
 }
+#privacy-choices-banner::before {
+  content: "Cookies & Privacy";
+  display: block;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #01366c;
+  margin-bottom: 8px;
+}
 #privacy-choices-banner .pc-inner {
   max-width: none !important;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 22px;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
 }
 #privacy-choices-banner p {
-  margin: 0;
-  flex: 1 1 320px;
-  min-width: 0;
-  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 12px 0;
+  color: #374151;
+  font-size: 0.83rem;
+  line-height: 1.5;
 }
 #privacy-choices-banner a {
-  color: #fbba00;
+  color: #01366c;
   text-decoration: underline;
   text-underline-offset: 2px;
+  font-weight: 600;
 }
 #privacy-choices-banner .pc-actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
   flex: 0 0 auto;
 }
 #privacy-choices-banner button {
@@ -3406,46 +3415,113 @@ body.has-tap-bar-visible {
   color: #01366c;
   border: 0;
   border-radius: 8px;
-  padding: 10px 16px;
+  padding: 10px 12px;
   font-weight: 800;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   letter-spacing: 0.01em;
-  transition: filter 0.15s ease;
+  transition: filter 0.15s ease, background-color 0.15s ease;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 #privacy-choices-banner button:hover {
-  filter: brightness(0.95);
+  filter: brightness(0.96);
+}
+#privacy-choices-banner #pc-accept {
+  grid-column: 1 / -1;
+  padding: 11px 14px;
+  font-size: 0.88rem;
 }
 #privacy-choices-banner button.pc-secondary {
   background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #01366c;
+  border: 1px solid #cbd5e1;
   font-weight: 700;
 }
 #privacy-choices-banner button.pc-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: #f3f6fa;
   filter: none;
 }
 
 @media (max-width: 599px) {
   #privacy-choices-banner {
-    padding: 16px 16px 18px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    inset: auto 0 0 0 !important;
+    width: 100%;
+    max-width: none;
+    border-radius: 14px 14px 0 0;
+    padding: 14px 16px 16px;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
   }
-  #privacy-choices-banner .pc-inner {
-    gap: 12px;
+  #privacy-choices-banner::before {
+    margin-bottom: 6px;
+  }
+  #privacy-choices-banner p {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
   }
   #privacy-choices-banner .pc-actions {
-    width: 100%;
-  }
-  #privacy-choices-banner .pc-actions button {
-    flex: 1 1 calc(50% - 5px);
-    min-width: 0;
-    padding: 11px 8px;
-    font-size: 0.82rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
   }
   #privacy-choices-banner #pc-accept {
-    flex-basis: 100%;
+    padding: 12px 14px;
+    font-size: 0.92rem;
+  }
+}
+
+/* ============================================================
+   THIRD-PARTY CHAT WIDGET (ApexChat via GTM)
+   On mobile the bottom bar (`apexchat_bar_invitation_wrapper`)
+   and the agent-avatar bubble (`apexchat_prechat_invitation_wrapper`)
+   cover the page's own form, hero bullets, and primary CTAs.
+   Hide every ApexChat surface on mobile; desktop keeps them.
+   To bring them back on mobile, delete this block.
+   ============================================================ */
+@media (max-width: 900px) {
+  [id^="apexchat_"],
+  [class*="apexchat_"],
+  [class*="livechat_bar_widget"] {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+  body.livechat_bar_widget_bottom {
+    padding-bottom: 0 !important;
+  }
+}
+
+/* ============================================================
+   LOGO LOCKUP — left gold accent bar makes the wordmark read
+   as a brand, not just loose text. Applies on both desktop +
+   mobile. Subtitle gets a slightly tighter color now that the
+   accent line carries the visual weight.
+   ============================================================ */
+.header__top .header__brand {
+  position: relative;
+  padding-left: 12px;
+}
+.header__top .header__brand::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background: linear-gradient(180deg, #fbba00 0%, #d99c00 100%);
+  border-radius: 2px;
+}
+@media (max-width: 480px) {
+  .header__top .header__brand {
+    padding-left: 10px;
+  }
+  .header__top .header__brand::before {
+    width: 2.5px;
+    top: 4px;
+    bottom: 4px;
   }
 }
