@@ -133,6 +133,8 @@ CORE_EN: list[str] = [
     "/uber-accident-lawyer-los-angeles",
     "/electric-scooter-ebike-accident-lawyer-los-angeles",
     "/uninsured-driver-accident-lawyer-los-angeles",
+    # Construction (new June 2026)
+    "/los-angeles-construction-accident-lawyer",
     # Other conversion-focused pages
     "/recover-destroyed-scooter-ebike",
     "/pressure-ulcers-nursing-home-neglect",
@@ -144,6 +146,7 @@ CORE_EN: list[str] = [
 GUIDES_EN: list[str] = [
     "/at-fault-driver-no-insurance",
     "/brain-injury",
+    "/california-comparative-negligence-personal-injury",
     "/can-i-sue-uninsured-driver-personally",
     "/can-new-lawyer-increase-injury-settlement",
     "/can-you-sue-nursing-home-bed-sores",
@@ -156,7 +159,7 @@ GUIDES_EN: list[str] = [
     "/does-filing-um-claim-raise-rates",
     "/evidence-preservation-car-accident-california",
     "/herniated-disc-car-accident-settlement-california",
-    "/how-insurance-calculates-settlement-offers",
+    "/how-adjusters-value-claims",
     "/how-long-does-a-car-accident-settlement-take-california",
     "/how-long-personal-injury-case-takes-california",
     "/how-much-is-my-car-accident-worth-california",
@@ -174,7 +177,7 @@ GUIDES_EN: list[str] = [
     "/nursing-home-wrongful-death",
     "/passenger-in-uninsured-car",
     "/pedestrian-right-of-way",
-    "/personal-injury-case-stalled-california",
+    "/personal-injury-case-feels-stalled-what-to-do",
     "/personal-injury-claim-process-california",
     "/personal-injury-court",
     "/personal-injury-lawyer-not-responding-california",
@@ -247,25 +250,24 @@ LEGAL_ES_PATHS: list[str] = [
 # inbound links and Google-discovered URLs do not 404, but Google should
 # not be invited to re-discover them via sitemap.
 EXCLUDED: dict[str, str] = {
-    # User-specified
-    "/comparative-negligence-california-explained":
-        "user-specified exclusion (consolidation candidate)",
-    "/what-happens-if-i-fire-my-accident-attorney":
-        "user-specified exclusion (consolidation candidate)",
     # Conversion-only
     "/thank-you":
         "form thank-you / conversion landing page; no SEO value",
-    # Consolidation losers — keep the strongest canonical of each cluster
-    "/california-comparative-negligence-personal-injury":
-        "consolidation: weak duplicate; primary is /comparative-negligence-california-explained (also excluded), neither is sitemap-worthy",
-    "/adjuster-claim-valuation":
-        "consolidation: keep /how-insurance-calculates-settlement-offers",
-    "/how-adjusters-value-claims":
-        "consolidation: keep /how-insurance-calculates-settlement-offers",
+    # Consolidation losers (June 2026 pass) — winners are in CORE_EN / GUIDES_EN
+    # and the loser 301s are in vercel.json.
+    "/comparative-negligence-california-explained":
+        "consolidation loser (June 2026): body content was corrupted; 301 -> /california-comparative-negligence-personal-injury",
     "/can-i-change-my-personal-injury-lawyer-california":
-        "consolidation: keep /changing-personal-injury-lawyer-california",
-    "/personal-injury-case-feels-stalled-what-to-do":
-        "consolidation: keep /personal-injury-case-stalled-california",
+        "consolidation loser (June 2026): 301 -> /changing-personal-injury-lawyer-california",
+    "/what-happens-if-i-fire-my-accident-attorney":
+        "consolidation loser (June 2026): 301 -> /changing-personal-injury-lawyer-california",
+    "/personal-injury-case-stalled-california":
+        "consolidation loser (June 2026): 301 -> /personal-injury-case-feels-stalled-what-to-do",
+    "/adjuster-claim-valuation":
+        "consolidation loser (June 2026): 301 -> /how-adjusters-value-claims",
+    "/how-insurance-calculates-settlement-offers":
+        "consolidation loser (June 2026): 301 -> /how-adjusters-value-claims",
+    # Pre-existing consolidation losers
     "/should-i-accept-insurance-first-offer":
         "consolidation: keep /should-i-accept-first-settlement-offer-california",
     "/hit-and-run-accidents-los-angeles":
