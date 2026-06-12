@@ -127,14 +127,85 @@
     document.body.appendChild(modalWrap.firstChild);
   }
 
+  // -----------------------------------------------------------------------
+  // Mobile chat-widget suppression while the cookie banner is on screen.
+  //
+  // GTM injects a third-party chat widget that floats at bottom-right on
+  // mobile and overlaps the cookie consent banner. To keep the consent UI
+  // usable AND keep consent compliance intact, we hide common chat-widget
+  // DOM elements only on small screens while the banner is visible (or no
+  // consent decision has been recorded yet), then reveal them after the
+  // user dismisses the banner. A 15s fallback also reveals the chat in
+  // case the user ignores the banner indefinitely.
+  // -----------------------------------------------------------------------
+  var CHAT_SUPPRESS_STYLE_ID = 'il-mobile-chat-suppress';
+  var CHAT_SUPPRESS_SELECTORS = [
+    // Generic chat / messenger iframes
+    'iframe[title*="chat" i]',
+    'iframe[title*="messenger" i]',
+    'iframe[id*="chat" i]',
+    'iframe[name*="chat" i]',
+    'iframe[id*="messenger" i]',
+    // Known vendors (kept broad on purpose; harmless if absent)
+    'iframe[id^="tawk-"]', 'iframe[name^="tawk-"]', '[id^="tawkchat-"]',
+    'iframe[id^="hubspot-messages"]', '#hubspot-messages-iframe-container',
+    'iframe[name^="intercom-"]', '.intercom-launcher', '.intercom-launcher-frame', '#intercom-container',
+    'iframe[name^="drift-"]', '#drift-widget', '#drift-frame-controller', '#drift-frame-chat',
+    'iframe[name^="crisp-"]', '.crisp-client',
+    'iframe[id="tidio-chat-iframe"]', '#tidio-chat', '#tidio-chat-iframe',
+    'iframe[name^="livechatframe"]', '#chat-widget-container',
+    'iframe[id^="zsalesiq"]', '#zsiq_float',
+    '#smartsupp-widget-container',
+    'iframe[id^="hellofresh-"]', 'iframe[id^="podium-"]', '#podium-website-widget',
+    'iframe[name="ms_chat_frame"]', '#msdyn365-chat',
+    'iframe[name="freshchat-frame"]', '#fc_frame',
+    'iframe[id^="kommunicate-widget"]',
+    // Generic fallback: floating buttons commonly used by chat widgets
+    'div[class*="chat-widget" i]',
+    'div[id*="chat-widget" i]',
+    'div[class*="chat-button" i]',
+    'div[class*="chat-launcher" i]'
+  ];
+
+  function isMobileViewport() {
+    if (window.matchMedia) {
+      try { return window.matchMedia('(max-width: 768px)').matches; } catch (e) { /* ignore */ }
+    }
+    return (window.innerWidth || document.documentElement.clientWidth || 0) <= 768;
+  }
+
+  function applyChatSuppression() {
+    if (!isMobileViewport()) return;
+    if (document.getElementById(CHAT_SUPPRESS_STYLE_ID)) return;
+    var css = CHAT_SUPPRESS_SELECTORS.join(',\n') +
+      ' { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }';
+    var style = document.createElement('style');
+    style.id = CHAT_SUPPRESS_STYLE_ID;
+    style.type = 'text/css';
+    style.appendChild(document.createTextNode(css));
+    (document.head || document.documentElement).appendChild(style);
+  }
+
+  function liftChatSuppression() {
+    var style = document.getElementById(CHAT_SUPPRESS_STYLE_ID);
+    if (style && style.parentNode) style.parentNode.removeChild(style);
+  }
+
   function showBanner() {
     var b = document.getElementById('privacy-choices-banner');
     if (b) b.classList.add('is-visible');
+    applyChatSuppression();
+    // Fallback: if the banner is ignored on mobile, lift the chat
+    // suppression after 15 seconds so visitors can still reach chat.
+    if (isMobileViewport()) {
+      setTimeout(liftChatSuppression, 15000);
+    }
   }
 
   function hideBanner() {
     var b = document.getElementById('privacy-choices-banner');
     if (b) b.classList.remove('is-visible');
+    liftChatSuppression();
   }
 
   function openModal(state) {
@@ -199,9 +270,15 @@
   }
 
   function init() {
+    var stored = readStored();
+    // Apply mobile chat suppression as early as possible if we're going to
+    // show the banner. This must happen BEFORE ensureBanner() / bind() so
+    // any chat widget GTM has already started loading is hidden on first
+    // paint instead of briefly flashing over the consent banner.
+    if (!stored && isMobileViewport()) applyChatSuppression();
+
     ensureBanner();
     bind();
-    var stored = readStored();
     if (!stored) {
       // No prior choice — set Consent Mode defaults to denied and show the banner.
       if (typeof window.gtag !== 'function' && Array.isArray(window.dataLayer)) {
