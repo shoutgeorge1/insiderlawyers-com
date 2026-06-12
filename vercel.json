@@ -56,7 +56,11 @@
     {"source": "/los-angeles-premises-liability-lawyer", "destination": "/premises-liability", "statusCode": 301},
     {"source": "/los-angeles-slip-and-fall-lawyer", "destination": "/personal-injury/slip-and-fall", "statusCode": 301},
     {"source": "/los-angeles-product-liability-lawyer", "destination": "/personal-injury/product-liability", "statusCode": 301},
-    {"source": "/los-angeles-uber-lyft-accident-lawyer", "destination": "/personal-injury/uber-and-lyft-accidents", "statusCode": 301}
+    {"source": "/los-angeles-uber-lyft-accident-lawyer", "destination": "/personal-injury/uber-and-lyft-accidents", "statusCode": 301},
+    {"source": "/should-i-accept-insurance-first-offer", "destination": "/should-i-accept-first-settlement-offer-california", "statusCode": 301},
+    {"source": "/should-i-accept-insurance-first-offer/", "destination": "/should-i-accept-first-settlement-offer-california", "statusCode": 301},
+    {"source": "/hit-and-run-accidents-los-angeles", "destination": "/hit-and-run-accident-lawyer-los-angeles", "statusCode": 301},
+    {"source": "/hit-and-run-accidents-los-angeles/", "destination": "/hit-and-run-accident-lawyer-los-angeles", "statusCode": 301}
   ],
   "headers": [
     {
