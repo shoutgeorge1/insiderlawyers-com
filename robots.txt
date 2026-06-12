@@ -1,5 +1,18 @@
 User-agent: *
 Allow: /
+# Conversion-only / non-public surfaces
+Disallow: /thank-you
+Disallow: /thank-you/
 Disallow: /social-assets/
+Disallow: /_dev/
+Disallow: /_old-site-extract/
+Disallow: /reports/
+Disallow: /docs/
+Disallow: /seo/
+# Build / audit Python scripts (the JS in /scripts/ is referenced by pages
+# and is allowed so Google can fully render pages).
+Disallow: /scripts/*.py$
+Disallow: /scripts/__pycache__/
 
+# Sitemap index
 Sitemap: https://www.insiderlawyers.com/sitemap.xml

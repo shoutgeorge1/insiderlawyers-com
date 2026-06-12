@@ -36,7 +36,11 @@ def target_exists(href: str, valid: set[str]) -> bool:
         return True
     if any(h.startswith(p) for p in ("/images/", "/styles/", "/scripts/", "/assets/")):
         return True
-    if h.endswith((".css", ".js", ".ico", ".png", ".jpg", ".jpeg", ".webp", ".svg", ".pdf", ".xml")):
+    if h.endswith((".css", ".js", ".ico", ".png", ".jpg", ".jpeg", ".webp",
+                    ".svg", ".pdf", ".xml", ".webmanifest", ".json", ".txt")):
+        return True
+    # Site root brand asset files
+    if h in ("/site.webmanifest", "/robots.txt", "/sitemap.xml"):
         return True
     key = h.rstrip("/")
     if key in valid or h in valid:

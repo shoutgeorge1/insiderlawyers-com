@@ -1,0 +1,245 @@
+# SEO audit (before)
+
+- Total routes scanned: **191**
+- English: 151 | Spanish: 40
+- Indexable: 190 | Noindex: 1
+- Indexable pages missing from sitemap: 23
+- Duplicate titles (groups): 0
+- Duplicate descriptions (groups): 0
+
+## Issue counts
+
+- missing web manifest link: 191
+- missing apple-touch-icon: 191
+- missing favicon link: 190
+- missing og: 178
+- missing twitter: 59
+- title too long: 42
+- description too long: 32
+- mojibake / replacement chars: 19
+- description too short: 17
+- missing H1: 15
+- stale law-firm branding: 1
+- missing description: 1
+
+## Indexable pages missing from sitemap
+
+- /adjuster-claim-valuation
+- /can-i-change-my-personal-injury-lawyer-california
+- /car-accident-lawyer-near-me-los-angeles
+- /comparative-negligence-california-explained
+- /hit-and-run-accidents-los-angeles
+- /how-insurance-calculates-settlement-offers
+- /los-angeles-auto-accident-lawyer
+- /los-angeles-bicycle-accident-lawyer
+- /los-angeles-brain-injury-lawyer
+- /los-angeles-car-crash-lawyer
+- /los-angeles-catastrophic-injury-lawyer
+- /los-angeles-motorcycle-accident-lawyer
+- /los-angeles-pedestrian-accident-lawyer
+- /los-angeles-premises-liability-lawyer
+- /los-angeles-product-liability-lawyer
+- /los-angeles-slip-and-fall-lawyer
+- /los-angeles-spine-injury-lawyer
+- /los-angeles-truck-accident-lawyer
+- /los-angeles-uber-lyft-accident-lawyer
+- /los-angeles-wrongful-death-lawyer
+- /personal-injury-case-stalled-california
+- /should-i-accept-insurance-first-offer
+- /what-happens-if-i-fire-my-accident-attorney
+
+## Pages with issues
+
+(191 pages with at least one issue)
+
+- `/` (en): description too long (201), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/accessibility` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:image
+- `/adjuster-claim-valuation` (en): description too short (83), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/at-fault-driver-no-insurance` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/attorney-referrals` (en): description too long (178), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/brain-injury` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/california-car-accident-lawyer` (en): title too long (72), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/california-comparative-negligence-personal-injury` (en): title too long (77), description too long (177), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image
+- `/california-injury-claim-second-opinion` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/california-parking-lot-accident-claim-guide` (en): title too long (71), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/california-personal-injury-demand-letter-guide` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/california-personal-injury-settlement-checklist` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/california-privacy-rights` (en): description too long (209), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:image
+- `/can-i-change-my-personal-injury-lawyer-california` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/can-i-sue-uninsured-driver-personally` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/can-new-lawyer-increase-injury-settlement` (en): title too long (73), description too long (178), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/can-you-sue-nursing-home-bed-sores` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/car-accident-lawyer-near-me-los-angeles` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/changing-personal-injury-lawyer-california` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/comparative-negligence-california-explained` (en): description too short (73), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/contact` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:image
+- `/contingency-fee-when-switching-lawyers-injury-case` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/cookie-policy` (en): description too long (197), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:image
+- `/delayed-pain-after-car-accident` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/demand-letter-negotiation` (en): title too long (74), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/demand-letters-explained` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/disclaimer` (en): description too long (221), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:image
+- `/do-i-need-police-report-accident` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/do-not-sell-or-share-my-personal-information` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:image
+- `/does-filing-um-claim-raise-rates` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/electric-scooter-ebike-accident-lawyer-los-angeles` (en): title too long (78), description too long (201), missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/evidence-preservation-car-accident-california` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/herniated-disc-car-accident-settlement-california` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/hit-and-run-accident-lawyer-los-angeles` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing twitter:card
+- `/hit-and-run-accidents-los-angeles` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/how-adjusters-value-claims` (en): description too long (181), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/how-insurance-calculates-settlement-offers` (en): description too short (75), missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/how-long-does-a-car-accident-settlement-take-california` (en): title too long (73), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/how-long-personal-injury-case-takes-california` (en): title too long (74), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/how-much-is-my-car-accident-worth-california` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/injuries-truck-accidents` (en): title too long (78), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/insurance-company-playbook` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/insurance-company-tactics-personal-injury` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/insurance-says-injury-is-minor-california` (en): title too long (85), description too long (177), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/insurance-says-low-impact-car-accident-california` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/lawyer-pushing-settlement-too-fast-california` (en): title too long (84), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/legal-terms` (en): description too long (196), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:image
+- `/lit-referral-brain-injury` (en): description too short (82), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/lit-referral-catastrophic-cases` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/lit-referral-core` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/lit-referral-coverage-disputes` (en): description too short (77), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/lit-referral-criteria` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/lit-referral-economics` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/lit-referral-process` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/lit-referral-trial-ready-cocounsel` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/lit-referral-truck-litigation` (en): description too short (98), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/lit-referral-wrongful-death` (en): description too short (79), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/los-angeles-auto-accident-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-bicycle-accident-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-brain-injury-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-car-accident-lawyer` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card, stale law-firm branding: Millions Recovered
+- `/los-angeles-car-crash-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-catastrophic-injury-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-construction-accident-lawyer` (en): title too long (85), description too long (254), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:image
+- `/los-angeles-motorcycle-accident-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-nursing-home-neglect-lawyer` (en): description too long (201), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/los-angeles-pedestrian-accident-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-premises-liability-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-product-liability-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-slip-and-fall-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-spine-injury-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-truck-accident-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-uber-lyft-accident-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/los-angeles-wrongful-death-lawyer` (en): missing H1, missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/lowball-offer-response` (en): description too short (88), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/major-car-accident` (en): title too long (79), description too long (211), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/motor-vehicle` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/motor-vehicle/bus-accident-lawyer-los-angeles` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:description, missing og:image, missing twitter:card
+- `/motorcycle-accident-case` (en): title too long (77), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/nursing-home-neglect-vs-abuse` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/nursing-home-repositioning-standards` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/nursing-home-understaffing-lawsuit` (en): title too long (75), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/nursing-home-wrongful-death` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/parking-lot-accident-lawyer-los-angeles` (en): title too long (74), description too long (192), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image
+- `/passenger-in-uninsured-car` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/pedestrian-accident-lawyer-los-angeles` (en): title too long (81), description too long (198), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image
+- `/pedestrian-right-of-way` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/personal-injury` (en): description too long (205), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/personal-injury-case-feels-stalled-what-to-do` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/personal-injury-case-stalled-california` (en): title too long (84), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/personal-injury-claim-process-california` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/personal-injury-court` (en): title too long (81), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/personal-injury-lawyer-not-responding-california` (en): title too long (92), description too long (194), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/personal-injury/animal-attacks` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/personal-injury/auto-accidents` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/personal-injury/bicycle-accidents` (en): description too long (202), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/personal-injury/brain-injuries` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/personal-injury/catastrophic-injuries` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/personal-injury/motorcycle-accidents` (en): description too long (213), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/personal-injury/pedestrian-accidents` (en): title too long (75), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/personal-injury/premises-liability` (en): title too long (73), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/personal-injury/product-liability` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/personal-injury/slip-and-fall` (en): title too long (76), description too long (185), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image
+- `/personal-injury/spine-injuries` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/personal-injury/truck-accidents` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/personal-injury/truck-accidents/fmcsa-hours-of-service` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/personal-injury/truck-accidents/truck-accident-evidence` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/personal-injury/truck-accidents/truck-accident-liability` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/personal-injury/uber-and-lyft-accidents` (en): title too long (74), description too long (189), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image
+- `/personal-injury/wrongful-death` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/post-dog-bite` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/premises-liability` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/premises-liability/negligent-security-lawyer-los-angeles` (en): description too long (187), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:description, missing og:image, missing twitter:card
+- `/pressure-ulcers-nursing-home-neglect` (en): description too long (183), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/privacy-policy` (en): description too long (241), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:image
+- `/proving-claim-value` (en): description too short (85), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/proving-truck-accident-case` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/rear-end-accident-lawyer-los-angeles` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/recorded-statement-should-you-give-one` (en): description too short (87), missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/recover-destroyed-scooter-ebike` (en): title too long (97), description too long (179), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/scooter-accident-driver-fled` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/scooter-accident-no-license-plate` (en): description too long (181), missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/second-opinion-before-signing-release-california` (en): title too long (74), description too long (198), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/second-opinion-personal-injury-claim-california` (en): title too long (89), description too long (188), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/settlements` (en): title too long (94), description too long (192), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/should-i-accept-first-settlement-offer-california` (en): title too long (75), description too long (189), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/should-i-accept-insurance-first-offer` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/signs-of-nursing-home-neglect` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/signs-personal-injury-lawyer-not-maximizing-case` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/soft-tissue-injury-settlement-california` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/spinal-fusion-surgery-car-accident-settlement-california` (en): title too long (74), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/stage-3-stage-4-bed-sore-lawsuit` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/t-bone-accident-claim-value-california` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/t-bone-accident-lawyer-los-angeles` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/thank-you` (en): missing description, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/traumatic-brain-injury-car-accident-settlement-california` (en): title too long (75), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/truck-accident-legal-rights` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/uber-accident-lawyer-los-angeles` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/uber-or-lyft-accident` (en): title too long (76), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/underinsured-motorist-claims-explained` (en): description too short (24), missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/uninsured-driver-accident-lawyer-los-angeles` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/uninsured-motorist-claims-california` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/what-causes-bed-sores` (en): title too long (78), missing favicon link, missing web manifest link, missing apple-touch-icon, missing og:title, missing og:description, missing og:image, missing twitter:card
+- `/what-happens-if-i-fire-my-accident-attorney` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/what-if-i-cant-afford-deductible` (en): description too short (20), missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/what-if-liability-disputed` (en): description too short (87), missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/what-is-uninsured-motorist-coverage` (en): description too short (87), missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/what-to-do-after-car-accident-california` (en): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/when-should-i-call-lawyer-accident` (en): missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/who-is-liable-scooter-accident` (en): description too short (91), missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/why-insurance-delays-claims` (en): description too short (78), missing favicon link, missing web manifest link, missing apple-touch-icon, mojibake / replacement chars
+- `/es` (es): title too long (75), description too long (178), missing favicon link, missing web manifest link, missing apple-touch-icon, missing twitter:card
+- `/es/abogado-accidente-conductor-sin-seguro-los-angeles` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/abogado-accidente-estacionamiento-los-angeles` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/abogado-accidente-fuga-los-angeles` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/abogado-accidente-peaton-los-angeles` (es): description too short (98), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/abogado-accidente-scooter-bicicleta-electrica-los-angeles` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/abogado-accidente-uber-lyft-los-angeles` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/abogado-accidentes-auto-california` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/abogado-accidentes-auto-los-angeles` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/abogado-choque-lateral-los-angeles` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/abogado-choque-por-alcance-los-angeles` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/abogado-negligencia-asilo-ancianos-los-angeles` (es): title too long (72), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/accesibilidad` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/accidente-auto-grave` (es): title too long (73), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/accidentes-vehiculos` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/acuerdos-liquidaciones-lesiones` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/aviso-legal` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/carta-demanda-lesiones-personales-california` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/contacto` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/derechos-privacidad-california` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/guia-reclamo-accidente-estacionamiento-california` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/lesiones-personales` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/lesiones-personales/accidentes-auto` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/lesiones-personales/accidentes-camion` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/lesiones-personales/lesion-cerebral` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/lesiones-personales/lesiones-catastroficas` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/lesiones-personales/lesiones-columna` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/lesiones-personales/muerte-injusta` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/lesiones-personales/resbalon-caida` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/lista-revision-liquidacion-lesiones-california` (es): title too long (73), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/no-vender-compartir-informacion-personal` (es): title too long (75), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/politica-cookies` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/politica-privacidad` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/recuperar-scooter-bicicleta-electrica-danada` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/responsabilidad-de-propiedad` (es): title too long (71), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/segunda-opinion-caso-lesiones-california` (es): title too long (71), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/segunda-opinion-reclamo-lesiones-california` (es): title too long (74), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/terminos-legales` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/ulceras-presion-negligencia-asilo-ancianos` (es): title too long (74), missing favicon link, missing web manifest link, missing apple-touch-icon
+- `/es/valor-reclamo-choque-lateral-california` (es): missing favicon link, missing web manifest link, missing apple-touch-icon
